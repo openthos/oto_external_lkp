@@ -1,9 +1,10 @@
-#!/system/xbin/sh
+#!/system/xbin/sh -x
 export PATH=/bin:/usr/bin:/system/xbin:/sbin:/vendor/bin:/system/sbin:/system/bin
 
 mount -o remount,rw /
 
 cd "$(dirname "$0")" 
+
 
 program_deploy()
 {
@@ -56,9 +57,6 @@ cd  /lkp_orig/lkp-tests-master/monitors/event/
 ln -s wakeup  ./wait
 
 cd  -
-cp ebizzy  /lkp/benchmarks/ebizzy/ebizzy
-chmod +x  /lkp/benchmarks/ebizzy/ebizzy
-
 
 chmod +x  -R  /lkp  /result  /lkp_orig
 
@@ -71,14 +69,16 @@ mkdir  -p $TMP
 }
 
 
+
 do_test()
 {
-
+filename="$1"
 
 export  LKP_SRC=/lkp_orig/lkp-tests-master 
 export  PATH=$PATH:$LKP_SRC/bin
 export  BENCHMARK_ROOT=/lkp/benchmarks
-export  RESULT_ROOT=/result/ebizzy/200%-8x-5s/elwin-virtual-machine/ubuntu/defconfig/gcc-5/4.4.0-22-generic/1/
+source  ./$filename
+run_the_bench
 export  TMP_RESULT_ROOT=$RESULT_ROOT
 export  TMP=/tmp/lkp-root
 
@@ -110,7 +110,7 @@ $LKP_SRC/monitors/event/wakeup job-finished
 deploy_test()
 {
 program_deploy
-do_test
+do_test  "$@"
 }
 
 "$@"
