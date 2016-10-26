@@ -1,0 +1,13 @@
+url: https://git.linaro.org/people/vincent.guittot/kernel.git
+owner: Vincent Guittot <vincent.guittot@linaro.org>
+subsystems:
+- mediatek
+- arm64
+- dts
+- arm
+- mt8173
+- wip
+- clk
+- vexpress
+- dt-bindings
+- soc

@@ -1,0 +1,12 @@
+testcase: nfsiozone
+category: benchmark
+
+disk: 1HDD
+
+fs:
+- nfsv3
+- nfsv4
+iosched:
+- cfq
+
+iozone:

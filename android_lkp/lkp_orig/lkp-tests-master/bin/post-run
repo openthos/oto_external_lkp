@@ -1,0 +1,161 @@
+#!/bin/sh -x
+
+umask 002
+
+wait_for_monitors()
+{
+	local pidfile=$TMP/.pid-wait-monitors
+	[ -s "$pidfile" ] || return 0
+
+	echo wait for background monitors: $(cat $TMP/.name-wait-monitors)
+
+	for i in 1 2 3 4 5
+	do
+		sleep $i
+		#ps axho pid | grep -qFwf $pidfile && continue
+		ps | awk '{print $2}'| grep -qFwf $pidfile && continue
+		return $i
+	done
+
+	echo "some monitors do not quit in time" >&2
+	#ps axho pid | grep -Fwf $pidfile | xargs ps u >&2
+	ps | awk '{print $2}' | grep -Fwf $pidfile | xargs ps  >&2
+
+	#ps faux
+	ps 
+	return $i
+}
+
+kill_monitors()
+{
+	local signal=$1
+	local wait_pidfile="$TMP/.pid-wait-monitors"
+	local pids
+
+	for pidfile in $TMP/pid-monitors
+	do
+		[ -s "$pidfile" ] || break
+
+		if [ -s "$wait_pidfile" ]; then
+			pids=$(grep -v -x -F -f "$wait_pidfile" "$pidfile")
+		else
+			pids=$(cat "$pidfile")
+		fi
+
+		[ -n "$pids" ] || continue
+		/bin/kill $signal $pids
+	done
+}
+
+kill_monitors -INT
+$LKP_SRC/monitors/event/wakeup post-test
+wait_for_monitors && sleep 1
+kill_monitors -KILL
+
+PERF_EVENT_DATA=$TMP/perf.data
+[ -s "$PERF_EVENT_DATA" ] && {
+	perf report --header -U -g fractal,5 -i $PERF_EVENT_DATA 2>/dev/null | gzip > $RESULT_ROOT/perf-profile.gz && {
+		rm -f $PERF_EVENT_DATA
+	}
+}
+
+PERF_REPORT_SRCLINE_DATA=$TMP/perf-report-srcline.data
+[ -s $PERF_REPORT_SRCLINE_DATA ] && {
+	perf=/lkp/benchmarks/perf-report-srcline/perf
+	$perf report --header -i $PERF_REPORT_SRCLINE_DATA --no-children -f -v \
+	      --stdio --sort sym,srcline -w 10,50,100 --full-source-path \
+	      2>/dev/null | gzip > $RESULT_ROOT/perf-report-srcline.gz &&
+		rm -f $PERF_REPORT_SRCLINE_DATA
+}
+
+wait_for_pipe()
+{
+	local i
+	local result
+
+	for i in $(seq 5)
+	do
+		sleep $i
+		pgrep --pidfile $TMP/.pid-pipes '(tee|cat|gzip)-.*' >/dev/null && continue
+		break
+	done
+
+	for i in $(seq 5)
+	do
+		sleep $i
+
+		for result in ${tmp_results}
+		do
+			[ "${result%.gz}" != "$result" ] || continue
+			[ -s "$result" ] && continue
+
+			echo "wait_for_pipe $i: empty $result"
+			continue 2
+		done
+
+		return 0
+	done
+
+	echo "wait_for_pipe timeout $i" >&2
+	ps faux
+	ls -l $TMP_RESULT_ROOT
+	return 1
+}
+
+[ -n "$TMP_RESULT_ROOT" ] &&
+[ "$TMP_RESULT_ROOT" != "$RESULT_ROOT" ] && {
+	tmp_results=$(echo $TMP_RESULT_ROOT/*)
+	[ "$tmp_results" != "$TMP_RESULT_ROOT/*" ] && {
+		# give chance to monitor fifo writer to sync data back to file
+		wait_for_pipe
+		chown lkp.lkp ${tmp_results}
+		mv --no-clobber ${tmp_results} $RESULT_ROOT/ && {
+			(
+				cd $RESULT_ROOT
+				for file_name in ${tmp_results}
+				do
+					ls -l $(basename $file_name)
+				done
+				echo
+			)
+		} || ls -l $tmp_results $RESULT_ROOT 2>&1
+	}
+}
+
+copy_to_result()
+{
+	local file=$1
+
+	[ -s "$file" ] || return
+
+	cp $file $RESULT_ROOT || ls -l $file $RESULT_ROOT/$(basename $file) 2>&1
+}
+
+copy_time_files()
+{
+	local ret_copy_time_files=0
+
+	for time_file in $TMP/*.time
+	do
+		[ -e "$time_file" ] || return
+
+		if copy_to_result $time_file; then
+			cat $time_file >> $RESULT_ROOT/time
+		else
+			ret_copy_time_files=1
+		fi
+	done
+
+	return $ret_copy_time_files
+}
+
+#copy_time_files || ps faux --cols 1000 > $RESULT_ROOT/time-debug
+copy_time_files || ps  > $RESULT_ROOT/time-debug
+
+truncate --no-create --size='<10M' $TMP/output $TMP/stdout $TMP/stderr
+
+copy_to_result $TMP/boot-time
+copy_to_result $TMP/env.yaml
+copy_to_result $TMP/stdout
+copy_to_result $TMP/stderr
+copy_to_result $TMP/output

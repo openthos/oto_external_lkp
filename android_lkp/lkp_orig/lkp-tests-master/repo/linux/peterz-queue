@@ -1,0 +1,9 @@
+url: https://git.kernel.org/pub/scm/linux/kernel/git/peterz/queue.git
+owner: Ingo Molnar <mingo@kernel.org>
+subsystems:
+- x86
+- fpu
+- perf
+- intel
+- mm
+- sched

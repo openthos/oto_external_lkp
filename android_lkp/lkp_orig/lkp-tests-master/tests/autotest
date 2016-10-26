@@ -1,0 +1,19 @@
+#!/bin/sh
+# - test
+
+## Autotest is a framework for fully automated testing. It is designed
+## primarily to test the Linux kernel, though it is useful for many
+## other functions such as qualifying new hardware.
+
+cd $BENCHMARK_ROOT/autotest || exit
+
+(
+	cd /usr/bin
+	[ -x "automake"	] || ln -s automake-* automake
+	[ -x "aclocal"	] || ln -s aclocal-* aclocal
+)
+
+cmd client/autotest-local run $test 2>&1 || exit
+
+copy-results	$BENCHMARK_ROOT/autotest/client/results/default/status.json \
+		$BENCHMARK_ROOT/autotest/client/results/default/debug/*

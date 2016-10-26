@@ -1,0 +1,35 @@
+testcase: dd-write
+category: benchmark
+
+disk: 4HDD
+md:
+- JBOD
+- RAID0
+- RAID5
+iosched:
+- cfq
+fs:
+- ext4
+- xfs
+- btrfs
+- f2fs
+fs2:
+- nfsv4
+- 
+
+monitors:
+  perf-stat:
+  perf-profile:
+  ftrace:
+    events:
+      balance_dirty_pages
+      bdi_dirty_ratelimit
+      global_dirty_state
+      writeback_single_inode
+
+nr_threads:
+- 1dd
+- 10dd
+- 100dd
+
+dd:

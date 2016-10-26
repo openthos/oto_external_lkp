@@ -1,0 +1,20 @@
+testcase: hackbench
+category: benchmark
+
+nr_node: $(echo /sys/devices/system/node/node* | wc -w)
+cgroup:
+  cpuset.mems: 0-$((nr_node-1))
+  cpuset.cpus: 0-$((nr_cpu-1))
+
+nr_threads: 1600%
+
+perf-profile:
+    freq: 800
+
+hackbench:
+  mode:
+  - process
+  - threads
+  ipc:
+  - pipe
+  - socket

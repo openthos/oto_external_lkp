@@ -1,0 +1,14 @@
+testcase: tbench
+category: benchmark
+
+nr_threads: 100%
+
+perf-profile:
+
+cluster: cs-localhost
+
+if role server:
+  tbench-server:
+
+if role client:
+  tbench:

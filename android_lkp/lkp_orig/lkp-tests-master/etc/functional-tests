@@ -1,0 +1,12 @@
+boot
+piglit
+xfstests
+ltp
+idle-inject
+kernel_selftests
+autotest
+pm-qa
+kvm-unit-tests
+packetdrill
+suspend
+lkp-bug

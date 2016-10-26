@@ -1,0 +1,12 @@
+Iteration: 1
+2016-08-25 05:38:33 ./ebizzy -t 8 -S 5
+57387 records/s 7051 7675 7208 6871 7350 7764 6838 6626
+real  5.00 s
+user 17.71 s
+sys   0.26 s
+Iteration: 2
+2016-08-25 05:38:38 ./ebizzy -t 8 -S 5
+59512 records/s 7830 7410 7923 7881 6658 7501 6941 7365
+real  5.00 s
+user 17.89 s
+sys   0.15 s

@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+LKP_SRC = ENV["LKP_SRC"] || File.dirname(File.dirname File.realpath $PROGRAM_NAME)
+
+require "#{LKP_SRC}/lib/matrix.rb"
+require "#{LKP_SRC}/lib/statistics.rb"
+require "#{LKP_SRC}/lib/stats.rb"
+require "#{LKP_SRC}/lib/yaml.rb"
+require "#{LKP_SRC}/lib/lkp_git"
+require "#{LKP_SRC}/lib/job.rb"
+
+File.umask 0002
+
+result_root = ARGV[0] || ENV["RESULT_ROOT"]
+
+unite_stats result_root

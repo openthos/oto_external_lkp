@@ -1,0 +1,30 @@
+#!/bin/sh
+# - runtime
+
+## qperf measures bandwidth and latency between two nodes.
+## It can work over TCP/IP as well as the RDMA transports.
+
+cd $BENCHMARK_ROOT/qperf || exit
+
+modprobe sctp 2>/dev/null
+
+nr_tests=6
+tests="
+tcp_bw
+tcp_lat
+udp_bw
+udp_lat
+sctp_bw
+sctp_lat
+"
+# rds_bw
+# rds_lat
+
+[ -n "$runtime" ] || runtime=600
+time=$((runtime / $nr_tests))
+
+[ -n "$direct_server_ips" ] && server=$direct_server_ips
+[ -z "$server" ] && server=127.0.0.1
+server=${server%% *}
+
+cmd ./qperf $server --unify_units --time $time $tests quit

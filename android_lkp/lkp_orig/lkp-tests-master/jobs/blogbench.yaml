@@ -1,0 +1,13 @@
+testcase: blogbench
+category: benchmark
+
+disk:
+- 1HDD
+- 1SSD
+
+fs:
+- ext4
+- xfs
+- btrfs
+
+blogbench:

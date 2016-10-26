@@ -1,0 +1,50 @@
+#!/bin/sh
+# - group
+
+## Piglit is a collection of automated tests for OpenGL implementations.
+
+export PATH=$BENCHMARK_ROOT/piglit/bin:$PATH
+
+dri_exist()
+{
+	[ -d '/sys/kernel/debug/dri' ]
+}
+
+check_wait_dri()
+{
+	dri_exist && return
+
+	mountpoint /sys/kernel/debug ||
+	mount -t debugfs debugfs /sys/kernel/debug || exit
+
+	dri_exist && return
+
+	modprobe drm 2>&1 || exit
+
+	for i in $(seq 9)
+	do
+		sleep $i
+		dri_exist && return
+	done
+
+	dri_exist && return
+
+	echo "No /sys/kernel/debug/dri" >&2
+}
+
+check_wait_dri
+
+cat > piglit.conf <<EOF
+[igt]
+path=$BENCHMARK_ROOT/piglit/lib/piglit/bin/igt
+EOF
+
+if [ "${group#*igt-}" != "$group" ]; then
+	$LKP_SRC/tests/piglit.xinitrc
+else
+	mkdir -p		/tmp/.X11-unix
+	chmod 1777		/tmp/.X11-unix
+	chown root:root		/tmp/.X11-unix
+
+	xinit $LKP_SRC/tests/piglit.xinitrc -- $LKP_SRC/tests/piglit.xserverrc
+fi

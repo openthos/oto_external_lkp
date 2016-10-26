@@ -1,0 +1,99 @@
+#!/bin/bash
+
+script_name=$(basename $0)
+usage()
+{
+	echo "Usage: lkp $script_name [-f filename] patterns..."
+	exit 1
+}
+
+[[ $# = 0 ]] && usage
+
+while getopts "f:0123456789" opt
+do
+	case $opt in
+		f ) opt_file="$OPTARG"; ;;
+		[0-9] ) opt_date="$opt"; ;;
+		? ) usage; ;;
+	esac
+done
+
+shift $(($OPTIND-1))
+
+export GIT_DIR=/c/repo/linux/.git
+
+shopt -s nullglob
+
+if [[ $opt_date ]]; then
+	files=()
+	for d in 0 $(seq $opt_date)
+	do
+		day=$(date +%F -d "$d days ago")
+		files+=(/lkp/paths/$day-*)
+	done
+elif [[ $script_name =~ ^_ ]]; then
+	files=(/lkp/paths/????-??-??-* /lkp/paths/.????-??-??-*)
+else
+	files=(/lkp/paths/????-??-??-*)
+fi
+
+[[ $files ]] || exit 0
+
+for pattern
+do
+	# expand v3.12 etc. to commit SHA1
+	commit=$(git rev-list -n1 "$pattern" 2>/dev/null) &&
+	[[ $commit ]] &&
+	pattern=$commit
+
+	if [[ "$paths" ]]; then
+		paths=$(echo "$paths" | grep -E "$pattern")
+	else
+		paths=$(grep -h -E "$pattern" "${files[@]}")
+	fi
+done
+
+[[ $paths ]] || exit 0
+
+paths=$(echo "$paths" | sed -e 's#/$##')
+
+case $script_name in
+rt|ls|ll)
+	paths=$(echo "$paths" | sort)
+	;;
+_rt)
+	paths=$(echo "$paths" | awk -F'/' '{OFS="/"; NF=NF-1; print}' | sort -u)
+	;;
+__rt)
+	paths=$(echo "$paths" | awk -F'/' '{OFS="/"; NF=NF-2; print}' | sort -u)
+	;;
+esac
+
+show_one_path()
+{
+	case $script_name in
+	ls)
+		echo "$1"
+		ls "$1"
+		echo
+		;;
+	ll)
+		echo "$1"
+		ls -l "$1"
+		echo
+		;;
+	*)
+		echo "$1"
+		;;
+	esac
+}
+
+for path in $paths
+do
+	if [[ ! $opt_file ]]; then
+		show_one_path "$path"
+	else
+		file_path=$(find $path -name $opt_file)
+		[[ $file_path ]] && show_one_path "$file_path"
+	fi
+done

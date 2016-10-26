@@ -1,0 +1,9 @@
+intel-gpu-tools
+xorg
+xinit
+freeglut3
+libglib2.0-0
+libgles2-mesa
+python-mako
+python-markupsafe
+python-numpy

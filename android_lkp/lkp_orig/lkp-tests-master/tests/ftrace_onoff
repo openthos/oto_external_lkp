@@ -1,0 +1,28 @@
+#!/bin/sh
+
+## Ftrace is an internal tracer designed to help out developers and
+## designers of systems to find what is going on inside the kernel.
+## It can be used for debugging or analyzing latencies and
+## performance issues that take place outside of user-space.
+
+cd /sys/kernel/debug/tracing || exit
+
+: ${runtime:=300}
+
+do_test()
+{
+	for tracer in $(cat available_tracers)
+	do
+		note "echo $tracer > current_tracer"
+		      echo $tracer > current_tracer
+
+		note "echo 1 > tracing_on"
+		      echo 1 > tracing_on
+
+		note "echo 0 > tracing_on"
+		      echo 0 > tracing_on
+	done
+}
+
+. $LKP_SRC/lib/runtime_loop.sh
+runtime_loop

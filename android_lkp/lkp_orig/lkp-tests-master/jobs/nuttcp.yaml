@@ -1,0 +1,12 @@
+testcase: nuttcp
+category: benchmark
+
+runtime: 300s
+
+cluster: cs-localhost
+
+if role server:
+  nuttcp-server:
+
+if role client:
+  nuttcp:

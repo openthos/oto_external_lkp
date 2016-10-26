@@ -1,0 +1,94 @@
+#!/bin/sh
+# - test
+
+## Regression test suite for xfs and other filesystems.
+
+. $LKP_SRC/lib/job.sh
+. $LKP_SRC/lib/debug.sh
+
+[ "$nr_partitions" -lt 2 ] && die "$nr_partitions -lt 2"
+cd $BENCHMARK_ROOT/xfstests || die "fail to cd $BENCHMARK_ROOT/xfstests"
+
+set_env()
+{
+	umount $mount_points
+
+	note export TEST_DIR=${mount_points%% *}
+	note export TEST_DEV=${partitions%% *}
+	export TEST_DIR=${mount_points%% *}
+	export TEST_DEV=${partitions%% *}
+
+	# f2fs needs this to prevent mount failure
+	note export FSTYP=$fs
+	export FSTYP=$fs
+
+	note export SCRATCH_MNT=/fs/scratch
+	export SCRATCH_MNT=/fs/scratch
+	cmd mkdir $SCRATCH_MNT -p
+
+	if [ "$fs" = btrfs ] && [ "$nr_partitions" -ge 4 ]; then
+		note export SCRATCH_DEV_POOL=\"${partitions#* }\"
+		export SCRATCH_DEV_POOL="${partitions#* }"
+	else
+		note export SCRATCH_DEV=${partitions##* }
+		export SCRATCH_DEV=${partitions##* }
+	fi
+
+	## We could use the "pack-deps" job to generate the relevant dependency package with cgz format,
+	## but sometimes the dependency package have a different layout with the original package.
+	## For examle:
+	## 1)the command "btrfs" under directory /sbin  in original rootfs.
+	## 2)the command "btrfs" under directory /bin  in dependency packages.
+	## this will result in the newer btrfs command can't override the original btrfs command,
+	## moreover, /bin behind with /sbin directory in the default "PATH" environment.
+	## so we need to adjust the "PATH" search order.
+	export PATH="/bin/":$PATH
+
+	if [ "$fs" = xfs ] && [ "$nr_partitions" -ge 3 ]; then
+		SCRATCH_LOGDEV=${partitions#* }
+		SCRATCH_LOGDEV=${SCRATCH_LOGDEV%% *}
+		note export SCRATCH_LOGDEV=$SCRATCH_LOGDEV
+		export SCRATCH_LOGDEV
+	fi
+}
+
+run_test()
+{
+	## Currently, we support the following several format's test item.
+	## With "generic" testcase as an example:
+	## - generic-all
+	## - generic-127
+	## - generic-quick/mid/slow1/slow2
+	## - generic-new
+	## - generic-not-run
+	## - generic-out-mismatch
+
+	local test_dir="$LKP_SRC/pack/xfstests-addon/tests"
+
+	if [ "${test#*-}" = "all" ]; then
+		all_tests=$(cd tests && ls ${test%-*}/[0-9][0-9][0-9])
+	elif [ "${test#*-}" = "new" ]; then
+		all_tests=$(cd tests && sed "s:^:${test%-*}/:" $test)
+	elif [ "${test%[a-z]-[0-9][0-9][0-9]}" != "$test" ]; then
+		all_tests="${test%-*}/${test#*-}"
+	elif [ "${test#*-}" != "$test" ]; then
+		all_tests=$(sed "s:^:${test%-*}/:" $test_dir/$test)
+	else
+		all_tests=$(cd tests && ls $test/[0-9][0-9][0-9] | grep -v -F -f $test_dir/$test-broken)
+	fi
+
+	cmd ./check $all_tests
+}
+
+export LC_ALL=C
+export LANG=C
+read_env_vars
+set_env
+run_test
+exit_value=$?
+
+# In the xfstests, there maybe a error "No space left on device" in results/generic/*.
+[ -d $BENCHMARK_ROOT/xfstests/results ] && grep -r -m 1 'No space left on device' $BENCHMARK_ROOT/xfstests/results 1>&2
+
+copy-results $BENCHMARK_ROOT/xfstests/results/*
+exit $exit_value

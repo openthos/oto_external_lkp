@@ -1,0 +1,32 @@
+#!/bin/sh
+# - test
+
+## The LTP testsuite contains a collection of tools for
+## testing the Linux kernel and related features.
+
+cd $BENCHMARK_ROOT/ltp || exit
+
+workaround_env()
+{
+	# some LTP sh scripts actually need bash. Fixes
+	# > netns_childns.sh: 38: .: cmdlib.sh: not found
+	[ "$(command -v bash)" = '/bin/bash' ] && [ $(readlink -e /bin/sh) != '/bin/bash' ] &&
+	ln -fs bash /bin/sh
+}
+workaround_env
+
+if [ "$test" = 'dio' ]; then
+	[ -z "$mount_points" ] && exit
+	export TMPDIR="${mount_points%% *}"
+elif [ "$test" = 'fs_readonly' ]; then
+	[ -z "$fs" ] && exit
+	[ -z "$partitions" ] && exit
+	big_dev="${partitions%% *}"
+	umount $big_dev
+	big_dev_opt="-Z $fs -z $big_dev"
+fi
+
+cmd ./runltp -f $test $big_dev_opt || exit
+
+copy-results	$BENCHMARK_ROOT/ltp/results/* \
+		$BENCHMARK_ROOT/ltp/output/*

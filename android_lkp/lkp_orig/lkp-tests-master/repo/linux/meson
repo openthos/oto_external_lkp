@@ -1,0 +1,10 @@
+url: https://github.com/carlocaione/linux-meson
+owner: Carlo Caione <carlo@endlessm.com>
+subsystems:
+- meson
+- arm
+- of
+- dts
+- clk
+- pinctrl
+- meson6

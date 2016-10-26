@@ -1,0 +1,29 @@
+url: https://git.kernel.org/pub/scm/linux/kernel/git/dledford/rdma
+mail_to: linux-rdma@vger.kernel.org
+owner: Doug Ledford <dledford@redhat.com>
+subsystems:
+- ib
+- iser
+- srp
+- rdma
+- mlx4
+- ipoib
+- cma
+- mad
+- hfi1
+- ulp
+- srpt
+- isert
+- hw
+- qib
+- nes
+- cxgb4
+- mlx5
+- cxgb3
+- ocrdma
+- usnic
+- mthca
+- ipath
+- amso1100
+- ehca
+- hfi

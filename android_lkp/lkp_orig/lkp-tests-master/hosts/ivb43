@@ -1,0 +1,7 @@
+model: Ivytown Ivy Bridge-EP
+nr_cpu: 48
+memory: 64G
+nr_hdd_partitions: 0
+hdd_partitions:
+rootfs_partition:
+swap_partitions:

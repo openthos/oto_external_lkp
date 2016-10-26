@@ -1,0 +1,6 @@
+testcase: ftrace_onoff
+category: functional
+
+runtime: 5m
+
+ftrace_onoff:

@@ -1,0 +1,12 @@
+#!/bin/sh
+# - loops
+# - mode
+
+## perf began as a tool for using the performance counters
+## subsystem in Linux, and has had various enhancements
+## to add tracing capabilities.
+
+loops="${loops%%ops}"
+[ "$mode" = 'threads' ] && opt_threads='-T'
+
+cmd perf bench sched pipe -l $loops $opt_threads

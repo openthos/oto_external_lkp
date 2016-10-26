@@ -1,0 +1,14 @@
+#!/bin/bash
+
+download()
+{
+	mkdir -p /lkp/benchmarks
+	cd /lkp/benchmarks
+	git_clone_update https://github.com/pmem/ndctl
+}
+
+build()
+{
+	# disable the default make
+	:
+}

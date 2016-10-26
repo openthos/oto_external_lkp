@@ -1,0 +1,116 @@
+#!/bin/bash
+
+. $LKP_SRC/lib/env.sh
+
+download()
+{
+	git_clone_update git://github.com/waffle-gl/waffle
+	git_clone_update git://anongit.freedesktop.org/piglit
+	git_clone_update git://anongit.freedesktop.org/xorg/app/intel-gpu-tools
+}
+
+build()
+{
+	# apt-get build-dep intel-gpu-tools
+	# apt-get install libglu1-mesa-dev python3-dev
+
+	local ncpu=$(nproc)
+
+	cd /tmp/waffle
+	cmake	-Dwaffle_has_glx=1	\
+		-Dwaffle_has_x11_egl=1	\
+		-Dwaffle_has_wayland=1	\
+		-Dwaffle_has_gbm=1	\
+		-DCMAKE_INSTALL_PREFIX=/usr
+	make -j $ncpu
+	make install -j $ncpu
+
+	cd ../$BM_NAME
+	cmake -DCMAKE_INSTALL_PREFIX=$BM_ROOT
+	make -j $ncpu
+	make install -j $ncpu
+
+	cd ../intel-gpu-tools
+	./autogen.sh
+	make -j $ncpu
+}
+
+create_config()
+{
+	cat > /lkp/benchmarks/piglit/piglit.conf <<-EOF
+	[igt]
+	path=$BM_ROOT/lib/piglit/bin/igt
+	EOF
+}
+
+install()
+{
+	mv -T /tmp/intel-gpu-tools $BM_ROOT/lib/$BM_NAME/bin/igt
+
+	cp -af $LKP_SRC/pack/${BM_NAME}-addon/* $BM_ROOT/
+
+	create_config
+	update_test_groups
+}
+
+update_test_groups()
+{
+	(
+	cd /lkp/benchmarks/piglit
+	mkdir -p groups
+
+	local tset
+	for tset in sanity igt all quick
+	do
+		bin/piglit run $tset /tmp/piglit-output -d -v | grep 'running ::' | sed 's/running :: //' > groups/$tset-all
+
+		cd groups
+		[[ -f $tset-000 ]] || split -d -a3 -l100 $tset-all $tset-
+
+		# add new tests to group 000
+		cat ${tset}-[0-9][0-9][0-9] > $tset-known
+		[[ -f ${tset}-broken ]] && cat ${tset}-broken >> $tset-known
+		grep -v -x -F -f $tset-known $tset-all > $tset-new
+		[[ -s $tset-new ]] &&
+		cat $tset-new >> $tset-000
+
+		# delete missing cases
+		local group
+		for group in ${tset}-[0-9][0-9][0-9]
+		do
+			grep -x -F -f $tset-all $group > tmp
+			mv tmp $group
+		done
+
+		rm $tset-known $tset-new
+		cd ..
+	done
+	)
+}
+
+pack()
+{
+	{
+
+		echo /lkp
+		echo /lkp/benchmarks
+		find /lkp/benchmarks/$BM_NAME
+		echo /usr/lib/x86_64-linux-gnu/libwaffle-1.so
+		echo /usr/lib/x86_64-linux-gnu/libwaffle-1.so.0
+		echo /usr/lib/x86_64-linux-gnu/libwaffle-1.so.0.*
+	} |
+	cpio -o -H newc | gzip -n -9 > /lkp/benchmarks/${BM_NAME}.cgz
+	[[ $arch ]] && mv "/lkp/benchmarks/${BM_NAME}.cgz" "/lkp/benchmarks/${BM_NAME}-${arch}.cgz"
+
+}
+
+post_cleanup()
+{
+	rm -fr "/tmp/$BM_NAME"
+	rm -f /usr/lib/x86_64-linux-gnu/pkgconfig/waffle-1.pc
+	rm -f /usr/bin/wflinfo
+	rm -f /usr/lib/x86_64-linux-gnu/libwaffle-1.so*
+	rm -fr /usr/lib/x86_64-linux-gnu/cmake/Waffle
+	rm -fr /usr/include/waffle-1
+	rm -fr /usr/share/doc/waffle1
+}

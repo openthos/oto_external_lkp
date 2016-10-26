@@ -1,0 +1,14 @@
+url: https://git.kernel.org/pub/scm/linux/kernel/git/zohar/linux-integrity.git
+integration_testing_branches: next
+mail_cc:
+- linux-ima-devel@lists.sourceforge.net
+- linux-security-module@vger.kernel.org
+owner: Mimi Zohar <zohar@linux.vnet.ibm.com>
+subsystems:
+- ima
+- integrity
+- evm
+- gen_init_cpio
+- initramfs
+- keys
+- vfs

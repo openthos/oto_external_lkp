@@ -1,0 +1,4 @@
+gcc
+make
+libc6-dev
+libpopt0

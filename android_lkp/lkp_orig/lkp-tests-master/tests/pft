@@ -1,0 +1,23 @@
+#!/bin/sh
+
+## Page Fault Test
+
+cd $BENCHMARK_ROOT/pft || exit
+
+. $LKP_SRC/lib/unit.sh
+. $LKP_SRC/lib/sysinfo.sh
+
+memory_bytes=$(to_byte $memory)
+pft_mapping_size=$((memory_bytes / 5))
+
+setup_threads_to_iterate
+
+for clients in $threads_to_iterate
+do
+	echo Clients: $clients
+	for iteration in $(seq 1 $iterations)
+	do
+		echo Iteration: $iteration
+		cmd ./pft -m $pft_mapping_size -n $clients
+	done
+done

@@ -1,0 +1,33 @@
+---
+ Run |    6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+--- a/Run
++++ b/Run
+@@ -750,7 +750,7 @@ sub getSystemInfo {
+     }
+ 
+     # Get graphics hardware info.
+-    $info->{'graphics'} = getCmdOutput("3dinfo | cut -f1 -d\'(\'");
++    #$info->{'graphics'} = getCmdOutput("3dinfo | cut -f1 -d\'(\'");
+ 
+     # Get system run state, load and usage info.
+     $info->{'runlevel'} = getCmdOutput("runlevel | cut -f2 -d\" \"");
+@@ -1329,7 +1329,7 @@ sub runTests {
+         # If the benchmark doesn't want to run with this many copies, skip it.
+         my $cat = $params->{'cat'};
+         my $maxCopies = $testCats->{$cat}{'maxCopies'};
+-        next if ($copies > $maxCopies);
++        #next if ($copies > $maxCopies);
+ 
+         # Run the benchmark.
+         my $bresult = runBenchmark($bench, $params, $verbose, $logFile, $copies);
+@@ -1764,7 +1764,7 @@ sub main {
+         $tests = $index;
+     }
+ 
+-    preChecks();
++    #preChecks();
+     my $systemInfo = getSystemInfo();
+ 
+     # If the number of copies to run was not set, set it to 1

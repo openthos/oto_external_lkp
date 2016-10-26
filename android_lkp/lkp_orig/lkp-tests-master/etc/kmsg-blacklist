@@ -1,0 +1,91 @@
+###### unstable ######
+Address belongs to variable 
+APIC calibration not consistent
+ invoked oom-killer: gfp_mask=0x
+' is using obsolete 
+sockopt(PACKET_SIZE) is deprecated: fix your app
+sockopt(CHANGE_L/R) is deprecated: fix your app
+' is using deprecated sysctl (
+ is using a deprecated SCSI ioctl, please convert it to SG_IO
+) uses deprecated remap_file_pages() syscall. 
+ using old stat() call. Recompile your binary.
+###### shows up also in normal printk levels ######
+Asymmetric key parser '
+ conflict with 
+could not be loaded.
+ devices, algorithm 
+ does not support 
+ Duplex, Flow Control: 
+ext4_da_release_space: 
+ is not supported
+: link is not ready
+megasas: INIT adapter done
+ not supported
+PEBS disabled due to CPU errata
+ request failed (
+secondary cpu clock
+): transmit queue 
+: unexpected interrupt 
+BTRFS: Transaction aborted (error 
+Info: mapping multiple BARs. Your kernel is fine.
+ line discipline 
+Management GUID not found
+ request failed 
+successfully loaded
+###### too common messages ######
+could not be loaded.
+ does not support 
+failed to peer to 
+failed to enable device
+hub failed to enable device, error 
+ is not supported
+: link is not ready
+ notification failure
+root hub lost power or was reset
+ Set to 'normal', was 'performance'
+Unable to find any System Interface(s)
+Unsupported brightness interface, 
+usb: failed to peer 
+usb: port power management may be unreliable
+**   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+** trace_printk() being used. Allocating extra memory.  **
+** This means that this is a DEBUG kernel and it is     **
+** unsafe for produciton use.                           **
+** If you see this message and you are not debugging    **
+** the kernel, report this immediately to your vendor!  **
+No controller found
+ failed with error 
+ address mismatch in FADT: 
+Invalid length for FADT/
+32/64X address mismatch in FADT/
+32/64X length mismatch in FADT/
+perf interrupt took too long (
+ conflicts with OpRegion 0x
+unable to register 
+Poll interval is 0 for generic hardware error source: 
+exception Emask 0x
+ - rounding interval to 
+ microframes, ep desc says 
+BMC returned incorrect response,
+Starting new kernel
+drm:drm_edid_block_valid
+Raw EDID:
+ACPI: Invalid BIOS MADT, disabling ACPI
+ACPI: Error parsing LAPIC address override entry
+ACPI: Error parsing LAPIC NMI entry
+ACPI: No IRQ available for PCI Interrupt Link 
+ACPI: PCI Interrupt Link .* enabled at IRQ 
+ACPI needs to be enabled for this driver to work!
+: Failed to register ACPI driver: 
+No Caching mode page found
+Assuming drive cache: write through
+DMAR-IR: Failed to copy IR table for dmar[0-9] from previous kernel
+CPU feature 'AVX registers' is not supported.
+CPU feature '(null)' is not supported.
+callbacks.suppressed
+smpboot: weird, boot CPU (#0) not listed by the BIOS
+Consider compiling CPUfreq support into your kernel.
+PnPBIOS: 
+Warning: Processor Platform Limit event detected, but not handled.
+Kernel Offset: disabled
+utf8 is not a recommended IO charset

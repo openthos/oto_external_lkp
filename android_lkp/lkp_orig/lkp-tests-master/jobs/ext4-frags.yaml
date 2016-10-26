@@ -1,0 +1,7 @@
+testcase: ext4-frags
+category: benchmark
+
+disk:
+- 1HDD
+
+ext4-frags:

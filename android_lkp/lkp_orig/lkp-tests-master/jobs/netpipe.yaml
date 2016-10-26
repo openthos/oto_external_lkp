@@ -1,0 +1,17 @@
+testcase: netpipe
+category: benchmark
+
+test:
+# - lam
+# - mpich2
+# - openmpi
+# - pvm
+- tcp
+
+cluster: cs-localhost
+
+if role server:
+  netpipe-server:
+
+if role client:
+  netpipe:

@@ -1,0 +1,14 @@
+testcase: boot
+
+boot-slabinfo:
+boot-meminfo:
+memmap:
+
+# stats
+boot-memory: # depends on memmap and boot-meminfo stats
+boot-time:
+kernel-size:
+
+timeout: 10m
+
+sleep: 1

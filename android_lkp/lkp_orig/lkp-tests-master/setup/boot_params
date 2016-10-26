@@ -1,0 +1,9 @@
+#!/bin/sh
+# - bp_mem
+# - bp1_memmap
+# - bp2_memmap
+# - bp_disable_mtrr_trim
+# - bp_idle
+# - bp_maxcpus
+
+# Kernel boot parameters that will impact performance/power

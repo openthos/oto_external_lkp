@@ -1,0 +1,35 @@
+#!/bin/sh
+# - runtime
+# - test
+# - mode
+# - nr_task
+
+## It Scale takes a testcase and runs it from 1 through to n
+## parallel copies to see if the testcase will scale. It
+## builds both a process and threads based test in order
+## to see any differences between the two.
+
+cd $BENCHMARK_ROOT/will-it-scale || exit
+
+setup_params()
+{
+	iterations=$((3 + nr_node))
+	duration=$(( runtime / iterations / 2 - WARMUP_ITERATIONS ))
+	[ "$duration" -lt 5  ] && duration=5
+}
+
+[ -n "$mode" ] || mode='both'
+[ -n "$runtime" ] || runtime=300
+WARMUP_ITERATIONS=5 # defined in will-it-scale/main.c
+
+if [ -n "$nr_task" ]; then
+	# one shot run
+	duration=$(( runtime - WARMUP_ITERATIONS ))
+	threads_to_iterate=$nr_task
+else
+	. $LKP_SRC/lib/sysinfo.sh
+	setup_threads_to_iterate
+	setup_params
+fi
+
+cmd ./runtest.py $test $duration $mode $threads_to_iterate
