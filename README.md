@@ -8,5 +8,6 @@ lkpebizzy是利用android_lkp目录制作，打包好的可以在androidx86上�
 lkpnbench是利用android_lkp目录制作，打包好的可以在androidx86上面运行的nbench测试用例。
 
 ## TODO
-- 完善lkp已有的 ./jobs/文件夹中的benchmark的移植方法。
+- 完善lkp已有的 ./jobs/文件夹中的benchmark的移植方法。 
+[*port lkp to androidx86*](./port_lkp_to_androidx86.md)
 - 新增新增测试用例的方法
