@@ -27,6 +27,6 @@ mount-static --bind /dev $CHMOUNT/dev
 mount -t devpts devpts $CHMOUNT/dev/pts
 chroot $CHMOUNT  su - root -c "/root/ubuntu_lkp_test.sh  $testcase"
 
-##下面的代码是不会执行的除非chroot失败
-echo "chroot error faild"
+##下面的代码会在chroot 结束以后执行
+echo "chroot over"
 exit
