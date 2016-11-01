@@ -1,0 +1,8 @@
+testcase: suspend
+category: functional
+
+runtime: 30s
+iterations: 3x
+
+suspend:
+  mode: disk

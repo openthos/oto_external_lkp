@@ -1,0 +1,99 @@
+#!/usr/bin/env ruby
+
+LKP_SRC = ENV["LKP_SRC"] || File.dirname(File.dirname File.realpath $PROGRAM_NAME)
+
+require 'optparse'
+require 'ostruct'
+require "#{LKP_SRC}/lib/lkp_git"
+require "#{LKP_SRC}/lib/yaml.rb"
+require "#{LKP_SRC}/lib/stats.rb"
+require "#{LKP_SRC}/lib/result.rb"
+
+$opt_group = '_rt'
+$opt_kernel = 'v3.13'
+$opt_field = 'time.elapsed_time'
+$opt_pattern = []
+
+opts = OptionParser.new do |opts|
+	opts.banner = "Usage: lkp stat [options]"
+
+	opts.separator ""
+	opts.separator "options:"
+
+	opts.on("-g GROUP", "--group-by GROUP", "group by GROUP") do |group|
+		$opt_group = group.gsub "/", " + '/' + "
+	end
+
+	opts.on("-k KERNEL", "--kernel KERNEL", "kernel branch/commit") do |kernel|
+		$opt_kernel = kernel
+	end
+
+	opts.on("-p PATTERN", "--pattern PATTERN", "grep RESULT_ROOT with PATTERN") do |pattern|
+		$opt_pattern << Regexp.new(pattern)
+	end
+
+	opts.on("-f FIELD", "--field FIELD", "stats field name") do |field|
+		$opt_field = field
+	end
+
+	opts.on("-r ", "--raw-samples", "show raw samples") do
+		$opt_raw = true
+	end
+
+	opts.on_tail("-h", "--help", "show this message") do
+		puts opts
+		exit
+	end
+end
+
+opts.parse!(ARGV)
+git = Git.open(project: 'linux')
+$opt_kernel = git.gcommit($opt_kernel).sha
+result_roots = `grep -r -h -F /#{$opt_kernel}/ /lkp/paths/`.split
+$opt_pattern.each do |pattern|
+	result_roots = result_roots.grep pattern
+end
+groups = {}
+_rts = {}
+result_roots.sort.each { |result_root|
+	_rt = File.dirname result_root
+	__rt = File.dirname _rt
+
+	next if _rts[_rt]
+	_rts[_rt] = true
+
+	next unless File.exist? _rt + '/matrix.json'
+	matrix = load_json _rt + '/matrix.json'
+	next unless matrix
+	unless $opt_field =~ /last_state/
+		next if matrix['last_state.is_incomplete_run']
+	end
+
+	result_path = ResultPath.new
+	result_path.parse_result_root(result_root)
+	result_path['_rt'] = _rt
+	result_path['__rt'] = __rt
+	result_path['test'] = result_path.test_desc 'commit', true
+
+	group = result_path[$opt_group]
+	groups[group] ||= []
+	if $opt_group =~ /__rt|_rt|test/
+		groups[group].concat samples_fill_missing_zeros(matrix, $opt_field)
+	else
+		groups[group] << samples_fill_missing_zeros(matrix, $opt_field).average
+	end
+}
+
+printf "%8s %16s %16s %6s%%  %s\n", 'runs', 'sum', 'average', 'stddev', 'case'
+
+groups.each { |k, v|
+	if $opt_raw
+		puts "#{k}: #{v}"
+	else
+		total = v.sum
+		next if total == 0
+		avg = v.average
+		stddev = 100 * v.standard_deviation / v.average
+		printf "%8d %16.2f %16.2f %6d%%  %s\n", v.size, total, avg, stddev, k
+	end
+}

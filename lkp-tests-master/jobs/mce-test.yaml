@@ -1,0 +1,12 @@
+testcase: mce-test
+category: functional
+
+disk:
+- 1HDD
+
+fs:
+- btrfs
+- ext4
+- xfs
+
+mce-test:

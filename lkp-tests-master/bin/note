@@ -1,0 +1,5 @@
+#!/bin/sh
+
+date=$(date +'%F %T')
+echo "$date $@"
+echo "$date $@" >> $RESULT_ROOT/reproduce.sh

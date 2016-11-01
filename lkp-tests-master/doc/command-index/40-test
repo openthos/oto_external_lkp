@@ -1,0 +1,5 @@
+
+TESTING
+
+	run JOB				run test JOB locally
+	qemu JOB			run test JOB in QEMU virtual machine

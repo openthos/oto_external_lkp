@@ -1,0 +1,10 @@
+url: git://linux-nfs.org/~bfields/linux.git
+owner:
+- J. Bruce Fields <bfields@redhat.com>
+- Bruce Fields <bfields@fieldses.org>
+git_am_branch: nfsd-next
+subsystems:
+- nfsd
+- svcrdma
+- sunrpc
+- lockd

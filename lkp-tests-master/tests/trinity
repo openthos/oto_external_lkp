@@ -1,0 +1,18 @@
+#!/bin/sh
+# - runtime
+# - seed
+
+## A Linux System call fuzz tester
+
+[ -n "$seed" ] || {
+	echo Seeding trinity based on $kconfig
+	seed=$(echo $kconfig | cksum | tr -d ' ')
+}
+
+cd /tmp
+cmd chroot --userspec nobody:nogroup / trinity -q -q -l off -s $seed -x get_robust_list -x remap_file_pages -N 999999999 2>&1 &
+
+pid=$!
+sleep $runtime
+
+kill -9 $pid

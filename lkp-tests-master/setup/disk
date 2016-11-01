@@ -1,0 +1,117 @@
+#!/bin/sh
+# - nr_ssd
+# - nr_hdd
+# - nr_brd
+# - nr_srd
+# - wait_disks_timeout
+
+# the hosts config may either
+# - hard code    xxx_partitions; leave nr_xxx_partitions empty
+# - hard code nr_xxx_partitions; make     xxx_partitions a shell glob to be expanded in test box
+
+[ -n "$wait_disks_timeout" ] || wait_disks_timeout=30
+
+. $LKP_SRC/lib/unit.sh
+
+check_nr_partitions()
+{
+	max_ssd=$(ls $ssd_partitions | wc -l)
+	max_hdd=$(ls $hdd_partitions | wc -l)
+
+	nr_ssd_partitions=${nr_ssd_partitions:-$(echo $ssd_partitions | wc -w)}
+	nr_hdd_partitions=${nr_hdd_partitions:-$(echo $hdd_partitions | wc -w)}
+
+	[ "$ssd_partitions" ] && [ "$nr_ssd_partitions" != "$max_ssd" ] && {
+		echo "disk number $nr_ssd_partitions mismatch with $max_ssd real disks: $ssd_partitions" >&2
+		return 1
+	}
+
+	[ "$hdd_partitions" ] && [ "$nr_hdd_partitions" != "$max_hdd" ] && {
+		echo "disk number $nr_hdd_partitions mismatch with $max_hdd real disks: $hdd_partitions" >&2
+		return 1
+	}
+
+	return 0
+}
+
+wait_disks()
+{
+	for i in $(seq $wait_disks_timeout)
+	do
+		check_nr_partitions 2>/dev/null && return
+		sleep 1
+	done
+
+	check_nr_partitions && return
+	exit 1
+}
+
+wait_disks
+
+[ -z "$nr_hdd" ] && nr_hdd=0
+[ -z "$nr_ssd" ] && nr_ssd=0
+
+[ "$nr_ssd" -gt "$max_ssd" ] && nr_ssd=$max_ssd
+[ "$nr_hdd" -gt "$max_hdd" ] && nr_hdd=$max_hdd
+
+if [ -n "$nr_hdd" -a "$nr_hdd" != 0 ]; then
+	nr_partitions=$nr_hdd
+	partitions="$hdd_partitions"
+	disk_description=${nr_hdd}hdd
+elif [ -n "$nr_ssd" -a "$nr_ssd" != 0 ]; then
+	nr_partitions=$nr_ssd
+	partitions="$ssd_partitions"
+	disk_description=${nr_ssd}ssd
+elif [ -n "$nr_brd" -a "$nr_brd" != 0 ]; then
+	[ -n "$ramdisk_size" ] || ramdisk_size="1G"
+	modprobe -r brd
+	modprobe brd rd_nr=$nr_brd rd_size=$(to_kb $ramdisk_size) part_show=1
+	sleep 1
+	partitions=$(ls /dev/ram*)
+	nr_partitions=$nr_brd
+	disk_description=${nr_brd}brd
+	disks=$(echo $partitions | tr '\n' ' ')
+elif [ -n "$nr_srd" -a "$nr_srd" != 0 ]; then
+	[ -n "$ramdisk_size" ] || ramdisk_size="1G"
+	modprobe -r scsi_debug
+	modprobe scsi_debug add_host=1 num_tgts=$nr_srd max_luns=1 dev_size_mb=$(to_mb $ramdisk_size)
+	sleep 1
+	partitions=$(grep -l -e scsi_debug /sys/block/*/device/model | awk -F'/' '{print "/dev/"$4}')
+	nr_partitions=$nr_srd
+	disk_description=${nr_srd}srd
+	disks=$(echo $partitions | tr '\n' ' ')
+elif [ -n "$scsi_ram" -a "$scsi_ram" != 0 ]; then
+	[ -n "$ramdisk_size" ] || ramdisk_size="1G"
+	modprobe -r scsi_ram
+	modprobe scsi_ram capacity=$(($(to_byte $ramdisk_size) / 512))
+	sleep 1
+	partitions=$(grep -l -e "RAM Drive" /sys/block/*/device/model | awk -F'/' '{print "/dev/"$4}')
+	nr_partitions=1
+	disk_description=1scsi_ram
+	disks=$(echo $partitions | tr '\n' ' ')
+else
+	echo "setup/disk: should not reach here" >&2
+	echo "setup/disk: dumping shell variables:"
+	set
+	echo
+	exit 1
+fi
+
+[ -z "$nr_partitions" -o "$nr_partitions" -lt 1 ] && {
+	echo "setup/disk: no disk partitions found, nr_partitions=$nr_partitions"
+	exit 1
+}
+
+[ "${partitions#/dev/disk/by-}" != "$partitions" ] && partitions="$(readlink -e $partitions)"
+
+partitions=$(echo $partitions | cut -f1-$nr_partitions -d' ')
+[ -n "$disks" ] || disks=$(echo $partitions | grep -o '[/a-z]\+' | sort -u | tr '\n' ' ')
+
+cat >> $TMP/env.yaml <<EOF
+
+# setup/disk
+nr_partitions: $nr_partitions
+partitions: $partitions
+disk_description: $disk_description
+disks: $disks
+EOF

@@ -1,0 +1,101 @@
+#!/bin/sh
+# - nr_threads
+# - test_size
+# - filesize
+# - nr_directories
+# - nr_files_per_directory
+# - sync_method
+# - iterations
+
+## The fs_mark benchmark tests synchronous write workloads.It can vary
+## the number of files, directory depth, etc. It has detailed timings
+## for reads, writes, unlinks and fsyncs that make it good for
+## simulating mail servers and other setups.
+
+cd $BENCHMARK_ROOT/fsmark || exit
+
+. $LKP_SRC/lib/unit.sh
+
+# NOTE: support 1 disk test only so far
+test_dir=${mount_points%% *}
+
+[ -n "$nr_threads" ] || nr_threads=$nr_cpu
+
+# limit from fsmark
+[ "$nr_threads" -gt 64 ] && nr_threads=64
+
+PARAM=
+for thread in $(seq 1 $nr_threads); do
+	mkdir -p $test_dir/$thread
+	PARAM="$PARAM -d $test_dir/$thread"
+done
+
+filesize=$(to_byte $filesize)
+
+case "$sync_method" in
+	NoSync)			sync_method=0 ;;
+	fsyncBeforeClose)	sync_method=1 ;;
+	syncFsync)		sync_method=2 ;;
+	PostReverseFsync)	sync_method=3 ;;
+	syncPostReverseFsync)	sync_method=4 ;;
+	PostFsync)		sync_method=5 ;;
+	syncPostFsync)		sync_method=6 ;;
+	'')			sync_method=1 ;;
+esac
+
+# calculate how many files we need create at one loop
+calc_nr_file()
+{
+	[ -n "$test_size" ] || {
+		# set test_size to 80G by default to avoid running too long
+		test_size="80G"
+
+		# limit test size again for small writes; as they are much slower
+		[ "$filesize" -lt "$(to_byte 1M)" ] && test_size="20G"
+	}
+	test_size=$(to_byte $test_size)
+
+	local disk_size="$(df -B M | grep $test_dir  | awk '{print $2}')"
+	disk_size=$(to_byte $disk_size)
+	[ "$test_size" -gt "$disk_size" ] && test_size=$disk_size
+
+	# set the minimal size to 4K, the default blocksize. filesize
+	# smaller than 4K is used to test fs iniline data or small file
+	# writes performance.
+	#
+	# If the fs doesn't support inline data, the small write still
+	# need one block to store the data. So, to avoid running out of
+	# space for many small files, set the minimal size to 4K.
+	local size=$filesize
+	[ "$size" -lt 4096  ] && size=4096
+
+	nr_files=$((test_size / size / nr_threads / iterations))
+	[ "$nr_files" -lt 1 ] && {
+		echo "Warning: nr_files too small; "
+		echo "    test_size: $(to_gb $test_size), filesize: $filesize"
+		echo "    nr_threads: $nr_threads, iterations: $iterations"
+		nr_files=1
+	}
+
+	# limit nr_files to 1000000; it's a limit from fsmark itself
+	[ "$nr_files" -gt 1000000 ] && nr_files=1000000
+}
+
+calc_nr_file
+
+nr_directories=${nr_directories%d}
+nr_files_per_directory=${nr_files_per_directory%fpd}
+if [ -z "$nr_directories" -a -n "$nr_files_per_directory" ]; then
+	nr_directories=$((nr_files / nr_files_per_directory))
+fi
+
+if [ "$nr_directories" -a "$nr_files_per_directory" ]; then
+	PARAM="${PARAM} -D $nr_directories -N $nr_files_per_directory"
+fi
+
+cmd ./fs_mark \
+	$PARAM \
+	-n $nr_files	\
+	-L $iterations \
+	-S $sync_method \
+	-s $filesize

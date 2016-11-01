@@ -1,0 +1,28 @@
+#!/bin/sh
+
+## wrapper to run other other tests
+
+program=$1
+program_dir=$(dirname $0)
+
+# Prefer to OOM kill job runner first.
+# This prevents some server/client test cases from blocking on OOM.
+echo 1000 > /proc/$PPID/oom_score_adj
+
+echo $$ >> $TMP/pid-tests
+
+shift
+
+fifo=$TMP/fifo-$program
+[ -p "$fifo" ] || mkfifo $fifo
+[ -L "$LKP_SRC/bin/tee-$program" ] || ln -s -T /usr/bin/tee $LKP_SRC/bin/tee-$program
+tee-$program -a $TMP_RESULT_ROOT/$program < $fifo &
+echo $! >> $TMP/.pid-pipes
+
+# time command may link to busybox which not support -o option
+if [ -L '/usr/bin/time' ]; then
+	time_prefix=
+else
+	time_prefix="/usr/bin/time -v -o $TMP/${program}.time"
+fi
+exec $time_prefix $exec_prefix $program_dir/$program "$@" > $fifo

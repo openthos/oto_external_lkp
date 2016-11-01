@@ -1,0 +1,23 @@
+#!/bin/sh
+# - iterations
+
+cd $BENCHMARK_ROOT/stutter || exit
+
+. $LKP_SRC/lib/unit.sh
+
+export MEMTOTAL_BYTES=$(to_byte $memory)
+export ITERATIONS=$iterations
+export LOGDIR_RESULTS=$RESULT_ROOT/log_result
+
+mkdir -p $LOGDIR_RESULTS
+
+[ -z "$mount_points" ] && exit
+export TESTDISK_DIR="${mount_points%% *}"
+
+echo "# running ./run.sh..."
+./run.sh
+if [ $? -ne 0 ]; then
+	echo "run_fail: 1"
+else
+	echo "# run success"
+fi

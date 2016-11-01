@@ -1,0 +1,92 @@
+#!/usr/bin/env ruby
+
+RESULT_ROOT = ENV['RESULT_ROOT']
+LKP_SRC = ENV["LKP_SRC"] || File.dirname(File.dirname(File.realpath($PROGRAM_NAME)))
+
+require "#{LKP_SRC}/lib/statistics.rb"
+require "#{LKP_SRC}/lib/bounds.rb"
+require "#{LKP_SRC}/lib/yaml.rb"
+require "#{LKP_SRC}/lib/job.rb"
+require 'set'
+
+$monitor = ARGV[0]
+
+$result = {}
+$invalid_records = []
+record_index = 0
+while line = STDIN.gets
+	next if line[0] == '#'
+	k, v = line.split(': ')
+	next if v == nil
+
+	k = $monitor + '.' + k
+	$result[k] ||= []
+	size = $result[k].size
+	if record_index < size
+		record_index = size
+	elsif record_index - size > 0
+		# fill 0 for missing values
+		$result[k].concat ([0] * (record_index - size))
+	end
+
+	if k =~ /[ \t]/
+		$invalid_records.push record_index
+		$stderr.puts "whitespace in stats name: #{k}"
+	end
+	if v.chomp!.strip! =~ /[^0-9a-fx.-]/
+		$invalid_records.push record_index
+		$stderr.puts "invalid stats value: #{v}"
+	end
+
+	v = v.index('.') ? v.to_f : v.to_i
+	if not is_valid_stats_range k, v
+		$invalid_records.push record_index
+		puts "outside valid range: #{v} in #{k} #{RESULT_ROOT}"
+	end
+
+	$result[k].push v
+end
+
+exit if $result.empty?
+
+max_cols = 0
+min_cols = Float::INFINITY
+min_cols_stat = ''
+zero_stats = []
+$result.each { |k, v|
+	max_cols = v.size if max_cols < v.size
+	if min_cols > v.size
+		min_cols = v.size
+		min_cols_stat = k
+	end
+	next if v[0] != 0
+	next if v[-1] != 0
+	next if v.sum != 0
+	zero_stats << k
+}
+zero_stats.each { |k| $result.delete k }
+
+if $monitor != 'ftrace'
+	# delete invalid number in reverse order
+	$invalid_records.reverse.each { |index|
+		$result.each { |k, v|
+			v.delete_at index
+		}
+	}
+end
+
+UNSTRUCTURED_MONITORS = %w(ftrace).to_set
+
+if min_cols < max_cols and not UNSTRUCTURED_MONITORS.include?($monitor)
+	if min_cols == max_cols - 1
+		$result.each { |k, v| v.pop if v.size == max_cols }
+		puts "Last record seems incomplete. Truncated #{RESULT_ROOT}/#{$monitor}.json"
+	else
+		$stderr.puts "Not a matrix: #{min_cols_stat}: #{min_cols} != #{max_cols}: #{RESULT_ROOT}/#{$monitor}.json"
+	end
+end
+
+exit if $result.empty?
+exit if $result.values[0].size == 0
+exit if $result.values[-1].size == 0
+save_json($result, "#{RESULT_ROOT}/#{$monitor}.json", compress=($result.size * min_cols > 1000))

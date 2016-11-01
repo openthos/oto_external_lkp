@@ -1,0 +1,49 @@
+#!/bin/sh
+# - testtime
+# - test
+
+## Suite IX is the "AIM Independent Resource Benchmark:"
+## the famous synthetic benchmark.
+
+[ -n "$test"		] || exit
+[ -n "$testtime"	] || exit
+
+testtime=${testtime%s}
+
+aim9_setup()
+{
+	# setup workfile
+	if [ -f "s9workfile.$test" ]; then
+		cp s9workfile.$test s9workfile
+	else
+		cat > s9workfile <<EOF
+# @(#) s9workfile:1.2 1/22/96 00:00:00
+# AIM Independent Resource Benchmark - Suite IX Workfile
+FILESIZE: 5M
+$test
+EOF
+	fi
+}
+
+run_aim()
+{
+	export PATH=`pwd`:$PATH
+
+	aim9_setup
+
+	(
+		echo $HOSTNAME
+		echo $test
+		echo $testtime
+		echo /tmp
+	) | ./singleuser -nl &
+
+	wait
+}
+
+cd $BENCHMARK_ROOT/aim9 || {
+	echo "ERROR: aim9 benchmark is not installed yet!" >&2
+	exit 1
+}
+
+run_aim

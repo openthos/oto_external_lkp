@@ -1,0 +1,149 @@
+#!/bin/sh
+# - fs
+# - mkfs
+# - mount
+
+# This script supports 2 NFS mount schemes:
+# fs1: followup scripts will see NFS mount_points only
+# fs2: followup scripts will see NFS mount_points as well as original mount_points
+
+[ -n "$fs" ] || exit 0
+
+def_mount=
+def_mkfs=
+fs_options() {
+	case $fs in
+	xfs)
+		def_mount="-o nobarrier,inode64"
+		[ "${raid_level#*raid}" != "$raid_level" ] && [ "$nr_partitions" -gt 1 ] && {
+			def_mount="${def_mount},logbsize=262144"
+			def_mkfs="-f -d agcount=$nr_partitions"
+		}
+		;;
+	ext*)
+		ensure_mkfs='-q -F'
+		;;
+	btrfs)
+		;;
+	f2fs)
+		modprobe f2fs 2>/dev/null
+		;;
+	nfsv3)
+		def_mount="-o vers=3"
+		fs="nfs"
+		;;
+	nfsv4)
+		def_mount="-o vers=4"
+		fs="nfs"
+		;;
+	esac
+}
+
+is_btrfs_raid_levels() {
+	[ "$fs" = 'btrfs' ] && [ "$raid_level" = 'braid0' -o \
+				 "$raid_level" = 'braid1' -o \
+				 "$raid_level" = 'braid10' ]
+}
+
+start_nfsd()
+{
+	local mp
+
+	# exportfs: /fs does not support NFS export
+	#
+	# the solution is to either run this earlier
+	#   mountpoint -q /fs || mount -t tmpfs fs /fs
+	# or mount --bind to a tmpfs nfsv4 export root.
+	#
+	mountpoint -q /export || {
+		mkdir /export
+		mount -t tmpfs 'nfsv4_root_export' /export
+	}
+	echo "/export *(fsid=0,rw,no_subtree_check,no_root_squash)" > /etc/exports
+
+	for mp
+	do
+		mkdir -p /export/$mp
+		mount --bind $mp /export/$mp
+		echo "/export/$mp *(rw,no_subtree_check,no_root_squash)"
+	done >> /etc/exports
+
+	cmd /etc/init.d/rpcbind start
+	cmd /etc/init.d/nfs-common start
+	cmd /etc/init.d/nfs-kernel-server start
+}
+
+mount_local_nfs()
+{
+	local dir
+	for dir
+	do
+		local mnt=/nfs/$(basename $dir)
+		local dev=localhost:$dir
+		mkdir -p $mnt
+		cmd mount -t $fs ${mount:-$def_mount} $dev $mnt || {
+			sleep 600 # wait for local debug login
+			exit
+		}
+		nfs_mount_points="${nfs_mount_points}$mnt "
+	done
+}
+
+make_fs() {
+	is_btrfs_raid_levels && {
+		cmd mkfs.btrfs --data ${raid_level#b} $mkfs $ensure_mkfs $partitions || exit
+		return
+	}
+
+	local pids=
+	for dev in $bdevs
+	do
+		cmd mkfs -t $fs ${mkfs:-$def_mkfs} $ensure_mkfs $dev &
+		pids="${pids} $! "
+	done
+
+	local pid
+	for pid in $pids; do
+		wait $pid || exit
+	done
+}
+
+mount_fs() {
+	for dev in $bdevs
+	do
+		local mnt=/fs/$(basename $dev)
+		mkdir -p $mnt
+		cmd mount -t $fs ${mount:-$def_mount} $dev $mnt || exit
+		mount_points="${mount_points}$mnt "
+	done
+}
+
+if is_btrfs_raid_levels; then
+	bdevs="${partitions%% *}"
+else
+	bdevs="$partitions"
+fi
+
+fs_options
+
+case $fs in
+	nfs)
+		start_nfsd $mount_points
+		mount_local_nfs $mount_points
+		[ "${0#*fs1}" != "$0" ] && mount_points=
+		;;
+
+	*)
+		. $LKP_SRC/lib/wipefs.sh
+		destroy_devices
+		make_fs
+		mount_fs
+		;;
+esac
+
+cat >> $TMP/env.yaml <<EOF
+
+# setup/fs
+fs: $fs
+mount_points: $nfs_mount_points $mount_points
+EOF

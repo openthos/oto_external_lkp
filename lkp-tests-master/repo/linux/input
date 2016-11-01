@@ -1,0 +1,16 @@
+url: https://git.kernel.org/pub/scm/linux/kernel/git/dtor/input.git
+integration_testing_branches:
+- next
+- for-linus
+mail_to: linux-input@vger.kernel.org
+owner: Dmitry Torokhov <dmitry.torokhov@gmail.com>
+subsystems:
+- input
+- mouse
+- serio
+- tablet
+- keyboard
+- touchscreen
+- gameport
+- joystick
+- iforce

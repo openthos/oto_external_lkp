@@ -1,0 +1,8 @@
+testcase: perf-bench-sched-pipe
+category: benchmark
+
+perf-bench-sched-pipe:
+  loops: 10000000ops
+  mode:
+    - process
+    - threads

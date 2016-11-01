@@ -1,0 +1,58 @@
+#!/bin/bash
+
+LKP_SRC=${LKP_SRC:-/lkp/$USER/src}
+ARCH=${arch:-x86_64}
+LKP_USER=${LKP_USER:-$USER}
+[ -n "$OWNER" ] && OWNER_OPT="--owner $OWNER"
+
+download()
+{
+	:
+}
+
+build()
+{
+	local program=$LKP_SRC/monitors/event/wakeup
+	local option=
+	[[ $ARCH = i386 ]] && option='-m32'
+	gcc $option -o $program $program.c
+}
+
+install()
+{
+	umask 002
+	mkdir -p /tmp/lkp_initrd-$USER/rootfs/lkp/$LKP_USER/src
+	mkdir -p /tmp/lkp_initrd-$USER/lkp/$LKP_USER
+	ln -sfT $LKP_SRC /tmp/lkp_initrd-$USER/lkp/$LKP_USER/src
+}
+
+pack()
+{
+	local tmp_dir=/tmp/lkp_initrd-$USER
+	local tmp_src=$tmp_dir/lkp/$LKP_USER/src
+	local archive=$tmp_dir/lkp/$LKP_USER/lkp-${ARCH}
+	local cpio_cmd="cpio -o $OWNER_OPT -H newc -F ${archive}.cpio"
+
+	(
+		cd $tmp_dir/rootfs				&& find lkp			| $cpio_cmd
+		cd $tmp_dir					&& find lkp/$LKP_USER/src/*	| $cpio_cmd --append
+		{
+			cd $tmp_dir/lkp/$LKP_USER/src/rootfs/addon
+			chmod -R 600 etc/ssh/* # to avoid sshd Permissions too open error
+			chmod g-ws root
+			chmod -R go-rwxs root/.ssh
+		}						&& find *			| $cpio_cmd --append
+		{
+			# restore permission for cleanup
+			cd $tmp_dir/lkp/$LKP_USER/src/rootfs/addon
+			find . -type d -exec chmod g+rwx \{\} \;
+			chmod -R g+rw *
+		}
+
+		[ -d /osimage/addon-${ARCH} ] &&
+		cd /osimage/addon-${ARCH}			&& find *			| $cpio_cmd --append
+	)
+
+	gzip -n -9 ${archive}.cpio
+	mv -f ${archive}.cpio.gz ${archive}.cgz
+}

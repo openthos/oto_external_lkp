@@ -1,0 +1,13 @@
+testcase: pm-qa
+category: functional
+
+pm-qa:
+  test:
+  - all
+  # - cpufreq
+  # - cpuhotplug
+  # - cpuidle
+  # - cputopology
+  # - thermal
+  # - suspend
+  # - powertop

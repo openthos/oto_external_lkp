@@ -1,0 +1,11 @@
+testcase: pixz
+category: benchmark
+
+perf-profile:
+    freq: 800
+
+nr_threads:
+- 100%
+- 25%
+
+pixz:

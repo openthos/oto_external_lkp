@@ -1,0 +1,24 @@
+#!/bin/bash
+
+download()
+{
+	[[ -d linux ]] || {
+		[[ -d /c/linux ]] && local opt_ref="--reference /c/linux"
+		git clone $opt_ref https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+	}
+	source_dir="linux"
+}
+
+build()
+{
+	cd $source_dir
+	make allyesconfig
+	make prepare
+	cd tools/testing/selftests
+	make
+}
+
+install()
+{
+	cp -af * $BM_ROOT
+}

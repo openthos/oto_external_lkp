@@ -1,0 +1,186 @@
+#!/bin/sh
+
+if ! [ $(id -u) = 0 ]; then
+	echo "This script must be run as root" 1>&2
+	exit 1
+fi
+
+script_name=$(basename $0)
+
+[ -n "$HOSTNAME" ] || HOSTNAME=$(hostname)		#?chomp
+[ -n "$LKP_SRC" ] || export LKP_SRC=$(dirname $(dirname $(readlink -e -v $0)))
+TMP="$LKP_SRC/tmp"
+
+usage() {
+	echo "Usage: lkp $script_name [options] <script>/<jobfile>"
+	echo "options: "
+	echo "--hdd partition: HDD partition for IO tests"
+	echo "--ssd partition: SSD partition for IO tests"
+	echo "--dry-run: preview changes will made testbox by install"
+}
+
+hdd_index=1
+ssd_index=1
+
+while [ $# -gt 0 ]
+do
+	case "$1" in
+		--hdd)
+		hdd_partitions[$hdd_index]=$2
+		hdd_index=$((hdd_index+1))
+		shift
+		;;
+		--ssd)
+		ssd_partitions[$ssd_index]=$2
+		ssd_index=$((ssd_index+1))
+		shift
+		;;
+		--dry-run)
+		DRY_RUN=0
+		;;
+		*)
+		break
+		;;
+	esac
+	shift
+done
+
+parse_yaml() {
+	local s='[[:space:]]*'
+	local w='[a-zA-Z0-9_-]*'
+	local tmp_filter="$(mktemp)"
+	ls -LR $LKP_SRC/setup $LKP_SRC/monitors $LKP_SRC/tests $LKP_SRC/daemon > $tmp_filter
+	scripts=$(cat $1 | sed -ne "s|^\($s\):|\1|" \
+	         -e "s|^\($s\)\($w\)$s:$s[\"']\(.*\)[\"']$s\$|\2|p" \
+	         -e "s|^\($s\)\($w\)$s:$s\(.*\)$s\$|\2|p" | grep -x -F -f $tmp_filter | grep -v -e ':$' -e '^$')
+}
+
+make_wakeup() {
+	echo "make -C $LKP_SRC/monitors/event"
+	[ -n "$DRY_RUN" ] && return
+
+	[ -x "$LKP_SRC/monitors/event/wakeup" ] || {
+		make -C "$LKP_SRC/monitors/event" wakeup
+	}
+}
+
+# todo: make paths configurable and less intrusive to developer's system
+# currently it's hard coded in a number of places, should be changed together
+create_lkp_dirs() {
+	[ -n "$DRY_RUN" ] && return
+
+	mkdir -p $TMP
+	mkdir -p '/lkp/paths'
+	mkdir -p '/lkp/benchmarks'
+}
+
+create_host_config() {
+	[ -n "$DRY_RUN" ] && return
+
+	local host_config="$LKP_SRC/hosts/${HOSTNAME}"
+	[ -e $host_config ] || {
+		echo "Creating testbox configuration file: $host_config."
+
+		local mem_kb="$(grep MemTotal /proc/meminfo | awk '{print $2}')"
+		local mem_gb="$(((mem_kb)/1024/1024))"
+
+		cat <<EOT >> $host_config
+memory: ${mem_gb}G
+hdd_partitions: ${hdd_partitions[*]}
+ssd_partitions: ${ssd_partitions[*]}
+EOT
+	}
+}
+
+install_packages() {
+	local script=$1
+	local distro=$2
+
+	local packages="$(get_dependency_packages ${distro} ${script})"
+	local dev_packages="$(get_dependency_packages ${distro} ${script}-dev)"
+	packages="$(echo $packages $dev_packages | tr '\n' ' ')"
+	[ -n "$packages" -a "$packages" != " " ] || return
+
+	echo "Use: $LKP_SRC/distro/installer/$distro install $packages"
+	[ -n "$DRY_RUN" ] && return
+
+	$LKP_SRC/distro/installer/$distro $packages || {
+		echo "Cannot install some packages in $LKP_SRC/distro/depends/${script}"
+		exit 1
+	}
+}
+
+build_install_benchmarks() {
+	local script=$1
+	local distro=$2
+
+	[ -x "$LKP_SRC/pack/$script" ] || return
+
+	echo "Making $script benchmark for $distro"
+	[ -n "$DRY_RUN" ] && return
+
+	local pkg_name
+	pkg_name=$(printf '%s-LKP\n' "$script" | sed 's/_/-/g')
+
+	$LKP_SRC/sbin/pack -d $distro -c $script
+	if [ $? -eq 0 ]; then
+		echo "Installing $pkg_name"
+
+		case $distro in
+		debian|ubuntu)
+			dpkg -i /tmp/$pkg_name.deb ;;
+		fedora)
+			rpm -ivh --replacepkgs /tmp/$pkg_name/RPMS/$pkg_name.$(uname -m).rpm ;;
+		*)
+			echo "Just make /lkp/benchmarks/$script-$(uname -m).cgz" ;;
+		esac
+	else
+		echo "Making $pkg_name failed"
+	fi
+}
+
+[ $# -eq 0 ] && {
+	usage
+	exit
+}
+
+. $LKP_SRC/lib/install.sh
+
+detect_system
+distro=$_system_name_lowercase
+
+[ -x $LKP_SRC/distro/installer/$distro ] || {
+	echo "Not a supported system, cannot install packages."
+	exit 1
+}
+
+make_wakeup
+create_lkp_dirs
+create_host_config
+install_packages "lkp" $distro
+
+for filename in "$@"
+do
+	scripts=
+	if [ -x "$filename" ]; then
+		scripts=$(basename $filename)
+	elif [ ${filename##*.} = "yaml" ]; then
+		if [ -f $filename ]; then
+			parse_yaml $filename
+		else
+			echo "$0: cannot find file $filename" >&2
+		fi
+	else
+		echo "$0: skip unknown parameter $filename" >&2
+	fi
+
+	for script in $scripts
+	do
+		[ -z "$makepkg_once" ] && [ -d "$LKP_SRC/pkg/$script" ] && ! [ -x "$LKP_SRC/pack/$script" ] && {
+			install_packages "makepkg" $distro
+			makepkg_once=1
+		}
+		install_packages "$script" $distro
+		build_install_benchmarks "$script" $distro
+	done
+done

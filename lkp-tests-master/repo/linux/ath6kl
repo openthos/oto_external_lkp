@@ -1,0 +1,16 @@
+url: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git
+owner:
+- Kalle Valo <kvalo@qca.qualcomm.com>
+- Kalle Valo <kvalo@codeaurora.org>
+git_am_branch: ath-next
+mail_cc:
+- ath10k@lists.infradead.org
+subsystems:
+- ath10k
+- wil6210
+- ath6kl
+- ar5523
+- ath5k
+- ath9k
+- carl9170
+- wcn36xx

@@ -1,0 +1,23 @@
+#!/bin/sh
+# - runtime
+# - msg_size
+
+## sockperf is a tool for network performance measurement
+
+cd $BENCHMARK_ROOT/sockperf || exit
+
+[ -n "$runtime" ] || runtime=600
+time=$((runtime / 6))
+msg_size=${msg_size%%[bB]}
+
+[ -n "$direct_server_ips" ] && server=$direct_server_ips
+[ -z "$server" ] && server=127.0.0.1
+server=${server%% *}
+
+for subcmd in under-load ping-pong throughput
+do
+	echo "sockperf: subcommand $subcmd UDP"
+	cmd ./sockperf $subcmd -i $server --time $time --msg-size $msg_size
+	echo "sockperf: subcommand $subcmd TCP"
+	cmd ./sockperf $subcmd -i $server --time $time --msg-size $msg_size --tcp
+done

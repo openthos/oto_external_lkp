@@ -1,0 +1,10 @@
+testcase: suspend
+category: functional
+
+runtime: 300s
+iterations: 10x
+
+suspend:
+  mode:
+  - mem
+  - freeze

@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+LKP_SRC = ENV["LKP_SRC"] || File.dirname(File.dirname File.realpath $PROGRAM_NAME)
+
+require "#{LKP_SRC}/lib/job.rb"
+
+job = Job.new
+job.load(ARGV[0]) or exit
+
+puts job['testcase'] + '/' + job.path_params

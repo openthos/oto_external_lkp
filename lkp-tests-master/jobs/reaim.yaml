@@ -1,0 +1,21 @@
+testcase: reaim
+category: benchmark
+
+timeout: 2h
+
+reaim:
+  test:
+  - aim9
+  - alltests
+  - all_utime
+  - compute
+  - custom
+  - dbase
+  - five_sec
+  - fserver
+  - high_systime
+  - long
+  - new_dbase
+  - new_fserver
+  - shared
+  - short

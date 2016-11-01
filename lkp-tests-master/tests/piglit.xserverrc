@@ -1,0 +1,5 @@
+#!/bin/sh
+
+## See 'tests/piglit'.
+
+X 2>&1

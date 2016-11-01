@@ -1,0 +1,9 @@
+testcase: make-package
+category: benchmark
+
+rootfs: debian-x86_64.cgz
+
+make-package:
+  pkgname:
+  - gcc
+  - ebizzy
