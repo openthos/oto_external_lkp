@@ -1,6 +1,9 @@
 # oto_lkp
 
 ## 概述
+目标： 在openthos的chroot环境下面运行lkp，获取测试结果的json数据和csv数据
+
+代码目录说明：
 lkp-tests-master目录存放的是lkp的源代码，其可以在androidx86的chroot ubuntu环境上面运行。
 
 lkpebizzy是用来通过adb远程在androidx86上面运行的ebizzy测试用例。 
