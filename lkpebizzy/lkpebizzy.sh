@@ -22,4 +22,4 @@ adb -s $androidIP:$port   shell busybox chmod +x /data/lkp_test/chroot_run.sh
 
 adb -s $androidIP:$port   shell /data/lkp_test/chroot_run.sh $filename
 
-adb -s $androidIP:$port pull  /result/  $foldName/
+adb -s $androidIP:$port pull  /data/ubuntu/result/  $foldName/

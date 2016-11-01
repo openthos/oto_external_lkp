@@ -25,7 +25,7 @@ cp /data/lkp_test/mount-static  /system/bin
 chmod 777 /system/bin/mount-static
 mount-static --bind /dev $CHMOUNT/dev
 mount -t devpts devpts $CHMOUNT/dev/pts
-chroot $CHMOUNT  su - root -c /root/ubuntu_lkp_test.sh  $testcase
+chroot $CHMOUNT  su - root -c "/root/ubuntu_lkp_test.sh  $testcase"
 
 ##下面的代码是不会执行的除非chroot失败
 echo "chroot error faild"
