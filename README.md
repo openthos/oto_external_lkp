@@ -34,3 +34,4 @@ root@elwin-virtual-machine:~/oto_lkp/lkpebizzy# ./fortest.sh
 
 ## TODO
 - 新增新增测试用例的方法
+- 将lkp collect的代码merge进来，达到将json数据转换为csv的目的
