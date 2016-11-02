@@ -1,0 +1,16 @@
+#!/bin/sh
+# - test
+
+cd $BENCHMARK_ROOT/nbench || exit
+
+start_time=$(date +%s)
+
+for i in $(seq 1 $iterations)
+do
+	echo Iteration: $i
+	cmd ./nbench
+done
+
+#cmd ./nbench | tee results/nbench-$((start_time))-results || exit
+#copy-results $BENCHMARK_ROOT/nbench/results/*
+
