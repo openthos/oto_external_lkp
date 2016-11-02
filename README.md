@@ -43,7 +43,7 @@ root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# ./fortest.sh
 
 [lkpebizzy在androidx86上面的测试日志](https://github.com/openthos/oto_lkp/blob/master/lkpebizzy_test_log.txt) 
 
-[lkpebizzy在androidx86上面的测试数据](https://github.com/openthos/oto_lkp/tree/master/testcase/lkpebizzy/ebizzy_result)
+[lkpebizzy在androidx86上面的测试数据](https://github.com/openthos/oto_lkp/tree/master/testcase/lkpebizzy/lkp_tmp_result)
 
 ## TODO
 - 新增新增测试用例的方法
