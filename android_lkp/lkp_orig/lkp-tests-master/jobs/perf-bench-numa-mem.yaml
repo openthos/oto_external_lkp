@@ -1,7 +1,0 @@
-testcase: perf-bench-numa-mem
-category: benchmark
-
-nr_threads: 2t
-
-perf-bench-numa-mem:
-  mem_proc: 300M

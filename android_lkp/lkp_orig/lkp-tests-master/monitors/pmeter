@@ -1,7 +1,0 @@
-#!/bin/sh
-# - pmeter_device
-# - pmeter_server
-
-[ -n "$pmeter_device" ] || exit 0
-
-$LKP_SRC/monitors/pmeter:$pmeter_device

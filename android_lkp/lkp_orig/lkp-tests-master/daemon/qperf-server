@@ -1,6 +1,0 @@
-#!/bin/sh
-
-cd $BENCHMARK_ROOT/qperf || exit
-
-modprobe sctp 2>/dev/null
-cmd ./qperf &

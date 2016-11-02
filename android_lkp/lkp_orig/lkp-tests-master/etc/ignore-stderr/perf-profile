@@ -1,5 +1,0 @@
-Warning:
-Processed .* events and lost .* chunks!
-Check IO/CPU overload!
-
-couldn't get COMM and pgid, malformed /proc/.*/status

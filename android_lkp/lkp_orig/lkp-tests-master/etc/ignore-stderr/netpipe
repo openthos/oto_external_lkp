@@ -1,2 +1,0 @@
-Send and receive buffers are .* and .* bytes
-\(A bug in Linux doubles the requested buffer sizes\)

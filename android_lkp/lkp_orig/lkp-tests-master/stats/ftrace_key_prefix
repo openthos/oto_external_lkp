@@ -1,4 +1,0 @@
----
-balance_dirty_pages: bdi
-bdi_dirty_ratelimit: bdi
-writeback_single_inode: bdi

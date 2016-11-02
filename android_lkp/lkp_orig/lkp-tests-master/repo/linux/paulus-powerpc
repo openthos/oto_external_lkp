@@ -1,7 +1,0 @@
-url: https://git.kernel.org/pub/scm/linux/kernel/git/paulus/powerpc.git
-integration_testing_branches: kvm-ppc-next
-owner: Paul Mackerras <paulus@samba.org>
-subsystems:
-- kvm
-- ppc
-- book3s

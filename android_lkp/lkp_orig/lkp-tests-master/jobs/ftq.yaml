@@ -1,8 +1,0 @@
-testcase: ftq
-category: benchmark
-
-nr_threads: 100%
-iterations: 20x
-
-ftq:
-  samples: 100000ss

@@ -1,7 +1,0 @@
-#!/bin/bash
-
-for i in $LKP_SRC/lib/*.rb; do
-	irb_options+="-r $i "
-done
-
-irb $irb_options

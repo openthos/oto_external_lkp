@@ -1,8 +1,0 @@
-url: https://github.com/paulburton/linux
-owner: Paul Burton <paul.burton@imgtec.com>
-subsystems:
-- mips
-- jz4740
-- devicetree
-- ingenic
-- clk

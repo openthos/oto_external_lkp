@@ -1,8 +1,0 @@
-curl
-bsdtar
-bzip2
-fakeroot
-gnupg
-gettext
-openssl
-ncurses-bin

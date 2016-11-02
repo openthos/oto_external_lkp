@@ -1,3 +1,0 @@
-ls: cannot access /nfs/.*
-mv: cannot create regular file .*: File exists
-cp: cannot create regular file .*: File exists

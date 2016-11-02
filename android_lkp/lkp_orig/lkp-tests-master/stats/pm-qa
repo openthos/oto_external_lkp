@@ -1,7 +1,0 @@
-#!/usr/bin/awk -f
-
-BEGIN { FS=": " }
-
-/fail$/ {
-	printf("%s.fail: 1\n", $1)
-}

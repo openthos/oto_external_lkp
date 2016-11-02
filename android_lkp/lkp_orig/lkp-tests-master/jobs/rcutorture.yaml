@@ -1,6 +1,0 @@
-testcase: rcutorture
-category: functional
-
-runtime: 300s
-
-rcutorture:

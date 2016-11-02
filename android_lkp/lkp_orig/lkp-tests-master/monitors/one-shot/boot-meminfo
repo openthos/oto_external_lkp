@@ -1,5 +1,0 @@
-#!/bin/sh
-
-test -f /proc/meminfo || exit 0
-
-cat /proc/meminfo

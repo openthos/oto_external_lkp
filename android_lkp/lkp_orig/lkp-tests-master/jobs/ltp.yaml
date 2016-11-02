@@ -1,6 +1,0 @@
-testcase: ltp
-category: functional
-
-ltp:
-  test:
-  - syscalls

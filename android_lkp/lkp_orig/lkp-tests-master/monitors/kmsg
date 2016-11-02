@@ -1,7 +1,0 @@
-#!/bin/sh
-
-killall rsyslogd klogd 2>/dev/null
-
-dmesg
-
-exec cat /proc/kmsg

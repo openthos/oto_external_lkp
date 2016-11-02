@@ -1,5 +1,0 @@
-url: https://github.com/robertdolca/linux
-owner: Robert Dolca <robert.dolca@gmail.com>
-subsystems:
-- nfc
-- nci

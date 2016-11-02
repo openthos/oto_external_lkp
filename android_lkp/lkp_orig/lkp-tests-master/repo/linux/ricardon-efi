@@ -1,5 +1,0 @@
-url: https://github.com/ricardon/efi
-owner: Ricardo Neri <ricardo.neri-calderon@linux.intel.com>
-subsystems:
-- efi
-- x86

@@ -1,6 +1,0 @@
-url: http://git.linux-mips.org/cgit/sjhill/linux-sjhill.git
-owner: Ralf Baechle <ralf@linux-mips.org>
-subsystems:
-- mips
-- elf2ecoff
-- irq

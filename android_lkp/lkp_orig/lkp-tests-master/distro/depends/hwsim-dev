@@ -1,8 +1,0 @@
-libdbus-1-dev
-libssl-dev
-binutils-dev
-libnl-3-dev
-libiberty-dev
-libnl-genl-3-dev
-libsqlite3-dev
-libpcap0.8-dev

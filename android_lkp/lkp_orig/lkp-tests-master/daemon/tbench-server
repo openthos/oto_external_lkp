@@ -1,6 +1,0 @@
-#!/bin/sh
-
-note "tbench_srv &"
-tbench_srv &
-
-sleep 1

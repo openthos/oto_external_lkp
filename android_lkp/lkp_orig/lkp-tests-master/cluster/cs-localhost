@@ -1,2 +1,0 @@
-localhost:
-  roles: [ server, client ]

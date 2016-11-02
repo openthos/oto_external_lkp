@@ -1,6 +1,0 @@
-testcase: locktorture
-category: functional
-
-runtime: 300s
-
-locktorture:

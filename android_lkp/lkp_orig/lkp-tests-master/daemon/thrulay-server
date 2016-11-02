@@ -1,6 +1,0 @@
-#!/bin/sh
-
-export PATH=$BENCHMARK_ROOT/thrulay/sbin:$BENCHMARK_ROOT/thrulay/bin:$PATH
-
-cmd thrulayd
-sleep 1
