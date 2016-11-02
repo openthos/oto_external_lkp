@@ -25,6 +25,7 @@ cp /data/lkp_test/mount-static  /system/bin
 chmod 777 /system/bin/mount-static
 mount-static --bind /dev $CHMOUNT/dev
 mount -t devpts devpts $CHMOUNT/dev/pts
+mount -t tmpfs tmpfs $CHMOUNT/dev/shm
 chroot $CHMOUNT  su - root -c "/root/ubuntu_lkp_test.sh  $testcase"
 
 ##下面的代码会在chroot 结束以后执行
