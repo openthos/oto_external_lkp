@@ -1,6 +1,7 @@
 {
   "stats_source": [
     "/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/stats.json",
-    "/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/stats.json"
+    "/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/stats.json",
+    "/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/stats.json"
   ]
 }

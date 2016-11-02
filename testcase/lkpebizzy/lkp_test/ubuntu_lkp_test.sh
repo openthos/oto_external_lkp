@@ -1,6 +1,8 @@
 #!/bin/bash -x
 testjob="$1"
 echo  "i am in ubuntu"
+apt-get update
+apt-get install -y ruby-git
 pwd
 rm -rf ./oto_lkp
 git clone https://github.com/openthos/oto_lkp.git
