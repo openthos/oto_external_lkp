@@ -22,18 +22,18 @@ su - root
 cd ~
 git clone https://github.com/openthos/oto_lkp
 
-cd ~/oto_lkp/lkpebizzy
+cd ~/oto_lkp/testcase/lkpebizzy
 修改 fortst.sh
 中ip_of_android="192.168.2.8"【PC2 androidx86 ip地址】
 
-root@elwin-virtual-machine:~/oto_lkp/lkpebizzy# ./fortest.sh 
-执行完毕以后结果存放在PC1的~/oto_lkp/lkpebizzy/ebizzy_result目录下面。请检查是否出现json文件。并且json文件是否有内容。
+root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# ./fortest.sh 
+执行完毕以后结果存放在PC1的~/oto_lkp/testcase/lkpebizzy/ebizzy_result目录下面。请检查是否出现json文件。并且json文件是否有内容。
 如果有内容则测试用例成功执行了。
 ```
 
 [lkpebizzy在androidx86上面的测试日志](https://github.com/openthos/oto_lkp/blob/master/lkpebizzy_test_log.txt) 
 
-[lkpebizzy在androidx86上面的测试数据](https://github.com/openthos/oto_lkp/tree/master/lkpebizzy/ebizzy_result)
+[lkpebizzy在androidx86上面的测试数据](https://github.com/openthos/oto_lkp/tree/master/testcase/lkpebizzy/ebizzy_result)
 
 ## TODO
 - 新增新增测试用例的方法
