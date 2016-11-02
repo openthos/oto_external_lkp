@@ -1,7 +1,7 @@
 ##ebizyy 简单测试日志：从这里可以了解测试过程。
 root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# ./fortest.sh 
 + ip_of_android=192.168.2.30
-+ tmp_result_dir=ebizzy_result
++ tmp_result_dir=lkp_tmp_result
 ++ dirname ./fortest.sh
 + cd .
 + apt-get install -y android-tools-adb
@@ -14,19 +14,20 @@ The following packages were automatically installed and are no longer required:
 Use 'apt autoremove' to remove them.
 0 upgraded, 0 newly installed, 0 to remove and 447 not upgraded.
 + adb connect 192.168.2.30
-connected to 192.168.2.30:5555
-+ ./lkpebizzy.sh 192.168.2.30 5555 ebizzy_result
+already connected to 192.168.2.30:5555
++ ./lkpebizzy.sh 192.168.2.30 5555 lkp_tmp_result
 + androidIP=192.168.2.30
 + port=5555
-+ foldName=ebizzy_result
++ foldName=lkp_tmp_result
 ++ dirname ./lkpebizzy.sh
 + cd .
-+ mkdir ebizzy_result
++ mkdir lkp_tmp_result
+mkdir: cannot create directory ‘lkp_tmp_result’: File exists
 ++ basename ./lkpebizzy.sh
 + filename=lkpebizzy.sh
 + filename=ebizzy.sh
-+ '[' -d ebizzy_result ']'
-+ rm -rf 'ebizzy_result/*'
++ '[' -d lkp_tmp_result ']'
++ rm -rf lkp_tmp_result/result
 + adb -s 192.168.2.30:5555 shell rm -rf /data/lkp_test
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
@@ -38,7 +39,7 @@ push: ./lkp_test/ubuntu_lkp_test.sh -> /data/lkp_test/ubuntu_lkp_test.sh
 push: ./lkp_test/mount-static -> /data/lkp_test/mount-static
 push: ./lkp_test/chroot_run.sh -> /data/lkp_test/chroot_run.sh
 3 files pushed. 0 files skipped.
-2127 KB/s (2974706 bytes in 1.365s)
+2760 KB/s (2974744 bytes in 1.052s)
 + adb -s 192.168.2.30:5555 shell busybox chmod +x /data/lkp_test/chroot_run.sh
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
@@ -46,11 +47,15 @@ WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-failed: Invalid argument
+failed: Device or resource busy
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+mount: Device or resource busy
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+mount: Device or resource busy
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+mount: Device or resource busy
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
@@ -60,66 +65,63 @@ WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
 + echo 'i am in ubuntu'
 i am in ubuntu
 + apt-get update
-Hit http://cn.archive.ubuntu.com wily InRelease
-Ign http://dl.google.com stable InRelease                       
-Hit http://cn.archive.ubuntu.com wily-updates InRelease                        
-Hit http://cn.archive.ubuntu.com wily-backports InRelease                      
-Get:1 http://dl.google.com stable Release.gpg [916 B]                          
-Get:2 http://archive.ubuntukylin.com:10006 trusty InRelease [16.0 kB]  
-Hit http://cn.archive.ubuntu.com wily-security InRelease                       
-Get:3 http://dl.google.com stable Release [1,189 B]                            
-Hit http://cn.archive.ubuntu.com wily/main Sources                             
-Hit http://cn.archive.ubuntu.com wily/restricted Sources         
-Hit http://cn.archive.ubuntu.com wily/universe Sources           
-Hit http://cn.archive.ubuntu.com wily/multiverse Sources         
-Hit http://cn.archive.ubuntu.com wily/main amd64 Packages        
-Hit http://cn.archive.ubuntu.com wily/restricted amd64 Packages         
-Hit http://archive.ubuntukylin.com:10006 trusty/main amd64 Packages            
-Hit http://cn.archive.ubuntu.com wily/universe amd64 Packages                  
+Hit http://archive.ubuntukylin.com:10006 trusty InRelease
+Ign http://dl.google.com stable InRelease                                      
+Hit http://archive.ubuntukylin.com:10006 trusty/main amd64 Packages
 Hit http://archive.ubuntukylin.com:10006 trusty/main i386 Packages             
-Get:4 http://dl.google.com stable/main amd64 Packages [1,441 B]                
-Hit http://cn.archive.ubuntu.com wily/multiverse amd64 Packages                
+Hit http://archive.ubuntukylin.com:10006 trusty/main Translation-en            
+Hit http://dl.google.com stable Release.gpg                                    
+Hit http://cn.archive.ubuntu.com wily InRelease                 
+Hit http://cn.archive.ubuntu.com wily-updates InRelease                 
+Hit http://cn.archive.ubuntu.com wily-backports InRelease                
+Hit http://cn.archive.ubuntu.com wily-security InRelease                 
+Hit http://cn.archive.ubuntu.com wily/main Sources                       
+Hit http://cn.archive.ubuntu.com wily/restricted Sources      
+Hit http://cn.archive.ubuntu.com wily/universe Sources        
+Hit http://cn.archive.ubuntu.com wily/multiverse Sources
+Hit http://cn.archive.ubuntu.com wily/main amd64 Packages          
+Hit http://cn.archive.ubuntu.com wily/restricted amd64 Packages    
+Hit http://cn.archive.ubuntu.com wily/universe amd64 Packages      
+Hit http://cn.archive.ubuntu.com wily/multiverse amd64 Packages    
 Hit http://cn.archive.ubuntu.com wily/main i386 Packages      
-Hit http://cn.archive.ubuntu.com wily/restricted i386 Packages
-Hit http://cn.archive.ubuntu.com wily/universe i386 Packages  
-Hit http://archive.ubuntukylin.com:10006 trusty/main Translation-en
-Hit http://cn.archive.ubuntu.com wily/multiverse i386 Packages 
-Hit http://cn.archive.ubuntu.com wily/main Translation-en     
+Hit http://cn.archive.ubuntu.com wily/restricted i386 Packages    
+Hit http://dl.google.com stable Release                           
+Hit http://cn.archive.ubuntu.com wily/universe i386 Packages       
+Hit http://cn.archive.ubuntu.com wily/multiverse i386 Packages
+Hit http://cn.archive.ubuntu.com wily/main Translation-en
 Hit http://cn.archive.ubuntu.com wily/main Translation-zh_CN
+Hit http://dl.google.com stable/main amd64 Packages
 Hit http://cn.archive.ubuntu.com wily/multiverse Translation-en
 Hit http://cn.archive.ubuntu.com wily/multiverse Translation-zh_CN
-Hit http://cn.archive.ubuntu.com wily/restricted Translation-en   
+Hit http://cn.archive.ubuntu.com wily/restricted Translation-en
 Hit http://cn.archive.ubuntu.com wily/restricted Translation-zh_CN
-Hit http://cn.archive.ubuntu.com wily/universe Translation-en     
+Hit http://cn.archive.ubuntu.com wily/universe Translation-en
 Hit http://cn.archive.ubuntu.com wily/universe Translation-zh_CN  
 Hit http://cn.archive.ubuntu.com wily-updates/main Sources        
 Hit http://cn.archive.ubuntu.com wily-updates/restricted Sources  
 Hit http://cn.archive.ubuntu.com wily-updates/universe Sources    
 Hit http://cn.archive.ubuntu.com wily-updates/multiverse Sources  
-Hit http://cn.archive.ubuntu.com wily-updates/main amd64 Packages
+Hit http://cn.archive.ubuntu.com wily-updates/main amd64 Packages 
 Hit http://cn.archive.ubuntu.com wily-updates/restricted amd64 Packages
 Hit http://cn.archive.ubuntu.com wily-updates/universe amd64 Packages
 Hit http://cn.archive.ubuntu.com wily-updates/multiverse amd64 Packages
-Hit http://cn.archive.ubuntu.com wily-updates/main i386 Packages    
+Hit http://cn.archive.ubuntu.com wily-updates/main i386 Packages  
 Hit http://cn.archive.ubuntu.com wily-updates/restricted i386 Packages
 Hit http://cn.archive.ubuntu.com wily-updates/universe i386 Packages
 Hit http://cn.archive.ubuntu.com wily-updates/multiverse i386 Packages
-Ign http://dl.google.com stable/main Translation-en_US
-Ign http://dl.google.com stable/main Translation-en
-Hit http://cn.archive.ubuntu.com wily-updates/main Translation-en
-Ign http://dl.google.com stable/main Translation-zh_CN
+Hit http://cn.archive.ubuntu.com wily-updates/main Translation-en   
 Hit http://cn.archive.ubuntu.com wily-updates/multiverse Translation-en
 Hit http://cn.archive.ubuntu.com wily-updates/restricted Translation-en
 Hit http://cn.archive.ubuntu.com wily-updates/universe Translation-en
-Hit http://cn.archive.ubuntu.com wily-backports/main Sources
-Hit http://cn.archive.ubuntu.com wily-backports/restricted Sources
-Hit http://cn.archive.ubuntu.com wily-backports/universe Sources
-Hit http://cn.archive.ubuntu.com wily-backports/multiverse Sources
+Hit http://cn.archive.ubuntu.com wily-backports/main Sources       
+Hit http://cn.archive.ubuntu.com wily-backports/restricted Sources 
+Hit http://cn.archive.ubuntu.com wily-backports/universe Sources   
+Hit http://cn.archive.ubuntu.com wily-backports/multiverse Sources 
 Hit http://cn.archive.ubuntu.com wily-backports/main amd64 Packages
 Hit http://cn.archive.ubuntu.com wily-backports/restricted amd64 Packages
 Hit http://cn.archive.ubuntu.com wily-backports/universe amd64 Packages
 Hit http://cn.archive.ubuntu.com wily-backports/multiverse amd64 Packages
-Hit http://cn.archive.ubuntu.com wily-backports/main i386 Packages
+Hit http://cn.archive.ubuntu.com wily-backports/main i386 Packages 
 Hit http://cn.archive.ubuntu.com wily-backports/restricted i386 Packages
 Hit http://cn.archive.ubuntu.com wily-backports/universe i386 Packages
 Hit http://cn.archive.ubuntu.com wily-backports/multiverse i386 Packages
@@ -127,24 +129,26 @@ Hit http://cn.archive.ubuntu.com wily-backports/main Translation-en
 Hit http://cn.archive.ubuntu.com wily-backports/multiverse Translation-en
 Hit http://cn.archive.ubuntu.com wily-backports/restricted Translation-en
 Hit http://cn.archive.ubuntu.com wily-backports/universe Translation-en
-Hit http://cn.archive.ubuntu.com wily-security/main Sources
-Hit http://cn.archive.ubuntu.com wily-security/restricted Sources
-Hit http://cn.archive.ubuntu.com wily-security/universe Sources
-Hit http://cn.archive.ubuntu.com wily-security/multiverse Sources
-Hit http://cn.archive.ubuntu.com wily-security/main amd64 Packages
+Hit http://cn.archive.ubuntu.com wily-security/main Sources        
+Hit http://cn.archive.ubuntu.com wily-security/restricted Sources  
+Hit http://cn.archive.ubuntu.com wily-security/universe Sources    
+Ign http://dl.google.com stable/main Translation-en_US             
+Hit http://cn.archive.ubuntu.com wily-security/multiverse Sources  
+Hit http://cn.archive.ubuntu.com wily-security/main amd64 Packages 
 Hit http://cn.archive.ubuntu.com wily-security/restricted amd64 Packages
 Hit http://cn.archive.ubuntu.com wily-security/universe amd64 Packages
+Ign http://dl.google.com stable/main Translation-en                
 Hit http://cn.archive.ubuntu.com wily-security/multiverse amd64 Packages
-Hit http://cn.archive.ubuntu.com wily-security/main i386 Packages
+Hit http://cn.archive.ubuntu.com wily-security/main i386 Packages 
 Hit http://cn.archive.ubuntu.com wily-security/restricted i386 Packages
 Hit http://cn.archive.ubuntu.com wily-security/universe i386 Packages
+Ign http://dl.google.com stable/main Translation-zh_CN              
 Hit http://cn.archive.ubuntu.com wily-security/multiverse i386 Packages
 Hit http://cn.archive.ubuntu.com wily-security/main Translation-en
 Hit http://cn.archive.ubuntu.com wily-security/multiverse Translation-en
 Hit http://cn.archive.ubuntu.com wily-security/restricted Translation-en
 Hit http://cn.archive.ubuntu.com wily-security/universe Translation-en
-Fetched 19.5 kB in 4s (4,321 B/s)            
-Reading package lists... Done
+Reading package lists... Done            
 + apt-get install -y ruby-git
 Reading package lists... Done
 Building dependency tree       
@@ -156,11 +160,11 @@ ruby-git is already the newest version.
 + rm -rf ./oto_lkp
 + git clone https://github.com/openthos/oto_lkp.git
 Cloning into 'oto_lkp'...
-remote: Counting objects: 2570, done.        
-remote: Compressing objects: 100% (1718/1718), done.        
-remote: Total 2570 (delta 500), reused 2502 (delta 452), pack-reused 0        
-Receiving objects: 100% (2570/2570), 5.29 MiB | 979.00 KiB/s, done.
-Resolving deltas: 100% (500/500), done.
+remote: Counting objects: 2660, done.        
+remote: Compressing objects: 100% (1785/1785), done.        
+remote: Total 2660 (delta 539), reused 2561 (delta 466), pack-reused 0        
+Receiving objects: 100% (2660/2660), 5.50 MiB | 1.00 MiB/s, done.
+Resolving deltas: 100% (539/539), done.
 Checking connectivity... done.
 + cd ./oto_lkp/lkp-tests-master
 + export LKP_SRC=/root/oto_lkp/lkp-tests-master
@@ -202,12 +206,12 @@ wget is already the newest version.
 /root/oto_lkp/lkp-tests-master/lkp-exec/install: skip unknown parameter lkp
 /root/oto_lkp/lkp-tests-master/lkp-exec/install: skip unknown parameter install
 Making ebizzy benchmark for ubuntu
---2016-11-02 19:25:15--  https://github.com/openthos/oto_lkp/raw/master/benchmark_mirror/ebizzy-0.3.tar.gz
+--2016-11-03 00:09:26--  https://github.com/openthos/oto_lkp/raw/master/benchmark_mirror/ebizzy-0.3.tar.gz
 Resolving github.com (github.com)... 192.30.253.112, 192.30.253.113
 Connecting to github.com (github.com)|192.30.253.112|:443... connected.
 HTTP request sent, awaiting response... 302 Found
 Location: https://raw.githubusercontent.com/openthos/oto_lkp/master/benchmark_mirror/ebizzy-0.3.tar.gz [following]
---2016-11-02 19:25:16--  https://raw.githubusercontent.com/openthos/oto_lkp/master/benchmark_mirror/ebizzy-0.3.tar.gz
+--2016-11-03 00:09:27--  https://raw.githubusercontent.com/openthos/oto_lkp/master/benchmark_mirror/ebizzy-0.3.tar.gz
 Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.100.133
 Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.100.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
@@ -216,7 +220,7 @@ Saving to: ‘ebizzy-0.3.tar.gz’
 
 ebizzy-0.3.tar.gz   100%[=====================>]  12.15K  --.-KB/s   in 0.007s 
 
-2016-11-02 19:25:17 (1.66 MB/s) - ‘ebizzy-0.3.tar.gz’ saved [12438/12438]
+2016-11-03 00:09:28 (1.77 MB/s) - ‘ebizzy-0.3.tar.gz’ saved [12438/12438]
 
 patching file configure
 Hunk #1 succeeded at 16 with fuzz 1.
@@ -231,8 +235,8 @@ dpkg-deb: building package 'ebizzy-lkp' in 'ebizzy-LKP.deb'.
 Installing ebizzy-LKP
 (Reading database ... 211363 files and directories currently installed.)
 Preparing to unpack /tmp/ebizzy-LKP.deb ...
-Unpacking ebizzy-lkp (2016-11-02) over (2016-11-02) ...
-Setting up ebizzy-lkp (2016-11-02) ...
+Unpacking ebizzy-lkp (2016-11-03) over (2016-11-02) ...
+Setting up ebizzy-lkp (2016-11-03) ...
 ++ lkp split /root/oto_lkp/lkp-tests-master/jobs/ebizzy.yaml
 /root/oto_lkp/lkp-tests-master/jobs/ebizzy.yaml => ./ebizzy-200%-100x-10s.yaml
 /root/oto_lkp/lkp-tests-master/jobs/ebizzy.yaml => ./ebizzy-200%-100x-5s.yaml
@@ -241,186 +245,176 @@ Setting up ebizzy-lkp (2016-11-02) ...
 ++ lkp run /root/oto_lkp/lkp-tests-master/ebizzy-200%-5x-5s.yaml
 /root/oto_lkp/lkp-tests-master/monitors/turbostat: line 10: cd: /lkp/benchmarks/turbostat: No such file or directory
 Iteration: 1
-2016-11-02 19:25:24 ./ebizzy -t 16 -S 5
-66749 records/s 4380 4136 4134 4136 4319 4096 4098 4223 4172 4168 4090 4084 4367 4098 4187 4055
+2016-11-03 00:09:30 ./ebizzy -t 16 -S 5
+66643 records/s 4387 4189 4082 4175 4129 4121 4153 4166 4097 4101 4090 4183 4102 4392 4197 4072
 real  5.00 s
-user  9.30 s
-sys  30.59 s
+user  9.46 s
+sys  30.43 s
 Iteration: 2
-2016-11-02 19:25:29 ./ebizzy -t 16 -S 5
-66913 records/s 4081 4093 4477 4415 4158 4075 4351 4094 4114 4125 4083 4155 4076 4345 4016 4251
+2016-11-03 00:09:35 ./ebizzy -t 16 -S 5
+66870 records/s 4127 4087 4094 4087 4308 4386 4351 4132 3973 4078 4047 4370 4055 4372 4240 4158
 real  5.00 s
-user  9.38 s
-sys  30.52 s
+user  9.64 s
+sys  30.25 s
 Iteration: 3
-2016-11-02 19:25:34 ./ebizzy -t 16 -S 5
-67140 records/s 4196 4116 4096 4283 4215 4153 4327 4103 4263 4290 4140 4192 4240 4088 4255 4176
+2016-11-03 00:09:40 ./ebizzy -t 16 -S 5
+66754 records/s 4163 4178 4273 4190 4067 4319 4234 4134 4063 4159 3973 4148 4208 4209 4187 4242
 real  5.00 s
-user  9.40 s
-sys  30.48 s
+user  9.52 s
+sys  30.37 s
 Iteration: 4
-2016-11-02 19:25:39 ./ebizzy -t 16 -S 5
-66844 records/s 4208 4339 4112 4076 4043 4063 4107 4282 4290 4177 4261 4078 4307 4124 4152 4219
+2016-11-03 00:09:45 ./ebizzy -t 16 -S 5
+66590 records/s 4128 4285 4171 4426 4147 4040 4058 4359 4089 4129 4066 4080 4251 4160 4069 4127
 real  5.00 s
 user  9.54 s
 sys  30.35 s
 Iteration: 5
-2016-11-02 19:25:44 ./ebizzy -t 16 -S 5
-66900 records/s 4843 4051 3921 4350 4075 4001 4073 4288 4306 4133 4237 3919 4604 4053 4014 4025
+2016-11-03 00:09:50 ./ebizzy -t 16 -S 5
+67060 records/s 4193 4143 4403 4155 4255 4204 4259 4198 4409 4186 4074 4151 4106 4085 4089 4144
 real  5.00 s
-user  9.48 s
-sys  30.41 s
+user  9.45 s
+sys  30.42 s
 wait for background monitors: uptime proc-vmstat proc-stat meminfo slabinfo interrupts softirqs diskstats cpuidle sched_debug
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/kmsg /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/kmsg < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/kmsg  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/uptime /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/uptime < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/uptime  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/vmstat /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/vmstat < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/vmstat  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/proc-vmstat /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-vmstat < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-vmstat  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/meminfo /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/meminfo < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/meminfo  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/slabinfo /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/slabinfo < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/slabinfo  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/interrupts /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/interrupts < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/interrupts  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/softirqs /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/softirqs < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/softirqs  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/diskstats /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/diskstats < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/diskstats  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/cpuidle /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/cpuidle < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/cpuidle  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/sched_debug /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/sched_debug < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/sched_debug  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/ebizzy /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/ebizzy < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/ebizzy  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/time /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/ebizzy.time < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/ebizzy.time  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/time /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/time < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/time  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 75: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/dmesg < /dev/null  exit code 1, check 
-mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No such file or directory
-/root/oto_lkp/lkp-tests-master/stats/wrapper: line 73: $tmpfile: ambiguous redirect
-/root/oto_lkp/lkp-tests-master/stats/kmsg /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/kmsg < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/kmsg  exit code 1, check 
 + echo 'lkp test over, leave ubuntu'
 lkp test over, leave ubuntu
 chroot over
-+ adb -s 192.168.2.30:5555 pull /data/ubuntu/result/ ebizzy_result/result
++ adb -s 192.168.2.30:5555 pull /data/ubuntu/result/ lkp_tmp_result/result
 pull: building file list...
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/job.sh -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/job.sh
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/meminfo.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/meminfo.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/stats.json -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/stats.json
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/time -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/time
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/vmstat -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/vmstat
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/cpufreq-stats -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/cpufreq-stats
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/meminfo -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/meminfo
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/interrupts -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/interrupts
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/softirqs -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/softirqs
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/uptime -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/uptime
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/matrix.json.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/matrix.json.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/sched_debug -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/sched_debug
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/interrupts.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/interrupts.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/ebizzy.time -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/ebizzy.time
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/cpuidle -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/cpuidle
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/bdi_dev_mapping -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/bdi_dev_mapping
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/pmeter -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/pmeter
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/sched_debug.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/sched_debug.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/ebizzy -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/ebizzy
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/slabinfo.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/slabinfo.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/job.yaml -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/job.yaml
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/diskstats.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/diskstats.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/slabinfo -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/slabinfo
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/reproduce.sh -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/reproduce.sh
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/env.yaml -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/env.yaml
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-vmstat.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-vmstat.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-vmstat -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-vmstat
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/kmsg -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/kmsg
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/diskstats -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/diskstats
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/softirqs.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/softirqs.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-stat.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-stat.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/job.sh -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/job.sh
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/meminfo.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/meminfo.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/stats.json -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/stats.json
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/time -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/time
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/vmstat -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/vmstat
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/cpufreq-stats -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/cpufreq-stats
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/meminfo -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/meminfo
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/interrupts -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/interrupts
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/softirqs -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/softirqs
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/uptime -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/uptime
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/matrix.json.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/matrix.json.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/sched_debug -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/sched_debug
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/interrupts.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/interrupts.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/ebizzy.time -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/ebizzy.time
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/cpuidle -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/cpuidle
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/bdi_dev_mapping -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/bdi_dev_mapping
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/pmeter -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/pmeter
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/sched_debug.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/sched_debug.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/ebizzy -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/ebizzy
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/slabinfo.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/slabinfo.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/job.yaml -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/job.yaml
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/diskstats.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/diskstats.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/slabinfo -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/slabinfo
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/reproduce.sh -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/reproduce.sh
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/env.yaml -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/env.yaml
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/proc-vmstat.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/proc-vmstat.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/proc-vmstat -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/proc-vmstat
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/kmsg -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/kmsg
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/diskstats -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/diskstats
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/softirqs.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/softirqs.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/proc-stat.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/proc-stat.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/job.sh -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/job.sh
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/meminfo.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/meminfo.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/stats.json -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/stats.json
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/time -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/time
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/vmstat -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/vmstat
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/cpufreq-stats -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/cpufreq-stats
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/meminfo -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/meminfo
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/interrupts -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/interrupts
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/softirqs -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/softirqs
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/uptime -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/uptime
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/matrix.json.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/matrix.json.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/sched_debug -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/sched_debug
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/interrupts.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/interrupts.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/ebizzy.time -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/ebizzy.time
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/cpuidle -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/cpuidle
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/bdi_dev_mapping -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/bdi_dev_mapping
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/pmeter -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/pmeter
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/sched_debug.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/sched_debug.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/ebizzy -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/ebizzy
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/slabinfo.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/slabinfo.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/job.yaml -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/job.yaml
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/diskstats.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/diskstats.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/slabinfo -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/slabinfo
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/reproduce.sh -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/reproduce.sh
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/env.yaml -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/env.yaml
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/proc-vmstat.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/proc-vmstat.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/proc-vmstat -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/proc-vmstat
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/kmsg -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/kmsg
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/diskstats -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/diskstats
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/softirqs.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/softirqs.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/proc-stat.gz -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/proc-stat.gz
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/stddev.json -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/stddev.json
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/matrix.json -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/matrix.json
-pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/avg.json -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/avg.json
-pull: /data/ubuntu/result/ebizzy/params.yaml -> ebizzy_result/result/ebizzy/params.yaml
-97 files pulled. 0 files skipped.
-319 KB/s (2105714 bytes in 6.431s)
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/job.sh -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/job.sh
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/meminfo.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/meminfo.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/stats.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/stats.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/time -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/time
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/vmstat -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/vmstat
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/cpufreq-stats -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/cpufreq-stats
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/meminfo -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/meminfo
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/interrupts -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/interrupts
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/softirqs -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/softirqs
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/uptime -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/uptime
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/matrix.json.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/matrix.json.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/sched_debug -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/sched_debug
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/interrupts.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/interrupts.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/ebizzy.time -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/ebizzy.time
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/cpuidle -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/cpuidle
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/bdi_dev_mapping -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/bdi_dev_mapping
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/pmeter -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/pmeter
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/sched_debug.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/sched_debug.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/ebizzy -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/ebizzy
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/slabinfo.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/slabinfo.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/job.yaml -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/job.yaml
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/diskstats.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/diskstats.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/slabinfo -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/slabinfo
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/reproduce.sh -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/reproduce.sh
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/env.yaml -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/env.yaml
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-vmstat.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-vmstat.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-vmstat -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-vmstat
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/kmsg -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/kmsg
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/diskstats -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/diskstats
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/softirqs.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/softirqs.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-stat.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/2/proc-stat.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/sched_debug.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/sched_debug.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/job.sh -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/job.sh
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/ebizzy.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/ebizzy.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/meminfo.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/meminfo.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/stats.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/stats.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/time -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/time
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/vmstat -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/vmstat
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/cpuidle.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/cpuidle.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/dmesg.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/dmesg.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/cpufreq-stats -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/cpufreq-stats
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/ebizzy.time.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/ebizzy.time.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/uptime -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/uptime
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/matrix.json.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/matrix.json.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/sched_debug.xz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/sched_debug.xz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/proc-vmstat.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/proc-vmstat.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/interrupts.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/interrupts.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/ebizzy.time -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/ebizzy.time
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/cpuidle -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/cpuidle
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/bdi_dev_mapping -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/bdi_dev_mapping
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/vmstat.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/vmstat.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/pmeter -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/pmeter
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/ebizzy -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/ebizzy
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/slabinfo.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/slabinfo.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/meminfo.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/meminfo.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/job.yaml -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/job.yaml
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/time.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/time.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/softirqs.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/softirqs.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/diskstats.json.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/diskstats.json.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/diskstats.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/diskstats.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/interrupts.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/interrupts.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/reproduce.sh -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/reproduce.sh
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/env.yaml -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/env.yaml
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/slabinfo.json.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/slabinfo.json.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/kmsg.xz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/kmsg.xz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/proc-vmstat.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/proc-vmstat.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/uptime.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/uptime.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/softirqs.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/softirqs.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/proc-stat.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/3/proc-stat.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/job.sh -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/job.sh
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/meminfo.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/meminfo.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/stats.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/stats.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/time -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/time
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/vmstat -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/vmstat
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/cpufreq-stats -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/cpufreq-stats
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/meminfo -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/meminfo
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/interrupts -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/interrupts
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/softirqs -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/softirqs
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/uptime -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/uptime
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/matrix.json.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/matrix.json.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/sched_debug -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/sched_debug
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/interrupts.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/interrupts.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/ebizzy.time -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/ebizzy.time
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/cpuidle -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/cpuidle
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/bdi_dev_mapping -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/bdi_dev_mapping
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/pmeter -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/pmeter
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/sched_debug.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/sched_debug.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/ebizzy -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/ebizzy
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/slabinfo.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/slabinfo.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/job.yaml -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/job.yaml
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/diskstats.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/diskstats.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/slabinfo -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/slabinfo
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/reproduce.sh -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/reproduce.sh
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/env.yaml -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/env.yaml
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/proc-vmstat.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/proc-vmstat.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/proc-vmstat -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/proc-vmstat
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/kmsg -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/kmsg
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/diskstats -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/diskstats
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/softirqs.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/softirqs.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/proc-stat.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/proc-stat.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/job.sh -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/job.sh
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/meminfo.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/meminfo.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/stats.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/stats.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/time -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/time
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/vmstat -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/vmstat
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/cpufreq-stats -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/cpufreq-stats
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/meminfo -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/meminfo
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/interrupts -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/interrupts
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/softirqs -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/softirqs
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/uptime -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/uptime
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/matrix.json.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/matrix.json.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/sched_debug -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/sched_debug
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/interrupts.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/interrupts.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/ebizzy.time -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/ebizzy.time
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/cpuidle -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/cpuidle
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/bdi_dev_mapping -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/bdi_dev_mapping
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/pmeter -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/pmeter
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/sched_debug.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/sched_debug.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/ebizzy -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/ebizzy
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/slabinfo.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/slabinfo.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/job.yaml -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/job.yaml
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/diskstats.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/diskstats.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/slabinfo -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/slabinfo
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/reproduce.sh -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/reproduce.sh
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/env.yaml -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/env.yaml
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/proc-vmstat.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/proc-vmstat.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/proc-vmstat -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/proc-vmstat
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/kmsg -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/kmsg
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/diskstats -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/diskstats
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/softirqs.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/softirqs.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/proc-stat.gz -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/proc-stat.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/stddev.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/stddev.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/matrix.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/matrix.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/avg.json -> lkp_tmp_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/avg.json
+pull: /data/ubuntu/result/ebizzy/params.yaml -> lkp_tmp_result/result/ebizzy/params.yaml
+135 files pulled. 0 files skipped.
+292 KB/s (2483792 bytes in 8.303s)
 root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# 
