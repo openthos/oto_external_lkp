@@ -26,7 +26,5 @@ mount-static --bind /dev $CHMOUNT/dev
 mount -t devpts devpts $CHMOUNT/dev/pts
 chroot $CHMOUNT  su -
 
-##下面的代码是不会执行的除非chroot失败
-export PATH=/usr/bin/:/usr/sbin/:/bin/:/sbin/:$PATH
-abc 
-def
+##下面的代码会在chroot结束以后执行
+echo "chroot over"
