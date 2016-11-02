@@ -52,4 +52,4 @@ root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# ./fortest.sh
 ##感谢
 - openthos项目提供的chroot环境支持
 - lkp collet相关人员的代码贡献。
-- [lkp项目原始出处](https://github.com/fengguang/lkp-tests)lkp-tests-master中的代码是其2016.6月份左右的一个版本。
+- [lkp项目原始出处](https://github.com/fengguang/lkp-tests)本repo中lkp-tests-master中的代码是其2016.6月份左右的一个版本。
