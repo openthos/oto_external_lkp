@@ -4,13 +4,23 @@
 目标： 在openthos的chroot环境下面运行lkp，获取测试结果的json数据和csv数据
 
 代码目录说明：
-lkp-tests-master目录存放的是lkp的源代码，其可以在androidx86的chroot ubuntu环境上面运行。
+lkp-tests-master目录存放的是lkp的源代码，其可以在androidx86的chroot ubuntu环境上面运行。 
 
-lkpebizzy是用来通过adb远程在androidx86上面运行的ebizzy测试用例。 
+testcase目录存放的是打包好的测试用例。
 
-lkpnbench是用来通过adb远程在androidx86上面运行的nbench测试用例。 
+##自动运行测试用例的方法【用于合并到自动化测试框架】：
+```
+git clone https://github.com/openthos/oto_lkp
+mv ./oto_lkp/testcase/*   somewhere
+rm -rf ./oto_lkp
+cd somewhere
+for adir in `ls `
+do
+ ./$adir.sh
+done
+```
 
-##本地测试方法
+##本地测试方法【用于单元测试】
 ```
 环境准备
 PC1 运行linux 
