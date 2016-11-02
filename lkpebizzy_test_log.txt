@@ -1,6 +1,6 @@
 ##ebizyy 简单测试日志：从这里可以了解测试过程。
 
-root@elwin-virtual-machine:~/oto_lkp/lkpebizzy# ./fortest.sh 
+root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# ./fortest.sh 
 + adb connect 192.168.2.27
 already connected to 192.168.2.27:5555
 + ./lkpebizzy.sh 192.168.2.27 5555 ebizzy_result
@@ -220,7 +220,7 @@ mktemp: failed to create file via template ‘/dev/shm/lkp-stats.XXXXXXXX’: No
 /root/oto_lkp/lkp-tests-master/stats/kmsg /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/kmsg < /result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/1/kmsg  exit code 1, check 
 + echo 'lkp test over, leave ubuntu'
 lkp test over, leave ubuntu
-chroot error faild
+chroot over
 + adb -s 192.168.2.27:5555 pull /data/ubuntu/result/ ebizzy_result/result
 pull: building file list...
 pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/job.sh -> ebizzy_result/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/job.sh
@@ -291,4 +291,4 @@ pull: /data/ubuntu/result/ebizzy/200%-5x-5s/localhost/ubuntu/defconfig/gcc-5/4.4
 pull: /data/ubuntu/result/ebizzy/params.yaml -> ebizzy_result/result/ebizzy/params.yaml
 66 files pulled. 0 files skipped.
 293 KB/s (1373135 bytes in 4.573s)
-root@elwin-virtual-machine:~/oto_lkp/lkpebizzy# 
+root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# 
