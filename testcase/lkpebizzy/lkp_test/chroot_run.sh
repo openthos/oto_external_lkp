@@ -53,4 +53,4 @@ chroot $CHMOUNT  su - root -c "/root/ubuntu_lkp_test.sh  $testcase"
 
 ##下面的代码会在chroot 结束以后执行
 echo "chroot over"
-exit
+echo 'do not  ctrl+c please wait until prompt all done'
