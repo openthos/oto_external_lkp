@@ -1,5 +1,7 @@
 # oto_lkp
 
+##使用前必读
+下文的PC2中的linux必须是ubuntu15.10 x86-64版本，并且以uefi+gpt形式安装到PC2。必须注意，以免做无用功。
 ## 概述
 目标： 在openthos的chroot环境下面运行lkp，获取测试结果的json数据和csv数据
 
