@@ -24,7 +24,7 @@ done
 ```
 环境准备
 PC1 运行linux 
-PC2 linux和androidx86双系统。linux在sda2【目前必须在sda2，代码写死了在sda2】,androidx86安装在sda40【非必须sda40】
+PC2 linux和androidx86双系统。linux在sda2【目前必须在sda2，代码写死了在sda2，而且系统必须是ubuntu15.10 x86-64，16.04chroot后apt-get 工作不正常】,androidx86安装在sda40【非必须sda40】
 
 
 在PC1上面执行以下操作即可完成lkp的本地化测试以验证测试用例是否正常执行。
