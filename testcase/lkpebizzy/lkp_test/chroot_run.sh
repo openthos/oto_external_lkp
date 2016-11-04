@@ -16,12 +16,12 @@ sleep 3
 cp /data/lkp_test/ubuntu_lkp_test.sh  $CHMOUNT/root
 
 sleep 1
-if [ ! "`grep inet /data/ubuntu/etc/group`" ];then
+if [ ! "`grep inet $CHMOUNT/ubuntu/etc/group`" ];then
     echo "inet:x:3003:root" >> $CHMOUNT/etc/group
 fi
 
 sleep 2
-if [ ! "`grep net_raw /data/ubuntu/etc/group`" ];then
+if [ ! "`grep net_raw $CHMOUNT/ubuntu/etc/group`" ];then
     echo "net_raw:x:3004:root" >> $CHMOUNT/etc/group
 fi
 

@@ -1,0 +1,3128 @@
+{
+  "uptime.boot": [
+    1618.68
+  ],
+  "uptime.idle": [
+    12166.84
+  ],
+  "nbench.memindex": [
+    71.45
+  ],
+  "nbench.intindex": [
+    50.29
+  ],
+  "nbench.fltindex": [
+    75.918
+  ],
+  "nbench.time.user_time": [
+    254.35
+  ],
+  "nbench.time.system_time": [
+    0.05
+  ],
+  "nbench.time.percent_of_cpu_this_job_got": [
+    99
+  ],
+  "nbench.time.elapsed_time": [
+    254.41
+  ],
+  "nbench.time.elapsed_time.max": [
+    254.41
+  ],
+  "nbench.time.maximum_resident_set_size": [
+    3184
+  ],
+  "nbench.time.minor_page_faults": [
+    1067
+  ],
+  "nbench.time.voluntary_context_switches": [
+    14
+  ],
+  "nbench.time.involuntary_context_switches": [
+    324
+  ],
+  "nbench.time.file_system_outputs": [
+    8
+  ],
+  "nbench.time.page_size": [
+    4096
+  ],
+  "interrupts.CPU0.0:IO-APIC.2-edge.timer": [
+    0
+  ],
+  "interrupts.0:IO-APIC.2-edge.timer": [
+    0
+  ],
+  "interrupts.CPU4.1:IO-APIC.1-edge.i8042": [
+    0
+  ],
+  "interrupts.CPU5.1:IO-APIC.1-edge.i8042": [
+    0
+  ],
+  "interrupts.1:IO-APIC.1-edge.i8042": [
+    0
+  ],
+  "interrupts.CPU0.7:IO-APIC.7-edge": [
+    0
+  ],
+  "interrupts.7:IO-APIC.7-edge": [
+    0
+  ],
+  "interrupts.CPU0.8:IO-APIC.8-edge.rtc0": [
+    0
+  ],
+  "interrupts.8:IO-APIC.8-edge.rtc0": [
+    0
+  ],
+  "interrupts.CPU4.9:IO-APIC.9-fasteoi.acpi": [
+    0
+  ],
+  "interrupts.9:IO-APIC.9-fasteoi.acpi": [
+    0
+  ],
+  "interrupts.CPU0.12:IO-APIC.12-edge.i8042": [
+    0
+  ],
+  "interrupts.CPU1.12:IO-APIC.12-edge.i8042": [
+    0
+  ],
+  "interrupts.CPU5.12:IO-APIC.12-edge.i8042": [
+    0
+  ],
+  "interrupts.CPU6.12:IO-APIC.12-edge.i8042": [
+    0
+  ],
+  "interrupts.12:IO-APIC.12-edge.i8042": [
+    0
+  ],
+  "interrupts.CPU0.120:PCI-MSI.376832-edge.0000:00:17.0": [
+    36
+  ],
+  "interrupts.CPU1.120:PCI-MSI.376832-edge.0000:00:17.0": [
+    30
+  ],
+  "interrupts.CPU2.120:PCI-MSI.376832-edge.0000:00:17.0": [
+    798
+  ],
+  "interrupts.CPU3.120:PCI-MSI.376832-edge.0000:00:17.0": [
+    19
+  ],
+  "interrupts.CPU4.120:PCI-MSI.376832-edge.0000:00:17.0": [
+    27
+  ],
+  "interrupts.CPU5.120:PCI-MSI.376832-edge.0000:00:17.0": [
+    12
+  ],
+  "interrupts.CPU6.120:PCI-MSI.376832-edge.0000:00:17.0": [
+    0
+  ],
+  "interrupts.CPU7.120:PCI-MSI.376832-edge.0000:00:17.0": [
+    11
+  ],
+  "interrupts.120:PCI-MSI.376832-edge.0000:00:17.0": [
+    933
+  ],
+  "interrupts.CPU0.121:PCI-MSI.327680-edge.xhci_hcd": [
+    0
+  ],
+  "interrupts.CPU1.121:PCI-MSI.327680-edge.xhci_hcd": [
+    0
+  ],
+  "interrupts.CPU2.121:PCI-MSI.327680-edge.xhci_hcd": [
+    0
+  ],
+  "interrupts.CPU4.121:PCI-MSI.327680-edge.xhci_hcd": [
+    0
+  ],
+  "interrupts.CPU5.121:PCI-MSI.327680-edge.xhci_hcd": [
+    0
+  ],
+  "interrupts.CPU6.121:PCI-MSI.327680-edge.xhci_hcd": [
+    0
+  ],
+  "interrupts.CPU7.121:PCI-MSI.327680-edge.xhci_hcd": [
+    0
+  ],
+  "interrupts.121:PCI-MSI.327680-edge.xhci_hcd": [
+    0
+  ],
+  "interrupts.CPU0.122:PCI-MSI.32768-edge.i915": [
+    1
+  ],
+  "interrupts.CPU1.122:PCI-MSI.32768-edge.i915": [
+    1
+  ],
+  "interrupts.CPU2.122:PCI-MSI.32768-edge.i915": [
+    14
+  ],
+  "interrupts.CPU3.122:PCI-MSI.32768-edge.i915": [
+    2
+  ],
+  "interrupts.CPU4.122:PCI-MSI.32768-edge.i915": [
+    1
+  ],
+  "interrupts.CPU5.122:PCI-MSI.32768-edge.i915": [
+    1
+  ],
+  "interrupts.CPU6.122:PCI-MSI.32768-edge.i915": [
+    0
+  ],
+  "interrupts.CPU7.122:PCI-MSI.32768-edge.i915": [
+    0
+  ],
+  "interrupts.122:PCI-MSI.32768-edge.i915": [
+    20
+  ],
+  "interrupts.CPU0.123:PCI-MSI.514048-edge.snd_hda_intel": [
+    0
+  ],
+  "interrupts.CPU1.123:PCI-MSI.514048-edge.snd_hda_intel": [
+    0
+  ],
+  "interrupts.CPU2.123:PCI-MSI.514048-edge.snd_hda_intel": [
+    0
+  ],
+  "interrupts.CPU4.123:PCI-MSI.514048-edge.snd_hda_intel": [
+    0
+  ],
+  "interrupts.CPU7.123:PCI-MSI.514048-edge.snd_hda_intel": [
+    0
+  ],
+  "interrupts.123:PCI-MSI.514048-edge.snd_hda_intel": [
+    0
+  ],
+  "interrupts.CPU0.124:PCI-MSI.2097152-edge.eth0": [
+    4
+  ],
+  "interrupts.CPU1.124:PCI-MSI.2097152-edge.eth0": [
+    2
+  ],
+  "interrupts.CPU2.124:PCI-MSI.2097152-edge.eth0": [
+    22
+  ],
+  "interrupts.CPU3.124:PCI-MSI.2097152-edge.eth0": [
+    1
+  ],
+  "interrupts.CPU4.124:PCI-MSI.2097152-edge.eth0": [
+    4
+  ],
+  "interrupts.CPU5.124:PCI-MSI.2097152-edge.eth0": [
+    2
+  ],
+  "interrupts.CPU6.124:PCI-MSI.2097152-edge.eth0": [
+    0
+  ],
+  "interrupts.CPU7.124:PCI-MSI.2097152-edge.eth0": [
+    1
+  ],
+  "interrupts.124:PCI-MSI.2097152-edge.eth0": [
+    36
+  ],
+  "interrupts.CPU0.NMI:Non-maskable_interrupts": [
+    0
+  ],
+  "interrupts.CPU1.NMI:Non-maskable_interrupts": [
+    0
+  ],
+  "interrupts.CPU2.NMI:Non-maskable_interrupts": [
+    0
+  ],
+  "interrupts.CPU3.NMI:Non-maskable_interrupts": [
+    0
+  ],
+  "interrupts.CPU4.NMI:Non-maskable_interrupts": [
+    0
+  ],
+  "interrupts.CPU5.NMI:Non-maskable_interrupts": [
+    0
+  ],
+  "interrupts.CPU6.NMI:Non-maskable_interrupts": [
+    25
+  ],
+  "interrupts.CPU7.NMI:Non-maskable_interrupts": [
+    0
+  ],
+  "interrupts.NMI:Non-maskable_interrupts": [
+    25
+  ],
+  "interrupts.CPU0.LOC:Local_timer_interrupts": [
+    14066
+  ],
+  "interrupts.CPU1.LOC:Local_timer_interrupts": [
+    15051
+  ],
+  "interrupts.CPU2.LOC:Local_timer_interrupts": [
+    6877
+  ],
+  "interrupts.CPU3.LOC:Local_timer_interrupts": [
+    15485
+  ],
+  "interrupts.CPU4.LOC:Local_timer_interrupts": [
+    12703
+  ],
+  "interrupts.CPU5.LOC:Local_timer_interrupts": [
+    10368
+  ],
+  "interrupts.CPU6.LOC:Local_timer_interrupts": [
+    254489
+  ],
+  "interrupts.CPU7.LOC:Local_timer_interrupts": [
+    11869
+  ],
+  "interrupts.LOC:Local_timer_interrupts": [
+    340908
+  ],
+  "interrupts.CPU0.PMI:Performance_monitoring_interrupts": [
+    0
+  ],
+  "interrupts.CPU1.PMI:Performance_monitoring_interrupts": [
+    0
+  ],
+  "interrupts.CPU2.PMI:Performance_monitoring_interrupts": [
+    0
+  ],
+  "interrupts.CPU3.PMI:Performance_monitoring_interrupts": [
+    0
+  ],
+  "interrupts.CPU4.PMI:Performance_monitoring_interrupts": [
+    0
+  ],
+  "interrupts.CPU5.PMI:Performance_monitoring_interrupts": [
+    0
+  ],
+  "interrupts.CPU6.PMI:Performance_monitoring_interrupts": [
+    25
+  ],
+  "interrupts.CPU7.PMI:Performance_monitoring_interrupts": [
+    0
+  ],
+  "interrupts.PMI:Performance_monitoring_interrupts": [
+    25
+  ],
+  "interrupts.CPU0.RTR:APIC_ICR_read_retries": [
+    0
+  ],
+  "interrupts.RTR:APIC_ICR_read_retries": [
+    0
+  ],
+  "interrupts.CPU0.RES:Rescheduling_interrupts": [
+    398
+  ],
+  "interrupts.CPU1.RES:Rescheduling_interrupts": [
+    314
+  ],
+  "interrupts.CPU2.RES:Rescheduling_interrupts": [
+    16
+  ],
+  "interrupts.CPU3.RES:Rescheduling_interrupts": [
+    334
+  ],
+  "interrupts.CPU4.RES:Rescheduling_interrupts": [
+    34
+  ],
+  "interrupts.CPU5.RES:Rescheduling_interrupts": [
+    63
+  ],
+  "interrupts.CPU6.RES:Rescheduling_interrupts": [
+    139
+  ],
+  "interrupts.CPU7.RES:Rescheduling_interrupts": [
+    46
+  ],
+  "interrupts.RES:Rescheduling_interrupts": [
+    1344
+  ],
+  "interrupts.CPU0.CAL:Function_call_interrupts": [
+    0
+  ],
+  "interrupts.CPU1.CAL:Function_call_interrupts": [
+    0
+  ],
+  "interrupts.CPU2.CAL:Function_call_interrupts": [
+    0
+  ],
+  "interrupts.CPU3.CAL:Function_call_interrupts": [
+    0
+  ],
+  "interrupts.CPU4.CAL:Function_call_interrupts": [
+    0
+  ],
+  "interrupts.CPU5.CAL:Function_call_interrupts": [
+    0
+  ],
+  "interrupts.CPU6.CAL:Function_call_interrupts": [
+    0
+  ],
+  "interrupts.CPU7.CAL:Function_call_interrupts": [
+    0
+  ],
+  "interrupts.CAL:Function_call_interrupts": [
+    0
+  ],
+  "interrupts.CPU0.TLB:TLB_shootdowns": [
+    35
+  ],
+  "interrupts.CPU1.TLB:TLB_shootdowns": [
+    32
+  ],
+  "interrupts.CPU2.TLB:TLB_shootdowns": [
+    1
+  ],
+  "interrupts.CPU3.TLB:TLB_shootdowns": [
+    34
+  ],
+  "interrupts.CPU4.TLB:TLB_shootdowns": [
+    41
+  ],
+  "interrupts.CPU5.TLB:TLB_shootdowns": [
+    43
+  ],
+  "interrupts.CPU6.TLB:TLB_shootdowns": [
+    2
+  ],
+  "interrupts.CPU7.TLB:TLB_shootdowns": [
+    32
+  ],
+  "interrupts.TLB:TLB_shootdowns": [
+    220
+  ],
+  "interrupts.CPU0.MCP:Machine_check_polls": [
+    1
+  ],
+  "interrupts.CPU1.MCP:Machine_check_polls": [
+    1
+  ],
+  "interrupts.CPU2.MCP:Machine_check_polls": [
+    1
+  ],
+  "interrupts.CPU3.MCP:Machine_check_polls": [
+    1
+  ],
+  "interrupts.CPU4.MCP:Machine_check_polls": [
+    1
+  ],
+  "interrupts.CPU5.MCP:Machine_check_polls": [
+    1
+  ],
+  "interrupts.CPU6.MCP:Machine_check_polls": [
+    1
+  ],
+  "interrupts.CPU7.MCP:Machine_check_polls": [
+    1
+  ],
+  "interrupts.MCP:Machine_check_polls": [
+    8
+  ],
+  "interrupts.ERR": [
+    0
+  ],
+  "softirqs.CPU2.HI": [
+    1
+  ],
+  "softirqs.CPU3.HI": [
+    1
+  ],
+  "softirqs.HI": [
+    2
+  ],
+  "softirqs.CPU0.TIMER": [
+    107452
+  ],
+  "softirqs.CPU1.TIMER": [
+    93949
+  ],
+  "softirqs.CPU2.TIMER": [
+    92206
+  ],
+  "softirqs.CPU3.TIMER": [
+    87159
+  ],
+  "softirqs.CPU4.TIMER": [
+    81041
+  ],
+  "softirqs.CPU5.TIMER": [
+    76454
+  ],
+  "softirqs.CPU6.TIMER": [
+    198228
+  ],
+  "softirqs.CPU7.TIMER": [
+    75317
+  ],
+  "softirqs.TIMER": [
+    811808
+  ],
+  "softirqs.CPU4.NET_TX": [
+    244
+  ],
+  "softirqs.NET_TX": [
+    244
+  ],
+  "softirqs.CPU0.NET_RX": [
+    26301
+  ],
+  "softirqs.CPU1.NET_RX": [
+    3560
+  ],
+  "softirqs.CPU2.NET_RX": [
+    2067
+  ],
+  "softirqs.CPU3.NET_RX": [
+    2199
+  ],
+  "softirqs.CPU4.NET_RX": [
+    11984
+  ],
+  "softirqs.CPU5.NET_RX": [
+    2575
+  ],
+  "softirqs.CPU6.NET_RX": [
+    2842
+  ],
+  "softirqs.CPU7.NET_RX": [
+    1683
+  ],
+  "softirqs.NET_RX": [
+    53212
+  ],
+  "softirqs.CPU0.BLOCK": [
+    13453
+  ],
+  "softirqs.CPU1.BLOCK": [
+    2116
+  ],
+  "softirqs.CPU2.BLOCK": [
+    1317
+  ],
+  "softirqs.CPU3.BLOCK": [
+    825
+  ],
+  "softirqs.CPU4.BLOCK": [
+    3782
+  ],
+  "softirqs.CPU5.BLOCK": [
+    1248
+  ],
+  "softirqs.CPU6.BLOCK": [
+    821
+  ],
+  "softirqs.CPU7.BLOCK": [
+    675
+  ],
+  "softirqs.BLOCK": [
+    24238
+  ],
+  "softirqs.CPU0.TASKLET": [
+    1810
+  ],
+  "softirqs.CPU1.TASKLET": [
+    55
+  ],
+  "softirqs.CPU2.TASKLET": [
+    133
+  ],
+  "softirqs.CPU3.TASKLET": [
+    42
+  ],
+  "softirqs.CPU4.TASKLET": [
+    579
+  ],
+  "softirqs.CPU5.TASKLET": [
+    17
+  ],
+  "softirqs.CPU6.TASKLET": [
+    18
+  ],
+  "softirqs.CPU7.TASKLET": [
+    20
+  ],
+  "softirqs.TASKLET": [
+    2674
+  ],
+  "softirqs.CPU0.SCHED": [
+    26675
+  ],
+  "softirqs.CPU1.SCHED": [
+    17444
+  ],
+  "softirqs.CPU2.SCHED": [
+    16115
+  ],
+  "softirqs.CPU3.SCHED": [
+    15913
+  ],
+  "softirqs.CPU4.SCHED": [
+    12414
+  ],
+  "softirqs.CPU5.SCHED": [
+    10720
+  ],
+  "softirqs.CPU6.SCHED": [
+    9363
+  ],
+  "softirqs.CPU7.SCHED": [
+    10116
+  ],
+  "softirqs.SCHED": [
+    118761
+  ],
+  "softirqs.CPU0.RCU": [
+    43556
+  ],
+  "softirqs.CPU1.RCU": [
+    39419
+  ],
+  "softirqs.CPU2.RCU": [
+    34014
+  ],
+  "softirqs.CPU3.RCU": [
+    33138
+  ],
+  "softirqs.CPU4.RCU": [
+    28855
+  ],
+  "softirqs.CPU5.RCU": [
+    25090
+  ],
+  "softirqs.CPU6.RCU": [
+    27057
+  ],
+  "softirqs.CPU7.RCU": [
+    24465
+  ],
+  "softirqs.RCU": [
+    255596
+  ],
+  "time.user_time": [
+    254.35
+  ],
+  "time.system_time": [
+    0.05
+  ],
+  "time.percent_of_cpu_this_job_got": [
+    99
+  ],
+  "time.elapsed_time": [
+    254.41
+  ],
+  "time.elapsed_time.max": [
+    254.41
+  ],
+  "time.maximum_resident_set_size": [
+    3184
+  ],
+  "time.minor_page_faults": [
+    1067
+  ],
+  "time.voluntary_context_switches": [
+    14
+  ],
+  "time.involuntary_context_switches": [
+    324
+  ],
+  "time.file_system_outputs": [
+    8
+  ],
+  "time.page_size": [
+    4096
+  ],
+  "dmesg.boot_failures": [
+    1
+  ],
+  "dmesg.drm:finish_csr_load[i915]]": [
+    1
+  ],
+  "dmesg.drm:intel_guc_ucode_init[i915]]": [
+    1
+  ],
+  "dmesg.drm:i915_gem_init_hw[i915]]": [
+    1
+  ],
+  "cpuidle.POLL.time": [
+    627807
+  ],
+  "cpuidle.POLL.usage": [
+    98
+  ],
+  "cpuidle.C1-SKL.time": [
+    510411
+  ],
+  "cpuidle.C1-SKL.usage": [
+    706
+  ],
+  "cpuidle.C1E-SKL.time": [
+    23142014
+  ],
+  "cpuidle.C1E-SKL.usage": [
+    3815
+  ],
+  "cpuidle.C3-SKL.time": [
+    1137541
+  ],
+  "cpuidle.C3-SKL.usage": [
+    3344
+  ],
+  "cpuidle.C6-SKL.time": [
+    100394192
+  ],
+  "cpuidle.C6-SKL.usage": [
+    40415
+  ],
+  "cpuidle.C7s-SKL.time": [
+    182752
+  ],
+  "cpuidle.C7s-SKL.usage": [
+    70
+  ],
+  "cpuidle.C8-SKL.time": [
+    1659293292
+  ],
+  "cpuidle.C8-SKL.usage": [
+    83033
+  ],
+  "slabinfo.i915_gem_vma.active_objs": [
+    101
+  ],
+  "slabinfo.i915_gem_vma.num_objs": [
+    192
+  ],
+  "slabinfo.i915_gem_vma.active_slabs": [
+    16
+  ],
+  "slabinfo.i915_gem_vma.num_slabs": [
+    16
+  ],
+  "slabinfo.i915_gem_object.active_objs": [
+    109
+  ],
+  "slabinfo.i915_gem_object.num_objs": [
+    168
+  ],
+  "slabinfo.i915_gem_object.active_slabs": [
+    24
+  ],
+  "slabinfo.i915_gem_object.num_slabs": [
+    24
+  ],
+  "slabinfo.ext4_groupinfo_4k.active_objs": [
+    1571
+  ],
+  "slabinfo.ext4_groupinfo_4k.num_objs": [
+    1596
+  ],
+  "slabinfo.ext4_groupinfo_4k.active_slabs": [
+    57
+  ],
+  "slabinfo.ext4_groupinfo_4k.num_slabs": [
+    57
+  ],
+  "slabinfo.UDPv6.active_objs": [
+    1
+  ],
+  "slabinfo.UDPv6.num_objs": [
+    7
+  ],
+  "slabinfo.UDPv6.active_slabs": [
+    1
+  ],
+  "slabinfo.UDPv6.num_slabs": [
+    1
+  ],
+  "slabinfo.TCPv6.active_objs": [
+    1
+  ],
+  "slabinfo.TCPv6.num_objs": [
+    2
+  ],
+  "slabinfo.TCPv6.active_slabs": [
+    1
+  ],
+  "slabinfo.TCPv6.num_slabs": [
+    1
+  ],
+  "slabinfo.nf_conntrack_ffffffff81a9e700.active_objs": [
+    9
+  ],
+  "slabinfo.nf_conntrack_ffffffff81a9e700.num_objs": [
+    38
+  ],
+  "slabinfo.nf_conntrack_ffffffff81a9e700.active_slabs": [
+    2
+  ],
+  "slabinfo.nf_conntrack_ffffffff81a9e700.num_slabs": [
+    2
+  ],
+  "slabinfo.ashmem_area_cache.active_objs": [
+    11
+  ],
+  "slabinfo.ashmem_area_cache.num_objs": [
+    52
+  ],
+  "slabinfo.ashmem_area_cache.active_slabs": [
+    4
+  ],
+  "slabinfo.ashmem_area_cache.num_slabs": [
+    4
+  ],
+  "slabinfo.cfq_io_cq.active_objs": [
+    157
+  ],
+  "slabinfo.cfq_io_cq.num_objs": [
+    252
+  ],
+  "slabinfo.cfq_io_cq.active_slabs": [
+    7
+  ],
+  "slabinfo.cfq_io_cq.num_slabs": [
+    7
+  ],
+  "slabinfo.cfq_queue.active_objs": [
+    106
+  ],
+  "slabinfo.cfq_queue.num_objs": [
+    204
+  ],
+  "slabinfo.cfq_queue.active_slabs": [
+    12
+  ],
+  "slabinfo.cfq_queue.num_slabs": [
+    12
+  ],
+  "slabinfo.fuse_inode.active_objs": [
+    25
+  ],
+  "slabinfo.fuse_inode.num_objs": [
+    33
+  ],
+  "slabinfo.fuse_inode.active_slabs": [
+    3
+  ],
+  "slabinfo.fuse_inode.num_slabs": [
+    3
+  ],
+  "slabinfo.jbd2_journal_handle.active_objs": [
+    71
+  ],
+  "slabinfo.jbd2_journal_handle.num_objs": [
+    83
+  ],
+  "slabinfo.jbd2_journal_handle.active_slabs": [
+    1
+  ],
+  "slabinfo.jbd2_journal_handle.num_slabs": [
+    1
+  ],
+  "slabinfo.jbd2_journal_head.active_objs": [
+    75
+  ],
+  "slabinfo.jbd2_journal_head.num_objs": [
+    257
+  ],
+  "slabinfo.jbd2_journal_head.active_slabs": [
+    7
+  ],
+  "slabinfo.jbd2_journal_head.num_slabs": [
+    7
+  ],
+  "slabinfo.jbd2_revoke_table_s.active_objs": [
+    4
+  ],
+  "slabinfo.jbd2_revoke_table_s.num_objs": [
+    240
+  ],
+  "slabinfo.jbd2_revoke_table_s.active_slabs": [
+    1
+  ],
+  "slabinfo.jbd2_revoke_table_s.num_slabs": [
+    1
+  ],
+  "slabinfo.jbd2_revoke_record_s.active_objs": [
+    2
+  ],
+  "slabinfo.jbd2_revoke_record_s.num_objs": [
+    32
+  ],
+  "slabinfo.jbd2_revoke_record_s.active_slabs": [
+    0
+  ],
+  "slabinfo.jbd2_revoke_record_s.num_slabs": [
+    0
+  ],
+  "slabinfo.ext4_inode_cache.active_objs": [
+    11731
+  ],
+  "slabinfo.ext4_inode_cache.num_objs": [
+    11762
+  ],
+  "slabinfo.ext4_inode_cache.active_slabs": [
+    3920
+  ],
+  "slabinfo.ext4_inode_cache.num_slabs": [
+    3920
+  ],
+  "slabinfo.ext4_free_data.active_objs": [
+    40
+  ],
+  "slabinfo.ext4_free_data.num_objs": [
+    80
+  ],
+  "slabinfo.ext4_free_data.active_slabs": [
+    1
+  ],
+  "slabinfo.ext4_free_data.num_slabs": [
+    1
+  ],
+  "slabinfo.ext4_allocation_context.active_objs": [
+    27
+  ],
+  "slabinfo.ext4_allocation_context.num_objs": [
+    51
+  ],
+  "slabinfo.ext4_allocation_context.active_slabs": [
+    1
+  ],
+  "slabinfo.ext4_allocation_context.num_slabs": [
+    1
+  ],
+  "slabinfo.ext4_io_end.active_objs": [
+    105
+  ],
+  "slabinfo.ext4_io_end.num_objs": [
+    212
+  ],
+  "slabinfo.ext4_io_end.active_slabs": [
+    3
+  ],
+  "slabinfo.ext4_io_end.num_slabs": [
+    3
+  ],
+  "slabinfo.ext4_extent_status.active_objs": [
+    9763
+  ],
+  "slabinfo.ext4_extent_status.num_objs": [
+    9999
+  ],
+  "slabinfo.ext4_extent_status.active_slabs": [
+    101
+  ],
+  "slabinfo.ext4_extent_status.num_slabs": [
+    101
+  ],
+  "slabinfo.dquot.active_objs": [
+    28
+  ],
+  "slabinfo.dquot.num_objs": [
+    44
+  ],
+  "slabinfo.dquot.active_slabs": [
+    2
+  ],
+  "slabinfo.dquot.num_slabs": [
+    2
+  ],
+  "slabinfo.posix_timers_cache.active_objs": [
+    2
+  ],
+  "slabinfo.posix_timers_cache.num_objs": [
+    17
+  ],
+  "slabinfo.posix_timers_cache.active_slabs": [
+    1
+  ],
+  "slabinfo.posix_timers_cache.num_slabs": [
+    1
+  ],
+  "slabinfo.UNIX.active_objs": [
+    193
+  ],
+  "slabinfo.UNIX.num_objs": [
+    216
+  ],
+  "slabinfo.UNIX.active_slabs": [
+    54
+  ],
+  "slabinfo.UNIX.num_slabs": [
+    54
+  ],
+  "slabinfo.UDP.active_objs": [
+    3
+  ],
+  "slabinfo.UDP.num_objs": [
+    8
+  ],
+  "slabinfo.UDP.active_slabs": [
+    2
+  ],
+  "slabinfo.UDP.num_slabs": [
+    2
+  ],
+  "slabinfo.tw_sock_TCP.active_objs": [
+    0
+  ],
+  "slabinfo.tw_sock_TCP.num_objs": [
+    2
+  ],
+  "slabinfo.tw_sock_TCP.active_slabs": [
+    0
+  ],
+  "slabinfo.tw_sock_TCP.num_slabs": [
+    0
+  ],
+  "slabinfo.TCP.active_objs": [
+    8
+  ],
+  "slabinfo.TCP.num_objs": [
+    8
+  ],
+  "slabinfo.TCP.active_slabs": [
+    4
+  ],
+  "slabinfo.TCP.num_slabs": [
+    4
+  ],
+  "slabinfo.blkdev_queue.active_objs": [
+    25
+  ],
+  "slabinfo.blkdev_queue.num_objs": [
+    26
+  ],
+  "slabinfo.blkdev_queue.active_slabs": [
+    13
+  ],
+  "slabinfo.blkdev_queue.num_slabs": [
+    13
+  ],
+  "slabinfo.blkdev_requests.active_objs": [
+    58
+  ],
+  "slabinfo.blkdev_requests.num_objs": [
+    83
+  ],
+  "slabinfo.blkdev_requests.active_slabs": [
+    7
+  ],
+  "slabinfo.blkdev_requests.num_slabs": [
+    7
+  ],
+  "slabinfo.blkdev_ioc.active_objs": [
+    164
+  ],
+  "slabinfo.blkdev_ioc.num_objs": [
+    273
+  ],
+  "slabinfo.blkdev_ioc.active_slabs": [
+    7
+  ],
+  "slabinfo.blkdev_ioc.num_slabs": [
+    7
+  ],
+  "slabinfo.dmaengine-unmap-256.active_objs": [
+    1
+  ],
+  "slabinfo.dmaengine-unmap-256.num_objs": [
+    3
+  ],
+  "slabinfo.dmaengine-unmap-256.active_slabs": [
+    1
+  ],
+  "slabinfo.dmaengine-unmap-256.num_slabs": [
+    1
+  ],
+  "slabinfo.sock_inode_cache.active_objs": [
+    237
+  ],
+  "slabinfo.sock_inode_cache.num_objs": [
+    251
+  ],
+  "slabinfo.sock_inode_cache.active_slabs": [
+    41
+  ],
+  "slabinfo.sock_inode_cache.num_slabs": [
+    41
+  ],
+  "slabinfo.file_lock_cache.active_objs": [
+    7
+  ],
+  "slabinfo.file_lock_cache.num_objs": [
+    57
+  ],
+  "slabinfo.file_lock_cache.active_slabs": [
+    3
+  ],
+  "slabinfo.file_lock_cache.num_slabs": [
+    3
+  ],
+  "slabinfo.shmem_inode_cache.active_objs": [
+    1293
+  ],
+  "slabinfo.shmem_inode_cache.num_objs": [
+    1332
+  ],
+  "slabinfo.shmem_inode_cache.active_slabs": [
+    222
+  ],
+  "slabinfo.shmem_inode_cache.num_slabs": [
+    222
+  ],
+  "slabinfo.pool_workqueue.active_objs": [
+    24
+  ],
+  "slabinfo.pool_workqueue.num_objs": [
+    64
+  ],
+  "slabinfo.pool_workqueue.active_slabs": [
+    4
+  ],
+  "slabinfo.pool_workqueue.num_slabs": [
+    4
+  ],
+  "slabinfo.taskstats.active_objs": [
+    23
+  ],
+  "slabinfo.taskstats.num_objs": [
+    72
+  ],
+  "slabinfo.taskstats.active_slabs": [
+    6
+  ],
+  "slabinfo.taskstats.num_slabs": [
+    6
+  ],
+  "slabinfo.proc_inode_cache.active_objs": [
+    1468
+  ],
+  "slabinfo.proc_inode_cache.num_objs": [
+    1490
+  ],
+  "slabinfo.proc_inode_cache.active_slabs": [
+    248
+  ],
+  "slabinfo.proc_inode_cache.num_slabs": [
+    248
+  ],
+  "slabinfo.sigqueue.active_objs": [
+    335
+  ],
+  "slabinfo.sigqueue.num_objs": [
+    368
+  ],
+  "slabinfo.sigqueue.active_slabs": [
+    14
+  ],
+  "slabinfo.sigqueue.num_slabs": [
+    14
+  ],
+  "slabinfo.bdev_cache.active_objs": [
+    4
+  ],
+  "slabinfo.bdev_cache.num_objs": [
+    8
+  ],
+  "slabinfo.bdev_cache.active_slabs": [
+    2
+  ],
+  "slabinfo.bdev_cache.num_slabs": [
+    2
+  ],
+  "slabinfo.kernfs_node_cache.active_objs": [
+    18831
+  ],
+  "slabinfo.kernfs_node_cache.num_objs": [
+    18876
+  ],
+  "slabinfo.kernfs_node_cache.active_slabs": [
+    572
+  ],
+  "slabinfo.kernfs_node_cache.num_slabs": [
+    572
+  ],
+  "slabinfo.mnt_cache.active_objs": [
+    1457
+  ],
+  "slabinfo.mnt_cache.num_objs": [
+    1482
+  ],
+  "slabinfo.mnt_cache.active_slabs": [
+    148
+  ],
+  "slabinfo.mnt_cache.num_slabs": [
+    148
+  ],
+  "slabinfo.inode_cache.active_objs": [
+    18472
+  ],
+  "slabinfo.inode_cache.num_objs": [
+    18493
+  ],
+  "slabinfo.inode_cache.active_slabs": [
+    2641
+  ],
+  "slabinfo.inode_cache.num_slabs": [
+    2641
+  ],
+  "slabinfo.dentry.active_objs": [
+    36356
+  ],
+  "slabinfo.dentry.num_objs": [
+    36393
+  ],
+  "slabinfo.dentry.active_slabs": [
+    1733
+  ],
+  "slabinfo.dentry.num_slabs": [
+    1733
+  ],
+  "slabinfo.buffer_head.active_objs": [
+    82742
+  ],
+  "slabinfo.buffer_head.num_objs": [
+    83091
+  ],
+  "slabinfo.buffer_head.active_slabs": [
+    2130
+  ],
+  "slabinfo.buffer_head.num_slabs": [
+    2130
+  ],
+  "slabinfo.vm_area_struct.active_objs": [
+    17879
+  ],
+  "slabinfo.vm_area_struct.num_objs": [
+    17961
+  ],
+  "slabinfo.vm_area_struct.active_slabs": [
+    780
+  ],
+  "slabinfo.vm_area_struct.num_slabs": [
+    780
+  ],
+  "slabinfo.mm_struct.active_objs": [
+    294
+  ],
+  "slabinfo.mm_struct.num_objs": [
+    307
+  ],
+  "slabinfo.mm_struct.active_slabs": [
+    76
+  ],
+  "slabinfo.mm_struct.num_slabs": [
+    76
+  ],
+  "slabinfo.files_cache.active_objs": [
+    202
+  ],
+  "slabinfo.files_cache.num_objs": [
+    279
+  ],
+  "slabinfo.files_cache.active_slabs": [
+    25
+  ],
+  "slabinfo.files_cache.num_slabs": [
+    25
+  ],
+  "slabinfo.signal_cache.active_objs": [
+    283
+  ],
+  "slabinfo.signal_cache.num_objs": [
+    378
+  ],
+  "slabinfo.signal_cache.active_slabs": [
+    54
+  ],
+  "slabinfo.signal_cache.num_slabs": [
+    54
+  ],
+  "slabinfo.sighand_cache.active_objs": [
+    233
+  ],
+  "slabinfo.sighand_cache.num_objs": [
+    266
+  ],
+  "slabinfo.sighand_cache.active_slabs": [
+    88
+  ],
+  "slabinfo.sighand_cache.num_slabs": [
+    88
+  ],
+  "slabinfo.task_struct.active_objs": [
+    776
+  ],
+  "slabinfo.task_struct.num_objs": [
+    788
+  ],
+  "slabinfo.task_struct.active_slabs": [
+    394
+  ],
+  "slabinfo.task_struct.num_slabs": [
+    394
+  ],
+  "slabinfo.Acpi-Operand.active_objs": [
+    8883
+  ],
+  "slabinfo.Acpi-Operand.num_objs": [
+    9128
+  ],
+  "slabinfo.Acpi-Operand.active_slabs": [
+    163
+  ],
+  "slabinfo.Acpi-Operand.num_slabs": [
+    163
+  ],
+  "slabinfo.Acpi-Parse.active_objs": [
+    40
+  ],
+  "slabinfo.Acpi-Parse.num_objs": [
+    142
+  ],
+  "slabinfo.Acpi-Parse.active_slabs": [
+    2
+  ],
+  "slabinfo.Acpi-Parse.num_slabs": [
+    2
+  ],
+  "slabinfo.Acpi-Namespace.active_objs": [
+    6434
+  ],
+  "slabinfo.Acpi-Namespace.num_objs": [
+    6435
+  ],
+  "slabinfo.Acpi-Namespace.active_slabs": [
+    65
+  ],
+  "slabinfo.Acpi-Namespace.num_slabs": [
+    65
+  ],
+  "slabinfo.anon_vma.active_objs": [
+    8288
+  ],
+  "slabinfo.anon_vma.num_objs": [
+    8398
+  ],
+  "slabinfo.anon_vma.active_slabs": [
+    149
+  ],
+  "slabinfo.anon_vma.num_slabs": [
+    149
+  ],
+  "slabinfo.radix_tree_node.active_objs": [
+    6752
+  ],
+  "slabinfo.radix_tree_node.num_objs": [
+    6812
+  ],
+  "slabinfo.radix_tree_node.active_slabs": [
+    973
+  ],
+  "slabinfo.radix_tree_node.num_slabs": [
+    973
+  ],
+  "slabinfo.trace_event_file.active_objs": [
+    573
+  ],
+  "slabinfo.trace_event_file.num_objs": [
+    690
+  ],
+  "slabinfo.trace_event_file.active_slabs": [
+    15
+  ],
+  "slabinfo.trace_event_file.num_slabs": [
+    15
+  ],
+  "slabinfo.ftrace_event_field.active_objs": [
+    4417
+  ],
+  "slabinfo.ftrace_event_field.num_objs": [
+    4648
+  ],
+  "slabinfo.ftrace_event_field.active_slabs": [
+    56
+  ],
+  "slabinfo.ftrace_event_field.num_slabs": [
+    56
+  ],
+  "slabinfo.idr_layer_cache.active_objs": [
+    356
+  ],
+  "slabinfo.idr_layer_cache.num_objs": [
+    375
+  ],
+  "slabinfo.idr_layer_cache.active_slabs": [
+    125
+  ],
+  "slabinfo.idr_layer_cache.num_slabs": [
+    125
+  ],
+  "slabinfo.kmalloc-262144.active_objs": [
+    1
+  ],
+  "slabinfo.kmalloc-262144.num_objs": [
+    1
+  ],
+  "slabinfo.kmalloc-262144.active_slabs": [
+    1
+  ],
+  "slabinfo.kmalloc-262144.num_slabs": [
+    1
+  ],
+  "slabinfo.kmalloc-131072.active_objs": [
+    1
+  ],
+  "slabinfo.kmalloc-131072.num_objs": [
+    1
+  ],
+  "slabinfo.kmalloc-131072.active_slabs": [
+    1
+  ],
+  "slabinfo.kmalloc-131072.num_slabs": [
+    1
+  ],
+  "slabinfo.kmalloc-65536.active_objs": [
+    21
+  ],
+  "slabinfo.kmalloc-65536.num_objs": [
+    21
+  ],
+  "slabinfo.kmalloc-65536.active_slabs": [
+    21
+  ],
+  "slabinfo.kmalloc-65536.num_slabs": [
+    21
+  ],
+  "slabinfo.kmalloc-32768.active_objs": [
+    5
+  ],
+  "slabinfo.kmalloc-32768.num_objs": [
+    5
+  ],
+  "slabinfo.kmalloc-32768.active_slabs": [
+    5
+  ],
+  "slabinfo.kmalloc-32768.num_slabs": [
+    5
+  ],
+  "slabinfo.kmalloc-16384.active_objs": [
+    266
+  ],
+  "slabinfo.kmalloc-16384.num_objs": [
+    266
+  ],
+  "slabinfo.kmalloc-16384.active_slabs": [
+    266
+  ],
+  "slabinfo.kmalloc-16384.num_slabs": [
+    266
+  ],
+  "slabinfo.kmalloc-8192.active_objs": [
+    60
+  ],
+  "slabinfo.kmalloc-8192.num_objs": [
+    61
+  ],
+  "slabinfo.kmalloc-8192.active_slabs": [
+    60
+  ],
+  "slabinfo.kmalloc-8192.num_slabs": [
+    61
+  ],
+  "slabinfo.kmalloc-4096.active_objs": [
+    340
+  ],
+  "slabinfo.kmalloc-4096.num_objs": [
+    349
+  ],
+  "slabinfo.kmalloc-4096.active_slabs": [
+    340
+  ],
+  "slabinfo.kmalloc-4096.num_slabs": [
+    349
+  ],
+  "slabinfo.kmalloc-2048.active_objs": [
+    639
+  ],
+  "slabinfo.kmalloc-2048.num_objs": [
+    647
+  ],
+  "slabinfo.kmalloc-2048.active_slabs": [
+    323
+  ],
+  "slabinfo.kmalloc-2048.num_slabs": [
+    323
+  ],
+  "slabinfo.kmalloc-1024.active_objs": [
+    935
+  ],
+  "slabinfo.kmalloc-1024.num_objs": [
+    1022
+  ],
+  "slabinfo.kmalloc-1024.active_slabs": [
+    255
+  ],
+  "slabinfo.kmalloc-1024.num_slabs": [
+    255
+  ],
+  "slabinfo.kmalloc-512.active_objs": [
+    882
+  ],
+  "slabinfo.kmalloc-512.num_objs": [
+    933
+  ],
+  "slabinfo.kmalloc-512.active_slabs": [
+    116
+  ],
+  "slabinfo.kmalloc-512.num_slabs": [
+    116
+  ],
+  "slabinfo.kmalloc-256.active_objs": [
+    3694
+  ],
+  "slabinfo.kmalloc-256.num_objs": [
+    4454
+  ],
+  "slabinfo.kmalloc-256.active_slabs": [
+    276
+  ],
+  "slabinfo.kmalloc-256.num_slabs": [
+    278
+  ],
+  "slabinfo.kmalloc-192.active_objs": [
+    2257
+  ],
+  "slabinfo.kmalloc-192.num_objs": [
+    2723
+  ],
+  "slabinfo.kmalloc-192.active_slabs": [
+    129
+  ],
+  "slabinfo.kmalloc-192.num_slabs": [
+    129
+  ],
+  "slabinfo.kmalloc-96.active_objs": [
+    1468
+  ],
+  "slabinfo.kmalloc-96.num_objs": [
+    1674
+  ],
+  "slabinfo.kmalloc-96.active_slabs": [
+    54
+  ],
+  "slabinfo.kmalloc-96.num_slabs": [
+    54
+  ],
+  "slabinfo.kmalloc-64.active_objs": [
+    23040
+  ],
+  "slabinfo.kmalloc-64.num_objs": [
+    23182
+  ],
+  "slabinfo.kmalloc-64.active_slabs": [
+    367
+  ],
+  "slabinfo.kmalloc-64.num_slabs": [
+    367
+  ],
+  "slabinfo.kmalloc-32.active_objs": [
+    13248
+  ],
+  "slabinfo.kmalloc-32.num_objs": [
+    14532
+  ],
+  "slabinfo.kmalloc-32.active_slabs": [
+    117
+  ],
+  "slabinfo.kmalloc-32.num_slabs": [
+    117
+  ],
+  "slabinfo.kmalloc-node.active_objs": [
+    4461
+  ],
+  "slabinfo.kmalloc-node.num_objs": [
+    4835
+  ],
+  "slabinfo.kmalloc-node.active_slabs": [
+    155
+  ],
+  "slabinfo.kmalloc-node.num_slabs": [
+    155
+  ],
+  "slabinfo.kmem_cache.active_objs": [
+    117
+  ],
+  "slabinfo.kmem_cache.num_objs": [
+    147
+  ],
+  "slabinfo.kmem_cache.active_slabs": [
+    7
+  ],
+  "slabinfo.kmem_cache.num_slabs": [
+    7
+  ],
+  "sched_debug.ktime": [
+    1483339.5173654002
+  ],
+  "sched_debug.sched_clk": [
+    1483358.3434328001
+  ],
+  "sched_debug.cpu_clk": [
+    1483358.3434818
+  ],
+  "sched_debug.jiffies": [
+    4296150636
+  ],
+  "sched_debug.sched_clock_stable()": [
+    1
+  ],
+  "sched_debug.sysctl_sched.sysctl_sched_latency": [
+    10.0
+  ],
+  "sched_debug.sysctl_sched.sysctl_sched_min_granularity": [
+    3.0
+  ],
+  "sched_debug.sysctl_sched.sysctl_sched_wakeup_granularity": [
+    2.0
+  ],
+  "sched_debug.sysctl_sched.sysctl_sched_features": [
+    44859
+  ],
+  "sched_debug.sysctl_sched.sysctl_sched_tunable_scaling": [
+    1
+  ],
+  "sched_debug.cpu.nr_running.0": [
+    0
+  ],
+  "sched_debug.cpu.load.0": [
+    409
+  ],
+  "sched_debug.cpu.nr_switches.0": [
+    206207
+  ],
+  "sched_debug.cpu.nr_load_updates.0": [
+    143557
+  ],
+  "sched_debug.cpu.nr_uninterruptible.0": [
+    -300
+  ],
+  "sched_debug.cpu.next_balance.0": [
+    4296.150628400001
+  ],
+  "sched_debug.cpu.curr->pid.0": [
+    3634
+  ],
+  "sched_debug.cpu.clock.0": [
+    1483358.1649914
+  ],
+  "sched_debug.cpu.clock_task.0": [
+    1483358.1649914
+  ],
+  "sched_debug.cpu.cpu_load[0].0": [
+    2
+  ],
+  "sched_debug.cpu.cpu_load[1].0": [
+    1
+  ],
+  "sched_debug.cpu.cpu_load[2].0": [
+    1
+  ],
+  "sched_debug.cpu.cpu_load[3].0": [
+    1
+  ],
+  "sched_debug.cpu.cpu_load[4].0": [
+    2
+  ],
+  "sched_debug.cpu.yld_count.0": [
+    362
+  ],
+  "sched_debug.cpu.sched_count.0": [
+    376615
+  ],
+  "sched_debug.cpu.sched_goidle.0": [
+    94934
+  ],
+  "sched_debug.cpu.avg_idle.0": [
+    937470
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.0": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.0": [
+    108478
+  ],
+  "sched_debug.cpu.ttwu_local.0": [
+    56699
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.0": [
+    63084.5261058
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.0": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.0": [
+    37844.7369248
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.0": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.0": [
+    17
+  ],
+  "sched_debug.cfs_rq:/.nr_running.0": [
+    0
+  ],
+  "sched_debug.cfs_rq:/.load.0": [
+    409
+  ],
+  "sched_debug.cfs_rq:/.load_avg.0": [
+    62
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.0": [
+    2
+  ],
+  "sched_debug.cfs_rq:/.util_avg.0": [
+    56
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.0": [
+    62
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.0": [
+    1118
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.0": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.0": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_running.1": [
+    0
+  ],
+  "sched_debug.cpu.load.1": [
+    409
+  ],
+  "sched_debug.cpu.nr_switches.1": [
+    154104
+  ],
+  "sched_debug.cpu.nr_load_updates.1": [
+    124841
+  ],
+  "sched_debug.cpu.nr_uninterruptible.1": [
+    45
+  ],
+  "sched_debug.cpu.next_balance.1": [
+    4296.150669799999
+  ],
+  "sched_debug.cpu.curr->pid.1": [
+    3959
+  ],
+  "sched_debug.cpu.clock.1": [
+    1483348.4413730002
+  ],
+  "sched_debug.cpu.clock_task.1": [
+    1483348.4413730002
+  ],
+  "sched_debug.cpu.cpu_load[0].1": [
+    4
+  ],
+  "sched_debug.cpu.cpu_load[1].1": [
+    3
+  ],
+  "sched_debug.cpu.cpu_load[2].1": [
+    2
+  ],
+  "sched_debug.cpu.cpu_load[3].1": [
+    1
+  ],
+  "sched_debug.cpu.cpu_load[4].1": [
+    1
+  ],
+  "sched_debug.cpu.yld_count.1": [
+    284
+  ],
+  "sched_debug.cpu.sched_count.1": [
+    156230
+  ],
+  "sched_debug.cpu.sched_goidle.1": [
+    71284
+  ],
+  "sched_debug.cpu.avg_idle.1": [
+    837095
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.1": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.1": [
+    66955
+  ],
+  "sched_debug.cpu.ttwu_local.1": [
+    27164
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.1": [
+    59575.3970896
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.1": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.1": [
+    36975.840035
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.1": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.1": [
+    -868.8968897999999
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.1": [
+    36
+  ],
+  "sched_debug.cfs_rq:/.nr_running.1": [
+    0
+  ],
+  "sched_debug.cfs_rq:/.load.1": [
+    409
+  ],
+  "sched_debug.cfs_rq:/.load_avg.1": [
+    33
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.1": [
+    4
+  ],
+  "sched_debug.cfs_rq:/.util_avg.1": [
+    28
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.1": [
+    33
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.1": [
+    1126
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.1": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.1": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_switches.2": [
+    151167
+  ],
+  "sched_debug.cpu.nr_load_updates.2": [
+    125243
+  ],
+  "sched_debug.cpu.nr_uninterruptible.2": [
+    -5
+  ],
+  "sched_debug.cpu.next_balance.2": [
+    4296.1506402
+  ],
+  "sched_debug.cpu.clock.2": [
+    1483358.4574644002
+  ],
+  "sched_debug.cpu.clock_task.2": [
+    1483358.4574644002
+  ],
+  "sched_debug.cpu.cpu_load[0].2": [
+    4
+  ],
+  "sched_debug.cpu.cpu_load[1].2": [
+    3
+  ],
+  "sched_debug.cpu.cpu_load[2].2": [
+    2
+  ],
+  "sched_debug.cpu.cpu_load[3].2": [
+    1
+  ],
+  "sched_debug.cpu.cpu_load[4].2": [
+    1
+  ],
+  "sched_debug.cpu.yld_count.2": [
+    231
+  ],
+  "sched_debug.cpu.sched_count.2": [
+    153358
+  ],
+  "sched_debug.cpu.sched_goidle.2": [
+    69845
+  ],
+  "sched_debug.cpu.avg_idle.2": [
+    636787
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.2": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.2": [
+    70626
+  ],
+  "sched_debug.cpu.ttwu_local.2": [
+    27794
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.2": [
+    59888.3286572
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.2": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.2": [
+    38707.874947
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.2": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.2": [
+    863.1380222
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.2": [
+    34
+  ],
+  "sched_debug.cfs_rq:/.load_avg.2": [
+    43
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.2": [
+    4
+  ],
+  "sched_debug.cfs_rq:/.util_avg.2": [
+    40
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.2": [
+    42
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.2": [
+    1127
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.2": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.2": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_switches.3": [
+    164870
+  ],
+  "sched_debug.cpu.nr_load_updates.3": [
+    119559
+  ],
+  "sched_debug.cpu.nr_uninterruptible.3": [
+    23
+  ],
+  "sched_debug.cpu.next_balance.3": [
+    4296.1506322000005
+  ],
+  "sched_debug.cpu.clock.3": [
+    1483355.8884376
+  ],
+  "sched_debug.cpu.clock_task.3": [
+    1483355.8884376
+  ],
+  "sched_debug.cpu.cpu_load[0].3": [
+    0
+  ],
+  "sched_debug.cpu.cpu_load[1].3": [
+    0
+  ],
+  "sched_debug.cpu.cpu_load[2].3": [
+    0
+  ],
+  "sched_debug.cpu.cpu_load[3].3": [
+    0
+  ],
+  "sched_debug.cpu.cpu_load[4].3": [
+    0
+  ],
+  "sched_debug.cpu.yld_count.3": [
+    191
+  ],
+  "sched_debug.cpu.sched_count.3": [
+    166930
+  ],
+  "sched_debug.cpu.sched_goidle.3": [
+    74232
+  ],
+  "sched_debug.cpu.avg_idle.3": [
+    932140
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.3": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.3": [
+    74851
+  ],
+  "sched_debug.cpu.ttwu_local.3": [
+    33013
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.3": [
+    57103.74973899999
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.3": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.3": [
+    35358.3555666
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.3": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.3": [
+    -2486.5605815999998
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.3": [
+    26
+  ],
+  "sched_debug.cfs_rq:/.load_avg.3": [
+    47
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.3": [
+    0
+  ],
+  "sched_debug.cfs_rq:/.util_avg.3": [
+    41
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.3": [
+    47
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.3": [
+    1133
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.3": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.3": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_running.4": [
+    0
+  ],
+  "sched_debug.cpu.load.4": [
+    204
+  ],
+  "sched_debug.cpu.nr_switches.4": [
+    103670
+  ],
+  "sched_debug.cpu.nr_load_updates.4": [
+    102387
+  ],
+  "sched_debug.cpu.nr_uninterruptible.4": [
+    12
+  ],
+  "sched_debug.cpu.next_balance.4": [
+    4296.1506334
+  ],
+  "sched_debug.cpu.curr->pid.4": [
+    1898
+  ],
+  "sched_debug.cpu.clock.4": [
+    1483358.0058943997
+  ],
+  "sched_debug.cpu.clock_task.4": [
+    1483358.0058943997
+  ],
+  "sched_debug.cpu.cpu_load[0].4": [
+    6
+  ],
+  "sched_debug.cpu.cpu_load[1].4": [
+    4
+  ],
+  "sched_debug.cpu.cpu_load[2].4": [
+    4
+  ],
+  "sched_debug.cpu.cpu_load[3].4": [
+    3
+  ],
+  "sched_debug.cpu.cpu_load[4].4": [
+    3
+  ],
+  "sched_debug.cpu.yld_count.4": [
+    230
+  ],
+  "sched_debug.cpu.sched_count.4": [
+    105082
+  ],
+  "sched_debug.cpu.sched_goidle.4": [
+    45817
+  ],
+  "sched_debug.cpu.avg_idle.4": [
+    920477
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.4": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.4": [
+    53792
+  ],
+  "sched_debug.cpu.ttwu_local.4": [
+    21725
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.4": [
+    56893.10235380001
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.4": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.4": [
+    34549.11901159999
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.4": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.4": [
+    -3295.7971366000006
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.4": [
+    21
+  ],
+  "sched_debug.cfs_rq:/.nr_running.4": [
+    0
+  ],
+  "sched_debug.cfs_rq:/.load.4": [
+    204
+  ],
+  "sched_debug.cfs_rq:/.load_avg.4": [
+    48
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.4": [
+    6
+  ],
+  "sched_debug.cfs_rq:/.util_avg.4": [
+    42
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.4": [
+    48
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.4": [
+    1140
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.4": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.4": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_running.5": [
+    1
+  ],
+  "sched_debug.cpu.load.5": [
+    1024
+  ],
+  "sched_debug.cpu.nr_switches.5": [
+    90376
+  ],
+  "sched_debug.cpu.nr_load_updates.5": [
+    98968
+  ],
+  "sched_debug.cpu.nr_uninterruptible.5": [
+    61
+  ],
+  "sched_debug.cpu.next_balance.5": [
+    4296.1506204
+  ],
+  "sched_debug.cpu.curr->pid.5": [
+    7864
+  ],
+  "sched_debug.cpu.clock.5": [
+    1483358.9020544
+  ],
+  "sched_debug.cpu.clock_task.5": [
+    1483358.9020544
+  ],
+  "sched_debug.cpu.cpu_load[0].5": [
+    2
+  ],
+  "sched_debug.cpu.cpu_load[1].5": [
+    2
+  ],
+  "sched_debug.cpu.cpu_load[2].5": [
+    6
+  ],
+  "sched_debug.cpu.cpu_load[3].5": [
+    9
+  ],
+  "sched_debug.cpu.cpu_load[4].5": [
+    7
+  ],
+  "sched_debug.cpu.yld_count.5": [
+    149
+  ],
+  "sched_debug.cpu.sched_count.5": [
+    91884
+  ],
+  "sched_debug.cpu.sched_goidle.5": [
+    39553
+  ],
+  "sched_debug.cpu.avg_idle.5": [
+    799978
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.5": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.5": [
+    39822
+  ],
+  "sched_debug.cpu.ttwu_local.5": [
+    10597
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.5": [
+    56698.1972104
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.5": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.5": [
+    36474.119606800006
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.5": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.5": [
+    -1370.7965413999998
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.5": [
+    20
+  ],
+  "sched_debug.cfs_rq:/.nr_running.5": [
+    1
+  ],
+  "sched_debug.cfs_rq:/.load.5": [
+    1024
+  ],
+  "sched_debug.cfs_rq:/.load_avg.5": [
+    21
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.5": [
+    4
+  ],
+  "sched_debug.cfs_rq:/.util_avg.5": [
+    20
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.5": [
+    21
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.5": [
+    1140
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.5": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.5": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_running.6": [
+    0
+  ],
+  "sched_debug.cpu.load.6": [
+    819
+  ],
+  "sched_debug.cpu.nr_switches.6": [
+    90089
+  ],
+  "sched_debug.cpu.nr_load_updates.6": [
+    212353
+  ],
+  "sched_debug.cpu.nr_uninterruptible.6": [
+    66
+  ],
+  "sched_debug.cpu.next_balance.6": [
+    4296.150700600001
+  ],
+  "sched_debug.cpu.curr->pid.6": [
+    6303
+  ],
+  "sched_debug.cpu.clock.6": [
+    1483359.1197519999
+  ],
+  "sched_debug.cpu.clock_task.6": [
+    1483359.1197519999
+  ],
+  "sched_debug.cpu.cpu_load[0].6": [
+    810
+  ],
+  "sched_debug.cpu.cpu_load[1].6": [
+    811
+  ],
+  "sched_debug.cpu.cpu_load[2].6": [
+    810
+  ],
+  "sched_debug.cpu.cpu_load[3].6": [
+    808
+  ],
+  "sched_debug.cpu.cpu_load[4].6": [
+    807
+  ],
+  "sched_debug.cpu.yld_count.6": [
+    218
+  ],
+  "sched_debug.cpu.sched_count.6": [
+    91363
+  ],
+  "sched_debug.cpu.sched_goidle.6": [
+    38321
+  ],
+  "sched_debug.cpu.avg_idle.6": [
+    890348
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.6": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.6": [
+    38694
+  ],
+  "sched_debug.cpu.ttwu_local.6": [
+    12736
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.6": [
+    177221.1497358
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.6": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.6": [
+    157687.6720606
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.6": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.6": [
+    119842.75591240001
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.6": [
+    16
+  ],
+  "sched_debug.cfs_rq:/.nr_running.6": [
+    0
+  ],
+  "sched_debug.cfs_rq:/.load.6": [
+    819
+  ],
+  "sched_debug.cfs_rq:/.load_avg.6": [
+    831
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.6": [
+    810
+  ],
+  "sched_debug.cfs_rq:/.util_avg.6": [
+    828
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.6": [
+    836
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.6": [
+    1149
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.6": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.6": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_switches.7": [
+    83581
+  ],
+  "sched_debug.cpu.nr_load_updates.7": [
+    97713
+  ],
+  "sched_debug.cpu.nr_uninterruptible.7": [
+    96
+  ],
+  "sched_debug.cpu.next_balance.7": [
+    4296.150632999999
+  ],
+  "sched_debug.cpu.clock.7": [
+    1483359.1439616
+  ],
+  "sched_debug.cpu.clock_task.7": [
+    1483359.1439616
+  ],
+  "sched_debug.cpu.cpu_load[0].7": [
+    4
+  ],
+  "sched_debug.cpu.cpu_load[1].7": [
+    4
+  ],
+  "sched_debug.cpu.cpu_load[2].7": [
+    4
+  ],
+  "sched_debug.cpu.cpu_load[3].7": [
+    4
+  ],
+  "sched_debug.cpu.cpu_load[4].7": [
+    4
+  ],
+  "sched_debug.cpu.yld_count.7": [
+    152
+  ],
+  "sched_debug.cpu.sched_count.7": [
+    85186
+  ],
+  "sched_debug.cpu.sched_goidle.7": [
+    35541
+  ],
+  "sched_debug.cpu.avg_idle.7": [
+    879797
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.7": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.7": [
+    36986
+  ],
+  "sched_debug.cpu.ttwu_local.7": [
+    10387
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.7": [
+    56063.72185239999
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.7": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.7": [
+    38662.7906398
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.7": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.7": [
+    817.6674542
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.7": [
+    38
+  ],
+  "sched_debug.cfs_rq:/.load_avg.7": [
+    38
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.7": [
+    4
+  ],
+  "sched_debug.cfs_rq:/.util_avg.7": [
+    32
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.7": [
+    37
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.7": [
+    1155
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.7": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.7": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_running.max": [
+    1.0
+  ],
+  "sched_debug.cpu.nr_running.avg": [
+    0.35
+  ],
+  "sched_debug.cpu.nr_running.stddev": [
+    0.47390087499918554
+  ],
+  "sched_debug.cpu.load.max": [
+    1024.0
+  ],
+  "sched_debug.cpu.load.avg": [
+    358.4
+  ],
+  "sched_debug.cpu.load.stddev": [
+    485.274495999166
+  ],
+  "sched_debug.cpu.nr_switches.max": [
+    206207.2
+  ],
+  "sched_debug.cpu.nr_switches.min": [
+    82903.6
+  ],
+  "sched_debug.cpu.nr_switches.avg": [
+    130508.3
+  ],
+  "sched_debug.cpu.nr_switches.stddev": [
+    41984.7652991335
+  ],
+  "sched_debug.cpu.nr_load_updates.max": [
+    220849.4
+  ],
+  "sched_debug.cpu.nr_load_updates.min": [
+    97713.8
+  ],
+  "sched_debug.cpu.nr_load_updates.avg": [
+    128078.025
+  ],
+  "sched_debug.cpu.nr_load_updates.stddev": [
+    38701.88227462583
+  ],
+  "sched_debug.cpu.nr_uninterruptible.max": [
+    96.4
+  ],
+  "sched_debug.cpu.nr_uninterruptible.min": [
+    -300.0
+  ],
+  "sched_debug.cpu.nr_uninterruptible.stddev": [
+    117.40791825692686
+  ],
+  "sched_debug.cpu.next_balance.max": [
+    4296.1507249999995
+  ],
+  "sched_debug.cpu.next_balance.min": [
+    4296.1505682
+  ],
+  "sched_debug.cpu.next_balance.avg": [
+    4296.1506447500005
+  ],
+  "sched_debug.cpu.next_balance.stddev": [
+    4.979232569369387e-05
+  ],
+  "sched_debug.cpu.curr->pid.max": [
+    9491.6
+  ],
+  "sched_debug.cpu.curr->pid.avg": [
+    2957.35
+  ],
+  "sched_debug.cpu.curr->pid.stddev": [
+    4029.780412379426
+  ],
+  "sched_debug.cpu.clock.max": [
+    1483359.3592376
+  ],
+  "sched_debug.cpu.clock.min": [
+    1483345.013169
+  ],
+  "sched_debug.cpu.clock.avg": [
+    1483357.0154911
+  ],
+  "sched_debug.cpu.clock.stddev": [
+    4.620866763671064
+  ],
+  "sched_debug.cpu.clock_task.max": [
+    1483359.3592376
+  ],
+  "sched_debug.cpu.clock_task.min": [
+    1483345.013169
+  ],
+  "sched_debug.cpu.clock_task.avg": [
+    1483357.0154911
+  ],
+  "sched_debug.cpu.clock_task.stddev": [
+    4.620866763671064
+  ],
+  "sched_debug.cpu.cpu_load[0].max": [
+    814.6
+  ],
+  "sched_debug.cpu.cpu_load[0].avg": [
+    104.25
+  ],
+  "sched_debug.cpu.cpu_load[0].stddev": [
+    269.1988802215695
+  ],
+  "sched_debug.cpu.cpu_load[1].max": [
+    814.2
+  ],
+  "sched_debug.cpu.cpu_load[1].avg": [
+    103.675
+  ],
+  "sched_debug.cpu.cpu_load[1].stddev": [
+    269.12227239533826
+  ],
+  "sched_debug.cpu.cpu_load[2].max": [
+    816.0
+  ],
+  "sched_debug.cpu.cpu_load[2].min": [
+    0.2
+  ],
+  "sched_debug.cpu.cpu_load[2].avg": [
+    103.875
+  ],
+  "sched_debug.cpu.cpu_load[2].stddev": [
+    269.5818580952052
+  ],
+  "sched_debug.cpu.cpu_load[3].max": [
+    817.4
+  ],
+  "sched_debug.cpu.cpu_load[3].min": [
+    0.2
+  ],
+  "sched_debug.cpu.cpu_load[3].avg": [
+    103.925
+  ],
+  "sched_debug.cpu.cpu_load[3].stddev": [
+    269.9161594191421
+  ],
+  "sched_debug.cpu.cpu_load[4].max": [
+    814.6
+  ],
+  "sched_debug.cpu.cpu_load[4].avg": [
+    103.55
+  ],
+  "sched_debug.cpu.cpu_load[4].stddev": [
+    269.10973932861395
+  ],
+  "sched_debug.cpu.yld_count.max": [
+    362.4
+  ],
+  "sched_debug.cpu.yld_count.min": [
+    149.8
+  ],
+  "sched_debug.cpu.yld_count.avg": [
+    227.475
+  ],
+  "sched_debug.cpu.yld_count.stddev": [
+    65.9626982484231
+  ],
+  "sched_debug.cpu.sched_count.max": [
+    376615.4
+  ],
+  "sched_debug.cpu.sched_count.min": [
+    84436.2
+  ],
+  "sched_debug.cpu.sched_count.avg": [
+    153331.3
+  ],
+  "sched_debug.cpu.sched_count.stddev": [
+    89917.89353020093
+  ],
+  "sched_debug.cpu.sched_goidle.max": [
+    94934.6
+  ],
+  "sched_debug.cpu.sched_goidle.min": [
+    35104.8
+  ],
+  "sched_debug.cpu.sched_goidle.avg": [
+    58691.175
+  ],
+  "sched_debug.cpu.sched_goidle.stddev": [
+    20405.384945176942
+  ],
+  "sched_debug.cpu.avg_idle.max": [
+    1000000.0
+  ],
+  "sched_debug.cpu.avg_idle.min": [
+    636787.2
+  ],
+  "sched_debug.cpu.avg_idle.avg": [
+    854261.975
+  ],
+  "sched_debug.cpu.avg_idle.stddev": [
+    125462.59321482173
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.max": [
+    500000.0
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.min": [
+    500000.0
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.avg": [
+    500000.0
+  ],
+  "sched_debug.cpu.ttwu_count.max": [
+    108478.8
+  ],
+  "sched_debug.cpu.ttwu_count.min": [
+    36303.6
+  ],
+  "sched_debug.cpu.ttwu_count.avg": [
+    61276.025
+  ],
+  "sched_debug.cpu.ttwu_count.stddev": [
+    22806.189242511115
+  ],
+  "sched_debug.cpu.ttwu_local.max": [
+    56699.8
+  ],
+  "sched_debug.cpu.ttwu_local.min": [
+    10271.6
+  ],
+  "sched_debug.cpu.ttwu_local.avg": [
+    25014.875
+  ],
+  "sched_debug.cpu.ttwu_local.stddev": [
+    14427.73423816841
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.max": [
+    178194.75420340002
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.min": [
+    56063.72185239999
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.avg": [
+    73316.021593
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.stddev": [
+    39780.83906539365
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.max": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.min": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.avg": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.max": [
+    157738.5536772
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.min": [
+    34549.11901159999
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.avg": [
+    52032.563599025
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.stddev": [
+    40153.63261553957
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.max": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.min": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.avg": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.max": [
+    119893.63752900001
+  ],
+  "sched_debug.cfs_rq:/.spread0.min": [
+    -3295.7971366000006
+  ],
+  "sched_debug.cfs_rq:/.spread0.avg": [
+    14187.688779925002
+  ],
+  "sched_debug.cfs_rq:/.spread0.stddev": [
+    40153.5903841894
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.max": [
+    38.0
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.min": [
+    16.0
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.avg": [
+    26.0
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.stddev": [
+    8.2915619758885
+  ],
+  "sched_debug.cfs_rq:/.nr_running.max": [
+    1.0
+  ],
+  "sched_debug.cfs_rq:/.nr_running.avg": [
+    0.35
+  ],
+  "sched_debug.cfs_rq:/.nr_running.stddev": [
+    0.47390087499918554
+  ],
+  "sched_debug.cfs_rq:/.load.max": [
+    1024.0
+  ],
+  "sched_debug.cfs_rq:/.load.avg": [
+    358.4
+  ],
+  "sched_debug.cfs_rq:/.load.stddev": [
+    485.274495999166
+  ],
+  "sched_debug.cfs_rq:/.load_avg.max": [
+    866.2
+  ],
+  "sched_debug.cfs_rq:/.load_avg.min": [
+    17.0
+  ],
+  "sched_debug.cfs_rq:/.load_avg.avg": [
+    140.575
+  ],
+  "sched_debug.cfs_rq:/.load_avg.stddev": [
+    278.76349523258693
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.max": [
+    814.6
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.avg": [
+    104.475
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.stddev": [
+    269.0525565389591
+  ],
+  "sched_debug.cfs_rq:/.util_avg.max": [
+    860.8
+  ],
+  "sched_debug.cfs_rq:/.util_avg.min": [
+    16.2
+  ],
+  "sched_debug.cfs_rq:/.util_avg.avg": [
+    136.35
+  ],
+  "sched_debug.cfs_rq:/.util_avg.stddev": [
+    277.8811183446047
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.max": [
+    871.0
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.min": [
+    17.0
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.avg": [
+    141.075
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.stddev": [
+    280.3623316130941
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.max": [
+    1155.6
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.min": [
+    1118.8
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.avg": [
+    1136.4
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.stddev": [
+    13.82451654341396
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.max": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.min": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.avg": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.max": [
+    800.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.min": [
+    800.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.avg": [
+    800.0
+  ],
+  "diskstats.sda.read_ios": [
+    18271
+  ],
+  "diskstats.sda.read_merges": [
+    293
+  ],
+  "diskstats.sda.read_sectors": [
+    1298830
+  ],
+  "diskstats.sda.read_ticks": [
+    138185
+  ],
+  "diskstats.sda.write_ios": [
+    5224
+  ],
+  "diskstats.sda.write_merges": [
+    17001
+  ],
+  "diskstats.sda.write_sectors": [
+    1876810
+  ],
+  "diskstats.sda.write_ticks": [
+    500058
+  ],
+  "diskstats.sda.in_flight": [
+    0
+  ],
+  "diskstats.sda.io_ticks": [
+    54662
+  ],
+  "diskstats.sda.time_in_queue": [
+    638487
+  ],
+  "diskstats.sda1.read_ios": [
+    15
+  ],
+  "diskstats.sda1.read_sectors": [
+    19
+  ],
+  "diskstats.sda1.read_ticks": [
+    63
+  ],
+  "diskstats.sda1.io_ticks": [
+    35
+  ],
+  "diskstats.sda1.time_in_queue": [
+    63
+  ],
+  "diskstats.sda2.read_ios": [
+    10216
+  ],
+  "diskstats.sda2.read_merges": [
+    131
+  ],
+  "diskstats.sda2.read_sectors": [
+    548196
+  ],
+  "diskstats.sda2.read_ticks": [
+    50130
+  ],
+  "diskstats.sda2.write_ios": [
+    2512
+  ],
+  "diskstats.sda2.write_merges": [
+    14199
+  ],
+  "diskstats.sda2.write_sectors": [
+    1785555
+  ],
+  "diskstats.sda2.write_ticks": [
+    441177
+  ],
+  "diskstats.sda2.in_flight": [
+    0
+  ],
+  "diskstats.sda2.io_ticks": [
+    26058
+  ],
+  "diskstats.sda2.time_in_queue": [
+    491558
+  ],
+  "diskstats.sda3.read_ios": [
+    98
+  ],
+  "diskstats.sda3.read_sectors": [
+    222
+  ],
+  "diskstats.sda3.read_ticks": [
+    23
+  ],
+  "diskstats.sda3.io_ticks": [
+    23
+  ],
+  "diskstats.sda3.time_in_queue": [
+    23
+  ],
+  "diskstats.sda40.read_ios": [
+    7835
+  ],
+  "diskstats.sda40.read_merges": [
+    162
+  ],
+  "diskstats.sda40.read_sectors": [
+    750092
+  ],
+  "diskstats.sda40.read_ticks": [
+    87916
+  ],
+  "diskstats.sda40.write_ios": [
+    2696
+  ],
+  "diskstats.sda40.write_merges": [
+    2802
+  ],
+  "diskstats.sda40.write_sectors": [
+    91255
+  ],
+  "diskstats.sda40.write_ticks": [
+    58812
+  ],
+  "diskstats.sda40.io_ticks": [
+    30766
+  ],
+  "diskstats.sda40.time_in_queue": [
+    146721
+  ],
+  "meminfo.MemTotal": [
+    16317260
+  ],
+  "meminfo.MemFree": [
+    15131262
+  ],
+  "meminfo.MemAvailable": [
+    15855186
+  ],
+  "meminfo.Buffers": [
+    29217
+  ],
+  "meminfo.Cached": [
+    848095
+  ],
+  "meminfo.Active": [
+    592039
+  ],
+  "meminfo.Inactive": [
+    468355
+  ],
+  "meminfo.Active(anon)": [
+    185787
+  ],
+  "meminfo.Inactive(anon)": [
+    85792
+  ],
+  "meminfo.Active(file)": [
+    406252
+  ],
+  "meminfo.Inactive(file)": [
+    382563
+  ],
+  "meminfo.Dirty": [
+    85
+  ],
+  "meminfo.Writeback": [
+    0
+  ],
+  "meminfo.AnonPages": [
+    183102
+  ],
+  "meminfo.Mapped": [
+    259757
+  ],
+  "meminfo.Shmem": [
+    88496
+  ],
+  "meminfo.Slab": [
+    78017
+  ],
+  "meminfo.SReclaimable": [
+    47476
+  ],
+  "meminfo.SUnreclaim": [
+    30541
+  ],
+  "meminfo.KernelStack": [
+    11706
+  ],
+  "meminfo.PageTables": [
+    12234
+  ],
+  "meminfo.CommitLimit": [
+    8158628
+  ],
+  "meminfo.Committed_AS": [
+    30596921
+  ],
+  "meminfo.VmallocTotal": [
+    34359738367
+  ],
+  "meminfo.DirectMap4k": [
+    20060
+  ],
+  "meminfo.DirectMap2M": [
+    1951744
+  ],
+  "meminfo.DirectMap1G": [
+    14680064
+  ],
+  "proc-vmstat.nr_free_pages": [
+    3782833
+  ],
+  "proc-vmstat.nr_alloc_batch": [
+    590
+  ],
+  "proc-vmstat.nr_inactive_anon": [
+    21448
+  ],
+  "proc-vmstat.nr_active_anon": [
+    46442
+  ],
+  "proc-vmstat.nr_inactive_file": [
+    95640
+  ],
+  "proc-vmstat.nr_active_file": [
+    101563
+  ],
+  "proc-vmstat.nr_anon_pages": [
+    45774
+  ],
+  "proc-vmstat.nr_mapped": [
+    64939
+  ],
+  "proc-vmstat.nr_file_pages": [
+    219328
+  ],
+  "proc-vmstat.nr_dirty": [
+    21
+  ],
+  "proc-vmstat.nr_writeback": [
+    0
+  ],
+  "proc-vmstat.nr_slab_reclaimable": [
+    11869
+  ],
+  "proc-vmstat.nr_slab_unreclaimable": [
+    7635
+  ],
+  "proc-vmstat.nr_page_table_pages": [
+    3058
+  ],
+  "proc-vmstat.nr_kernel_stack": [
+    731
+  ],
+  "proc-vmstat.nr_shmem": [
+    22124
+  ],
+  "proc-vmstat.nr_dirtied": [
+    720
+  ],
+  "proc-vmstat.nr_written": [
+    1417
+  ],
+  "proc-vmstat.nr_dirty_threshold": [
+    790037
+  ],
+  "proc-vmstat.nr_dirty_background_threshold": [
+    197508
+  ],
+  "proc-vmstat.pgpgin": [
+    0
+  ],
+  "proc-vmstat.pgpgout": [
+    8168
+  ],
+  "proc-vmstat.pgalloc_dma": [
+    0
+  ],
+  "proc-vmstat.pgalloc_dma32": [
+    50675
+  ],
+  "proc-vmstat.pgalloc_normal": [
+    304448
+  ],
+  "proc-vmstat.pgfree": [
+    353251
+  ],
+  "proc-vmstat.pgactivate": [
+    270
+  ],
+  "proc-vmstat.pgfault": [
+    511089
+  ],
+  "proc-vmstat.pgmajfault": [
+    0
+  ],
+  "proc-vmstat.pageoutrun": [
+    0
+  ],
+  "vmstat.procs.r": [
+    1
+  ],
+  "vmstat.memory.free": [
+    15131469
+  ],
+  "vmstat.memory.buff": [
+    29217
+  ],
+  "vmstat.memory.cache": [
+    848098
+  ],
+  "vmstat.io.bi": [
+    0
+  ],
+  "vmstat.io.bo": [
+    32
+  ],
+  "vmstat.system.in": [
+    1347
+  ],
+  "vmstat.system.cs": [
+    586
+  ],
+  "vmstat.cpu.us": [
+    12
+  ],
+  "vmstat.cpu.sy": [
+    0
+  ],
+  "vmstat.cpu.id": [
+    87
+  ],
+  "vmstat.cpu.wa": [
+    0
+  ],
+  "stats_source": [
+    "/result/nbench/1x/localhost/ubuntu/defconfig/gcc-5/4.4.10-android-x86_64/0/stats.json"
+  ]
+}

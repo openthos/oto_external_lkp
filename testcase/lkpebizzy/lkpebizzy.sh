@@ -3,6 +3,10 @@ androidIP=$1
 port=$2
 foldName=$3
 cd "$(dirname "$0")"
+if  [ -z "$foldName"  ] ; then
+ echo "foldName is empty !"
+ exit
+fi
 mkdir $foldName
 #adb -s $androidIP:$port push ebizzy /data/local/tmp
 #adb -s $androidIP:$port shell /data/local/tmp/ebizzy > $foldName/testResult
@@ -10,7 +14,8 @@ mkdir $foldName
 filename=$(basename $0)
 filename=${filename#lkp}
 if  [  -d $foldName  ];then
-      rm -rf  $foldName/* 
+      mkdir /tmp/xxx
+      mv   $foldName/* /tmp/xxx
 fi
 
 adb -s $androidIP:$port  shell  rm -rf  /data/lkp_test
