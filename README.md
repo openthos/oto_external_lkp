@@ -52,7 +52,6 @@ root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# ./run_withlog.sh
 [lkpebizzy在androidx86上面的测试数据csv](https://github.com/openthos/oto_lkp/tree/master/testcase/lkpebizzy/lkp_tmp_result/result)
 ## TODO
 - 新增新增测试用例的方法
-- 将lkp collect的代码merge进来，达到将json数据转换为csv的目的
 
 ##感谢
 - openthos项目提供的chroot环境支持
