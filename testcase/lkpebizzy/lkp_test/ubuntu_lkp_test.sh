@@ -2,6 +2,7 @@
 testjob="$1"
 echo  "i am in ubuntu"
 apt-get update
+apt-get install -y git
 apt-get install -y ruby-git
 pwd
 rm -rf ./oto_lkp

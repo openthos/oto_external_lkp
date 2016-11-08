@@ -14,8 +14,9 @@ mkdir $foldName
 filename=$(basename $0)
 filename=${filename#lkp}
 if  [  -d $foldName  ];then
-      mkdir /tmp/xxx
-      mv   $foldName/* /tmp/xxx
+      trash=$RANDOM  
+      mkdir /tmp/$trash 
+      mv   $foldName/* /tmp/$trash
 fi
 
 adb -s $androidIP:$port  shell  rm -rf  /data/lkp_test
