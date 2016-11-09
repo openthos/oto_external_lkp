@@ -40,7 +40,7 @@ cd ~/oto_lkp/testcase/lkpebizzy
 
 root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# ./run_withlog.sh
 执行完毕以后结果存放在PC1的~/oto_lkp/testcase/lkpebizzy/lkp_tmp_result目录下面。请检查是否出现json文件。并且json文件是否有内容。
-生成的csv文件存放在lkp_tmp_result/result目录下面，请检查是否出现csv文件。并且csv文件是否有内容。
+生成的csv文件存放在lkp_tmp_result/result/ebizzy(即testcase的名字)目录下面，请检查是否出现csv文件。并且csv文件是否有内容。
 如果有内容则测试用例成功执行了。
 测试日志存放在PC1的~/oto_lkp/testcase/lkpebizzy/test_log.txt文件当中。
 ```
@@ -49,7 +49,7 @@ root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# ./run_withlog.sh
 
 [lkpebizzy在androidx86上面的测试数据json](https://github.com/openthos/oto_lkp/tree/master/testcase/lkpebizzy/lkp_tmp_result) 
 
-[lkpebizzy在androidx86上面的测试数据csv](https://github.com/openthos/oto_lkp/tree/master/testcase/lkpebizzy/lkp_tmp_result/result)
+[lkpebizzy在androidx86上面的测试数据csv](https://github.com/openthos/oto_lkp/tree/master/testcase/lkpebizzy/lkp_tmp_result/result/ebizzy)
 ## TODO
 - 新增新增测试用例的方法
 
