@@ -5,6 +5,9 @@ CHMOUNT=/data/ubuntu
 BUSYBOX=/system/xbin/busybox
 export PATH=/system/xbin/:$PATH 
 
+source  /data/lkp_test/before_chroot.sh
+
+
 if [ ! -d $CHMOUNT ];then
    mkdir $CHMOUNT
 fi
