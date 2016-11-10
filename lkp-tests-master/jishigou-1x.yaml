@@ -1,0 +1,34 @@
+---
+testcase: jishigou
+default-monitors:
+  wait: activate-monitor
+  kmsg: 
+  uptime: 
+  iostat: 
+  vmstat: 
+  numa-numastat: 
+  numa-vmstat: 
+  numa-meminfo: 
+  proc-vmstat: 
+  proc-stat:
+    interval: 10
+  meminfo: 
+  slabinfo: 
+  interrupts: 
+  lock_stat: 
+  latency_stats: 
+  softirqs: 
+  bdi_dev_mapping: 
+  diskstats: 
+  nfsstat: 
+  cpuidle: 
+  cpufreq-stats: 
+  turbostat: 
+  pmeter: 
+  sched_debug:
+    interval: 60
+category: benchmark
+iterations: 1x
+jishigou:
+  duration: 10s
+enqueue_time: 2016-11-10 01:28:07.310786201 -05:00

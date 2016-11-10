@@ -3,5 +3,5 @@ category: benchmark
 
 iterations: 1x
 
-nbench:
+jishigou:
   duration: 10s
