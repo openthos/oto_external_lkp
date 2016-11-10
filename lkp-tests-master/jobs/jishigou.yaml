@@ -1,0 +1,7 @@
+testcase: jishigou
+category: benchmark
+
+iterations: 1x
+
+nbench:
+  duration: 10s
