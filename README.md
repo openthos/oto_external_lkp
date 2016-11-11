@@ -7,7 +7,7 @@
 ```
 git clone https://github.com/openthos/oto_lkp
 cd oto_lkp
-git checkout -b b0dcbe653041e074c6fbac608c5e9d34c8a025b4
+git checkout   b0dcbe653041e074c6fbac608c5e9d34c8a025b4
 检出稳定的版本。
 ```
 
@@ -23,7 +23,7 @@ testcase目录存放的是打包好的测试用例。
 ```
 git clone https://github.com/openthos/oto_lkp
 cd oto_lkp
-git checkout -b b0dcbe653041e074c6fbac608c5e9d34c8a025b4
+git checkout  b0dcbe653041e074c6fbac608c5e9d34c8a025b4
 cd -
 mv ./oto_lkp/testcase/*   somewhere
 rm -rf ./oto_lkp
