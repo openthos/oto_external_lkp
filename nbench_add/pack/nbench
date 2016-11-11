@@ -1,0 +1,11 @@
+#!/bin/bash
+
+VERSION="2.2.3"
+WEB_URL="http://www.tux.org/~mayer/linux/nbench-byte-2.2.3.tar.gz"
+
+install()
+{
+    #make
+	cp -af $BM_NAME $BM_ROOT
+    cp -af *.DAT $BM_ROOT
+}

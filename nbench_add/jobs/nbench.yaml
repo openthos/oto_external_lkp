@@ -1,0 +1,7 @@
+testcase: nbench
+category: benchmark
+
+iterations: 1x
+
+nbench:
+  duration: 10s
