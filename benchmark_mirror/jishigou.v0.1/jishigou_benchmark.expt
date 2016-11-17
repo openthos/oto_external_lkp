@@ -1,0 +1,7 @@
+#!/usr/bin/expect
+spawn  telnet localhost
+expect "#"
+send "/data/ubuntu/lkp/benchmarks/jishigou/auto_interact.sh\r"
+expect "#"
+send "exit\r"
+
