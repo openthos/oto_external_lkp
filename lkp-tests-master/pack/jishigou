@@ -10,8 +10,7 @@ install()
 cp  -af $BM_NAME  $BM_ROOT
 cp -af *.apk $BM_ROOT
 cp -af  auto_interact.sh $BM_ROOT   
-nc localhost 2600 <<EOF
-pm install /data/ubuntu/lkp/benchmarks/jishigou/net.jishigou.t2.8.0.apk
-EOF
+cp -af  jishigou_benchmark.expt $BM_ROOT   
+./jishigou_pack.expt
 sleep 10
 }

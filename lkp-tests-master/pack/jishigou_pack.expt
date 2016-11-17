@@ -1,0 +1,8 @@
+#!/usr/bin/expect
+spawn  telnet localhost
+expect "#"
+send "pm install /data/ubuntu/lkp/benchmarks/jishigou/net.jishigou.t2.8.0.apk\r"
+expect "#"
+send "sleep 1"
+expect "#"
+send "exit\r"
