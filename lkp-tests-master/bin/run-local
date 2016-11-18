@@ -85,7 +85,7 @@ HOSTNAME = ENV["HOSTNAME"] || `hostname`.chomp
 
 def getcommitid()
         commitid=`uname -r`.chomp!
-        afile ='/data/commitId.txt'
+        afile ='/root/commitId.txt'
         if File.exist?(afile)
            rbfile= File.open(afile,"r")
            line=rbfile.gets.chomp!
