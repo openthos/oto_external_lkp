@@ -5,6 +5,9 @@ CHMOUNT=/data/ubuntu
 BUSYBOX=/system/xbin/busybox
 export PATH=/system/xbin/:$PATH 
 
+source  /data/lkp_test/before_chroot.sh
+
+
 if [ ! -d $CHMOUNT ];then
    mkdir $CHMOUNT
 fi
@@ -14,6 +17,7 @@ sleep 3
 mount -t ext4 /dev/block/sda2 $CHMOUNT
 sleep 3
 cp /data/lkp_test/ubuntu_lkp_test.sh  $CHMOUNT/root
+cp /data/commitId.txt  $CHMOUNT/root
 
 sleep 1
 if [ ! "`grep inet $CHMOUNT/ubuntu/etc/group`" ];then
@@ -54,3 +58,4 @@ chroot $CHMOUNT  su - root -c "/root/ubuntu_lkp_test.sh  $testcase"
 ##下面的代码会在chroot 结束以后执行
 echo "chroot over"
 echo 'do not  ctrl+c please wait until prompt all done'
+#pkill nc

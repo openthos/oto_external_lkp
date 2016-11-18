@@ -17,6 +17,7 @@ sleep 3
 mount -t ext4 /dev/block/sda2 $CHMOUNT
 sleep 3
 cp /data/lkp_test/ubuntu_lkp_test.sh  $CHMOUNT/root
+cp /data/commitId.txt  $CHMOUNT/root
 
 sleep 1
 if [ ! "`grep inet $CHMOUNT/ubuntu/etc/group`" ];then
