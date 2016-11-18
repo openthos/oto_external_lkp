@@ -81,10 +81,25 @@ job.load(jobfile) or (
 )
 
 HOSTNAME = ENV["HOSTNAME"] || `hostname`.chomp
+
+
+def getcommitid()
+        commitid=`uname -r`.chomp!
+        afile ='/data/commitId.txt'
+        if File.exist?(afile)
+           rbfile= File.open(afile,"r")
+           line=rbfile.gets.chomp!
+           # puts line
+           commitid=line[9,line.length-1]
+        end
+    return commitid
+end
+
+
 job['testbox'] = HOSTNAME
 job['tbox_group'] = tbox_group(HOSTNAME)
 job['kconfig'] ||= 'defconfig'
-job['commit'] ||= `uname -r`.chomp!
+job['commit'] ||= getcommitid
 job['rootfs'] ||= `grep -m1 ^ID= /etc/os-release`.split('=')[1].chomp
 job['nr_cpu'] ||= '$(nproc)'
 job['compiler'] ||= File.symlink?('/usr/bin/gcc') ? File.readlink('/usr/bin/gcc') : 'gcc'
