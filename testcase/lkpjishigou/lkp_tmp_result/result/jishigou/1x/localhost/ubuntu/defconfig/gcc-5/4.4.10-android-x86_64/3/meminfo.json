@@ -1,0 +1,83 @@
+{
+  "meminfo.time": [
+    1478791676.5871744
+  ],
+  "meminfo.MemTotal": [
+    16317260
+  ],
+  "meminfo.MemFree": [
+    15005116
+  ],
+  "meminfo.MemAvailable": [
+    15789500
+  ],
+  "meminfo.Buffers": [
+    48988
+  ],
+  "meminfo.Cached": [
+    925096
+  ],
+  "meminfo.Active": [
+    731596
+  ],
+  "meminfo.Inactive": [
+    452080
+  ],
+  "meminfo.Active(anon)": [
+    212120
+  ],
+  "meminfo.Inactive(anon)": [
+    124844
+  ],
+  "meminfo.Active(file)": [
+    519476
+  ],
+  "meminfo.Inactive(file)": [
+    327236
+  ],
+  "meminfo.Dirty": [
+    9288
+  ],
+  "meminfo.AnonPages": [
+    209416
+  ],
+  "meminfo.Mapped": [
+    257252
+  ],
+  "meminfo.Shmem": [
+    127548
+  ],
+  "meminfo.Slab": [
+    84928
+  ],
+  "meminfo.SReclaimable": [
+    52608
+  ],
+  "meminfo.SUnreclaim": [
+    32320
+  ],
+  "meminfo.KernelStack": [
+    10080
+  ],
+  "meminfo.PageTables": [
+    9876
+  ],
+  "meminfo.CommitLimit": [
+    8158628
+  ],
+  "meminfo.Committed_AS": [
+    25622140
+  ],
+  "meminfo.VmallocTotal": [
+    34359738367
+  ],
+  "meminfo.DirectMap4k": [
+    20060
+  ],
+  "meminfo.DirectMap2M": [
+    1951744
+  ],
+  "meminfo.DirectMap1G": [
+    14680064
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "proc-vmstat.time": [
+    1478792851.3274615,
+    1478792852.3305485
+  ],
+  "proc-vmstat.nr_free_pages": [
+    3738831,
+    3736576
+  ],
+  "proc-vmstat.nr_alloc_batch": [
+    797,
+    883
+  ],
+  "proc-vmstat.nr_inactive_anon": [
+    29703,
+    29703
+  ],
+  "proc-vmstat.nr_active_anon": [
+    54732,
+    55683
+  ],
+  "proc-vmstat.nr_inactive_file": [
+    85442,
+    85414
+  ],
+  "proc-vmstat.nr_active_file": [
+    137493,
+    137603
+  ],
+  "proc-vmstat.nr_anon_pages": [
+    53992,
+    55022
+  ],
+  "proc-vmstat.nr_mapped": [
+    64886,
+    64913
+  ],
+  "proc-vmstat.nr_file_pages": [
+    253317,
+    253399
+  ],
+  "proc-vmstat.nr_dirty": [
+    12633,
+    609
+  ],
+  "proc-vmstat.nr_writeback": [
+    0,
+    2099
+  ],
+  "proc-vmstat.nr_slab_reclaimable": [
+    13231,
+    13282
+  ],
+  "proc-vmstat.nr_slab_unreclaimable": [
+    8393,
+    9321
+  ],
+  "proc-vmstat.nr_page_table_pages": [
+    2789,
+    2965
+  ],
+  "proc-vmstat.nr_kernel_stack": [
+    674,
+    712
+  ],
+  "proc-vmstat.nr_shmem": [
+    30379,
+    30379
+  ],
+  "proc-vmstat.nr_dirtied": [
+    538532,
+    538558
+  ],
+  "proc-vmstat.nr_written": [
+    506909,
+    516950
+  ],
+  "proc-vmstat.nr_dirty_threshold": [
+    786383,
+    785949
+  ],
+  "proc-vmstat.nr_dirty_background_threshold": [
+    196595,
+    196487
+  ],
+  "proc-vmstat.pgpgin": [
+    693423,
+    693431
+  ],
+  "proc-vmstat.pgpgout": [
+    2135696,
+    2183804
+  ],
+  "proc-vmstat.pgalloc_dma": [
+    1,
+    1
+  ],
+  "proc-vmstat.pgalloc_dma32": [
+    3238101,
+    3240710
+  ],
+  "proc-vmstat.pgalloc_normal": [
+    19740735,
+    19757216
+  ],
+  "proc-vmstat.pgfree": [
+    26719607,
+    26736271
+  ],
+  "proc-vmstat.pgactivate": [
+    403434,
+    403454
+  ],
+  "proc-vmstat.pgfault": [
+    33678892,
+    33701784
+  ],
+  "proc-vmstat.pgmajfault": [
+    4479,
+    4479
+  ],
+  "proc-vmstat.pageoutrun": [
+    1,
+    1
+  ]
+}

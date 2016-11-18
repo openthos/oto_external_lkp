@@ -1,0 +1,32 @@
+{
+  "nbench.time.user_time": [
+    254.31
+  ],
+  "nbench.time.system_time": [
+    0.06
+  ],
+  "nbench.time.percent_of_cpu_this_job_got": [
+    100
+  ],
+  "nbench.time.elapsed_time": [
+    254.37
+  ],
+  "nbench.time.maximum_resident_set_size": [
+    3136
+  ],
+  "nbench.time.minor_page_faults": [
+    1046
+  ],
+  "nbench.time.voluntary_context_switches": [
+    15
+  ],
+  "nbench.time.involuntary_context_switches": [
+    338
+  ],
+  "nbench.time.file_system_outputs": [
+    8
+  ],
+  "nbench.time.page_size": [
+    4096
+  ]
+}

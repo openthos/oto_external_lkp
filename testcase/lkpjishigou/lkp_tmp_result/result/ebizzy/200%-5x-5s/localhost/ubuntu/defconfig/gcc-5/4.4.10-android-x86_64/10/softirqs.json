@@ -1,0 +1,238 @@
+{
+  "softirqs.time": [
+    1478267237.5486505,
+    1478267263.540795
+  ],
+  "softirqs.CPU2.HI": [
+    2,
+    2
+  ],
+  "softirqs.HI": [
+    2,
+    2
+  ],
+  "softirqs.CPU0.TIMER": [
+    257560,
+    282629
+  ],
+  "softirqs.CPU1.TIMER": [
+    241842,
+    266951
+  ],
+  "softirqs.CPU2.TIMER": [
+    258300,
+    283385
+  ],
+  "softirqs.CPU3.TIMER": [
+    258565,
+    283671
+  ],
+  "softirqs.CPU4.TIMER": [
+    227272,
+    252353
+  ],
+  "softirqs.CPU5.TIMER": [
+    211115,
+    236217
+  ],
+  "softirqs.CPU6.TIMER": [
+    192073,
+    217144
+  ],
+  "softirqs.CPU7.TIMER": [
+    182919,
+    208025
+  ],
+  "softirqs.TIMER": [
+    1829646,
+    2030375
+  ],
+  "softirqs.CPU4.NET_TX": [
+    1158,
+    1162
+  ],
+  "softirqs.NET_TX": [
+    1158,
+    1162
+  ],
+  "softirqs.CPU0.NET_RX": [
+    64612,
+    64624
+  ],
+  "softirqs.CPU1.NET_RX": [
+    4940,
+    4948
+  ],
+  "softirqs.CPU2.NET_RX": [
+    4406,
+    4409
+  ],
+  "softirqs.CPU3.NET_RX": [
+    2194,
+    2202
+  ],
+  "softirqs.CPU4.NET_RX": [
+    22978,
+    22983
+  ],
+  "softirqs.CPU5.NET_RX": [
+    4144,
+    4149
+  ],
+  "softirqs.CPU6.NET_RX": [
+    5063,
+    5066
+  ],
+  "softirqs.CPU7.NET_RX": [
+    4194,
+    4195
+  ],
+  "softirqs.NET_RX": [
+    112531,
+    112576
+  ],
+  "softirqs.CPU0.BLOCK": [
+    22262,
+    22427
+  ],
+  "softirqs.CPU1.BLOCK": [
+    2970,
+    2970
+  ],
+  "softirqs.CPU2.BLOCK": [
+    1092,
+    1092
+  ],
+  "softirqs.CPU3.BLOCK": [
+    1216,
+    1216
+  ],
+  "softirqs.CPU4.BLOCK": [
+    4710,
+    4710
+  ],
+  "softirqs.CPU5.BLOCK": [
+    3797,
+    3799
+  ],
+  "softirqs.CPU6.BLOCK": [
+    2258,
+    2259
+  ],
+  "softirqs.CPU7.BLOCK": [
+    1190,
+    1190
+  ],
+  "softirqs.BLOCK": [
+    39495,
+    39663
+  ],
+  "softirqs.CPU0.TASKLET": [
+    6063,
+    6063
+  ],
+  "softirqs.CPU1.TASKLET": [
+    125,
+    125
+  ],
+  "softirqs.CPU2.TASKLET": [
+    277,
+    277
+  ],
+  "softirqs.CPU3.TASKLET": [
+    73,
+    73
+  ],
+  "softirqs.CPU4.TASKLET": [
+    664,
+    664
+  ],
+  "softirqs.CPU5.TASKLET": [
+    39,
+    39
+  ],
+  "softirqs.CPU6.TASKLET": [
+    115,
+    115
+  ],
+  "softirqs.CPU7.TASKLET": [
+    53,
+    53
+  ],
+  "softirqs.TASKLET": [
+    7409,
+    7409
+  ],
+  "softirqs.CPU0.SCHED": [
+    50456,
+    50738
+  ],
+  "softirqs.CPU1.SCHED": [
+    42507,
+    42799
+  ],
+  "softirqs.CPU2.SCHED": [
+    49288,
+    49572
+  ],
+  "softirqs.CPU3.SCHED": [
+    48447,
+    48743
+  ],
+  "softirqs.CPU4.SCHED": [
+    60395,
+    60680
+  ],
+  "softirqs.CPU5.SCHED": [
+    30527,
+    30825
+  ],
+  "softirqs.CPU6.SCHED": [
+    24364,
+    24637
+  ],
+  "softirqs.CPU7.SCHED": [
+    21859,
+    22154
+  ],
+  "softirqs.SCHED": [
+    327843,
+    330148
+  ],
+  "softirqs.CPU0.RCU": [
+    110273,
+    112975
+  ],
+  "softirqs.CPU1.RCU": [
+    99636,
+    102328
+  ],
+  "softirqs.CPU2.RCU": [
+    108821,
+    111519
+  ],
+  "softirqs.CPU3.RCU": [
+    109812,
+    112484
+  ],
+  "softirqs.CPU4.RCU": [
+    76868,
+    79598
+  ],
+  "softirqs.CPU5.RCU": [
+    80722,
+    83492
+  ],
+  "softirqs.CPU6.RCU": [
+    65394,
+    67958
+  ],
+  "softirqs.CPU7.RCU": [
+    58628,
+    61342
+  ],
+  "softirqs.RCU": [
+    710154,
+    731696
+  ]
+}

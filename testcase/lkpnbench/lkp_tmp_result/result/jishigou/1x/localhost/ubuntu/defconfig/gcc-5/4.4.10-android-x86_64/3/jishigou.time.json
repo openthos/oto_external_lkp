@@ -1,0 +1,26 @@
+{
+  "jishigou.time.percent_of_cpu_this_job_got": [
+    84
+  ],
+  "jishigou.time.elapsed_time": [
+    0.01
+  ],
+  "jishigou.time.maximum_resident_set_size": [
+    3144
+  ],
+  "jishigou.time.minor_page_faults": [
+    1032
+  ],
+  "jishigou.time.voluntary_context_switches": [
+    15
+  ],
+  "jishigou.time.involuntary_context_switches": [
+    7
+  ],
+  "jishigou.time.file_system_outputs": [
+    16
+  ],
+  "jishigou.time.page_size": [
+    4096
+  ]
+}

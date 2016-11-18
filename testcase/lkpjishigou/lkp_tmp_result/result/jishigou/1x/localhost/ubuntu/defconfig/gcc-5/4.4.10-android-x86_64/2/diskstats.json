@@ -1,0 +1,125 @@
+{
+  "diskstats.time": [
+    1478790804.0596704
+  ],
+  "diskstats.sda.read_ios": [
+    19214
+  ],
+  "diskstats.sda.read_merges": [
+    162
+  ],
+  "diskstats.sda.read_sectors": [
+    1300214
+  ],
+  "diskstats.sda.read_ticks": [
+    143265
+  ],
+  "diskstats.sda.write_ios": [
+    19548
+  ],
+  "diskstats.sda.write_merges": [
+    36158
+  ],
+  "diskstats.sda.write_sectors": [
+    2901528
+  ],
+  "diskstats.sda.write_ticks": [
+    685052
+  ],
+  "diskstats.sda.io_ticks": [
+    106208
+  ],
+  "diskstats.sda.time_in_queue": [
+    828763
+  ],
+  "diskstats.sda1.read_ios": [
+    15
+  ],
+  "diskstats.sda1.read_sectors": [
+    19
+  ],
+  "diskstats.sda1.read_ticks": [
+    65
+  ],
+  "diskstats.sda1.io_ticks": [
+    37
+  ],
+  "diskstats.sda1.time_in_queue": [
+    65
+  ],
+  "diskstats.sda2.read_ios": [
+    10407
+  ],
+  "diskstats.sda2.read_merges": [
+    11
+  ],
+  "diskstats.sda2.read_sectors": [
+    503396
+  ],
+  "diskstats.sda2.read_ticks": [
+    56293
+  ],
+  "diskstats.sda2.write_ios": [
+    3438
+  ],
+  "diskstats.sda2.write_merges": [
+    24556
+  ],
+  "diskstats.sda2.write_sectors": [
+    2619736
+  ],
+  "diskstats.sda2.write_ticks": [
+    504046
+  ],
+  "diskstats.sda2.io_ticks": [
+    28193
+  ],
+  "diskstats.sda2.time_in_queue": [
+    560802
+  ],
+  "diskstats.sda3.read_ios": [
+    98
+  ],
+  "diskstats.sda3.read_sectors": [
+    222
+  ],
+  "diskstats.sda3.read_ticks": [
+    21
+  ],
+  "diskstats.sda3.io_ticks": [
+    21
+  ],
+  "diskstats.sda3.time_in_queue": [
+    21
+  ],
+  "diskstats.sda40.read_ios": [
+    8587
+  ],
+  "diskstats.sda40.read_merges": [
+    151
+  ],
+  "diskstats.sda40.read_sectors": [
+    796276
+  ],
+  "diskstats.sda40.read_ticks": [
+    86837
+  ],
+  "diskstats.sda40.write_ios": [
+    16081
+  ],
+  "diskstats.sda40.write_merges": [
+    11602
+  ],
+  "diskstats.sda40.write_sectors": [
+    281792
+  ],
+  "diskstats.sda40.write_ticks": [
+    180772
+  ],
+  "diskstats.sda40.io_ticks": [
+    80774
+  ],
+  "diskstats.sda40.time_in_queue": [
+    267592
+  ]
+}
