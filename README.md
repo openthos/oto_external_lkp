@@ -1,7 +1,7 @@
 # oto_lkp
 
 ##使用前必读
-lkp本身需要在root权限执行。因此以下所有操作请在root账号下操作。以免出现不必要的麻烦。
+lkp本身需要在root权限执行。因此以下所有操作请在root账号下操作。以免出现不必要的麻烦。  
 vim /etc/hostname
 修改各个被测试机器中ubuntu的hostname为不同的名字，不要出现重复的hostname。
 
