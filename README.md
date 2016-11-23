@@ -22,6 +22,10 @@ git checkout   b0dcbe653041e074c6fbac608c5e9d34c8a025b4
 lkp-tests-master目录存放的是lkp的源代码，其可以在androidx86的chroot ubuntu环境上面运行。 
 
 testcase目录存放的是打包好的测试用例。
+## 原理以及功能描述
+- 通过chroot使得lkp可以运行在androidx86内核上面的ubuntu环境中。使得lkp可以采集androidx86的内核信息。
+- 通过adb达到自动化测试框架远程控制lkp运行
+- 为了让gui app在运行的同时，lkp可以采集androidx86内核的信息，增加了chrooted ubuntu和androidx86通过telnet+expect通信协作的功能。
 
 ##自动运行测试用例的方法【用于合并到自动化测试框架】：
 ```
