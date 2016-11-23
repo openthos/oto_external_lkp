@@ -61,7 +61,8 @@ root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# ./run_withlog.sh
 
 [lkpebizzy在androidx86上面的测试数据csv](https://github.com/openthos/oto_lkp/tree/master/testcase/lkpebizzy/lkp_tmp_result/result/ebizzy)
 ## TODO
-- 新增新增测试用例的方法
+- 编写新增新增测试用例的文档 https://github.com/openthos/oto_lkp/issues/3
+- 增加dev分支。https://github.com/openthos/oto_lkp/issues/4  
 
 ##感谢
 - openthos项目提供的chroot环境支持
