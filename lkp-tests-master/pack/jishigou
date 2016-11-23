@@ -12,5 +12,4 @@ cp -af *.apk $BM_ROOT
 cp -af  auto_interact.sh $BM_ROOT   
 cp -af  jishigou_benchmark.expt $BM_ROOT   
 $LKP_SRC/pack/jishigou_pack.expt
-sleep 10
 }
