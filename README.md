@@ -6,13 +6,7 @@ vim /etc/hostname
 修改各个机器中ubuntu系统的hostname为不同的名字，不要出现重复的hostname。
 
 下文的PC2中的linux必须是ubuntu15.10 x86-64版本，并且以uefi+gpt形式安装到PC2。必须注意，以免做无用功。
-目前b0dcbe653041e074c6fbac608c5e9d34c8a025b4这个commit是稳定版本，其以后的commit加了新功能，还不完善。
-使用时请
-```
-git clone https://github.com/openthos/oto_lkp
-cd oto_lkp
-git checkout   b0dcbe653041e074c6fbac608c5e9d34c8a025b4
-检出稳定的版本。
+
 ```
 
 ## 概述
@@ -31,7 +25,6 @@ testcase目录存放的是打包好的测试用例。
 ```
 git clone https://github.com/openthos/oto_lkp
 cd oto_lkp
-git checkout  b0dcbe653041e074c6fbac608c5e9d34c8a025b4
 cd -
 mv ./oto_lkp/testcase/*   somewhere
 rm -rf ./oto_lkp
