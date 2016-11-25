@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+
+STDIN.each_line do |line|
+	case line
+	when /^  Time/
+		next
+	when /^HH:MM:SS/
+		lines=line.gsub!(/ /,'_')		
+		$titles = lines[11..27].split("__")
+				
+	else 
+		values = line.split
+		values[0].gsub!(/:/,'-')
+		$titles.each_with_index { |title, i|
+			puts  values[0]+ "." + title + ": " + values[i+1]			
+		}		
+	end
+end
