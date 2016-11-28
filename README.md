@@ -66,6 +66,9 @@ root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# ./run_withlog.sh
 
 ##感谢
 - openthos项目提供的chroot环境支持
+ + https://github.com/openthos/community-analysis/wiki/chroot%E5%88%B0ubuntu
+ + https://github.com/openthos/system-analysis/blob/master/display/issues/chroot.md
+ + https://github.com/openthos/app-testing-results/issues/259
 - [lkp collet](https://github.com/openthos/lkp-analysis)等相关人员的代码贡献。
 - [lkp项目原始出处](https://github.com/fengguang/lkp-tests)本repo中lkp-tests-master中的代码是其2016.6月份左右的一个版本。
 
