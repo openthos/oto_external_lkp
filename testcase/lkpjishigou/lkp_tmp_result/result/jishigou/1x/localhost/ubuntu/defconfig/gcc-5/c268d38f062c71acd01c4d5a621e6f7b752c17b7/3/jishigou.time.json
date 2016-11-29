@@ -1,0 +1,23 @@
+{
+  "jishigou.time.elapsed_time": [
+    10.39
+  ],
+  "jishigou.time.maximum_resident_set_size": [
+    5568
+  ],
+  "jishigou.time.minor_page_faults": [
+    1039
+  ],
+  "jishigou.time.voluntary_context_switches": [
+    179
+  ],
+  "jishigou.time.involuntary_context_switches": [
+    6
+  ],
+  "jishigou.time.file_system_outputs": [
+    8
+  ],
+  "jishigou.time.page_size": [
+    4096
+  ]
+}

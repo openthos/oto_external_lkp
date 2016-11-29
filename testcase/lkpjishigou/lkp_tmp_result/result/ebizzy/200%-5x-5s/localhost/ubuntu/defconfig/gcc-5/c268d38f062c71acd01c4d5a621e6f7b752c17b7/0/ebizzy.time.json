@@ -1,0 +1,32 @@
+{
+  "ebizzy.time.user_time": [
+    26.97
+  ],
+  "ebizzy.time.system_time": [
+    72.04
+  ],
+  "ebizzy.time.percent_of_cpu_this_job_got": [
+    395
+  ],
+  "ebizzy.time.elapsed_time": [
+    25.03
+  ],
+  "ebizzy.time.maximum_resident_set_size": [
+    9864
+  ],
+  "ebizzy.time.minor_page_faults": [
+    51562300
+  ],
+  "ebizzy.time.voluntary_context_switches": [
+    252
+  ],
+  "ebizzy.time.involuntary_context_switches": [
+    22150
+  ],
+  "ebizzy.time.file_system_outputs": [
+    24
+  ],
+  "ebizzy.time.page_size": [
+    4096
+  ]
+}

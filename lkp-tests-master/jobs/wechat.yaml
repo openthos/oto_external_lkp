@@ -1,0 +1,7 @@
+testcase: wechat
+category: benchmark
+
+iterations: 1x
+
+jishigou:
+  duration: 10s

@@ -1,0 +1,38 @@
+{
+  "time.user_time": [
+    27.32
+  ],
+  "time.system_time": [
+    72.35
+  ],
+  "time.percent_of_cpu_this_job_got": [
+    398
+  ],
+  "time.elapsed_time": [
+    25.03
+  ],
+  "time.maximum_resident_set_size": [
+    9916
+  ],
+  "time.major_page_faults": [
+    1
+  ],
+  "time.minor_page_faults": [
+    52629519
+  ],
+  "time.voluntary_context_switches": [
+    182
+  ],
+  "time.involuntary_context_switches": [
+    17977
+  ],
+  "time.file_system_inputs": [
+    96
+  ],
+  "time.file_system_outputs": [
+    40
+  ],
+  "time.page_size": [
+    4096
+  ]
+}

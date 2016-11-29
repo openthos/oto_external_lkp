@@ -27,14 +27,11 @@ default-monitors:
   pmeter: 
   sched_debug:
     interval: 60
-memory: 15G
-hdd_partitions: 
-ssd_partitions: 
 category: benchmark
 iterations: 1x
 jishigou:
   duration: 10s
-enqueue_time: 2016-11-18 23:13:59.906020503 +08:00
+enqueue_time: 2016-11-24 15:47:21.914331186 +08:00
 testbox: localhost
 tbox_group: localhost
 kconfig: defconfig

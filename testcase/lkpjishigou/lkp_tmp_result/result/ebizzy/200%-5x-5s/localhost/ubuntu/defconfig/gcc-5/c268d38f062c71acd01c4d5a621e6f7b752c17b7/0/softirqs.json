@@ -1,0 +1,150 @@
+{
+  "softirqs.time": [
+    1479890268.1837144,
+    1479890294.1759589
+  ],
+  "softirqs.CPU1.HI": [
+    3,
+    3
+  ],
+  "softirqs.CPU2.HI": [
+    6,
+    6
+  ],
+  "softirqs.CPU3.HI": [
+    2,
+    2
+  ],
+  "softirqs.HI": [
+    11,
+    11
+  ],
+  "softirqs.CPU0.TIMER": [
+    249363,
+    274599
+  ],
+  "softirqs.CPU1.TIMER": [
+    254065,
+    279195
+  ],
+  "softirqs.CPU2.TIMER": [
+    96938,
+    122193
+  ],
+  "softirqs.CPU3.TIMER": [
+    76635,
+    101721
+  ],
+  "softirqs.TIMER": [
+    677001,
+    777708
+  ],
+  "softirqs.CPU2.NET_TX": [
+    181,
+    185
+  ],
+  "softirqs.NET_TX": [
+    181,
+    185
+  ],
+  "softirqs.CPU0.NET_RX": [
+    10973,
+    11026
+  ],
+  "softirqs.CPU1.NET_RX": [
+    5140,
+    5143
+  ],
+  "softirqs.CPU2.NET_RX": [
+    36432,
+    36447
+  ],
+  "softirqs.CPU3.NET_RX": [
+    7178,
+    7186
+  ],
+  "softirqs.NET_RX": [
+    59723,
+    59802
+  ],
+  "softirqs.CPU0.BLOCK": [
+    67729,
+    67960
+  ],
+  "softirqs.CPU1.BLOCK": [
+    26939,
+    26939
+  ],
+  "softirqs.CPU2.BLOCK": [
+    116097,
+    116099
+  ],
+  "softirqs.CPU3.BLOCK": [
+    71540,
+    71543
+  ],
+  "softirqs.BLOCK": [
+    282305,
+    282541
+  ],
+  "softirqs.CPU0.TASKLET": [
+    96,
+    96
+  ],
+  "softirqs.CPU1.TASKLET": [
+    203,
+    203
+  ],
+  "softirqs.CPU2.TASKLET": [
+    1713,
+    1713
+  ],
+  "softirqs.CPU3.TASKLET": [
+    65,
+    65
+  ],
+  "softirqs.TASKLET": [
+    2077,
+    2077
+  ],
+  "softirqs.CPU0.SCHED": [
+    86832,
+    87143
+  ],
+  "softirqs.CPU1.SCHED": [
+    87790,
+    88141
+  ],
+  "softirqs.CPU2.SCHED": [
+    37812,
+    38170
+  ],
+  "softirqs.CPU3.SCHED": [
+    33068,
+    33408
+  ],
+  "softirqs.SCHED": [
+    245502,
+    246862
+  ],
+  "softirqs.CPU0.RCU": [
+    181758,
+    189099
+  ],
+  "softirqs.CPU1.RCU": [
+    183864,
+    191077
+  ],
+  "softirqs.CPU2.RCU": [
+    113340,
+    120238
+  ],
+  "softirqs.CPU3.RCU": [
+    74923,
+    82115
+  ],
+  "softirqs.RCU": [
+    553885,
+    582529
+  ]
+}

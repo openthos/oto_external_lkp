@@ -1,0 +1,42 @@
+---
+testcase: ebizzy
+default-monitors:
+  wait: activate-monitor
+  kmsg: 
+  uptime: 
+  iostat: 
+  vmstat: 
+  numa-numastat: 
+  numa-vmstat: 
+  numa-meminfo: 
+  proc-vmstat: 
+  proc-stat:
+    interval: 10
+  meminfo: 
+  slabinfo: 
+  interrupts: 
+  lock_stat: 
+  latency_stats: 
+  softirqs: 
+  bdi_dev_mapping: 
+  diskstats: 
+  nfsstat: 
+  cpuidle: 
+  cpufreq-stats: 
+  turbostat: 
+  pmeter: 
+  sched_debug:
+    interval: 60
+category: benchmark
+nr_threads: 200%
+iterations: 5x
+ebizzy:
+  duration: 5s
+enqueue_time: 2016-11-24 18:47:11.693710998 +08:00
+testbox: localhost
+tbox_group: localhost
+kconfig: defconfig
+commit: c268d38f062c71acd01c4d5a621e6f7b752c17b7
+rootfs: ubuntu
+nr_cpu: "$(nproc)"
+compiler: gcc-5

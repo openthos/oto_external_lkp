@@ -1,0 +1,150 @@
+{
+  "softirqs.time": [
+    1479890993.1757004,
+    1479891019.1700356
+  ],
+  "softirqs.CPU1.HI": [
+    3,
+    3
+  ],
+  "softirqs.CPU2.HI": [
+    6,
+    6
+  ],
+  "softirqs.CPU3.HI": [
+    2,
+    2
+  ],
+  "softirqs.HI": [
+    11,
+    11
+  ],
+  "softirqs.CPU0.TIMER": [
+    371317,
+    396624
+  ],
+  "softirqs.CPU1.TIMER": [
+    399331,
+    424458
+  ],
+  "softirqs.CPU2.TIMER": [
+    178499,
+    203631
+  ],
+  "softirqs.CPU3.TIMER": [
+    137615,
+    162701
+  ],
+  "softirqs.TIMER": [
+    1086762,
+    1187414
+  ],
+  "softirqs.CPU2.NET_TX": [
+    302,
+    306
+  ],
+  "softirqs.NET_TX": [
+    302,
+    306
+  ],
+  "softirqs.CPU0.NET_RX": [
+    19573,
+    19596
+  ],
+  "softirqs.CPU1.NET_RX": [
+    8980,
+    8992
+  ],
+  "softirqs.CPU2.NET_RX": [
+    59099,
+    59108
+  ],
+  "softirqs.CPU3.NET_RX": [
+    14065,
+    14072
+  ],
+  "softirqs.NET_RX": [
+    101717,
+    101768
+  ],
+  "softirqs.CPU0.BLOCK": [
+    68134,
+    68326
+  ],
+  "softirqs.CPU1.BLOCK": [
+    27023,
+    27026
+  ],
+  "softirqs.CPU2.BLOCK": [
+    116562,
+    116565
+  ],
+  "softirqs.CPU3.BLOCK": [
+    71600,
+    71603
+  ],
+  "softirqs.BLOCK": [
+    283319,
+    283520
+  ],
+  "softirqs.CPU0.TASKLET": [
+    101,
+    101
+  ],
+  "softirqs.CPU1.TASKLET": [
+    208,
+    208
+  ],
+  "softirqs.CPU2.TASKLET": [
+    1810,
+    1810
+  ],
+  "softirqs.CPU3.TASKLET": [
+    108,
+    108
+  ],
+  "softirqs.TASKLET": [
+    2227,
+    2227
+  ],
+  "softirqs.CPU0.SCHED": [
+    119205,
+    119570
+  ],
+  "softirqs.CPU1.SCHED": [
+    128585,
+    128912
+  ],
+  "softirqs.CPU2.SCHED": [
+    66098,
+    66459
+  ],
+  "softirqs.CPU3.SCHED": [
+    46581,
+    46894
+  ],
+  "softirqs.SCHED": [
+    360469,
+    361835
+  ],
+  "softirqs.CPU0.RCU": [
+    241077,
+    248756
+  ],
+  "softirqs.CPU1.RCU": [
+    258295,
+    265409
+  ],
+  "softirqs.CPU2.RCU": [
+    158154,
+    166060
+  ],
+  "softirqs.CPU3.RCU": [
+    105539,
+    113219
+  ],
+  "softirqs.RCU": [
+    763065,
+    793444
+  ]
+}

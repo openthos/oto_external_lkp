@@ -1,0 +1,30 @@
+Iteration: 1
+2016-11-25 13:31:13 ./ebizzy -t 8 -S 5
+21889 records/s 2681 2947 2698 2717 2723 2725 2729 2666
+real  5.00 s
+user  5.35 s
+sys  14.58 s
+Iteration: 2
+2016-11-25 13:31:18 ./ebizzy -t 8 -S 5
+21960 records/s 2753 2733 2741 2747 2748 2736 2758 2740
+real  5.00 s
+user  5.47 s
+sys  14.46 s
+Iteration: 3
+2016-11-25 13:31:23 ./ebizzy -t 8 -S 5
+21873 records/s 2733 2711 2728 2723 2714 2742 2713 2806
+real  5.00 s
+user  5.51 s
+sys  14.43 s
+Iteration: 4
+2016-11-25 13:31:28 ./ebizzy -t 8 -S 5
+21916 records/s 2743 2735 2756 2795 2696 2695 2742 2750
+real  5.00 s
+user  5.50 s
+sys  14.42 s
+Iteration: 5
+2016-11-25 13:31:33 ./ebizzy -t 8 -S 5
+21985 records/s 2755 2763 2739 2752 2735 2755 2740 2742
+real  5.00 s
+user  5.48 s
+sys  14.45 s

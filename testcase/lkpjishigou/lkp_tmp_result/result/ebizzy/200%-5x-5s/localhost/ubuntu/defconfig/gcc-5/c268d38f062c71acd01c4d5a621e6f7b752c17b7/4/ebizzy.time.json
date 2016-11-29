@@ -1,0 +1,38 @@
+{
+  "ebizzy.time.user_time": [
+    27.32
+  ],
+  "ebizzy.time.system_time": [
+    72.35
+  ],
+  "ebizzy.time.percent_of_cpu_this_job_got": [
+    398
+  ],
+  "ebizzy.time.elapsed_time": [
+    25.03
+  ],
+  "ebizzy.time.maximum_resident_set_size": [
+    9916
+  ],
+  "ebizzy.time.major_page_faults": [
+    1
+  ],
+  "ebizzy.time.minor_page_faults": [
+    52629519
+  ],
+  "ebizzy.time.voluntary_context_switches": [
+    182
+  ],
+  "ebizzy.time.involuntary_context_switches": [
+    17977
+  ],
+  "ebizzy.time.file_system_inputs": [
+    96
+  ],
+  "ebizzy.time.file_system_outputs": [
+    40
+  ],
+  "ebizzy.time.page_size": [
+    4096
+  ]
+}

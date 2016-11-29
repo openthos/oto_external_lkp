@@ -3,11 +3,8 @@
 export_top_env()
 {
 	export testcase='jishigou'
-	export memory='15G'
-	export hdd_partitions=
-	export ssd_partitions=
 	export category='benchmark'
-	export enqueue_time='2016-11-18 23:13:59 +0800'
+	export enqueue_time='2016-11-24 15:47:21 +0800'
 	export testbox='localhost'
 	export tbox_group='localhost'
 	export kconfig='defconfig'

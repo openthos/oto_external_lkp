@@ -1,0 +1,29 @@
+{
+  "time.elapsed_time": [
+    10.38
+  ],
+  "time.maximum_resident_set_size": [
+    5512
+  ],
+  "time.major_page_faults": [
+    1
+  ],
+  "time.minor_page_faults": [
+    1040
+  ],
+  "time.voluntary_context_switches": [
+    180
+  ],
+  "time.involuntary_context_switches": [
+    3
+  ],
+  "time.file_system_inputs": [
+    96
+  ],
+  "time.file_system_outputs": [
+    8
+  ],
+  "time.page_size": [
+    4096
+  ]
+}
