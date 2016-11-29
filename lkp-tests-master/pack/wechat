@@ -2,7 +2,7 @@
 
 VERSION="2.2.3"
 #WEB_URL="http://www.tux.org/~mayer/linux/nbench-byte-2.2.3.tar.gz"
-WEB_URL="https://github.com/xhl2791188/Second/blob/master/wechat.v0.1.tar.gz"
+WEB_URL="https://github.com/openthos/oto_lkp/blob/master/benchmark_mirror/wechat.v0.1.tar.gz"
 
 install()
 {
