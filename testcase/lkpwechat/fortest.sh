@@ -1,5 +1,5 @@
 #!/bin/bash -x
-ip_of_android="192.168.0.138"
+ip_of_android="192.168.2.60"
 tmp_result_dir="lkp_tmp_result"
 cd "$(dirname "$0")" 
 apt-get install -y android-tools-adb
