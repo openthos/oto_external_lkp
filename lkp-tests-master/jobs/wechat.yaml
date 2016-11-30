@@ -1,0 +1,7 @@
+testcase: wechat
+category: benchmark
+
+iterations: 1x
+
+wechat:
+  duration: 10s

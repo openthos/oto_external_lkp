@@ -6,15 +6,6 @@ vim /etc/hostname
 修改各个机器中ubuntu系统的hostname为不同的名字，不要出现重复的hostname。
 
 下文的PC2中的linux必须是ubuntu15.10 x86-64版本，并且以uefi+gpt形式安装到PC2。必须注意，以免做无用功。
-目前b0dcbe653041e074c6fbac608c5e9d34c8a025b4这个commit是稳定版本，其以后的commit加了新功能，还不完善。
-使用时请
-```
-git clone https://github.com/openthos/oto_lkp
-cd oto_lkp
-git checkout   b0dcbe653041e074c6fbac608c5e9d34c8a025b4
-检出稳定的版本。
-```
-
 ## 概述
 目标： 在openthos的chroot环境下面运行lkp，获取测试结果的json数据和csv数据
 
@@ -22,12 +13,15 @@ git checkout   b0dcbe653041e074c6fbac608c5e9d34c8a025b4
 lkp-tests-master目录存放的是lkp的源代码，其可以在androidx86的chroot ubuntu环境上面运行。 
 
 testcase目录存放的是打包好的测试用例。
+## 原理以及功能描述
+- 通过chroot使得lkp可以运行在androidx86内核上面的ubuntu环境中。使得lkp可以采集androidx86的内核信息。
+- 通过adb达到自动化测试框架远程控制lkp运行
+- 为了让gui app在运行的同时，lkp可以采集androidx86内核的信息，增加了chrooted ubuntu和androidx86通过telnet+expect通信协作的功能。
 
 ##自动运行测试用例的方法【用于合并到自动化测试框架】：
 ```
 git clone https://github.com/openthos/oto_lkp
 cd oto_lkp
-git checkout  b0dcbe653041e074c6fbac608c5e9d34c8a025b4
 cd -
 mv ./oto_lkp/testcase/*   somewhere
 rm -rf ./oto_lkp
@@ -67,9 +61,17 @@ root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# ./run_withlog.sh
 
 [lkpebizzy在androidx86上面的测试数据csv](https://github.com/openthos/oto_lkp/tree/master/testcase/lkpebizzy/lkp_tmp_result/result/ebizzy)
 ## TODO
-- 新增新增测试用例的方法
+- 编写新增新增测试用例的文档 https://github.com/openthos/oto_lkp/issues/3
+- 增加dev分支。https://github.com/openthos/oto_lkp/issues/4  
 
 ##感谢
 - openthos项目提供的chroot环境支持
-- lkp collet相关人员的代码贡献。
+ + https://github.com/openthos/community-analysis/wiki/chroot%E5%88%B0ubuntu
+ + https://github.com/openthos/system-analysis/blob/master/display/issues/chroot.md
+ + https://github.com/openthos/app-testing-results/issues/259
+- [lkp-analysis](https://github.com/openthos/lkp-analysis)、[lkp collet](https://github.com/openthos/lkp-analysis/tree/lkp_collect)等相关人员的代码贡献。
 - [lkp项目原始出处](https://github.com/fengguang/lkp-tests)本repo中lkp-tests-master中的代码是其2016.6月份左右的一个版本。
+
+##LKP官方帮助信息
+- https://github.com/openthos/oto_lkp/blob/master/lkp-tests-master/README.md
+- https://github.com/openthos/oto_lkp/blob/master/lkp-tests-master/doc/lkp-howto.md

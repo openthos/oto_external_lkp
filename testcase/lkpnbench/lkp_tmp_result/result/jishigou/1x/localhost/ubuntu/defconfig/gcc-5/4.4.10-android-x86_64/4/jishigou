@@ -1,7 +1,0 @@
-Iteration: 1
-2016-11-10 23:47:32 ./jishigou
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-	pkg: /data/ubuntu/lkp/benchmarks/jishigou/net.jishigou.t2.8.0.apk
-Success
-/ # 
