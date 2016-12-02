@@ -1,5 +1,5 @@
 #!/system/xbin/sh
-am start -n net.wechat.t/net.wechat.t.StartActivity
+am start -n  com.tencent.mm.ui/com.tencent.mm.ui.LauncherUI
 for i in `seq 1 100`
 do
 echo $i
