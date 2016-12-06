@@ -1,3 +1,0 @@
-2016-11-24 20:40:56 /usr/bin/hackbench -g 2 --threads -l 60000
-Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
-Each sender will pass 60000 messages of 100 bytes
