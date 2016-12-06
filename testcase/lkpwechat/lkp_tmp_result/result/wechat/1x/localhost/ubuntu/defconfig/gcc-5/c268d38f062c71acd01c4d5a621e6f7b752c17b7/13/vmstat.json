@@ -1,0 +1,62 @@
+{
+  "vmstat.procs.r": [
+    3,
+    2,
+    1
+  ],
+  "vmstat.memory.free": [
+    5777888,
+    5772036,
+    5776460
+  ],
+  "vmstat.memory.buff": [
+    63240,
+    63248,
+    63252
+  ],
+  "vmstat.memory.cache": [
+    1690412,
+    1690560,
+    1690648
+  ],
+  "vmstat.io.bi": [
+    49,
+    0,
+    0
+  ],
+  "vmstat.io.bo": [
+    440,
+    4,
+    136
+  ],
+  "vmstat.system.in": [
+    1089,
+    1428,
+    1546
+  ],
+  "vmstat.system.cs": [
+    1819,
+    4608,
+    2657
+  ],
+  "vmstat.cpu.us": [
+    10,
+    3,
+    3
+  ],
+  "vmstat.cpu.sy": [
+    6,
+    4,
+    4
+  ],
+  "vmstat.cpu.id": [
+    81,
+    91,
+    90
+  ],
+  "vmstat.cpu.wa": [
+    4,
+    2,
+    2
+  ]
+}

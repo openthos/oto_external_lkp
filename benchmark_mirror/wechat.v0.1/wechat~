@@ -1,2 +1,3 @@
-#!/bin/bash
+#!/bin/bash -x
 ./wechat_benchmark.expt
+./auto_interact.sh

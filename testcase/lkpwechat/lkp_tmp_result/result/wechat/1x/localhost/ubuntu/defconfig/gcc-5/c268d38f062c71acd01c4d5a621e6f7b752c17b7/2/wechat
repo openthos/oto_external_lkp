@@ -1,0 +1,56 @@
+Iteration: 1
+2016-12-02 14:53:15 ./wechat
+spawn telnet localhost
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+/data # [6n/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Starting: Intent { cmp=net.wechat.t/.StartActivity }
+Error type 3
+Error: Activity class {net.wechat.t/net.wechat.t.StartActivity} does not exist.
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+1
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Fri Dec  2 14:53:16 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+2
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Fri Dec  2 14:53:17 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+3
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Fri Dec  2 14:53:18 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+4
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Fri Dec  2 14:53:19 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+5
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Fri Dec  2 14:53:20 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+6
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Fri Dec  2 14:53:21 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+7
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Fri Dec  2 14:53:22 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+8
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Fri Dec  2 14:53:23 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+9
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Fri Dec  2 14:53:24 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+10
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Fri Dec  2 14:53:25 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160

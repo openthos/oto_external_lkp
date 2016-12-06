@@ -1,0 +1,11 @@
+2016-11-24 20:31:10 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 36.534
+2016-11-24 20:31:46 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 38.317
+2016-11-24 20:32:25 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes

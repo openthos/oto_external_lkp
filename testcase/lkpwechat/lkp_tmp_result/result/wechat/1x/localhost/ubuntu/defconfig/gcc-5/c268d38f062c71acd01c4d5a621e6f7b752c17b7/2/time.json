@@ -1,0 +1,29 @@
+{
+  "time.user_time": [
+    0.02
+  ],
+  "time.system_time": [
+    0.01
+  ],
+  "time.elapsed_time": [
+    10.51
+  ],
+  "time.maximum_resident_set_size": [
+    5560
+  ],
+  "time.minor_page_faults": [
+    1044
+  ],
+  "time.voluntary_context_switches": [
+    182
+  ],
+  "time.involuntary_context_switches": [
+    14
+  ],
+  "time.file_system_outputs": [
+    8
+  ],
+  "time.page_size": [
+    4096
+  ]
+}

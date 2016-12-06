@@ -1,0 +1,25 @@
+---
+testcase: hackbench
+default-monitors:
+  wait: activate-monitor
+  ifstat: 
+  uptime:
+    interval: 10
+  meminfo: 
+  memory:
+    interval: 60
+category: benchmark
+nr_threads: 50%
+perf-profile:
+  freq: 800
+hackbench:
+  mode: threads
+  ipc: socket
+enqueue_time: 2016-11-10 16:08:21.758710425 +08:00
+testbox: ooss
+tbox_group: ooss
+kconfig: defconfig
+commit: 4.2.0-16-generic
+rootfs: ubuntu
+nr_cpu: "$(nproc)"
+compiler: gcc-5
