@@ -6,7 +6,7 @@
 1. 测试用例的编译（[GUI的命令行编译](compiler/gui.md)（张琳苹）、[LKP的编译框架](compiler/lkp.md)（薛海龙、毛英明））
 
 ## 自动部署：
-1. [QEMU环境](deploy/qemu.md)（LKP的部署框架：QEMU的加载参数）（曹睿东、陈振环）
+1. [QEMU环境](deploy/qemu.md)（LKP的部署框架：QEMU的加载参数）（曹睿东）
 1. 真实环境（[双系统部署](deploy/pair.md)、[chroot](deploy/chroot.md)）（毛英明）
 
 ## 自动测试：
