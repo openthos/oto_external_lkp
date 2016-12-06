@@ -1,0 +1,150 @@
+{
+  "softirqs.time": [
+    1480665592.6621196,
+    1480665603.1993344
+  ],
+  "softirqs.CPU1.HI": [
+    3,
+    3
+  ],
+  "softirqs.CPU2.HI": [
+    2,
+    2
+  ],
+  "softirqs.CPU3.HI": [
+    1,
+    1
+  ],
+  "softirqs.HI": [
+    6,
+    6
+  ],
+  "softirqs.CPU0.TIMER": [
+    690757,
+    694038
+  ],
+  "softirqs.CPU1.TIMER": [
+    674205,
+    677230
+  ],
+  "softirqs.CPU2.TIMER": [
+    450399,
+    452653
+  ],
+  "softirqs.CPU3.TIMER": [
+    374435,
+    376163
+  ],
+  "softirqs.TIMER": [
+    2189796,
+    2200084
+  ],
+  "softirqs.CPU0.NET_TX": [
+    411,
+    413
+  ],
+  "softirqs.NET_TX": [
+    411,
+    413
+  ],
+  "softirqs.CPU0.NET_RX": [
+    27975,
+    28024
+  ],
+  "softirqs.CPU1.NET_RX": [
+    20389,
+    20435
+  ],
+  "softirqs.CPU2.NET_RX": [
+    56106,
+    56180
+  ],
+  "softirqs.CPU3.NET_RX": [
+    16537,
+    16585
+  ],
+  "softirqs.NET_RX": [
+    121007,
+    121224
+  ],
+  "softirqs.CPU0.BLOCK": [
+    8442,
+    8463
+  ],
+  "softirqs.CPU1.BLOCK": [
+    4361,
+    4369
+  ],
+  "softirqs.CPU2.BLOCK": [
+    13071,
+    13133
+  ],
+  "softirqs.CPU3.BLOCK": [
+    3385,
+    3392
+  ],
+  "softirqs.BLOCK": [
+    29259,
+    29357
+  ],
+  "softirqs.CPU0.TASKLET": [
+    40,
+    40
+  ],
+  "softirqs.CPU1.TASKLET": [
+    123,
+    123
+  ],
+  "softirqs.CPU2.TASKLET": [
+    424,
+    424
+  ],
+  "softirqs.CPU3.TASKLET": [
+    47,
+    47
+  ],
+  "softirqs.TASKLET": [
+    634,
+    634
+  ],
+  "softirqs.CPU0.SCHED": [
+    295523,
+    296848
+  ],
+  "softirqs.CPU1.SCHED": [
+    287219,
+    288437
+  ],
+  "softirqs.CPU2.SCHED": [
+    230630,
+    231821
+  ],
+  "softirqs.CPU3.SCHED": [
+    184320,
+    185182
+  ],
+  "softirqs.SCHED": [
+    997692,
+    1002288
+  ],
+  "softirqs.CPU0.RCU": [
+    446555,
+    448765
+  ],
+  "softirqs.CPU1.RCU": [
+    435555,
+    437617
+  ],
+  "softirqs.CPU2.RCU": [
+    323893,
+    325621
+  ],
+  "softirqs.CPU3.RCU": [
+    265889,
+    267268
+  ],
+  "softirqs.RCU": [
+    1471892,
+    1479271
+  ]
+}

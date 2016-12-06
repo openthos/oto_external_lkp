@@ -1,0 +1,44 @@
+---
+testcase: hackbench
+default-monitors:
+  wait: activate-monitor
+  ifstat: 
+  uptime: 
+  iostat: 
+  vmstat: 
+  numa-numastat: 
+  numa-vmstat: 
+  numa-meminfo: 
+  proc-vmstat: 
+  proc-stat:
+    interval: 10
+  meminfo: 
+  slabinfo: 
+  interrupts: 
+  lock_stat: 
+  latency_stats: 
+  softirqs: 
+  bdi_dev_mapping: 
+  diskstats: 
+  nfsstat: 
+  cpuidle: 
+  cpufreq-stats: 
+  turbostat: 
+  pmeter: 
+  sched_debug:
+    interval: 60
+category: benchmark
+nr_threads: 50%
+perf-profile:
+  freq: 800
+hackbench:
+  mode: threads
+  ipc: socket
+enqueue_time: 2016-11-24 20:00:52.492855217 +08:00
+testbox: ooss
+tbox_group: ooss
+kconfig: defconfig
+commit: 4.2.0-16-generic
+rootfs: ubuntu
+nr_cpu: "$(nproc)"
+compiler: gcc-5

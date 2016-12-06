@@ -1,0 +1,68 @@
+2016-11-24 16:12:33 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 37.824
+2016-11-24 16:13:11 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 38.122
+2016-11-24 16:13:49 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 38.462
+2016-11-24 16:14:28 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 36.551
+2016-11-24 16:15:04 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 36.288
+2016-11-24 16:15:40 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 39.307
+2016-11-24 16:16:20 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 37.012
+2016-11-24 16:16:57 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 37.500
+2016-11-24 16:17:34 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 37.484
+2016-11-24 16:18:12 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 36.494
+2016-11-24 16:18:48 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 36.846
+2016-11-24 16:19:25 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 38.895
+2016-11-24 16:20:04 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 36.464
+2016-11-24 16:20:41 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 36.689
+2016-11-24 16:21:17 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 36.523
+2016-11-24 16:21:54 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 38.178
+2016-11-24 16:22:32 /usr/bin/hackbench -g 2 --threads -l 60000
+Running in threaded mode with 2 groups using 40 file descriptors each (== 80 tasks)
+Each sender will pass 60000 messages of 100 bytes
+Time: 37.315

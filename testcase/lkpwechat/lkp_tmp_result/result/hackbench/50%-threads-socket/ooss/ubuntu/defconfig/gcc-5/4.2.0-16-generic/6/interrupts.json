@@ -1,0 +1,426 @@
+{
+  "interrupts.time": [
+    1479988859.1431606,
+    1479989497.4072256
+  ],
+  "interrupts.CPU0.0:IR-IO-APIC.2-edge.timer": [
+    25,
+    25
+  ],
+  "interrupts.0:IR-IO-APIC.2-edge.timer": [
+    25,
+    25
+  ],
+  "interrupts.CPU0.1:IR-IO-APIC.1-edge.i8042": [
+    660,
+    660
+  ],
+  "interrupts.CPU1.1:IR-IO-APIC.1-edge.i8042": [
+    9,
+    9
+  ],
+  "interrupts.CPU2.1:IR-IO-APIC.1-edge.i8042": [
+    98,
+    98
+  ],
+  "interrupts.CPU3.1:IR-IO-APIC.1-edge.i8042": [
+    5,
+    5
+  ],
+  "interrupts.1:IR-IO-APIC.1-edge.i8042": [
+    772,
+    772
+  ],
+  "interrupts.CPU0.7:IR-IO-APIC.7-edge": [
+    15,
+    15
+  ],
+  "interrupts.7:IR-IO-APIC.7-edge": [
+    15,
+    15
+  ],
+  "interrupts.CPU0.8:IR-IO-APIC.8-edge.rtc0": [
+    1,
+    1
+  ],
+  "interrupts.8:IR-IO-APIC.8-edge.rtc0": [
+    1,
+    1
+  ],
+  "interrupts.CPU0.9:IR-IO-APIC.9-fasteoi.acpi": [
+    2006,
+    2126
+  ],
+  "interrupts.CPU1.9:IR-IO-APIC.9-fasteoi.acpi": [
+    15,
+    15
+  ],
+  "interrupts.CPU2.9:IR-IO-APIC.9-fasteoi.acpi": [
+    170,
+    170
+  ],
+  "interrupts.CPU3.9:IR-IO-APIC.9-fasteoi.acpi": [
+    30,
+    30
+  ],
+  "interrupts.9:IR-IO-APIC.9-fasteoi.acpi": [
+    2221,
+    2341
+  ],
+  "interrupts.CPU0.12:IR-IO-APIC.12-edge.i8042": [
+    17768,
+    17768
+  ],
+  "interrupts.CPU1.12:IR-IO-APIC.12-edge.i8042": [
+    49,
+    49
+  ],
+  "interrupts.CPU2.12:IR-IO-APIC.12-edge.i8042": [
+    1476,
+    1476
+  ],
+  "interrupts.CPU3.12:IR-IO-APIC.12-edge.i8042": [
+    44,
+    44
+  ],
+  "interrupts.12:IR-IO-APIC.12-edge.i8042": [
+    19337,
+    19337
+  ],
+  "interrupts.CPU0.125:IR-PCI-MSI.327680-edge.xhci_hcd": [
+    42181,
+    45801
+  ],
+  "interrupts.CPU1.125:IR-PCI-MSI.327680-edge.xhci_hcd": [
+    10097,
+    10097
+  ],
+  "interrupts.CPU2.125:IR-PCI-MSI.327680-edge.xhci_hcd": [
+    1796,
+    1796
+  ],
+  "interrupts.CPU3.125:IR-PCI-MSI.327680-edge.xhci_hcd": [
+    1266,
+    1266
+  ],
+  "interrupts.125:IR-PCI-MSI.327680-edge.xhci_hcd": [
+    55340,
+    58960
+  ],
+  "interrupts.CPU0.126:IR-PCI-MSI.376832-edge.0000:00:17.0": [
+    25069,
+    25951
+  ],
+  "interrupts.CPU1.126:IR-PCI-MSI.376832-edge.0000:00:17.0": [
+    13265,
+    13265
+  ],
+  "interrupts.CPU2.126:IR-PCI-MSI.376832-edge.0000:00:17.0": [
+    8897,
+    8897
+  ],
+  "interrupts.CPU3.126:IR-PCI-MSI.376832-edge.0000:00:17.0": [
+    4746,
+    4746
+  ],
+  "interrupts.126:IR-PCI-MSI.376832-edge.0000:00:17.0": [
+    51977,
+    52859
+  ],
+  "interrupts.CPU0.127:IR-PCI-MSI.1572864-edge.rtsx_pci": [
+    24,
+    24
+  ],
+  "interrupts.CPU1.127:IR-PCI-MSI.1572864-edge.rtsx_pci": [
+    2,
+    2
+  ],
+  "interrupts.CPU2.127:IR-PCI-MSI.1572864-edge.rtsx_pci": [
+    1,
+    1
+  ],
+  "interrupts.CPU3.127:IR-PCI-MSI.1572864-edge.rtsx_pci": [
+    2,
+    2
+  ],
+  "interrupts.127:IR-PCI-MSI.1572864-edge.rtsx_pci": [
+    29,
+    29
+  ],
+  "interrupts.CPU0.128:IR-PCI-MSI.1574912-edge.enp3s0f1": [
+    36763,
+    37339
+  ],
+  "interrupts.CPU1.128:IR-PCI-MSI.1574912-edge.enp3s0f1": [
+    16,
+    16
+  ],
+  "interrupts.CPU2.128:IR-PCI-MSI.1574912-edge.enp3s0f1": [
+    29,
+    29
+  ],
+  "interrupts.CPU3.128:IR-PCI-MSI.1574912-edge.enp3s0f1": [
+    8,
+    8
+  ],
+  "interrupts.128:IR-PCI-MSI.1574912-edge.enp3s0f1": [
+    36816,
+    37392
+  ],
+  "interrupts.CPU0.129:IR-PCI-MSI.32768-edge.i915": [
+    107462,
+    112097
+  ],
+  "interrupts.CPU1.129:IR-PCI-MSI.32768-edge.i915": [
+    1634,
+    1634
+  ],
+  "interrupts.CPU2.129:IR-PCI-MSI.32768-edge.i915": [
+    2630,
+    2630
+  ],
+  "interrupts.CPU3.129:IR-PCI-MSI.32768-edge.i915": [
+    1339,
+    1339
+  ],
+  "interrupts.129:IR-PCI-MSI.32768-edge.i915": [
+    113065,
+    117700
+  ],
+  "interrupts.CPU0.130:IR-PCI-MSI.524288-edge.nvkm": [
+    16,
+    16
+  ],
+  "interrupts.CPU1.130:IR-PCI-MSI.524288-edge.nvkm": [
+    2,
+    2
+  ],
+  "interrupts.CPU2.130:IR-PCI-MSI.524288-edge.nvkm": [
+    17,
+    17
+  ],
+  "interrupts.CPU3.130:IR-PCI-MSI.524288-edge.nvkm": [
+    1,
+    1
+  ],
+  "interrupts.130:IR-PCI-MSI.524288-edge.nvkm": [
+    36,
+    36
+  ],
+  "interrupts.CPU0.131:IR-PCI-MSI.360448-edge.mei_me": [
+    13,
+    13
+  ],
+  "interrupts.CPU2.131:IR-PCI-MSI.360448-edge.mei_me": [
+    19,
+    19
+  ],
+  "interrupts.131:IR-PCI-MSI.360448-edge.mei_me": [
+    32,
+    32
+  ],
+  "interrupts.CPU0.132:IR-PCI-MSI.1048576-edge.iwlwifi": [
+    2,
+    2
+  ],
+  "interrupts.CPU2.132:IR-PCI-MSI.1048576-edge.iwlwifi": [
+    18,
+    18
+  ],
+  "interrupts.CPU3.132:IR-PCI-MSI.1048576-edge.iwlwifi": [
+    3,
+    3
+  ],
+  "interrupts.132:IR-PCI-MSI.1048576-edge.iwlwifi": [
+    23,
+    23
+  ],
+  "interrupts.CPU0.133:IR-PCI-MSI.514048-edge.snd_hda_intel": [
+    89,
+    89
+  ],
+  "interrupts.CPU2.133:IR-PCI-MSI.514048-edge.snd_hda_intel": [
+    23,
+    23
+  ],
+  "interrupts.133:IR-PCI-MSI.514048-edge.snd_hda_intel": [
+    112,
+    112
+  ],
+  "interrupts.CPU0.NMI:Non-maskable_interrupts": [
+    23797,
+    31723
+  ],
+  "interrupts.CPU1.NMI:Non-maskable_interrupts": [
+    23804,
+    31747
+  ],
+  "interrupts.CPU2.NMI:Non-maskable_interrupts": [
+    23792,
+    31708
+  ],
+  "interrupts.CPU3.NMI:Non-maskable_interrupts": [
+    23792,
+    31695
+  ],
+  "interrupts.NMI:Non-maskable_interrupts": [
+    95185,
+    126873
+  ],
+  "interrupts.CPU0.LOC:Local_timer_interrupts": [
+    891058,
+    1160542
+  ],
+  "interrupts.CPU1.LOC:Local_timer_interrupts": [
+    719596,
+    887704
+  ],
+  "interrupts.CPU2.LOC:Local_timer_interrupts": [
+    698581,
+    863567
+  ],
+  "interrupts.CPU3.LOC:Local_timer_interrupts": [
+    695275,
+    859069
+  ],
+  "interrupts.LOC:Local_timer_interrupts": [
+    3004510,
+    3770882
+  ],
+  "interrupts.CPU0.PMI:Performance_monitoring_interrupts": [
+    23797,
+    31723
+  ],
+  "interrupts.CPU1.PMI:Performance_monitoring_interrupts": [
+    23804,
+    31747
+  ],
+  "interrupts.CPU2.PMI:Performance_monitoring_interrupts": [
+    23792,
+    31708
+  ],
+  "interrupts.CPU3.PMI:Performance_monitoring_interrupts": [
+    23792,
+    31695
+  ],
+  "interrupts.PMI:Performance_monitoring_interrupts": [
+    95185,
+    126873
+  ],
+  "interrupts.CPU0.IWI:IRQ_work_interrupts": [
+    7,
+    9
+  ],
+  "interrupts.CPU1.IWI:IRQ_work_interrupts": [
+    6,
+    8
+  ],
+  "interrupts.CPU2.IWI:IRQ_work_interrupts": [
+    7,
+    9
+  ],
+  "interrupts.CPU3.IWI:IRQ_work_interrupts": [
+    7,
+    9
+  ],
+  "interrupts.IWI:IRQ_work_interrupts": [
+    27,
+    35
+  ],
+  "interrupts.CPU0.RTR:APIC_ICR_read_retries": [
+    3,
+    3
+  ],
+  "interrupts.CPU1.RTR:APIC_ICR_read_retries": [
+    1,
+    1
+  ],
+  "interrupts.RTR:APIC_ICR_read_retries": [
+    4,
+    4
+  ],
+  "interrupts.CPU0.RES:Rescheduling_interrupts": [
+    40605803,
+    55883196
+  ],
+  "interrupts.CPU1.RES:Rescheduling_interrupts": [
+    39077520,
+    53571447
+  ],
+  "interrupts.CPU2.RES:Rescheduling_interrupts": [
+    43110060,
+    59110020
+  ],
+  "interrupts.CPU3.RES:Rescheduling_interrupts": [
+    41482048,
+    57173810
+  ],
+  "interrupts.RES:Rescheduling_interrupts": [
+    164275431,
+    225738473
+  ],
+  "interrupts.CPU0.CAL:Function_call_interrupts": [
+    5892,
+    6240
+  ],
+  "interrupts.CPU1.CAL:Function_call_interrupts": [
+    951,
+    955
+  ],
+  "interrupts.CPU2.CAL:Function_call_interrupts": [
+    1137,
+    1147
+  ],
+  "interrupts.CPU3.CAL:Function_call_interrupts": [
+    1227,
+    1237
+  ],
+  "interrupts.CAL:Function_call_interrupts": [
+    9207,
+    9579
+  ],
+  "interrupts.CPU0.TLB:TLB_shootdowns": [
+    1637,
+    1982
+  ],
+  "interrupts.CPU1.TLB:TLB_shootdowns": [
+    1705,
+    2022
+  ],
+  "interrupts.CPU2.TLB:TLB_shootdowns": [
+    1644,
+    2002
+  ],
+  "interrupts.CPU3.TLB:TLB_shootdowns": [
+    1363,
+    1801
+  ],
+  "interrupts.TLB:TLB_shootdowns": [
+    6349,
+    7807
+  ],
+  "interrupts.CPU0.MCP:Machine_check_polls": [
+    32,
+    34
+  ],
+  "interrupts.CPU1.MCP:Machine_check_polls": [
+    32,
+    34
+  ],
+  "interrupts.CPU2.MCP:Machine_check_polls": [
+    32,
+    34
+  ],
+  "interrupts.CPU3.MCP:Machine_check_polls": [
+    32,
+    34
+  ],
+  "interrupts.MCP:Machine_check_polls": [
+    128,
+    136
+  ],
+  "interrupts.ERR": [
+    16,
+    16
+  ]
+}
