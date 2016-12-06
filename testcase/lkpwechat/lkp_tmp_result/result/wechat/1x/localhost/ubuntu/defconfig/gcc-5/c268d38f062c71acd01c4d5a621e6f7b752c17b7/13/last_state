@@ -1,4 +1,0 @@
-wechat.exit_code.1: 1
-exit_fail: 1
-# missing wechat /dev/shm/lkp-stats.LRg3e0sU
-is_incomplete_run: 1
