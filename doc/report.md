@@ -2,7 +2,9 @@
 在这里维护结题报告的素材列表和文档，幻灯片放在[内核分析wiki](http://os.cs.tsinghua.edu.cn/research/kernel/Openthos4H170pro2016#A.2BZeVf1w-)上；
 
 ## 自动编译
-1. ISO的编译（基于git（敖权）、基于docker（王建兴））、
+1. ISO的编译
+ a. 基于git（敖权）
+ a. 基于docker（王建兴））、
 1. 测试用例的编译（GUI的命令行编译（张琳苹）、LKP的编译框架（薛海龙、毛英明））
 
 ## 自动部署：
