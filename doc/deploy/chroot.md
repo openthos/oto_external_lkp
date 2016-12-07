@@ -1,1 +1,8 @@
 # 真实环境下的自动部署-chroot（毛英明）
+##为什么需要chroot？
+lkp运行apt-get,ruby,git，make,glibc动态链接库等环境支持。而这些环境在androidx86下面不具备。如果强行将lkp移植到androidx86环境下面，需要将lkp的运行流程拆分，使用ruby的程序在linux上面离线运行，使用glibc等动态链接库的，需要静态编译，对于androidx86上面不兼容或者没有的应用程序(stdbuf,vmstat,ps,nproc,truncat等)需要静态编译。有些程序可以静态编译成。但是有的无法静态编译(例如ps,ruby),总之困难比较大。
+
+由于androidx86底层也是基于linux kernel,而且是运行在x86指令集上，因此android x86的kernel可以很好的通过chroot进行环境变量和根文件系统的隔离，使得x86_64版本的ubuntu根文件系统运行起来，使得lkp可以在chroot ubuntu下面运行，并且采集android kernel信息。
+
+##chroot后带来的问题以及解决方法
+由于chroot根文件系统的隔离，使得在chroot ubuntu里面没法直接执行androidx86里面的命令，例如pm,am等等。因此在chroot前，在androidx86上面开启了telnet服务，使得chroot ubuntu可以通过expect+telnet客户端，向androidx86发送命令，执行命令，达到协作目的。
