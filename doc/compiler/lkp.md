@@ -1,6 +1,8 @@
 # 测试用例的编译-LKP的编译框架（薛海龙、毛英明）
-lkp 的benchmark是在lkp install过程中编译和安装的。
-LKP每个benchmark需要提供一个$LKP_SRC/pack/$benchmarkname文件，来实现benchmark的自动下载、编译、安装。
+lkp 的benchmark是在lkp install过程中编译和安装的。 
+
+LKP每个benchmark需要提供一个$LKP_SRC/pack/$benchmarkname文件，来实现benchmark的自动下载、编译、安装。 
+
 
 ##例如ebizzy
 https://github.com/openthos/oto_lkp/blob/master/lkp-tests-master/pack/ebizzy
@@ -15,9 +17,11 @@ install()
 	cp -af $BM_NAME $BM_ROOT
 }
 ```
-其中WEB_URL指定了测试用例的下载URL。lkp install阶段会，通过wget从WEB_URL下载该benchmark压缩包到/tmp目录。（因为随着时间的流逝一些benmark的url失效了，导致wget失败，因此我们采取了将其原来的url(例如sourceforge)放到https://github.com/openthos/oto_lkp/tree/master/benchmark_mirror 上的措施）
-压缩包下载完毕以后，会进行解压，然后执行该目录中的./configure 然后make编译benchmark，make install,安装benchmark。(如果没有confiure文件，有Makefile文件，则会直接执行make命令)
-而且还会执行/pack/$benchmarkname文件中的install()函数，把benchmark安装到/lkp/benchmarks/$benchmarkname/目录下面，并且会对/lkp/benchmarks/$benchmarkname打包成一个$benchmarkname-LKP.deb包，并在此安装该deb包到/lkp/benchmarks/$benchmarkname/目录。
+其中WEB_URL指定了测试用例的下载URL。lkp install阶段会，通过wget从WEB_URL下载该benchmark压缩包到/tmp目录。（因为随着时间的流逝一些benmark的url失效了，导致wget失败，因此我们采取了将其原来的url(例如sourceforge)放到https://github.com/openthos/oto_lkp/tree/master/benchmark_mirror 上的措施） 
+
+压缩包下载完毕以后，会进行解压，然后执行该目录中的./configure 然后make编译benchmark，make install,安装benchmark。(如果没有confiure文件，有Makefile文件，则会直接执行make命令) 
+
+而且还会执行/pack/$benchmarkname文件中的install()函数，把benchmark安装到/lkp/benchmarks/$benchmarkname/目录下面，并且会对/lkp/benchmarks/$benchmarkname打包成一个$benchmarkname-LKP.deb包，并且安装该deb包到/lkp/benchmarks/$benchmarkname/目录。
 
 ##新增测试用例(以jishigou apk为例)：
 ###需要benchmark包：
