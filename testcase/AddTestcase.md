@@ -1,6 +1,8 @@
 ### LKP官方需要添加的文件（以下均以wechat为例）
 - 在oto_lkp/lkp-tests-master/目录下的pack、stats、tests、jobs中添加相应的文件
-  + lkp-tests-master/pack/wechat #编译安装测试用例
+ 
+ + lkp-tests-master/pack/wechat #编译安装测试用例
+ 
    ```
   #!/bin/bash
   VERSION="2.2.3"
@@ -17,9 +19,10 @@ cp -af  wechat_benchmark.expt $BM_ROOT
 $LKP_SRC/pack/wechat_pack.expt
 }
    ```
-  + lkp-tests-master/stats/wechat #将benchmark的原始输出，转变为key:value中间结果
+ + lkp-tests-master/stats/wechat #将benchmark的原始输出，转变为key:value中间结果
  
-  + lkp-tests-master/tests/wechat #benchmark的运行方法
+ + lkp-tests-master/tests/wechat #benchmark的运行方法
+  
    ```
    #!/bin/sh
 # - test
@@ -31,7 +34,9 @@ do
 	cmd ./wechat
 done
    ```
-  + kp-tests-master/jobs/wechat.yaml #描述benchmark的配置文件
+ 
+ + kp-tests-master/jobs/wechat.yaml #描述benchmark的配置文件
+ 
    ```
    testcase: wechat
 category: benchmark
@@ -42,10 +47,14 @@ wechat:
   duration: 10s
    ```
 - 在oto_lkp/benchmark_mirror目录下添加benchmark压缩包
-  + /benchmark_mirror/wechat.v0.1.tar.gz #benchmark压缩包【压缩包里的文件将在下边具体说明】
+
+ + /benchmark_mirror/wechat.v0.1.tar.gz #benchmark压缩包【压缩包里的文件将在下边具体说明】
+ 
 ### 合并自动化测试框架需添加的文件
 - 在oto_lkp/目录下的joblist、testcase、benchmark_mirror添加相应的文件
-  + joblist/wechat.sh #运行lkp
+
+ + joblist/wechat.sh #运行lkp
+ 
 ```
 # 运行lkp的benchmark方法
 lkp install $LKP_SRC/jobs/wechat.yaml
@@ -54,9 +63,10 @@ lkp run $LKP_SRC/wechat-1x.yaml
 lkp collect -c testcase=wechat -o /result/wechat/wechat.csv
   ```
  
-  + testcase/lkpwechat/run_withlog.sh #测试的启动脚本【自己本地测试时的启动脚本】
+ + testcase/lkpwechat/run_withlog.sh #测试的启动脚本【自己本地测试时的启动脚本】
   
-  + testcase/lkpwechat/fortest.sh #adb connect openthos 【自己本地测试时需要的基本配置】
+ + testcase/lkpwechat/fortest.sh #adb connect openthos 【自己本地测试时需要的基本配置】
+ 
   ```
 #!/bin/bash -x
 # 设置openthos的ip
@@ -69,15 +79,19 @@ adb -s $ip_of_android:5555   push ./commitId.txt /data/
 # 调用wechat测试开始的脚本
 ./lkpwechat.sh  $ip_of_android  5555   $tmp_result_dir
   ```
-  + testcase/lkpwechat/lkp_test/before_chroot.sh #启动Android的telnet【自己添加用例时不需要更改此脚本】
+  
+ + testcase/lkpwechat/lkp_test/before_chroot.sh #启动Android的telnet【自己添加用例时不需要更改此脚本】
+ 
   ```
 cd /data/
 /system/xbin/telnetd -l /system/xbin/sh
 cd -
   ```
-  + testcase/lkpwechat/lkp_test/chroot_run.sh #chroot openthos到ubuntu【自己添加用例时不需要更改此脚本】
-  + testcase/lkpwechat/lkp_test/mount-static #chroot的工具【拷贝到自己要添加的测试用例相同目录下即可】
-  + testcase/lkpwechat/lkp_test/ubuntu_lkp_test.sh #chroot到ubuntu进行lkp操作【自己添加用例时不需要更改此脚本】
+  
+ + testcase/lkpwechat/lkp_test/chroot_run.sh #chroot openthos到ubuntu【自己添加用例时不需要更改此脚本】
+ + testcase/lkpwechat/lkp_test/mount-static #chroot的工具【拷贝到自己要添加的测试用例相同目录下即可】
+ + testcase/lkpwechat/lkp_test/ubuntu_lkp_test.sh #chroot到ubuntu进行lkp操作【自己添加用例时不需要更改此脚本】
+ 
   ```
 #!/bin/bash -x
 testjob="$1"
@@ -95,21 +109,27 @@ export PATH=$PATH:$LKP_SRC/bin
 source  ../joblist/$testjob
 echo "lkp test over, leave ubuntu"
   ```
-  + benchmark_mirror/wechat.v0.1/net.wechat.t2.8.0.apk #要安装的apk
-  + benchmark_mirror/wechat.v0.1/auto_interact.sh #启动activity，gui自动交互的脚本
+ 
+ + benchmark_mirror/wechat.v0.1/net.wechat.t2.8.0.apk #要安装的apk
+ + benchmark_mirror/wechat.v0.1/auto_interact.sh #启动activity，gui自动交互的脚本
+ 
   ```
 #!/system/xbin/sh
 # wechat.jar是自己定义的对wechat的窗口拖拉等一系列操作，并用uiautomator命令运行jar包
 uiautomator runtest /data/ubuntu/lkp/benchmarks/wechat/wechat.jar -c com.autoTestUI.wechat
   ```
-  + benchmark_mirror/wechat.v0.1/Makefile #文件夹下的文件添加权限
+  
+ + benchmark_mirror/wechat.v0.1/Makefile #文件夹下的文件添加权限
+ 
   ```
   all:
 	chmod  777  ./wechat
 	chmod  777  ./auto_interact.sh
 	chmod  777 ./wechat_benchmark.expt
   ```
-  + benchmark_mirror/wechat.v0.1/wechat#调用chroot与ubuntu交互的脚本
+ 
+ + benchmark_mirror/wechat.v0.1/wechat#调用chroot与ubuntu交互的脚本
+ 
   ```
 #!/bin/bash -x
 ./wechat_benchmark.expt
@@ -117,7 +137,9 @@ uiautomator runtest /data/ubuntu/lkp/benchmarks/wechat/wechat.jar -c com.autoTes
 
 ### chroot到ubuntu后和androidx86通过telnet协作,需要添加的文件
 - 在oto_lkp/lkp-tests-master/pack和oto_lkp/benchmark_mirror/wechat.v0.1/目录下添加expt脚本
+ 
  + lkp-tests-master/pack/wechat_pack.expt
+ 
  ```
 #!/usr/bin/expect
 spawn  telnet localhost
@@ -129,7 +151,9 @@ send "sleep 1"
 expect "#"
 send "exit\r"
  ```
- + benchmark_mirror/wechat.v0.1/wechat_benchmark.expt
+
++ benchmark_mirror/wechat.v0.1/wechat_benchmark.expt
+
  ```
  #!/usr/bin/expect
 spawn  telnet localhost
