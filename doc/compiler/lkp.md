@@ -55,7 +55,8 @@ $LKP_SRC/pack/jishigou_pack.expt         #安装apk
 }
 ```
 ###由于chroot和自动安装apk需要额外增加的脚本
-因为lkp运行在chroot环境中，编译完benchmark（即自动运行apk的程序）后，需要安装apk到androidx86，因此使用了telent+expect方式，在chroot ubuntu环境中发送pm install命令给androidx86，来安装apk.
+因为lkp运行在chroot环境中，编译完benchmark（即自动运行apk的程序）后，需要安装apk到androidx86，因此使用了telent+expect方式，在chroot ubuntu环境中发送pm install命令给androidx86，来安装apk. 
+
 即install函数中的$LKP_SRC/pack/jishigou_pack.expt命令和
 脚本https://github.com/openthos/oto_lkp/blob/master/lkp-tests-master/pack/jishigou_pack.expt
 ```
