@@ -89,10 +89,12 @@ cd -
   ```
   
  + testcase/lkpwechat/lkp_test/chroot_run.sh #chroot openthos到ubuntu【自己添加用例时不需要更改此脚本】
+ 
  + testcase/lkpwechat/lkp_test/mount-static #chroot的工具【拷贝到自己要添加的测试用例相同目录下即可】
+ 
  + testcase/lkpwechat/lkp_test/ubuntu_lkp_test.sh #chroot到ubuntu进行lkp操作【自己添加用例时不需要更改此脚本】
  
-  ```
+```
 #!/bin/bash -x
 testjob="$1"
 echo  "i am in ubuntu"
