@@ -33,3 +33,4 @@
 * 并发测试的入口脚本是[paraRun.sh](https://github.com/openthos/testing-analysis/blob/master/auto-testing-script/cts-autotest/paraRun.sh)，运行该脚本之前需要注意一个配置文件[configs](https://github.com/openthos/testing-analysis/blob/master/auto-testing-script/cts-autotest/configs)，在该配置文件中需要执行测试的一些参数以及测试哪些机器，如果有多条配置信息，则并发进行多台机器测试
 * 并发测试中的脚本只有一份，测试用例也只有一份，为了防止测试用例的结果相互覆盖，测试框架为每一个测试用（GUI和LKP）建立了一个文件夹，一次保证结果正确性
 * 并发测试中，测试框架会为每一个测试机器分配监听端口，目前该端口主要用于nc命令检测机器的重启过程，端口从52001开始递增,此处需要注意，有冲突的可能性
+* 并发测试不支持多个版本的iso同时测试，只能使同一个版本的iso在多台机器上测试
