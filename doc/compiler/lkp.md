@@ -1,5 +1,5 @@
 # 测试用例的编译-LKP的编译框架（薛海龙、毛英明）
-lkp 的benchmark用例是在lkp install过程中编译和安装的。
+lkp 的benchmark是在lkp install过程中编译和安装的。
 LKP每个benchmark需要提供一个$LKP_SRC/pack/$benchmarkname文件，来实现benchmark的自动下载、编译、安装。
 
 ##例如ebizzy
