@@ -1,0 +1,270 @@
+{
+  "diskstats.time": [
+    1481099470.556372,
+    1481099471.562715
+  ],
+  "diskstats.sda.read_ios": [
+    21327,
+    21338
+  ],
+  "diskstats.sda.read_merges": [
+    817,
+    817
+  ],
+  "diskstats.sda.read_sectors": [
+    1333637,
+    1334101
+  ],
+  "diskstats.sda.read_ticks": [
+    258510,
+    258714
+  ],
+  "diskstats.sda.write_ios": [
+    6674,
+    6712
+  ],
+  "diskstats.sda.write_merges": [
+    9030,
+    9036
+  ],
+  "diskstats.sda.write_sectors": [
+    2309057,
+    2313617
+  ],
+  "diskstats.sda.write_ticks": [
+    629810,
+    632032
+  ],
+  "diskstats.sda.in_flight": [
+    38,
+    2
+  ],
+  "diskstats.sda.io_ticks": [
+    107069,
+    107253
+  ],
+  "diskstats.sda.time_in_queue": [
+    888992,
+    890783
+  ],
+  "diskstats.sda1.read_ios": [
+    21,
+    21
+  ],
+  "diskstats.sda1.read_sectors": [
+    1128,
+    1128
+  ],
+  "diskstats.sda1.read_ticks": [
+    86,
+    86
+  ],
+  "diskstats.sda1.io_ticks": [
+    86,
+    86
+  ],
+  "diskstats.sda1.time_in_queue": [
+    86,
+    86
+  ],
+  "diskstats.sda2.read_ios": [
+    6410,
+    6421
+  ],
+  "diskstats.sda2.read_merges": [
+    225,
+    225
+  ],
+  "diskstats.sda2.read_sectors": [
+    242970,
+    243434
+  ],
+  "diskstats.sda2.read_ticks": [
+    34269,
+    34473
+  ],
+  "diskstats.sda2.write_ios": [
+    1993,
+    2029
+  ],
+  "diskstats.sda2.write_merges": [
+    5308,
+    5308
+  ],
+  "diskstats.sda2.write_sectors": [
+    2124776,
+    2129272
+  ],
+  "diskstats.sda2.write_ticks": [
+    318205,
+    320384
+  ],
+  "diskstats.sda2.in_flight": [
+    37,
+    0
+  ],
+  "diskstats.sda2.io_ticks": [
+    25660,
+    25826
+  ],
+  "diskstats.sda2.time_in_queue": [
+    353122,
+    354865
+  ],
+  "diskstats.sda3.read_ios": [
+    32,
+    32
+  ],
+  "diskstats.sda3.read_sectors": [
+    3840,
+    3840
+  ],
+  "diskstats.sda3.read_ticks": [
+    109,
+    109
+  ],
+  "diskstats.sda3.io_ticks": [
+    104,
+    104
+  ],
+  "diskstats.sda3.time_in_queue": [
+    109,
+    109
+  ],
+  "diskstats.sda4.read_ios": [
+    49,
+    49
+  ],
+  "diskstats.sda4.read_sectors": [
+    2597,
+    2597
+  ],
+  "diskstats.sda4.read_ticks": [
+    243,
+    243
+  ],
+  "diskstats.sda4.write_ios": [
+    1,
+    1
+  ],
+  "diskstats.sda4.write_sectors": [
+    1,
+    1
+  ],
+  "diskstats.sda4.write_ticks": [
+    912,
+    912
+  ],
+  "diskstats.sda4.io_ticks": [
+    1013,
+    1013
+  ],
+  "diskstats.sda4.time_in_queue": [
+    1155,
+    1155
+  ],
+  "diskstats.sda5.read_ios": [
+    5620,
+    5620
+  ],
+  "diskstats.sda5.read_merges": [
+    112,
+    112
+  ],
+  "diskstats.sda5.read_sectors": [
+    463634,
+    463634
+  ],
+  "diskstats.sda5.read_ticks": [
+    82178,
+    82178
+  ],
+  "diskstats.sda5.write_ios": [
+    105,
+    105
+  ],
+  "diskstats.sda5.write_merges": [
+    159,
+    159
+  ],
+  "diskstats.sda5.write_sectors": [
+    7872,
+    7872
+  ],
+  "diskstats.sda5.write_ticks": [
+    4911,
+    4911
+  ],
+  "diskstats.sda5.io_ticks": [
+    31367,
+    31367
+  ],
+  "diskstats.sda5.time_in_queue": [
+    87086,
+    87086
+  ],
+  "diskstats.sda6.read_ios": [
+    9165,
+    9165
+  ],
+  "diskstats.sda6.read_merges": [
+    480,
+    480
+  ],
+  "diskstats.sda6.read_sectors": [
+    616988,
+    616988
+  ],
+  "diskstats.sda6.read_ticks": [
+    141474,
+    141474
+  ],
+  "diskstats.sda6.write_ios": [
+    3930,
+    3932
+  ],
+  "diskstats.sda6.write_merges": [
+    3563,
+    3569
+  ],
+  "diskstats.sda6.write_sectors": [
+    176408,
+    176472
+  ],
+  "diskstats.sda6.write_ticks": [
+    290819,
+    290862
+  ],
+  "diskstats.sda6.in_flight": [
+    1,
+    2
+  ],
+  "diskstats.sda6.io_ticks": [
+    71578,
+    71612
+  ],
+  "diskstats.sda6.time_in_queue": [
+    432295,
+    432343
+  ],
+  "diskstats.sdb.read_ios": [
+    50,
+    50
+  ],
+  "diskstats.sdb.read_sectors": [
+    4496,
+    4496
+  ],
+  "diskstats.sdb.read_ticks": [
+    31,
+    31
+  ],
+  "diskstats.sdb.io_ticks": [
+    25,
+    25
+  ],
+  "diskstats.sdb.time_in_queue": [
+    31,
+    31
+  ]
+}

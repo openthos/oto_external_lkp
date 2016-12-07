@@ -1,0 +1,23 @@
+2016-11-24 20:41:57 /usr/bin/hackbench -g 64 --process -l 1875
+Running in process mode with 64 groups using 40 file descriptors each (== 2560 tasks)
+Each sender will pass 1875 messages of 100 bytes
+Time: 19.211
+2016-11-24 20:42:16 /usr/bin/hackbench -g 64 --process -l 1875
+Running in process mode with 64 groups using 40 file descriptors each (== 2560 tasks)
+Each sender will pass 1875 messages of 100 bytes
+Time: 20.104
+2016-11-24 20:42:37 /usr/bin/hackbench -g 64 --process -l 1875
+Running in process mode with 64 groups using 40 file descriptors each (== 2560 tasks)
+Each sender will pass 1875 messages of 100 bytes
+Time: 21.360
+2016-11-24 20:42:58 /usr/bin/hackbench -g 64 --process -l 1875
+Running in process mode with 64 groups using 40 file descriptors each (== 2560 tasks)
+Each sender will pass 1875 messages of 100 bytes
+Time: 21.160
+2016-11-24 20:43:20 /usr/bin/hackbench -g 64 --process -l 1875
+Running in process mode with 64 groups using 40 file descriptors each (== 2560 tasks)
+Each sender will pass 1875 messages of 100 bytes
+Time: 21.185
+2016-11-24 20:43:41 /usr/bin/hackbench -g 64 --process -l 1875
+Running in process mode with 64 groups using 40 file descriptors each (== 2560 tasks)
+Each sender will pass 1875 messages of 100 bytes

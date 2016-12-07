@@ -1,0 +1,150 @@
+{
+  "softirqs.time": [
+    1480991063.7344582,
+    1480991074.3075187
+  ],
+  "softirqs.CPU0.HI": [
+    1,
+    1
+  ],
+  "softirqs.CPU2.HI": [
+    4,
+    4
+  ],
+  "softirqs.CPU3.HI": [
+    3,
+    3
+  ],
+  "softirqs.HI": [
+    8,
+    8
+  ],
+  "softirqs.CPU0.TIMER": [
+    655232,
+    658052
+  ],
+  "softirqs.CPU1.TIMER": [
+    637953,
+    640959
+  ],
+  "softirqs.CPU2.TIMER": [
+    404563,
+    407390
+  ],
+  "softirqs.CPU3.TIMER": [
+    361020,
+    363234
+  ],
+  "softirqs.TIMER": [
+    2058768,
+    2069635
+  ],
+  "softirqs.CPU2.NET_TX": [
+    363,
+    365
+  ],
+  "softirqs.NET_TX": [
+    363,
+    365
+  ],
+  "softirqs.CPU0.NET_RX": [
+    62126,
+    62217
+  ],
+  "softirqs.CPU1.NET_RX": [
+    47147,
+    47209
+  ],
+  "softirqs.CPU2.NET_RX": [
+    106783,
+    106898
+  ],
+  "softirqs.CPU3.NET_RX": [
+    40856,
+    40904
+  ],
+  "softirqs.NET_RX": [
+    256912,
+    257228
+  ],
+  "softirqs.CPU0.BLOCK": [
+    7063,
+    7125
+  ],
+  "softirqs.CPU1.BLOCK": [
+    4942,
+    4989
+  ],
+  "softirqs.CPU2.BLOCK": [
+    14359,
+    14626
+  ],
+  "softirqs.CPU3.BLOCK": [
+    3044,
+    3102
+  ],
+  "softirqs.BLOCK": [
+    29408,
+    29842
+  ],
+  "softirqs.CPU0.TASKLET": [
+    116,
+    116
+  ],
+  "softirqs.CPU1.TASKLET": [
+    102,
+    102
+  ],
+  "softirqs.CPU2.TASKLET": [
+    1476,
+    1476
+  ],
+  "softirqs.CPU3.TASKLET": [
+    209,
+    209
+  ],
+  "softirqs.TASKLET": [
+    1903,
+    1903
+  ],
+  "softirqs.CPU0.SCHED": [
+    272633,
+    273812
+  ],
+  "softirqs.CPU1.SCHED": [
+    271035,
+    272312
+  ],
+  "softirqs.CPU2.SCHED": [
+    211718,
+    212899
+  ],
+  "softirqs.CPU3.SCHED": [
+    176523,
+    177455
+  ],
+  "softirqs.SCHED": [
+    931909,
+    936478
+  ],
+  "softirqs.CPU0.RCU": [
+    422125,
+    424084
+  ],
+  "softirqs.CPU1.RCU": [
+    417265,
+    419450
+  ],
+  "softirqs.CPU2.RCU": [
+    298214,
+    300336
+  ],
+  "softirqs.CPU3.RCU": [
+    257689,
+    259511
+  ],
+  "softirqs.RCU": [
+    1395293,
+    1403381
+  ]
+}

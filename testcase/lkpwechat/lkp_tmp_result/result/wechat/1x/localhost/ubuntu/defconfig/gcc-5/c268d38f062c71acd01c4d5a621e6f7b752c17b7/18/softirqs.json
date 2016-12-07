@@ -1,0 +1,158 @@
+{
+  "softirqs.time": [
+    1481101144.1168787,
+    1481101145.249361
+  ],
+  "softirqs.CPU0.HI": [
+    4,
+    4
+  ],
+  "softirqs.CPU1.HI": [
+    2,
+    2
+  ],
+  "softirqs.CPU2.HI": [
+    4,
+    4
+  ],
+  "softirqs.CPU3.HI": [
+    2,
+    2
+  ],
+  "softirqs.HI": [
+    12,
+    12
+  ],
+  "softirqs.CPU0.TIMER": [
+    519359,
+    519615
+  ],
+  "softirqs.CPU1.TIMER": [
+    519419,
+    519839
+  ],
+  "softirqs.CPU2.TIMER": [
+    398194,
+    398504
+  ],
+  "softirqs.CPU3.TIMER": [
+    343358,
+    343855
+  ],
+  "softirqs.TIMER": [
+    1780330,
+    1781813
+  ],
+  "softirqs.CPU0.NET_TX": [
+    459,
+    459
+  ],
+  "softirqs.CPU1.NET_TX": [
+    1,
+    1
+  ],
+  "softirqs.NET_TX": [
+    460,
+    460
+  ],
+  "softirqs.CPU0.NET_RX": [
+    185113,
+    185123
+  ],
+  "softirqs.CPU1.NET_RX": [
+    125823,
+    125832
+  ],
+  "softirqs.CPU2.NET_RX": [
+    295645,
+    295673
+  ],
+  "softirqs.CPU3.NET_RX": [
+    121854,
+    121862
+  ],
+  "softirqs.NET_RX": [
+    728435,
+    728490
+  ],
+  "softirqs.CPU0.BLOCK": [
+    9465,
+    9471
+  ],
+  "softirqs.CPU1.BLOCK": [
+    5030,
+    5031
+  ],
+  "softirqs.CPU2.BLOCK": [
+    19286,
+    19298
+  ],
+  "softirqs.CPU3.BLOCK": [
+    4144,
+    4144
+  ],
+  "softirqs.BLOCK": [
+    37925,
+    37944
+  ],
+  "softirqs.CPU0.TASKLET": [
+    376,
+    376
+  ],
+  "softirqs.CPU1.TASKLET": [
+    227,
+    227
+  ],
+  "softirqs.CPU2.TASKLET": [
+    1799,
+    1799
+  ],
+  "softirqs.CPU3.TASKLET": [
+    121,
+    121
+  ],
+  "softirqs.TASKLET": [
+    2523,
+    2523
+  ],
+  "softirqs.CPU0.SCHED": [
+    220478,
+    220598
+  ],
+  "softirqs.CPU1.SCHED": [
+    222289,
+    222454
+  ],
+  "softirqs.CPU2.SCHED": [
+    199412,
+    199551
+  ],
+  "softirqs.CPU3.SCHED": [
+    168037,
+    168192
+  ],
+  "softirqs.SCHED": [
+    810216,
+    810795
+  ],
+  "softirqs.CPU0.RCU": [
+    335444,
+    335665
+  ],
+  "softirqs.CPU1.RCU": [
+    340861,
+    341179
+  ],
+  "softirqs.CPU2.RCU": [
+    285803,
+    286052
+  ],
+  "softirqs.CPU3.RCU": [
+    246361,
+    246777
+  ],
+  "softirqs.RCU": [
+    1208469,
+    1209673
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "softirqs.time": [
+    1480931319.2127512,
+    1480931330.7540696
+  ],
+  "softirqs.CPU0.HI": [
+    1,
+    1
+  ],
+  "softirqs.CPU1.HI": [
+    1,
+    1
+  ],
+  "softirqs.CPU2.HI": [
+    3,
+    3
+  ],
+  "softirqs.CPU3.HI": [
+    1,
+    1
+  ],
+  "softirqs.HI": [
+    6,
+    6
+  ],
+  "softirqs.CPU0.TIMER": [
+    132564,
+    136612
+  ],
+  "softirqs.CPU1.TIMER": [
+    126926,
+    131654
+  ],
+  "softirqs.CPU2.TIMER": [
+    105164,
+    109369
+  ],
+  "softirqs.CPU3.TIMER": [
+    106368,
+    110015
+  ],
+  "softirqs.TIMER": [
+    471022,
+    487650
+  ],
+  "softirqs.CPU3.NET_TX": [
+    63,
+    65
+  ],
+  "softirqs.NET_TX": [
+    63,
+    65
+  ],
+  "softirqs.CPU0.NET_RX": [
+    52286,
+    52398
+  ],
+  "softirqs.CPU1.NET_RX": [
+    39525,
+    39578
+  ],
+  "softirqs.CPU2.NET_RX": [
+    93354,
+    93432
+  ],
+  "softirqs.CPU3.NET_RX": [
+    28043,
+    28086
+  ],
+  "softirqs.NET_RX": [
+    213208,
+    213494
+  ],
+  "softirqs.CPU0.BLOCK": [
+    6956,
+    7057
+  ],
+  "softirqs.CPU1.BLOCK": [
+    4710,
+    4751
+  ],
+  "softirqs.CPU2.BLOCK": [
+    11865,
+    12079
+  ],
+  "softirqs.CPU3.BLOCK": [
+    3545,
+    3584
+  ],
+  "softirqs.BLOCK": [
+    27076,
+    27471
+  ],
+  "softirqs.CPU0.TASKLET": [
+    19,
+    19
+  ],
+  "softirqs.CPU1.TASKLET": [
+    22,
+    22
+  ],
+  "softirqs.CPU2.TASKLET": [
+    151,
+    151
+  ],
+  "softirqs.CPU3.TASKLET": [
+    11,
+    11
+  ],
+  "softirqs.TASKLET": [
+    203,
+    203
+  ],
+  "softirqs.CPU0.SCHED": [
+    57217,
+    58754
+  ],
+  "softirqs.CPU1.SCHED": [
+    55573,
+    57127
+  ],
+  "softirqs.CPU2.SCHED": [
+    50212,
+    51697
+  ],
+  "softirqs.CPU3.SCHED": [
+    41898,
+    43270
+  ],
+  "softirqs.SCHED": [
+    204900,
+    210848
+  ],
+  "softirqs.CPU0.RCU": [
+    88703,
+    91280
+  ],
+  "softirqs.CPU1.RCU": [
+    86106,
+    89005
+  ],
+  "softirqs.CPU2.RCU": [
+    76430,
+    78961
+  ],
+  "softirqs.CPU3.RCU": [
+    68796,
+    71046
+  ],
+  "softirqs.RCU": [
+    320035,
+    330292
+  ]
+}

@@ -1,0 +1,7 @@
+---
+nr_threads:
+- 50%
+mode:
+- threads
+ipc:
+- socket

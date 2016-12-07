@@ -1,0 +1,38 @@
+{
+  "wechat.time.user_time": [
+    0.01
+  ],
+  "wechat.time.system_time": [
+    0.01
+  ],
+  "wechat.time.percent_of_cpu_this_job_got": [
+    22
+  ],
+  "wechat.time.elapsed_time": [
+    0.15
+  ],
+  "wechat.time.maximum_resident_set_size": [
+    5476
+  ],
+  "wechat.time.major_page_faults": [
+    1
+  ],
+  "wechat.time.minor_page_faults": [
+    1045
+  ],
+  "wechat.time.voluntary_context_switches": [
+    40
+  ],
+  "wechat.time.involuntary_context_switches": [
+    7
+  ],
+  "wechat.time.file_system_inputs": [
+    96
+  ],
+  "wechat.time.file_system_outputs": [
+    8
+  ],
+  "wechat.time.page_size": [
+    4096
+  ]
+}

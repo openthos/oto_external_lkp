@@ -1,0 +1,254 @@
+{
+  "diskstats.time": [
+    1481010231.663773,
+    1481010232.6658688
+  ],
+  "diskstats.sda.read_ios": [
+    18169,
+    18176
+  ],
+  "diskstats.sda.read_merges": [
+    578,
+    578
+  ],
+  "diskstats.sda.read_sectors": [
+    1355548,
+    1355852
+  ],
+  "diskstats.sda.read_ticks": [
+    286118,
+    286198
+  ],
+  "diskstats.sda.write_ios": [
+    5363,
+    5366
+  ],
+  "diskstats.sda.write_merges": [
+    6793,
+    6793
+  ],
+  "diskstats.sda.write_sectors": [
+    2258824,
+    2258848
+  ],
+  "diskstats.sda.write_ticks": [
+    697713,
+    697757
+  ],
+  "diskstats.sda.in_flight": [
+    1,
+    0
+  ],
+  "diskstats.sda.io_ticks": [
+    98393,
+    98455
+  ],
+  "diskstats.sda.time_in_queue": [
+    983954,
+    984035
+  ],
+  "diskstats.sda1.read_ios": [
+    21,
+    21
+  ],
+  "diskstats.sda1.read_sectors": [
+    1128,
+    1128
+  ],
+  "diskstats.sda1.read_ticks": [
+    110,
+    110
+  ],
+  "diskstats.sda1.io_ticks": [
+    110,
+    110
+  ],
+  "diskstats.sda1.time_in_queue": [
+    110,
+    110
+  ],
+  "diskstats.sda2.read_ios": [
+    6487,
+    6494
+  ],
+  "diskstats.sda2.read_merges": [
+    162,
+    162
+  ],
+  "diskstats.sda2.read_sectors": [
+    243146,
+    243450
+  ],
+  "diskstats.sda2.read_ticks": [
+    40284,
+    40364
+  ],
+  "diskstats.sda2.write_ios": [
+    1844,
+    1844
+  ],
+  "diskstats.sda2.write_merges": [
+    4111,
+    4111
+  ],
+  "diskstats.sda2.write_sectors": [
+    2046120,
+    2046120
+  ],
+  "diskstats.sda2.write_ticks": [
+    346316,
+    346316
+  ],
+  "diskstats.sda2.io_ticks": [
+    26699,
+    26760
+  ],
+  "diskstats.sda2.time_in_queue": [
+    386676,
+    386756
+  ],
+  "diskstats.sda3.read_ios": [
+    32,
+    32
+  ],
+  "diskstats.sda3.read_sectors": [
+    3840,
+    3840
+  ],
+  "diskstats.sda3.read_ticks": [
+    113,
+    113
+  ],
+  "diskstats.sda3.io_ticks": [
+    108,
+    108
+  ],
+  "diskstats.sda3.time_in_queue": [
+    113,
+    113
+  ],
+  "diskstats.sda4.read_ios": [
+    48,
+    48
+  ],
+  "diskstats.sda4.read_sectors": [
+    2596,
+    2596
+  ],
+  "diskstats.sda4.read_ticks": [
+    308,
+    308
+  ],
+  "diskstats.sda4.io_ticks": [
+    120,
+    120
+  ],
+  "diskstats.sda4.time_in_queue": [
+    308,
+    308
+  ],
+  "diskstats.sda5.read_ios": [
+    5380,
+    5380
+  ],
+  "diskstats.sda5.read_merges": [
+    31,
+    31
+  ],
+  "diskstats.sda5.read_sectors": [
+    458690,
+    458690
+  ],
+  "diskstats.sda5.read_ticks": [
+    99433,
+    99433
+  ],
+  "diskstats.sda5.write_ios": [
+    19,
+    19
+  ],
+  "diskstats.sda5.write_merges": [
+    11,
+    11
+  ],
+  "diskstats.sda5.write_sectors": [
+    6016,
+    6016
+  ],
+  "diskstats.sda5.write_ticks": [
+    5757,
+    5757
+  ],
+  "diskstats.sda5.io_ticks": [
+    33618,
+    33618
+  ],
+  "diskstats.sda5.time_in_queue": [
+    105188,
+    105188
+  ],
+  "diskstats.sda6.read_ios": [
+    6171,
+    6171
+  ],
+  "diskstats.sda6.read_merges": [
+    385,
+    385
+  ],
+  "diskstats.sda6.read_sectors": [
+    643668,
+    643668
+  ],
+  "diskstats.sda6.read_ticks": [
+    145733,
+    145733
+  ],
+  "diskstats.sda6.write_ios": [
+    2815,
+    2818
+  ],
+  "diskstats.sda6.write_merges": [
+    2671,
+    2671
+  ],
+  "diskstats.sda6.write_sectors": [
+    206688,
+    206712
+  ],
+  "diskstats.sda6.write_ticks": [
+    328977,
+    329021
+  ],
+  "diskstats.sda6.in_flight": [
+    1,
+    0
+  ],
+  "diskstats.sda6.io_ticks": [
+    67841,
+    67842
+  ],
+  "diskstats.sda6.time_in_queue": [
+    474736,
+    474737
+  ],
+  "diskstats.sdb.read_ios": [
+    50,
+    50
+  ],
+  "diskstats.sdb.read_sectors": [
+    4496,
+    4496
+  ],
+  "diskstats.sdb.read_ticks": [
+    28,
+    28
+  ],
+  "diskstats.sdb.io_ticks": [
+    25,
+    25
+  ],
+  "diskstats.sdb.time_in_queue": [
+    28,
+    28
+  ]
+}

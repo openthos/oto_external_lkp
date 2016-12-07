@@ -1,0 +1,12 @@
+Iteration: 1
+2016-12-07 16:31:11 ./wechat
+spawn telnet localhost
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+/data # [6n/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh: line 2: java: not found
+/data # [6n

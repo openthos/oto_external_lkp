@@ -1,0 +1,35 @@
+{
+  "jishigou.time.user_time": [
+    0.02
+  ],
+  "jishigou.time.system_time": [
+    0.01
+  ],
+  "jishigou.time.elapsed_time": [
+    9.63
+  ],
+  "jishigou.time.maximum_resident_set_size": [
+    5536
+  ],
+  "jishigou.time.major_page_faults": [
+    1
+  ],
+  "jishigou.time.minor_page_faults": [
+    1039
+  ],
+  "jishigou.time.voluntary_context_switches": [
+    168
+  ],
+  "jishigou.time.involuntary_context_switches": [
+    7
+  ],
+  "jishigou.time.file_system_inputs": [
+    96
+  ],
+  "jishigou.time.file_system_outputs": [
+    8
+  ],
+  "jishigou.time.page_size": [
+    4096
+  ]
+}

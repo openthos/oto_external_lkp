@@ -1,0 +1,84 @@
+Iteration: 1
+2016-12-06 11:12:39 ./wechat
+spawn telnet localhost
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+/data # [6n/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Starting: Intent { cmp=com.tencent.mm/.ui.LauncherUI }
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+mkdir: can't create directory 'aaa': File exists
+/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh: line 10: java: not found
+1
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Tue Dec  6 11:12:40 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+mkdir: can't create directory 'aaa': File exists
+/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh: line 10: java: not found
+2
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Tue Dec  6 11:12:41 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+mkdir: can't create directory 'aaa': File exists
+/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh: line 10: java: not found
+3
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Tue Dec  6 11:12:42 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+mkdir: can't create directory 'aaa': File exists
+/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh: line 10: java: not found
+4
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Tue Dec  6 11:12:43 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+mkdir: can't create directory 'aaa': File exists
+/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh: line 10: java: not found
+5
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Tue Dec  6 11:12:44 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+mkdir: can't create directory 'aaa': File exists
+/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh: line 10: java: not found
+6
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Tue Dec  6 11:12:45 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+mkdir: can't create directory 'aaa': File exists
+/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh: line 10: java: not found
+7
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Tue Dec  6 11:12:46 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+mkdir: can't create directory 'aaa': File exists
+/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh: line 10: java: not found
+8
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Tue Dec  6 11:12:47 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+mkdir: can't create directory 'aaa': File exists
+/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh: line 10: java: not found
+9
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Tue Dec  6 11:12:48 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+mkdir: can't create directory 'aaa': File exists
+/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh: line 10: java: not found
+10
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Tue Dec  6 11:12:49 CST 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160

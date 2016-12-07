@@ -1,0 +1,1206 @@
+{
+  "slabinfo.time": [
+    1481001297.6170878,
+    1481001298.622297
+  ],
+  "slabinfo.i915_gem_vma.active_objs": [
+    222,
+    222
+  ],
+  "slabinfo.i915_gem_vma.num_objs": [
+    348,
+    348
+  ],
+  "slabinfo.i915_gem_vma.active_slabs": [
+    29,
+    29
+  ],
+  "slabinfo.i915_gem_vma.num_slabs": [
+    29,
+    29
+  ],
+  "slabinfo.i915_gem_object.active_objs": [
+    243,
+    243
+  ],
+  "slabinfo.i915_gem_object.num_objs": [
+    336,
+    336
+  ],
+  "slabinfo.i915_gem_object.active_slabs": [
+    48,
+    48
+  ],
+  "slabinfo.i915_gem_object.num_slabs": [
+    48,
+    48
+  ],
+  "slabinfo.ext4_groupinfo_4k.active_objs": [
+    3858,
+    3858
+  ],
+  "slabinfo.ext4_groupinfo_4k.num_objs": [
+    3864,
+    3864
+  ],
+  "slabinfo.ext4_groupinfo_4k.active_slabs": [
+    138,
+    138
+  ],
+  "slabinfo.ext4_groupinfo_4k.num_slabs": [
+    138,
+    138
+  ],
+  "slabinfo.UDPv6.active_objs": [
+    1,
+    1
+  ],
+  "slabinfo.UDPv6.num_objs": [
+    7,
+    7
+  ],
+  "slabinfo.UDPv6.active_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.UDPv6.num_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.TCPv6.active_objs": [
+    8,
+    8
+  ],
+  "slabinfo.TCPv6.num_objs": [
+    10,
+    10
+  ],
+  "slabinfo.TCPv6.active_slabs": [
+    5,
+    5
+  ],
+  "slabinfo.TCPv6.num_slabs": [
+    5,
+    5
+  ],
+  "slabinfo.nf_conntrack_ffffffff81a9e7c0.active_objs": [
+    16,
+    16
+  ],
+  "slabinfo.nf_conntrack_ffffffff81a9e7c0.num_objs": [
+    39,
+    39
+  ],
+  "slabinfo.nf_conntrack_ffffffff81a9e7c0.active_slabs": [
+    3,
+    3
+  ],
+  "slabinfo.nf_conntrack_ffffffff81a9e7c0.num_slabs": [
+    3,
+    3
+  ],
+  "slabinfo.ashmem_area_cache.active_objs": [
+    12,
+    12
+  ],
+  "slabinfo.ashmem_area_cache.num_objs": [
+    65,
+    65
+  ],
+  "slabinfo.ashmem_area_cache.active_slabs": [
+    5,
+    5
+  ],
+  "slabinfo.ashmem_area_cache.num_slabs": [
+    5,
+    5
+  ],
+  "slabinfo.cfq_io_cq.active_objs": [
+    195,
+    195
+  ],
+  "slabinfo.cfq_io_cq.num_objs": [
+    252,
+    252
+  ],
+  "slabinfo.cfq_io_cq.active_slabs": [
+    7,
+    7
+  ],
+  "slabinfo.cfq_io_cq.num_slabs": [
+    7,
+    7
+  ],
+  "slabinfo.cfq_queue.active_objs": [
+    137,
+    137
+  ],
+  "slabinfo.cfq_queue.num_objs": [
+    238,
+    238
+  ],
+  "slabinfo.cfq_queue.active_slabs": [
+    14,
+    14
+  ],
+  "slabinfo.cfq_queue.num_slabs": [
+    14,
+    14
+  ],
+  "slabinfo.fuse_request.active_objs": [
+    3,
+    3
+  ],
+  "slabinfo.fuse_request.num_objs": [
+    20,
+    20
+  ],
+  "slabinfo.fuse_request.active_slabs": [
+    2,
+    2
+  ],
+  "slabinfo.fuse_request.num_slabs": [
+    2,
+    2
+  ],
+  "slabinfo.fuse_inode.active_objs": [
+    2637,
+    2637
+  ],
+  "slabinfo.fuse_inode.num_objs": [
+    2651,
+    2651
+  ],
+  "slabinfo.fuse_inode.active_slabs": [
+    241,
+    241
+  ],
+  "slabinfo.fuse_inode.num_slabs": [
+    241,
+    241
+  ],
+  "slabinfo.fat_inode_cache.active_objs": [
+    5,
+    5
+  ],
+  "slabinfo.fat_inode_cache.num_objs": [
+    12,
+    12
+  ],
+  "slabinfo.fat_inode_cache.active_slabs": [
+    2,
+    2
+  ],
+  "slabinfo.fat_inode_cache.num_slabs": [
+    2,
+    2
+  ],
+  "slabinfo.fat_cache.active_objs": [
+    1,
+    1
+  ],
+  "slabinfo.fat_cache.num_objs": [
+    124,
+    124
+  ],
+  "slabinfo.fat_cache.active_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.fat_cache.num_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.jbd2_journal_handle.active_objs": [
+    29,
+    29
+  ],
+  "slabinfo.jbd2_journal_handle.num_objs": [
+    166,
+    166
+  ],
+  "slabinfo.jbd2_journal_handle.active_slabs": [
+    2,
+    2
+  ],
+  "slabinfo.jbd2_journal_handle.num_slabs": [
+    2,
+    2
+  ],
+  "slabinfo.jbd2_journal_head.active_objs": [
+    288,
+    288
+  ],
+  "slabinfo.jbd2_journal_head.num_objs": [
+    288,
+    288
+  ],
+  "slabinfo.jbd2_journal_head.active_slabs": [
+    8,
+    8
+  ],
+  "slabinfo.jbd2_journal_head.num_slabs": [
+    8,
+    8
+  ],
+  "slabinfo.jbd2_revoke_table_s.active_objs": [
+    6,
+    6
+  ],
+  "slabinfo.jbd2_revoke_table_s.num_objs": [
+    240,
+    240
+  ],
+  "slabinfo.jbd2_revoke_table_s.active_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.jbd2_revoke_table_s.num_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.jbd2_revoke_record_s.active_objs": [
+    47,
+    47
+  ],
+  "slabinfo.jbd2_revoke_record_s.num_objs": [
+    124,
+    124
+  ],
+  "slabinfo.jbd2_revoke_record_s.active_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.jbd2_revoke_record_s.num_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.ext4_inode_cache.active_objs": [
+    18489,
+    18495
+  ],
+  "slabinfo.ext4_inode_cache.num_objs": [
+    18489,
+    18495
+  ],
+  "slabinfo.ext4_inode_cache.active_slabs": [
+    6163,
+    6165
+  ],
+  "slabinfo.ext4_inode_cache.num_slabs": [
+    6163,
+    6165
+  ],
+  "slabinfo.ext4_free_data.active_objs": [
+    126,
+    126
+  ],
+  "slabinfo.ext4_free_data.num_objs": [
+    126,
+    126
+  ],
+  "slabinfo.ext4_free_data.active_slabs": [
+    2,
+    2
+  ],
+  "slabinfo.ext4_free_data.num_slabs": [
+    2,
+    2
+  ],
+  "slabinfo.ext4_allocation_context.active_objs": [
+    32,
+    32
+  ],
+  "slabinfo.ext4_allocation_context.num_objs": [
+    32,
+    32
+  ],
+  "slabinfo.ext4_allocation_context.active_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.ext4_allocation_context.num_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.ext4_io_end.active_objs": [
+    112,
+    112
+  ],
+  "slabinfo.ext4_io_end.num_objs": [
+    112,
+    112
+  ],
+  "slabinfo.ext4_io_end.active_slabs": [
+    2,
+    2
+  ],
+  "slabinfo.ext4_io_end.num_slabs": [
+    2,
+    2
+  ],
+  "slabinfo.ext4_extent_status.active_objs": [
+    13203,
+    13203
+  ],
+  "slabinfo.ext4_extent_status.num_objs": [
+    13266,
+    13266
+  ],
+  "slabinfo.ext4_extent_status.active_slabs": [
+    134,
+    134
+  ],
+  "slabinfo.ext4_extent_status.num_slabs": [
+    134,
+    134
+  ],
+  "slabinfo.dquot.active_objs": [
+    48,
+    43
+  ],
+  "slabinfo.dquot.num_objs": [
+    48,
+    48
+  ],
+  "slabinfo.dquot.active_slabs": [
+    3,
+    3
+  ],
+  "slabinfo.dquot.num_slabs": [
+    3,
+    3
+  ],
+  "slabinfo.posix_timers_cache.active_objs": [
+    2,
+    2
+  ],
+  "slabinfo.posix_timers_cache.num_objs": [
+    17,
+    17
+  ],
+  "slabinfo.posix_timers_cache.active_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.posix_timers_cache.num_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.UNIX.active_objs": [
+    209,
+    209
+  ],
+  "slabinfo.UNIX.num_objs": [
+    220,
+    220
+  ],
+  "slabinfo.UNIX.active_slabs": [
+    55,
+    55
+  ],
+  "slabinfo.UNIX.num_slabs": [
+    55,
+    55
+  ],
+  "slabinfo.UDP.active_objs": [
+    10,
+    10
+  ],
+  "slabinfo.UDP.num_objs": [
+    12,
+    12
+  ],
+  "slabinfo.UDP.active_slabs": [
+    3,
+    3
+  ],
+  "slabinfo.UDP.num_slabs": [
+    3,
+    3
+  ],
+  "slabinfo.TCP.active_objs": [
+    4,
+    4
+  ],
+  "slabinfo.TCP.num_objs": [
+    4,
+    4
+  ],
+  "slabinfo.TCP.active_slabs": [
+    2,
+    2
+  ],
+  "slabinfo.TCP.num_slabs": [
+    2,
+    2
+  ],
+  "slabinfo.blkdev_queue.active_objs": [
+    26,
+    26
+  ],
+  "slabinfo.blkdev_queue.num_objs": [
+    26,
+    26
+  ],
+  "slabinfo.blkdev_queue.active_slabs": [
+    13,
+    13
+  ],
+  "slabinfo.blkdev_queue.num_slabs": [
+    13,
+    13
+  ],
+  "slabinfo.blkdev_requests.active_objs": [
+    88,
+    115
+  ],
+  "slabinfo.blkdev_requests.num_objs": [
+    154,
+    154
+  ],
+  "slabinfo.blkdev_requests.active_slabs": [
+    14,
+    14
+  ],
+  "slabinfo.blkdev_requests.num_slabs": [
+    14,
+    14
+  ],
+  "slabinfo.blkdev_ioc.active_objs": [
+    206,
+    206
+  ],
+  "slabinfo.blkdev_ioc.num_objs": [
+    234,
+    234
+  ],
+  "slabinfo.blkdev_ioc.active_slabs": [
+    6,
+    6
+  ],
+  "slabinfo.blkdev_ioc.num_slabs": [
+    6,
+    6
+  ],
+  "slabinfo.dmaengine-unmap-256.active_objs": [
+    1,
+    1
+  ],
+  "slabinfo.dmaengine-unmap-256.num_objs": [
+    3,
+    3
+  ],
+  "slabinfo.dmaengine-unmap-256.active_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.dmaengine-unmap-256.num_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.sock_inode_cache.active_objs": [
+    289,
+    289
+  ],
+  "slabinfo.sock_inode_cache.num_objs": [
+    300,
+    300
+  ],
+  "slabinfo.sock_inode_cache.active_slabs": [
+    50,
+    50
+  ],
+  "slabinfo.sock_inode_cache.num_slabs": [
+    50,
+    50
+  ],
+  "slabinfo.file_lock_cache.active_objs": [
+    54,
+    46
+  ],
+  "slabinfo.file_lock_cache.num_objs": [
+    57,
+    57
+  ],
+  "slabinfo.file_lock_cache.active_slabs": [
+    3,
+    3
+  ],
+  "slabinfo.file_lock_cache.num_slabs": [
+    3,
+    3
+  ],
+  "slabinfo.pool_workqueue.active_objs": [
+    27,
+    27
+  ],
+  "slabinfo.pool_workqueue.num_objs": [
+    64,
+    64
+  ],
+  "slabinfo.pool_workqueue.active_slabs": [
+    4,
+    4
+  ],
+  "slabinfo.pool_workqueue.num_slabs": [
+    4,
+    4
+  ],
+  "slabinfo.taskstats.active_objs": [
+    40,
+    39
+  ],
+  "slabinfo.taskstats.num_objs": [
+    60,
+    60
+  ],
+  "slabinfo.taskstats.active_slabs": [
+    5,
+    5
+  ],
+  "slabinfo.taskstats.num_slabs": [
+    5,
+    5
+  ],
+  "slabinfo.proc_inode_cache.active_objs": [
+    1351,
+    1351
+  ],
+  "slabinfo.proc_inode_cache.num_objs": [
+    1566,
+    1566
+  ],
+  "slabinfo.proc_inode_cache.active_slabs": [
+    261,
+    261
+  ],
+  "slabinfo.proc_inode_cache.num_slabs": [
+    261,
+    261
+  ],
+  "slabinfo.sigqueue.active_objs": [
+    100,
+    125
+  ],
+  "slabinfo.sigqueue.num_objs": [
+    100,
+    125
+  ],
+  "slabinfo.sigqueue.active_slabs": [
+    4,
+    5
+  ],
+  "slabinfo.sigqueue.num_slabs": [
+    4,
+    5
+  ],
+  "slabinfo.bdev_cache.active_objs": [
+    6,
+    6
+  ],
+  "slabinfo.bdev_cache.num_objs": [
+    12,
+    12
+  ],
+  "slabinfo.bdev_cache.active_slabs": [
+    3,
+    3
+  ],
+  "slabinfo.bdev_cache.num_slabs": [
+    3,
+    3
+  ],
+  "slabinfo.shmem_inode_cache.active_objs": [
+    1700,
+    1697
+  ],
+  "slabinfo.shmem_inode_cache.num_objs": [
+    1980,
+    1980
+  ],
+  "slabinfo.shmem_inode_cache.active_slabs": [
+    330,
+    330
+  ],
+  "slabinfo.shmem_inode_cache.num_slabs": [
+    330,
+    330
+  ],
+  "slabinfo.kernfs_node_cache.active_objs": [
+    18641,
+    18641
+  ],
+  "slabinfo.kernfs_node_cache.num_objs": [
+    18744,
+    18744
+  ],
+  "slabinfo.kernfs_node_cache.active_slabs": [
+    568,
+    568
+  ],
+  "slabinfo.kernfs_node_cache.num_slabs": [
+    568,
+    568
+  ],
+  "slabinfo.mnt_cache.active_objs": [
+    14563,
+    14563
+  ],
+  "slabinfo.mnt_cache.num_objs": [
+    16320,
+    16320
+  ],
+  "slabinfo.mnt_cache.active_slabs": [
+    1632,
+    1632
+  ],
+  "slabinfo.mnt_cache.num_slabs": [
+    1632,
+    1632
+  ],
+  "slabinfo.inode_cache.active_objs": [
+    19002,
+    19029
+  ],
+  "slabinfo.inode_cache.num_objs": [
+    19033,
+    19033
+  ],
+  "slabinfo.inode_cache.active_slabs": [
+    2719,
+    2719
+  ],
+  "slabinfo.inode_cache.num_slabs": [
+    2719,
+    2719
+  ],
+  "slabinfo.dentry.active_objs": [
+    48434,
+    48434
+  ],
+  "slabinfo.dentry.num_objs": [
+    48699,
+    48699
+  ],
+  "slabinfo.dentry.active_slabs": [
+    2319,
+    2319
+  ],
+  "slabinfo.dentry.num_slabs": [
+    2319,
+    2319
+  ],
+  "slabinfo.buffer_head.active_objs": [
+    234651,
+    234651
+  ],
+  "slabinfo.buffer_head.num_objs": [
+    234897,
+    234897
+  ],
+  "slabinfo.buffer_head.active_slabs": [
+    6017,
+    6017
+  ],
+  "slabinfo.buffer_head.num_slabs": [
+    6023,
+    6023
+  ],
+  "slabinfo.vm_area_struct.active_objs": [
+    18486,
+    18906
+  ],
+  "slabinfo.vm_area_struct.num_objs": [
+    21229,
+    21229
+  ],
+  "slabinfo.vm_area_struct.active_slabs": [
+    923,
+    923
+  ],
+  "slabinfo.vm_area_struct.num_slabs": [
+    923,
+    923
+  ],
+  "slabinfo.mm_struct.active_objs": [
+    148,
+    156
+  ],
+  "slabinfo.mm_struct.num_objs": [
+    148,
+    156
+  ],
+  "slabinfo.mm_struct.active_slabs": [
+    37,
+    39
+  ],
+  "slabinfo.mm_struct.num_slabs": [
+    37,
+    39
+  ],
+  "slabinfo.files_cache.active_objs": [
+    154,
+    154
+  ],
+  "slabinfo.files_cache.num_objs": [
+    154,
+    154
+  ],
+  "slabinfo.files_cache.active_slabs": [
+    14,
+    14
+  ],
+  "slabinfo.files_cache.num_slabs": [
+    14,
+    14
+  ],
+  "slabinfo.signal_cache.active_objs": [
+    267,
+    287
+  ],
+  "slabinfo.signal_cache.num_objs": [
+    280,
+    287
+  ],
+  "slabinfo.signal_cache.active_slabs": [
+    40,
+    41
+  ],
+  "slabinfo.signal_cache.num_slabs": [
+    40,
+    41
+  ],
+  "slabinfo.sighand_cache.active_objs": [
+    214,
+    237
+  ],
+  "slabinfo.sighand_cache.num_objs": [
+    228,
+    237
+  ],
+  "slabinfo.sighand_cache.active_slabs": [
+    76,
+    79
+  ],
+  "slabinfo.sighand_cache.num_slabs": [
+    76,
+    79
+  ],
+  "slabinfo.task_struct.active_objs": [
+    763,
+    778
+  ],
+  "slabinfo.task_struct.num_objs": [
+    778,
+    778
+  ],
+  "slabinfo.task_struct.active_slabs": [
+    389,
+    389
+  ],
+  "slabinfo.task_struct.num_slabs": [
+    389,
+    389
+  ],
+  "slabinfo.Acpi-Operand.active_objs": [
+    8802,
+    8802
+  ],
+  "slabinfo.Acpi-Operand.num_objs": [
+    8960,
+    8960
+  ],
+  "slabinfo.Acpi-Operand.active_slabs": [
+    160,
+    160
+  ],
+  "slabinfo.Acpi-Operand.num_slabs": [
+    160,
+    160
+  ],
+  "slabinfo.Acpi-Parse.active_objs": [
+    57,
+    57
+  ],
+  "slabinfo.Acpi-Parse.num_objs": [
+    213,
+    213
+  ],
+  "slabinfo.Acpi-Parse.active_slabs": [
+    3,
+    3
+  ],
+  "slabinfo.Acpi-Parse.num_slabs": [
+    3,
+    3
+  ],
+  "slabinfo.Acpi-Namespace.active_objs": [
+    5214,
+    5214
+  ],
+  "slabinfo.Acpi-Namespace.num_objs": [
+    5247,
+    5247
+  ],
+  "slabinfo.Acpi-Namespace.active_slabs": [
+    53,
+    53
+  ],
+  "slabinfo.Acpi-Namespace.num_slabs": [
+    53,
+    53
+  ],
+  "slabinfo.anon_vma.active_objs": [
+    8379,
+    8499
+  ],
+  "slabinfo.anon_vma.num_objs": [
+    10584,
+    10584
+  ],
+  "slabinfo.anon_vma.active_slabs": [
+    189,
+    189
+  ],
+  "slabinfo.anon_vma.num_slabs": [
+    189,
+    189
+  ],
+  "slabinfo.radix_tree_node.active_objs": [
+    10856,
+    10856
+  ],
+  "slabinfo.radix_tree_node.num_objs": [
+    10969,
+    10969
+  ],
+  "slabinfo.radix_tree_node.active_slabs": [
+    1567,
+    1567
+  ],
+  "slabinfo.radix_tree_node.num_slabs": [
+    1567,
+    1567
+  ],
+  "slabinfo.trace_event_file.active_objs": [
+    831,
+    831
+  ],
+  "slabinfo.trace_event_file.num_objs": [
+    920,
+    920
+  ],
+  "slabinfo.trace_event_file.active_slabs": [
+    20,
+    20
+  ],
+  "slabinfo.trace_event_file.num_slabs": [
+    20,
+    20
+  ],
+  "slabinfo.ftrace_event_field.active_objs": [
+    5478,
+    5538
+  ],
+  "slabinfo.ftrace_event_field.num_objs": [
+    5478,
+    5561
+  ],
+  "slabinfo.ftrace_event_field.active_slabs": [
+    66,
+    67
+  ],
+  "slabinfo.ftrace_event_field.num_slabs": [
+    66,
+    67
+  ],
+  "slabinfo.idr_layer_cache.active_objs": [
+    285,
+    297
+  ],
+  "slabinfo.idr_layer_cache.num_objs": [
+    297,
+    297
+  ],
+  "slabinfo.idr_layer_cache.active_slabs": [
+    99,
+    99
+  ],
+  "slabinfo.idr_layer_cache.num_slabs": [
+    99,
+    99
+  ],
+  "slabinfo.kmalloc-262144.active_objs": [
+    1,
+    1
+  ],
+  "slabinfo.kmalloc-262144.num_objs": [
+    1,
+    1
+  ],
+  "slabinfo.kmalloc-262144.active_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.kmalloc-262144.num_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.kmalloc-131072.active_objs": [
+    1,
+    1
+  ],
+  "slabinfo.kmalloc-131072.num_objs": [
+    1,
+    1
+  ],
+  "slabinfo.kmalloc-131072.active_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.kmalloc-131072.num_slabs": [
+    1,
+    1
+  ],
+  "slabinfo.kmalloc-65536.active_objs": [
+    14,
+    14
+  ],
+  "slabinfo.kmalloc-65536.num_objs": [
+    14,
+    14
+  ],
+  "slabinfo.kmalloc-65536.active_slabs": [
+    14,
+    14
+  ],
+  "slabinfo.kmalloc-65536.num_slabs": [
+    14,
+    14
+  ],
+  "slabinfo.kmalloc-32768.active_objs": [
+    6,
+    7
+  ],
+  "slabinfo.kmalloc-32768.num_objs": [
+    6,
+    7
+  ],
+  "slabinfo.kmalloc-32768.active_slabs": [
+    6,
+    7
+  ],
+  "slabinfo.kmalloc-32768.num_slabs": [
+    6,
+    7
+  ],
+  "slabinfo.kmalloc-16384.active_objs": [
+    295,
+    296
+  ],
+  "slabinfo.kmalloc-16384.num_objs": [
+    295,
+    296
+  ],
+  "slabinfo.kmalloc-16384.active_slabs": [
+    295,
+    296
+  ],
+  "slabinfo.kmalloc-16384.num_slabs": [
+    295,
+    296
+  ],
+  "slabinfo.kmalloc-8192.active_objs": [
+    69,
+    70
+  ],
+  "slabinfo.kmalloc-8192.num_objs": [
+    69,
+    70
+  ],
+  "slabinfo.kmalloc-8192.active_slabs": [
+    69,
+    70
+  ],
+  "slabinfo.kmalloc-8192.num_slabs": [
+    69,
+    70
+  ],
+  "slabinfo.kmalloc-4096.active_objs": [
+    302,
+    302
+  ],
+  "slabinfo.kmalloc-4096.num_objs": [
+    302,
+    302
+  ],
+  "slabinfo.kmalloc-4096.active_slabs": [
+    302,
+    302
+  ],
+  "slabinfo.kmalloc-4096.num_slabs": [
+    302,
+    302
+  ],
+  "slabinfo.kmalloc-2048.active_objs": [
+    598,
+    598
+  ],
+  "slabinfo.kmalloc-2048.num_objs": [
+    598,
+    598
+  ],
+  "slabinfo.kmalloc-2048.active_slabs": [
+    299,
+    299
+  ],
+  "slabinfo.kmalloc-2048.num_slabs": [
+    299,
+    299
+  ],
+  "slabinfo.kmalloc-1024.active_objs": [
+    984,
+    984
+  ],
+  "slabinfo.kmalloc-1024.num_objs": [
+    984,
+    984
+  ],
+  "slabinfo.kmalloc-1024.active_slabs": [
+    246,
+    246
+  ],
+  "slabinfo.kmalloc-1024.num_slabs": [
+    246,
+    246
+  ],
+  "slabinfo.kmalloc-512.active_objs": [
+    936,
+    963
+  ],
+  "slabinfo.kmalloc-512.num_objs": [
+    1064,
+    1064
+  ],
+  "slabinfo.kmalloc-512.active_slabs": [
+    133,
+    133
+  ],
+  "slabinfo.kmalloc-512.num_slabs": [
+    133,
+    133
+  ],
+  "slabinfo.kmalloc-256.active_objs": [
+    4200,
+    4200
+  ],
+  "slabinfo.kmalloc-256.num_objs": [
+    4928,
+    4928
+  ],
+  "slabinfo.kmalloc-256.active_slabs": [
+    308,
+    308
+  ],
+  "slabinfo.kmalloc-256.num_slabs": [
+    308,
+    308
+  ],
+  "slabinfo.kmalloc-192.active_objs": [
+    2422,
+    2422
+  ],
+  "slabinfo.kmalloc-192.num_objs": [
+    3150,
+    3150
+  ],
+  "slabinfo.kmalloc-192.active_slabs": [
+    150,
+    150
+  ],
+  "slabinfo.kmalloc-192.num_slabs": [
+    150,
+    150
+  ],
+  "slabinfo.kmalloc-96.active_objs": [
+    1748,
+    1748
+  ],
+  "slabinfo.kmalloc-96.num_objs": [
+    1860,
+    1860
+  ],
+  "slabinfo.kmalloc-96.active_slabs": [
+    60,
+    60
+  ],
+  "slabinfo.kmalloc-96.num_slabs": [
+    60,
+    60
+  ],
+  "slabinfo.kmalloc-64.active_objs": [
+    24440,
+    24740
+  ],
+  "slabinfo.kmalloc-64.num_objs": [
+    28917,
+    28917
+  ],
+  "slabinfo.kmalloc-64.active_slabs": [
+    459,
+    459
+  ],
+  "slabinfo.kmalloc-64.num_slabs": [
+    459,
+    459
+  ],
+  "slabinfo.kmalloc-32.active_objs": [
+    29791,
+    29791
+  ],
+  "slabinfo.kmalloc-32.num_objs": [
+    32240,
+    32240
+  ],
+  "slabinfo.kmalloc-32.active_slabs": [
+    260,
+    260
+  ],
+  "slabinfo.kmalloc-32.num_slabs": [
+    260,
+    260
+  ],
+  "slabinfo.kmalloc-node.active_objs": [
+    7374,
+    7374
+  ],
+  "slabinfo.kmalloc-node.num_objs": [
+    7378,
+    7378
+  ],
+  "slabinfo.kmalloc-node.active_slabs": [
+    238,
+    238
+  ],
+  "slabinfo.kmalloc-node.num_slabs": [
+    238,
+    238
+  ],
+  "slabinfo.kmem_cache.active_objs": [
+    119,
+    119
+  ],
+  "slabinfo.kmem_cache.num_objs": [
+    147,
+    147
+  ],
+  "slabinfo.kmem_cache.active_slabs": [
+    7,
+    7
+  ],
+  "slabinfo.kmem_cache.num_slabs": [
+    7,
+    7
+  ]
+}
