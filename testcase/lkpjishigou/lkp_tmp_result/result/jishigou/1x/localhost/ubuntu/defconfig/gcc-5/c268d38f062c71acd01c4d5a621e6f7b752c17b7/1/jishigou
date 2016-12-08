@@ -1,0 +1,54 @@
+Iteration: 1
+2016-11-23 22:20:48 ./jishigou
+spawn telnet localhost
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+/data # [6n/data/ubuntu/lkp/benchmarks/jishigou/auto_interact.sh
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Starting: Intent { cmp=net.jishigou.t/.StartActivity }
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+1
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Wed Nov 23 06:20:48 GMT 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+2
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Wed Nov 23 06:20:49 GMT 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+3
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Wed Nov 23 06:20:50 GMT 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+4
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Wed Nov 23 06:20:51 GMT 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+5
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Wed Nov 23 06:20:52 GMT 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+6
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Wed Nov 23 06:20:53 GMT 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+7
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Wed Nov 23 06:20:54 GMT 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+8
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Wed Nov 23 06:20:55 GMT 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+9
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Wed Nov 23 06:20:56 GMT 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+10
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+Wed Nov 23 06:20:57 GMT 2016
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
