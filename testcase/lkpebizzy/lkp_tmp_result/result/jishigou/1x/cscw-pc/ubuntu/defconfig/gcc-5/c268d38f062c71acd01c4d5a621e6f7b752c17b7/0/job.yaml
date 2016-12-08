@@ -1,0 +1,44 @@
+---
+testcase: jishigou
+default-monitors:
+  wait: activate-monitor
+  kmsg: 
+  uptime: 
+  iostat: 
+  vmstat: 
+  numa-numastat: 
+  numa-vmstat: 
+  numa-meminfo: 
+  proc-vmstat: 
+  proc-stat:
+    interval: 10
+  meminfo: 
+  slabinfo: 
+  interrupts: 
+  lock_stat: 
+  latency_stats: 
+  softirqs: 
+  bdi_dev_mapping: 
+  diskstats: 
+  nfsstat: 
+  cpuidle: 
+  cpufreq-stats: 
+  turbostat: 
+  pmeter: 
+  sched_debug:
+    interval: 60
+memory: 15G
+hdd_partitions: 
+ssd_partitions: 
+category: benchmark
+iterations: 1x
+jishigou:
+  duration: 10s
+enqueue_time: 2016-12-08 19:33:13.609170354 +08:00
+testbox: cscw-pc
+tbox_group: cscw-pc
+kconfig: defconfig
+commit: c268d38f062c71acd01c4d5a621e6f7b752c17b7
+rootfs: ubuntu
+nr_cpu: "$(nproc)"
+compiler: gcc-5

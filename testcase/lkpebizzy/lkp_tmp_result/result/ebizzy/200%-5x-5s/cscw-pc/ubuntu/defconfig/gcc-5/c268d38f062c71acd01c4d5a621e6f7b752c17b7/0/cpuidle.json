@@ -1,0 +1,58 @@
+{
+  "cpuidle.POLL.time": [
+    2663803,
+    2664684
+  ],
+  "cpuidle.POLL.usage": [
+    1332,
+    1335
+  ],
+  "cpuidle.C1-SKL.time": [
+    8318209,
+    8326715
+  ],
+  "cpuidle.C1-SKL.usage": [
+    41994,
+    42115
+  ],
+  "cpuidle.C1E-SKL.time": [
+    59294512,
+    59545494
+  ],
+  "cpuidle.C1E-SKL.usage": [
+    200003,
+    200157
+  ],
+  "cpuidle.C3-SKL.time": [
+    28586998,
+    28609055
+  ],
+  "cpuidle.C3-SKL.usage": [
+    50255,
+    50351
+  ],
+  "cpuidle.C6-SKL.time": [
+    252310172,
+    252756772
+  ],
+  "cpuidle.C6-SKL.usage": [
+    194820,
+    195502
+  ],
+  "cpuidle.C7s-SKL.time": [
+    5789557,
+    5791579
+  ],
+  "cpuidle.C7s-SKL.usage": [
+    2220,
+    2221
+  ],
+  "cpuidle.C8-SKL.time": [
+    2230848401,
+    2237461894
+  ],
+  "cpuidle.C8-SKL.usage": [
+    347348,
+    347729
+  ]
+}
