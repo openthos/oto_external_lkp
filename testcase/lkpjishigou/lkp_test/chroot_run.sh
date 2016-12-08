@@ -31,8 +31,6 @@ fi
 
 sleep 3
 echo "nameserver 8.8.8.8" > $CHMOUNT/etc/resolv.conf
-sleep 1
-hostname -F /etc/hostname
 
 
 

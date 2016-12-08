@@ -1,6 +1,8 @@
 #!/bin/bash -x
 testjob="$1"
-echo  "i am in ubuntu"
+echo  "i am in ubuntu: `hostname`"
+hostname -F /etc/hostname
+echo  "i am in ubuntu changed_hostname: `hostname`"
 apt-get update
 apt-get install -y expect
 apt-get install -y git
