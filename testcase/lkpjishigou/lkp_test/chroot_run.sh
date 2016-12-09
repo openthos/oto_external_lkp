@@ -20,12 +20,12 @@ cp /data/lkp_test/ubuntu_lkp_test.sh  $CHMOUNT/root
 cp /data/commitId.txt  $CHMOUNT/root
 
 sleep 1
-if [ ! "`grep inet $CHMOUNT/ubuntu/etc/group`" ];then
+if [ ! "`grep inet $CHMOUNT/etc/group`" ];then
     echo "inet:x:3003:root" >> $CHMOUNT/etc/group
 fi
 
 sleep 2
-if [ ! "`grep net_raw $CHMOUNT/ubuntu/etc/group`" ];then
+if [ ! "`grep net_raw $CHMOUNT/etc/group`" ];then
     echo "net_raw:x:3004:root" >> $CHMOUNT/etc/group
 fi
 
@@ -58,4 +58,3 @@ chroot $CHMOUNT  su - root -c "/root/ubuntu_lkp_test.sh  $testcase"
 ##下面的代码会在chroot 结束以后执行
 echo "chroot over"
 echo 'do not  ctrl+c please wait until prompt all done'
-#pkill nc
