@@ -10,8 +10,6 @@ qemu-system-x86_64 -enable-kvm -kernel ./kernel -initrd ./initrd.img -append "in
 
 ## LKP初步运行在Android-x86
 
-https://github.com/elliott10/lkp-tests/tree/run
-
 正常运行LKP： `run-qemu ./jobs/ebizzy.yaml x86_64-rhel/gcc-4.9/c13dcf9f2d6f5f06ef1bf79ec456df614c5e058b vmlinuz-4.2.0-rc8`
 最终通过qemu及其参数运行： `qemu-system-x86_64 -enable-kvm xxxxxx`
 
