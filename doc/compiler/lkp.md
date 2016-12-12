@@ -19,7 +19,7 @@ install()
 ```
 其中WEB_URL指定了测试用例的下载URL。lkp install阶段会，通过wget从WEB_URL下载该benchmark压缩包到/tmp目录。（因为随着时间的流逝一些benmark的url失效了，导致wget失败，因此我们采取了将其原来的url(例如sourceforge)放到https://github.com/openthos/oto_lkp/tree/master/benchmark_mirror 上的措施） 
 
-压缩包下载完毕以后，会进行解压，然后执行该目录中的./configure 然后make编译benchmark，make install,安装benchmark。(如果没有confiure文件，有Makefile文件，则会直接执行make命令) 
+压缩包下载完毕以后，会进行解压，然后执行该目录中的./configure 然后make编译benchmark，make install,安装benchmark。(如果没有configure文件，有Makefile文件，则会直接执行make命令) 
 
 而且还会执行/pack/$benchmarkname文件中的install()函数，把benchmark安装到/lkp/benchmarks/$benchmarkname/目录下面，并且会对/lkp/benchmarks/$benchmarkname打包成一个$benchmarkname-LKP.deb包，并且安装该deb包到/lkp/benchmarks/$benchmarkname/目录。
 
