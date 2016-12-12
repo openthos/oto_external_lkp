@@ -1,2 +1,2 @@
 #!/system/xbin/sh
-uiautomator runtest wechat.jar -c com.autoTestUI.wechat
+uiautomator runtest /data/ubuntu/lkp/benchmarks/wechat/wechat.jar -c com.autoTestUI.wechat
