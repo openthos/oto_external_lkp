@@ -1,4 +1,5 @@
 #!/usr/bin/expect
+set timeout 6000
 spawn  telnet localhost
 expect "#"
 send "/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh\r"

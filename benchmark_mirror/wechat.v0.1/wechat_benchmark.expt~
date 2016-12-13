@@ -1,0 +1,6 @@
+#!/usr/bin/expect
+spawn  telnet localhost
+expect "#"
+send "/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh\r"
+expect "#"
+send "exit\r"
