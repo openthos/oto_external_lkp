@@ -4,4 +4,4 @@ category: benchmark
 iterations: 1x
 
 wechat:
-  duration: 50s
+  duration: 600s
