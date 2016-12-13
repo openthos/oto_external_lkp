@@ -14,7 +14,7 @@ android create uitest-project -n <name> -t <android-sdk-ID> -p <path>
 （1）name为生成的jar包，可以由自己定义
 
 （2）path为Eclipse创建的工程的路径
-  - 例如：
+例如：
 ```
 android create uitest-project -n mytest -t 1 -p workspace/mytest
 ```
@@ -28,3 +28,14 @@ ant build
 ```
 
 在bin目录下会生成jar文件，编译完成
+
+##4、执行测试
+```
+adb push <jar文件路径> data/local/tmp
+adb shell uiautomator runtest <jar文件名> -c <工程中的包名.类名>
+```
+例如：
+```
+adb push bin/mytest.jar data/local/tmp
+adb shell uiautomator runtest mytest.jar -c com.autoTestUI.mytest
+```
