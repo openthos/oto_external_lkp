@@ -1,1 +1,17 @@
 #!/usr/bin/env ruby
+while line = STDIN.gets
+    case line
+    when /test=/
+        name = line.sub(/^.*=/,"").chomp
+    when /launch/
+        lt = line.gsub(/\D/,"")
+        puts "#{name}.launchtime:#{lt}"
+    when /Time:/
+        rt = line.sub(/^.*:\s/,"")
+        puts "#{name}.runtime:#{rt}"
+    when /OK/
+        puts "#{name}.result:1"
+    when /FAILURES/
+        puts "#{name}.result:0"
+    end
+end
