@@ -5,13 +5,13 @@ while line = STDIN.gets
         name = line.sub(/^.*=/,"").chomp
     when /launch/
         lt = line.gsub(/\D/,"")
-        puts "#{name}.launchtime:#{lt}"
+        puts "#{name}.launchtime: #{lt}"
     when /Time:/
         rt = line.sub(/^.*:\s/,"")
-        puts "#{name}.runtime:#{rt}"
+        puts "#{name}.runtime: #{rt}"
     when /OK/
-        puts "#{name}.result:1"
+        puts "#{name}.result: 1"
     when /FAILURES/
-        puts "#{name}.result:0"
+        puts "#{name}.result: 0"
     end
 end
