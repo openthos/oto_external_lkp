@@ -28,6 +28,9 @@ adb -s $androidIP:$port   shell busybox chmod +x /data/lkp_test/chroot_run.sh
 
 adb -s $androidIP:$port   shell /data/lkp_test/chroot_run.sh $filename
 
-adb -s $androidIP:$port pull  /data/ubuntu/result/  $foldName/result
+filename1=${filename%.sh}
+filename2=lkp$filename1
+mkdir $foldName/$filename2
+adb -s $androidIP:$port pull  /data/ubuntu/result/$filename1  $foldName/$filename2/
 
 echo "test over! all done!"
