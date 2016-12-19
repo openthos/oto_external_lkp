@@ -7,7 +7,7 @@ export_top_env()
 	export hdd_partitions=
 	export ssd_partitions=
 	export category='benchmark'
-	export enqueue_time='2016-12-19 22:25:36 +0800'
+	export enqueue_time='2016-12-20 00:30:30 +0800'
 	export testbox='cscw-pc'
 	export tbox_group='cscw-pc'
 	export kconfig='defconfig'

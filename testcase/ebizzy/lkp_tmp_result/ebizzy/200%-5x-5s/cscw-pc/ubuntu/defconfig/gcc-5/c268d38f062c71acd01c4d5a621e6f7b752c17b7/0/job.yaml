@@ -35,7 +35,7 @@ nr_threads: 200%
 iterations: 5x
 ebizzy:
   duration: 5s
-enqueue_time: 2016-12-19 22:25:36.203648828 +08:00
+enqueue_time: 2016-12-20 00:30:30.599430578 +08:00
 testbox: cscw-pc
 tbox_group: cscw-pc
 kconfig: defconfig
