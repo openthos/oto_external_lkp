@@ -45,7 +45,7 @@ cd ~
 git clone https://github.com/openthos/oto_lkp
 
 cd ~/oto_lkp/testcase/lkpebizzy
-修改 fortest.sh
+修改 run_withlog.sh
 中ip_of_android="192.168.2.8"【PC2 androidx86 ip地址】
 
 root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# ./run_withlog.sh
