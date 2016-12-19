@@ -1,0 +1,404 @@
++ ip_of_android=192.168.2.74
++ tmp_result_dir=lkp_tmp_result
++++ pwd
+++ basename /home/elwin/oto_lkp/testcase/ebizzy
++ testcasename=ebizzy
+++ dirname ./fortest.sh
++ cd .
++ apt-get install -y android-tools-adb
+Reading package lists...
+Building dependency tree...
+Reading state information...
+android-tools-adb is already the newest version (5.1.1r36+git20160322-0ubuntu3).
+0 upgraded, 0 newly installed, 0 to remove and 290 not upgraded.
++ adb connect 192.168.2.74
+* daemon not running. starting it now on port 5037 *
+* daemon started successfully *
+connected to 192.168.2.74:5555
++ adb -s 192.168.2.74:5555 push ./commitId.txt /data/
+1 KB/s (50 bytes in 0.040s)
++ ./ebizzy.sh 192.168.2.74 5555 lkp_tmp_result
++ androidIP=192.168.2.74
++ port=5555
++ foldName=lkp_tmp_result
+++ dirname ./ebizzy.sh
++ cd .
++ '[' -z lkp_tmp_result ']'
++ mkdir lkp_tmp_result
+++ basename ./ebizzy.sh
++ filename=ebizzy.sh
++ '[' -d lkp_tmp_result ']'
++ trash=2645
++ mkdir /tmp/lkp_trash/2645
+mkdir: cannot create directory ‘/tmp/lkp_trash/2645’: No such file or directory
++ mv 'lkp_tmp_result/*' /tmp/lkp_trash/2645
+mv: cannot stat 'lkp_tmp_result/*': No such file or directory
++ adb -s 192.168.2.74:5555 shell rm -rf /data/lkp_test
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ adb -s 192.168.2.74:5555 shell mkdir /data/lkp_test
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ adb -s 192.168.2.74:5555 push ./lkp_test /data/lkp_test/
+push: ./lkp_test/ubuntu_lkp_test.sh -> /data/lkp_test/ubuntu_lkp_test.sh
+push: ./lkp_test/chroot_run.sh -> /data/lkp_test/chroot_run.sh
+push: ./lkp_test/before_chroot.sh -> /data/lkp_test/before_chroot.sh
+push: ./lkp_test/mount-static -> /data/lkp_test/mount-static
+4 files pushed. 0 files skipped.
+2116 KB/s (2975336 bytes in 1.372s)
++ adb -s 192.168.2.74:5555 shell busybox chmod +x /data/lkp_test/chroot_run.sh
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ adb -s 192.168.2.74:5555 shell /data/lkp_test/chroot_run.sh ebizzy.sh
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ testcase=ebizzy.sh
++ CHMOUNT=/data/ubuntu
++ BUSYBOX=/system/xbin/busybox
++ export PATH=/system/xbin/:/sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin
++ source /data/lkp_test/before_chroot.sh
++ cd /data/
++ /system/xbin/telnetd -l /system/xbin/sh
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ cd -
+/
++ [ ! -d /data/ubuntu ]
++ umount /data/ubuntu
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
+umount: can't umount /data/ubuntu: Invalid argument
++ sleep 3
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ mount -t ext4 /dev/block/sda2 /data/ubuntu
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ sleep 3
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ cp /data/lkp_test/ubuntu_lkp_test.sh /data/ubuntu/root
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ cp /data/commitId.txt /data/ubuntu/root
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ sleep 1
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ grep inet /data/ubuntu/etc/group
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ [ ! inet:x:3003:root ]
++ sleep 2
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ grep net_raw /data/ubuntu/etc/group
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ [ ! net_raw:x:3004:root ]
++ sleep 3
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ echo nameserver 8.8.8.8
++ export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/system/xbin/:/sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin
++ mount -t sysfs sysfs /data/ubuntu/sys
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ mount -t proc proc /data/ubuntu/proc
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ cp /data/lkp_test/mount-static /system/bin
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ chmod 777 /system/bin/mount-static
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ mount-static --bind /dev /data/ubuntu/dev
++ sleep 2
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ mount -t devpts devpts /data/ubuntu/dev/pts
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ sleep 2
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ [ ! -d /data/ubuntu/dev/shm ]
++ mkdir /data/ubuntu/dev/shm
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ sleep 2
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ mount -t tmpfs tmpfs /data/ubuntu/dev/shm
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ sleep 2
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ chroot /data/ubuntu su - root -c /root/ubuntu_lkp_test.sh  ebizzy.sh
+WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
++ testjob=ebizzy.sh
+++ hostname
++ echo 'i am in ubuntu: localhost'
+i am in ubuntu: localhost
++ hostname -F /etc/hostname
+++ hostname
++ echo 'i am in ubuntu changed_hostname: cscw-pc'
+i am in ubuntu changed_hostname: cscw-pc
++ apt-get update
+0% [Working]            Hit http://mirrors.tuna.tsinghua.edu.cn wily InRelease
+            0% [Connecting to dl.google.com] [Connecting to archive.ubuntukylin.com]                                                                        Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates InRelease
+                                                                        Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports InRelease
+                                                                        Hit http://mirrors.tuna.tsinghua.edu.cn wily-security InRelease
+                                                                        0% [Waiting for headers] [Connecting to archive.ubuntukylin.com]                                                                0% [InRelease gpgv 218 kB] [Waiting for headers] [Connecting to archive.ubuntuk                                                                               Ign http://dl.google.com stable InRelease
+12% [InRelease gpgv 218 kB] [Connecting to archive.ubuntukylin.com (114.67.37.1                                                                               Hit http://archive.ubuntukylin.com:10006 trusty InRelease
+                                                                               12% [InRelease gpgv 218 kB] [Waiting for headers]                                                 Get:1 http://dl.google.com stable Release.gpg [916 B]
+                                                 99% [InRelease gpgv 218 kB] [1 Release.gpg 916 B/916 B 100%]                                                            97% [1 Release.gpg 916 B/916 B 100%]                                    97% [Working]             97% [InRelease gpgv 65.9 kB] [Waiting for headers]                                                  Hit http://mirrors.tuna.tsinghua.edu.cn wily/main Sources
+97% [InRelease gpgv 65.9 kB] [Waiting for headers]                                                  96% [Waiting for headers]                         96% [Sources 0 B] [Waiting for headers]                                       96% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers]                                                                Hit http://mirrors.tuna.tsinghua.edu.cn wily/restricted Sources
+                                                                96% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for h                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily/universe Sources
+96% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for h                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily/multiverse Sources
+96% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for h                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily/main amd64 Packages
+96% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for h                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily/restricted amd64 Packages
+96% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for h                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily/universe amd64 Packages
+96% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for h                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily/multiverse amd64 Packages
+96% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for h                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily/main i386 Packages
+96% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for h                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily/restricted i386 Packages
+96% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for h                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily/universe i386 Packages
+96% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for h                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily/multiverse i386 Packages
+96% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for h                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily/main Translation-en
+96% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for h                                                                               Get:2 http://dl.google.com stable Release [1,189 B]
+98% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [2 Release 1,1                                                                               98% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers]                                                                Hit http://mirrors.tuna.tsinghua.edu.cn wily/main Translation-zh_CN
+                                                                98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily/multiverse Translation-en
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily/multiverse Translation-zh_CN
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily/restricted Translation-en
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily/restricted Translation-zh_CN
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily/universe Translation-en
+                                          98% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers]                                                                Hit http://mirrors.tuna.tsinghua.edu.cn wily/universe Translation-zh_CN
+                                                                98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/main Sources
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/restricted Sources
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/universe Sources
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/multiverse Sources
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/main amd64 Packages
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/restricted amd64 Packages
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/universe amd64 Packages
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/multiverse amd64 Packages
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/main i386 Packages
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/restricted i386 Packages
+98% [Sources 0 B] [InRelease gpgv 65.9 kB]                                          Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/universe i386 Packages
+                                          98% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers]                                                                Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/multiverse i386 Packages
+                                                                98% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/main Translation-en
+98% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/multiverse Translation-en
+98% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/restricted Translation-en
+98% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-updates/universe Translation-en
+98% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               97% [Sources 5,357 kB]                      97% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/main Sources
+97% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/restricted Sources
+97% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/universe Sources
+97% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/multiverse Sources
+97% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/main amd64 Packages
+97% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/restricted amd64 Packages
+97% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/universe amd64 Packages
+97% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/multiverse amd64 Packages
+97% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/main i386 Packages
+97% [Sources 5,357 kB] [InRelease gpgv 65.9 kB]                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/restricted i386 Packages
+                                               97% [Sources 5,357 kB] [InRelease gpgv 65.9 kB] [Waiting for headers]                                                                     Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/universe i386 Packages
+97% [Sources 5,357 kB] [InRelease gpgv 65.9 kB] [Waiting for headers]                                                                     Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/multiverse i386 Packages
+97% [Sources 5,357 kB] [InRelease gpgv 65.9 kB] [Waiting for headers]                                                                     97% [Sources 5,357 kB] [Waiting for headers]                                            97% [Sources 5,357 kB] [InRelease gpgv 16.0 kB] [Waiting for headers]                                                                     97% [Sources 5,357 kB] [Waiting for headers]                                            97% [Sources 5,357 kB] [2 Release gpgv 1,189 B] [Waiting for headers]                                                                     97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/main Translation-en
+                                                                  97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/multiverse Translation-en
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/restricted Translation-en
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-backports/universe Translation-en
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/main Sources
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/restricted Sources
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/universe Sources
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/multiverse Sources
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/main amd64 Packages
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/restricted amd64 Packages
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/universe amd64 Packages
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/multiverse amd64 Packages
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/main i386 Packages
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/restricted i386 Packages
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/universe i386 Packages
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/multiverse i386 Packages
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/main Translation-en
+97% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               100% [Waiting for headers] [Waiting for headers] [Waiting for headers]                                                                      100% [Sources 0 B] [Waiting for headers] [Waiting for headers] [Waiting for hea                                                                               100% [Waiting for headers] [Waiting for headers] [Waiting for headers]                                                                      100% [Sources 0 B] [Waiting for headers] [Waiting for headers] [Waiting for hea                                                                               Hit http://archive.ubuntukylin.com:10006 trusty/main amd64 Packages
+                                                                               100% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                              Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/multiverse Translation-en
+100% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                              Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/restricted Translation-en
+100% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                              Hit http://mirrors.tuna.tsinghua.edu.cn wily-security/universe Translation-en
+100% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                              Get:3 http://dl.google.com stable/main amd64 Packages [1,440 B]
+                                                              100% [Sources 0 B] [3 Packages 1,440 B/1,440 B 100%] [Waiting for headers]                                                                          100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://archive.ubuntukylin.com:10006 trusty/main i386 Packages
+                                            Hit http://archive.ubuntukylin.com:10006 trusty/main Translation-en
+                                            100% [Sources 32.3 MB]                      100% [3 Packages bzip2 0 B] [Sources 32.3 MB] [Waiting for headers]                                                                   100% [Sources 32.3 MB] [Waiting for headers]                                            100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         Ign http://dl.google.com stable/main Translation-en_US
+                                         100% [Packages 0 B]                   Ign http://dl.google.com stable/main Translation-en
+                   100% [Packages 36.8 MB]                       Ign http://dl.google.com stable/main Translation-zh_CN
+100% [Packages 36.8 MB]                       100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Packages 36.7 MB]                       100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-zh_CN 0 B]                            100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-zh_CN 0 B]                            100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-zh_CN 0 B]                            100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-zh_CN 0 B]                            100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Translation-en 0 B]                         100% [Working]              Fetched 3,545 B in 4s (860 B/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 34%Reading package lists... 34%Reading package lists... 35%Reading package lists... 35%Reading package lists... 41%Reading package lists... 41%Reading package lists... 41%Reading package lists... 41%Reading package lists... 51%Reading package lists... 69%Reading package lists... 69%Reading package lists... 70%Reading package lists... 70%Reading package lists... 73%Reading package lists... 73%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 90%Reading package lists... 90%Reading package lists... 91%Reading package lists... 91%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 93%Reading package lists... 93%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... Done
++ apt-get install -y expect
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+expect is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
++ apt-get install -y git
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+git is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
++ apt-get install -y ruby-git
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+ruby-git is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
++ pwd
+/root
++ rm -rf ./oto_lkp
++ rm -rf /result/
++ git clone https://github.com/openthos/oto_lkp.git
+Cloning into 'oto_lkp'...
+remote: Counting objects: 6436, done.        
+remote: Compressing objects:   2% (1/35)           remote: Compressing objects:   5% (2/35)           remote: Compressing objects:   8% (3/35)           remote: Compressing objects:  11% (4/35)           remote: Compressing objects:  14% (5/35)           remote: Compressing objects:  17% (6/35)           remote: Compressing objects:  20% (7/35)           remote: Compressing objects:  22% (8/35)           remote: Compressing objects:  25% (9/35)           remote: Compressing objects:  28% (10/35)           remote: Compressing objects:  31% (11/35)           remote: Compressing objects:  34% (12/35)           remote: Compressing objects:  37% (13/35)           remote: Compressing objects:  40% (14/35)           remote: Compressing objects:  42% (15/35)           remote: Compressing objects:  45% (16/35)           remote: Compressing objects:  48% (17/35)           remote: Compressing objects:  51% (18/35)           remote: Compressing objects:  54% (19/35)           remote: Compressing objects:  57% (20/35)           remote: Compressing objects:  60% (21/35)           remote: Compressing objects:  62% (22/35)           remote: Compressing objects:  65% (23/35)           remote: Compressing objects:  68% (24/35)           remote: Compressing objects:  71% (25/35)           remote: Compressing objects:  74% (26/35)           remote: Compressing objects:  77% (27/35)           remote: Compressing objects:  80% (28/35)           remote: Compressing objects:  82% (29/35)           remote: Compressing objects:  85% (30/35)           remote: Compressing objects:  88% (31/35)           remote: Compressing objects:  91% (32/35)           remote: Compressing objects:  94% (33/35)           remote: Compressing objects:  97% (34/35)           remote: Compressing objects: 100% (35/35)           remote: Compressing objects: 100% (35/35), done.        
+Receiving objects:   0% (1/6436)   Receiving objects:   1% (65/6436)   Receiving objects:   2% (129/6436)   Receiving objects:   3% (194/6436)   Receiving objects:   3% (246/6436), 84.01 KiB | 77.00 KiB/s   Receiving objects:   3% (246/6436), 196.01 KiB | 93.00 KiB/s   Receiving objects:   3% (246/6436), 348.01 KiB | 112.00 KiB/s   Receiving objects:   3% (246/6436), 540.01 KiB | 129.00 KiB/s   Receiving objects:   3% (246/6436), 844.01 KiB | 170.00 KiB/s   Receiving objects:   3% (246/6436), 1.31 MiB | 258.00 KiB/s   Receiving objects:   3% (246/6436), 2.07 MiB | 399.00 KiB/s   Receiving objects:   3% (254/6436), 3.21 MiB | 617.00 KiB/s   Receiving objects:   3% (254/6436), 4.80 MiB | 931.00 KiB/s   Receiving objects:   3% (256/6436), 6.98 MiB | 1.31 MiB/s   Receiving objects:   3% (256/6436), 9.85 MiB | 1.80 MiB/s   Receiving objects:   3% (256/6436), 13.57 MiB | 2.42 MiB/s   Receiving objects:   3% (256/6436), 18.19 MiB | 3.15 MiB/s   Receiving objects:   3% (256/6436), 22.95 MiB | 3.79 MiB/s   Receiving objects:   3% (256/6436), 27.70 MiB | 4.29 MiB/s   Receiving objects:   3% (256/6436), 32.47 MiB | 4.64 MiB/s   Receiving objects:   3% (256/6436), 37.20 MiB | 4.75 MiB/s   Receiving objects:   3% (256/6436), 41.97 MiB | 4.75 MiB/s   Receiving objects:   3% (256/6436), 46.82 MiB | 4.77 MiB/s   Receiving objects:   3% (256/6436), 51.94 MiB | 4.85 MiB/s   Receiving objects:   3% (256/6436), 57.03 MiB | 4.93 MiB/s   Receiving objects:   3% (256/6436), 62.13 MiB | 5.00 MiB/s   Receiving objects:   3% (256/6436), 67.25 MiB | 5.08 MiB/s   Receiving objects:   3% (256/6436), 72.38 MiB | 5.10 MiB/s   Receiving objects:   3% (256/6436), 77.49 MiB | 5.10 MiB/s   Receiving objects:   3% (256/6436), 82.60 MiB | 5.11 MiB/s   Receiving objects:   3% (256/6436), 87.68 MiB | 5.10 MiB/s   Receiving objects:   3% (256/6436), 92.82 MiB | 5.11 MiB/s   Receiving objects:   3% (257/6436), 97.95 MiB | 5.11 MiB/s   Receiving objects:   3% (257/6436), 103.06 MiB | 5.11 MiB/s   Receiving objects:   4% (258/6436), 105.61 MiB | 5.11 MiB/s   Receiving objects:   4% (263/6436), 113.36 MiB | 5.13 MiB/s   Receiving objects:   4% (263/6436), 118.47 MiB | 5.05 MiB/s   Receiving objects:   4% (263/6436), 124.01 MiB | 5.14 MiB/s   Receiving objects:   4% (263/6436), 128.74 MiB | 4.81 MiB/s   Receiving objects:   4% (263/6436), 130.49 MiB | 4.59 MiB/s   Receiving objects:   4% (263/6436), 134.39 MiB | 4.31 MiB/s   Receiving objects:   4% (264/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:   5% (322/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:   6% (387/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:   7% (451/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:   8% (515/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:   9% (580/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:  10% (644/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:  11% (708/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:  12% (773/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:  13% (837/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:  14% (902/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:  15% (966/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:  16% (1030/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:  17% (1095/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:  18% (1159/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:  19% (1223/6436), 136.08 MiB | 4.13 MiB/s   Receiving objects:  20% (1288/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  21% (1352/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  22% (1416/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  23% (1481/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  24% (1545/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  25% (1609/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  26% (1674/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  27% (1738/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  28% (1803/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  29% (1867/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  30% (1931/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  31% (1996/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  32% (2060/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  33% (2124/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  34% (2189/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  35% (2253/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  36% (2317/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  37% (2382/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  38% (2446/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  39% (2511/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  40% (2575/6436), 137.82 MiB | 4.03 MiB/s   Receiving objects:  41% (2639/6436), 139.54 MiB | 3.75 MiB/s   Receiving objects:  42% (2704/6436), 139.54 MiB | 3.75 MiB/s   Receiving objects:  43% (2768/6436), 139.54 MiB | 3.75 MiB/s   Receiving objects:  44% (2832/6436), 139.54 MiB | 3.75 MiB/s   Receiving objects:  45% (2897/6436), 139.54 MiB | 3.75 MiB/s   Receiving objects:  45% (2946/6436), 139.54 MiB | 3.75 MiB/s   Receiving objects:  46% (2961/6436), 139.54 MiB | 3.75 MiB/s   Receiving objects:  47% (3025/6436), 139.54 MiB | 3.75 MiB/s   Receiving objects:  48% (3090/6436), 139.54 MiB | 3.75 MiB/s   Receiving objects:  49% (3154/6436), 139.54 MiB | 3.75 MiB/s   Receiving objects:  50% (3218/6436), 141.36 MiB | 3.59 MiB/s   Receiving objects:  51% (3283/6436), 141.36 MiB | 3.59 MiB/s   Receiving objects:  52% (3347/6436), 141.36 MiB | 3.59 MiB/s   Receiving objects:  53% (3412/6436), 141.36 MiB | 3.59 MiB/s   Receiving objects:  54% (3476/6436), 141.36 MiB | 3.59 MiB/s   Receiving objects:  55% (3540/6436), 141.36 MiB | 3.59 MiB/s   Receiving objects:  56% (3605/6436), 141.36 MiB | 3.59 MiB/s   Receiving objects:  57% (3669/6436), 141.36 MiB | 3.59 MiB/s   Receiving objects:  58% (3733/6436), 141.36 MiB | 3.59 MiB/s   Receiving objects:  59% (3798/6436), 143.23 MiB | 3.45 MiB/s   Receiving objects:  60% (3862/6436), 143.23 MiB | 3.45 MiB/s   Receiving objects:  61% (3926/6436), 143.23 MiB | 3.45 MiB/s   Receiving objects:  61% (3944/6436), 143.23 MiB | 3.45 MiB/s   Receiving objects:  61% (3973/6436), 148.86 MiB | 3.56 MiB/s   Receiving objects:  61% (3973/6436), 152.64 MiB | 3.65 MiB/s   Receiving objects:  61% (3973/6436), 156.35 MiB | 3.73 MiB/s   Receiving objects:  61% (3973/6436), 160.14 MiB | 3.74 MiB/s   Receiving objects:  61% (3973/6436), 163.94 MiB | 3.76 MiB/s   Receiving objects:  61% (3973/6436), 167.76 MiB | 3.77 MiB/s   Receiving objects:  61% (3973/6436), 171.66 MiB | 3.81 MiB/s   Receiving objects:  61% (3973/6436), 175.65 MiB | 3.86 MiB/s   Receiving objects:  61% (3973/6436), 179.84 MiB | 3.95 MiB/s   Receiving objects:  61% (3973/6436), 184.29 MiB | 4.09 MiB/s   Receiving objects:  61% (3973/6436), 189.08 MiB | 4.30 MiB/s   Receiving objects:  61% (3973/6436), 194.14 MiB | 4.55 MiB/s   Receiving objects:  61% (3973/6436), 197.28 MiB | 4.31 MiB/s   Receiving objects:  61% (3973/6436), 200.29 MiB | 4.03 MiB/s   Receiving objects:  61% (3973/6436), 203.38 MiB | 3.68 MiB/s   Receiving objects:  61% (3977/6436), 206.68 MiB | 3.32 MiB/s   Receiving objects:  61% (3977/6436), 210.06 MiB | 3.18 MiB/s   Receiving objects:  61% (3977/6436), 213.50 MiB | 3.26 MiB/s   Receiving objects:  61% (3977/6436), 216.90 MiB | 3.32 MiB/s   Receiving objects:  61% (3977/6436), 220.31 MiB | 3.38 MiB/s   Receiving objects:  61% (3977/6436), 223.75 MiB | 3.40 MiB/s   Receiving objects:  61% (3977/6436), 227.12 MiB | 3.39 MiB/s   Receiving objects:  61% (3977/6436), 230.60 MiB | 3.42 MiB/s   Receiving objects:  61% (3977/6436), 234.18 MiB | 3.45 MiB/s   Receiving objects:  62% (3991/6436), 234.18 MiB | 3.45 MiB/s   Receiving objects:  62% (4007/6436), 237.89 MiB | 3.51 MiB/s   Receiving objects:  62% (4007/6436), 241.82 MiB | 3.63 MiB/s   Receiving objects:  62% (4007/6436), 246.07 MiB | 3.81 MiB/s   Receiving objects:  62% (4007/6436), 250.70 MiB | 4.06 MiB/s   Receiving objects:  62% (4007/6436), 255.61 MiB | 4.34 MiB/s   Receiving objects:  62% (4007/6436), 260.39 MiB | 4.56 MiB/s   Receiving objects:  62% (4008/6436), 262.76 MiB | 4.65 MiB/s   Receiving objects:  62% (4008/6436), 269.91 MiB | 4.79 MiB/s   Receiving objects:  62% (4008/6436), 274.70 MiB | 4.79 MiB/s   Receiving objects:  62% (4009/6436), 277.10 MiB | 4.77 MiB/s   Receiving objects:  62% (4009/6436), 284.27 MiB | 4.78 MiB/s   Receiving objects:  62% (4009/6436), 289.04 MiB | 4.78 MiB/s   Receiving objects:  63% (4055/6436), 289.04 MiB | 4.78 MiB/s   Receiving objects:  64% (4120/6436), 289.04 MiB | 4.78 MiB/s   Receiving objects:  65% (4184/6436), 289.04 MiB | 4.78 MiB/s   Receiving objects:  66% (4248/6436), 289.04 MiB | 4.78 MiB/s   Receiving objects:  67% (4313/6436), 291.45 MiB | 4.78 MiB/s   Receiving objects:  67% (4318/6436), 291.45 MiB | 4.78 MiB/s   Receiving objects:  68% (4377/6436), 291.45 MiB | 4.78 MiB/s   Receiving objects:  69% (4441/6436), 291.45 MiB | 4.78 MiB/s   Receiving objects:  70% (4506/6436), 291.45 MiB | 4.78 MiB/s   Receiving objects:  71% (4570/6436), 291.45 MiB | 4.78 MiB/s   Receiving objects:  72% (4634/6436), 291.45 MiB | 4.78 MiB/s   Receiving objects:  73% (4699/6436), 291.45 MiB | 4.78 MiB/s   Receiving objects:  74% (4763/6436), 291.45 MiB | 4.78 MiB/s   Receiving objects:  75% (4827/6436), 291.45 MiB | 4.78 MiB/s   Receiving objects:  76% (4892/6436), 291.45 MiB | 4.78 MiB/s   Receiving objects:  77% (4956/6436), 293.84 MiB | 4.78 MiB/s   Receiving objects:  78% (5021/6436), 293.84 MiB | 4.78 MiB/s   Receiving objects:  78% (5032/6436), 298.82 MiB | 4.82 MiB/s   Receiving objects:  78% (5032/6436), 303.88 MiB | 4.88 MiB/s   Receiving objects:  78% (5032/6436), 308.86 MiB | 4.93 MiB/s   Receiving objects:  78% (5032/6436), 313.12 MiB | 4.81 MiB/s   Receiving objects:  78% (5032/6436), 318.11 MiB | 4.84 MiB/s   Receiving objects:  78% (5032/6436), 323.26 MiB | 4.86 MiB/s   Receiving objects:  78% (5032/6436), 328.35 MiB | 4.87 MiB/s   Receiving objects:  78% (5032/6436), 333.47 MiB | 4.97 MiB/s   Receiving objects:  78% (5032/6436), 338.63 MiB | 5.13 MiB/s   Receiving objects:  78% (5033/6436), 343.80 MiB | 5.13 MiB/s   Receiving objects:  78% (5033/6436), 348.93 MiB | 5.13 MiB/s   Receiving objects:  78% (5033/6436), 354.05 MiB | 5.13 MiB/s   Receiving objects:  78% (5034/6436), 356.62 MiB | 5.14 MiB/s   Receiving objects:  78% (5034/6436), 364.33 MiB | 5.13 MiB/s   Receiving objects:  78% (5035/6436), 366.91 MiB | 5.13 MiB/s   Receiving objects:  78% (5038/6436), 374.65 MiB | 5.14 MiB/s   Receiving objects:  78% (5038/6436), 379.79 MiB | 5.14 MiB/s   Receiving objects:  78% (5039/6436), 382.33 MiB | 5.14 MiB/s   Receiving objects:  79% (5085/6436), 382.33 MiB | 5.14 MiB/s   Receiving objects:  80% (5149/6436), 382.33 MiB | 5.14 MiB/s   Receiving objects:  80% (5181/6436), 387.32 MiB | 4.83 MiB/s   Receiving objects:  80% (5181/6436), 390.56 MiB | 4.31 MiB/s   Receiving objects:  80% (5181/6436), 390.88 MiB | 3.65 MiB/s   Receiving objects:  80% (5181/6436), 393.96 MiB | 3.21 MiB/s   Receiving objects:  80% (5181/6436), 395.72 MiB | 2.57 MiB/s   Receiving objects:  80% (5181/6436), 397.53 MiB | 2.05 MiB/s   Receiving objects:  80% (5181/6436), 399.39 MiB | 1.81 MiB/s   Receiving objects:  80% (5181/6436), 401.30 MiB | 1.90 MiB/s   Receiving objects:  80% (5205/6436), 403.32 MiB | 1.85 MiB/s   Receiving objects:  80% (5205/6436), 405.33 MiB | 1.91 MiB/s   Receiving objects:  80% (5205/6436), 407.29 MiB | 1.94 MiB/s   Receiving objects:  80% (5205/6436), 409.23 MiB | 1.96 MiB/s   Receiving objects:  80% (5205/6436), 411.23 MiB | 1.96 MiB/s   Receiving objects:  80% (5205/6436), 413.39 MiB | 1.99 MiB/s   Receiving objects:  80% (5205/6436), 415.78 MiB | 2.08 MiB/s   Receiving objects:  80% (5205/6436), 418.41 MiB | 2.25 MiB/s   Receiving objects:  80% (5205/6436), 421.20 MiB | 2.44 MiB/s   Receiving objects:  80% (5211/6436), 424.54 MiB | 2.72 MiB/s   Receiving objects:  80% (5211/6436), 428.45 MiB | 3.09 MiB/s   Receiving objects:  80% (5211/6436), 433.05 MiB | 3.55 MiB/s   Receiving objects:  80% (5211/6436), 438.15 MiB | 4.09 MiB/s   Receiving objects:  81% (5214/6436), 438.15 MiB | 4.09 MiB/s   Receiving objects:  81% (5218/6436), 443.29 MiB | 4.55 MiB/s   Receiving objects:  81% (5218/6436), 448.43 MiB | 4.89 MiB/s   Receiving objects:  81% (5218/6436), 453.53 MiB | 5.08 MiB/s   Receiving objects:  81% (5218/6436), 458.67 MiB | 5.13 MiB/s   Receiving objects:  81% (5247/6436), 463.81 MiB | 5.13 MiB/s   Receiving objects:  81% (5247/6436), 468.96 MiB | 5.12 MiB/s   Receiving objects:  81% (5247/6436), 474.11 MiB | 5.13 MiB/s   Receiving objects:  81% (5266/6436), 479.06 MiB | 5.09 MiB/s   Receiving objects:  81% (5266/6436), 484.17 MiB | 5.09 MiB/s   Receiving objects:  81% (5266/6436), 489.14 MiB | 5.05 MiB/s   Receiving objects:  81% (5266/6436), 494.28 MiB | 5.05 MiB/s   Receiving objects:  81% (5266/6436), 499.41 MiB | 5.05 MiB/s   Receiving objects:  81% (5266/6436), 504.47 MiB | 5.08 MiB/s   Receiving objects:  82% (5278/6436), 506.86 MiB | 5.04 MiB/s   Receiving objects:  82% (5284/6436), 509.21 MiB | 5.00 MiB/s   Receiving objects:  82% (5284/6436), 513.96 MiB | 4.94 MiB/s   Receiving objects:  82% (5284/6436), 518.75 MiB | 4.87 MiB/s   Receiving objects:  82% (5284/6436), 523.50 MiB | 4.78 MiB/s   Receiving objects:  82% (5284/6436), 528.29 MiB | 4.76 MiB/s   Receiving objects:  82% (5284/6436), 533.04 MiB | 4.76 MiB/s   Receiving objects:  82% (5285/6436), 535.43 MiB | 4.77 MiB/s   Receiving objects:  83% (5342/6436), 535.43 MiB | 4.77 MiB/s   Receiving objects:  84% (5407/6436), 535.43 MiB | 4.77 MiB/s   Receiving objects:  85% (5471/6436), 535.43 MiB | 4.77 MiB/s   Receiving objects:  86% (5535/6436), 535.43 MiB | 4.77 MiB/s   Receiving objects:  87% (5600/6436), 535.43 MiB | 4.77 MiB/s   Receiving objects:  88% (5664/6436), 535.43 MiB | 4.77 MiB/s   Receiving objects:  89% (5729/6436), 537.82 MiB | 4.77 MiB/s   Receiving objects:  90% (5793/6436), 537.82 MiB | 4.77 MiB/s   Receiving objects:  90% (5848/6436), 542.57 MiB | 4.76 MiB/s   Receiving objects:  91% (5857/6436), 542.57 MiB | 4.76 MiB/s   Receiving objects:  91% (5883/6436), 547.68 MiB | 4.83 MiB/s   Receiving objects:  91% (5890/6436), 552.82 MiB | 4.91 MiB/s   Receiving objects:  92% (5922/6436), 552.82 MiB | 4.91 MiB/s   Receiving objects:  93% (5986/6436), 552.82 MiB | 4.91 MiB/s   Receiving objects:  94% (6050/6436), 552.82 MiB | 4.91 MiB/s   Receiving objects:  95% (6115/6436), 555.38 MiB | 4.96 MiB/s   Receiving objects:  95% (6136/6436), 555.38 MiB | 4.96 MiB/s   Receiving objects:  96% (6179/6436), 555.38 MiB | 4.96 MiB/s   Receiving objects:  97% (6243/6436), 557.91 MiB | 4.99 MiB/s   Receiving objects:  98% (6308/6436), 557.91 MiB | 4.99 MiB/s   Receiving objects:  99% (6372/6436), 557.91 MiB | 4.99 MiB/s   remote: Total 6436 (delta 14), reused 0 (delta 0), pack-reused 6401        
+Receiving objects: 100% (6436/6436), 557.91 MiB | 4.99 MiB/s   Receiving objects: 100% (6436/6436), 558.61 MiB | 5.01 MiB/s, done.
+Resolving deltas:   0% (0/2193)   Resolving deltas:   1% (40/2193)   Resolving deltas:   3% (71/2193)   Resolving deltas:   4% (88/2193)   Resolving deltas:   5% (113/2193)   Resolving deltas:   6% (133/2193)   Resolving deltas:   7% (160/2193)   Resolving deltas:   8% (179/2193)   Resolving deltas:   9% (200/2193)   Resolving deltas:  10% (220/2193)   Resolving deltas:  11% (260/2193)   Resolving deltas:  12% (267/2193)   Resolving deltas:  13% (289/2193)   Resolving deltas:  14% (308/2193)   Resolving deltas:  15% (332/2193)   Resolving deltas:  16% (351/2193)   Resolving deltas:  17% (374/2193)   Resolving deltas:  19% (429/2193)   Resolving deltas:  20% (459/2193)   Resolving deltas:  21% (469/2193)   Resolving deltas:  22% (485/2193)   Resolving deltas:  24% (530/2193)   Resolving deltas:  25% (549/2193)   Resolving deltas:  26% (571/2193)   Resolving deltas:  27% (597/2193)   Resolving deltas:  28% (618/2193)   Resolving deltas:  29% (644/2193)   Resolving deltas:  30% (658/2193)   Resolving deltas:  31% (681/2193)   Resolving deltas:  32% (705/2193)   Resolving deltas:  33% (725/2193)   Resolving deltas:  34% (751/2193)   Resolving deltas:  39% (857/2193)   Resolving deltas:  40% (885/2193)   Resolving deltas:  42% (933/2193)   Resolving deltas:  44% (985/2193)   Resolving deltas:  49% (1080/2193)   Resolving deltas:  50% (1098/2193)   Resolving deltas:  51% (1136/2193)   Resolving deltas:  52% (1142/2193)   Resolving deltas:  54% (1191/2193)   Resolving deltas:  55% (1207/2193)   Resolving deltas:  57% (1260/2193)   Resolving deltas:  58% (1274/2193)   Resolving deltas:  59% (1315/2193)   Resolving deltas:  60% (1330/2193)   Resolving deltas:  62% (1371/2193)   Resolving deltas:  63% (1385/2193)   Resolving deltas:  64% (1405/2193)   Resolving deltas:  65% (1432/2193)   Resolving deltas:  66% (1451/2193)   Resolving deltas:  67% (1475/2193)   Resolving deltas:  68% (1507/2193)   Resolving deltas:  69% (1522/2193)   Resolving deltas:  70% (1547/2193)   Resolving deltas:  71% (1573/2193)   Resolving deltas:  72% (1579/2193)   Resolving deltas:  73% (1605/2193)   Resolving deltas:  76% (1685/2193)   Resolving deltas:  77% (1702/2193)   Resolving deltas:  78% (1730/2193)   Resolving deltas:  79% (1742/2193)   Resolving deltas:  80% (1776/2193)   Resolving deltas:  81% (1786/2193)   Resolving deltas:  82% (1813/2193)   Resolving deltas:  83% (1841/2193)   Resolving deltas:  84% (1843/2193)   Resolving deltas:  85% (1870/2193)   Resolving deltas:  86% (1888/2193)   Resolving deltas:  87% (1908/2193)   Resolving deltas:  88% (1930/2193)   Resolving deltas:  89% (1960/2193)   Resolving deltas:  90% (1977/2193)   Resolving deltas:  91% (1997/2193)   Resolving deltas:  92% (2030/2193)   Resolving deltas:  93% (2049/2193)   Resolving deltas:  94% (2063/2193)   Resolving deltas:  95% (2088/2193)   Resolving deltas:  96% (2120/2193)   Resolving deltas:  97% (2129/2193)   Resolving deltas:  98% (2153/2193)   Resolving deltas:  99% (2176/2193)   Resolving deltas: 100% (2193/2193)   Resolving deltas: 100% (2193/2193), done.
+Checking connectivity... done.
++ cd ./oto_lkp/lkp-tests-master
++ export LKP_SRC=/root/oto_lkp/lkp-tests-master
++ LKP_SRC=/root/oto_lkp/lkp-tests-master
++ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/oto_lkp/lkp-tests-master/bin
++ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/oto_lkp/lkp-tests-master/bin
++ source ../joblist/ebizzy.sh
+++ lkp install /root/oto_lkp/lkp-tests-master/jobs/ebizzy.yaml
+make -C /root/oto_lkp/lkp-tests-master/monitors/event
+Creating testbox configuration file: /root/oto_lkp/lkp-tests-master/hosts/cscw-pc.
+Use: /root/oto_lkp/lkp-tests-master/distro/installer/ubuntu install bc gawk linux-tools-generic ruby ruby-gnuplot ruby-git sysstat time kmod gzip xz-utils make automake gcc libtool patch git cpio wget 
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+automake is already the newest version.
+bc is already the newest version.
+gawk is already the newest version.
+gcc is already the newest version.
+gzip is already the newest version.
+kmod is already the newest version.
+libtool is already the newest version.
+make is already the newest version.
+patch is already the newest version.
+ruby is already the newest version.
+sysstat is already the newest version.
+time is already the newest version.
+xz-utils is already the newest version.
+ruby-git is already the newest version.
+ruby-gnuplot is already the newest version.
+cpio is already the newest version.
+git is already the newest version.
+linux-tools-generic is already the newest version.
+wget is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+Making ebizzy benchmark for ubuntu
+--2016-12-19 22:25:25--  https://github.com/openthos/oto_lkp/raw/master/benchmark_mirror/ebizzy-0.3.tar.gz
+Resolving github.com (github.com)... 192.30.253.113, 192.30.253.112
+Connecting to github.com (github.com)|192.30.253.113|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/openthos/oto_lkp/master/benchmark_mirror/ebizzy-0.3.tar.gz [following]
+--2016-12-19 22:25:29--  https://raw.githubusercontent.com/openthos/oto_lkp/master/benchmark_mirror/ebizzy-0.3.tar.gz
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.192.133, 151.101.128.133, 151.101.64.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.192.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 12438 (12K) [application/octet-stream]
+Saving to: ‘ebizzy-0.3.tar.gz’
+
+ebizzy-0.3.tar.gz     0%[                      ]       0  --.-KB/s             ebizzy-0.3.tar.gz   100%[=====================>]  12.15K  --.-KB/s   in 0.008s 
+
+2016-12-19 22:25:29 (1.51 MB/s) - ‘ebizzy-0.3.tar.gz’ saved [12438/12438]
+
+patching file configure
+Hunk #1 succeeded at 16 with fuzz 1.
+patching file ebizzy.c
+Type 'make' to compile
+gcc -Wall -Wshadow -pthread  -o ebizzy ebizzy.c
+ebizzy.c: In function ‘search_mem’:
+ebizzy.c:393:9: warning: ‘state’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   chunk = rand_num(chunks, state);
+         ^
+dpkg-deb: building package 'ebizzy-lkp' in 'ebizzy-LKP.deb'.
+Installing ebizzy-LKP
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 211457 files and directories currently installed.)
+Preparing to unpack /tmp/ebizzy-LKP.deb ...
+Unpacking ebizzy-lkp (2016-12-19) over (2016-12-09) ...
+Setting up ebizzy-lkp (2016-12-19) ...
+++ lkp split /root/oto_lkp/lkp-tests-master/jobs/ebizzy.yaml
+/root/oto_lkp/lkp-tests-master/jobs/ebizzy.yaml => ./ebizzy-200%-100x-10s.yaml
+/root/oto_lkp/lkp-tests-master/jobs/ebizzy.yaml => ./ebizzy-200%-100x-5s.yaml
+/root/oto_lkp/lkp-tests-master/jobs/ebizzy.yaml => ./ebizzy-200%-5x-10s.yaml
+/root/oto_lkp/lkp-tests-master/jobs/ebizzy.yaml => ./ebizzy-200%-5x-5s.yaml
+++ lkp run /root/oto_lkp/lkp-tests-master/ebizzy-200%-5x-5s.yaml
+/root/oto_lkp/lkp-tests-master/monitors/turbostat: line 10: cd: /lkp/benchmarks/turbostat: No such file or directory
+Iteration: 1
+2016-12-19 22:25:37 ./ebizzy -t 16 -S 5
+66513 records/s 4258 4148 4148 4154 4165 4160 4150 4160 4165 4167 4124 4149 4175 4124 4141 4120
+real  5.00 s
+user  9.20 s
+sys  30.70 s
+Iteration: 2
+2016-12-19 22:25:42 ./ebizzy -t 16 -S 5
+66705 records/s 4119 4087 4442 4121 4324 4043 3995 3993 4333 4295 4154 4257 4154 4284 4127 3970
+real  5.00 s
+user  9.34 s
+sys  30.55 s
+Iteration: 3
+2016-12-19 22:25:47 ./ebizzy -t 16 -S 5
+66531 records/s 4151 4152 4236 4064 4231 3975 4095 4055 4082 3974 4012 4183 4546 4061 4056 4654
+real  5.00 s
+user  9.56 s
+sys  30.34 s
+Iteration: 4
+2016-12-19 22:25:52 ./ebizzy -t 16 -S 5
+66550 records/s 4109 4143 3991 4323 3991 4026 4188 4143 3983 4152 4105 4112 4362 4343 4269 4303
+real  5.00 s
+user  9.50 s
+sys  30.39 s
+Iteration: 5
+2016-12-19 22:25:57 ./ebizzy -t 16 -S 5
+66410 records/s 4056 4355 4120 4032 4127 4029 4060 4046 4467 4261 4082 4341 4032 4219 4154 4023
+real  5.00 s
+user  9.38 s
+sys  30.51 s
+wait for background monitors: uptime proc-vmstat proc-stat meminfo slabinfo interrupts softirqs diskstats cpuidle sched_debug
++++ hostname
+++ lkp collect -c testcase=ebizzy -o /result/ebizzy/ebizzy_cscw-pc.csv
++ echo 'lkp test over, leave ubuntu'
+lkp test over, leave ubuntu
++ echo chroot over
+chroot over
++ echo do not  ctrl+c please wait until prompt all done
+do not  ctrl+c please wait until prompt all done
++ filename1=ebizzy
++ mkdir lkp_tmp_result/ebizzy
++ adb -s 192.168.2.74:5555 pull /data/ubuntu/result/ebizzy lkp_tmp_result/ebizzy/
+pull: building file list...
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/sched_debug.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/sched_debug.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/job.sh -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/job.sh
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/ebizzy.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/ebizzy.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/meminfo.gz -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/meminfo.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/stats.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/stats.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/time -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/time
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/vmstat -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/vmstat
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/cpuidle.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/cpuidle.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/dmesg.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/dmesg.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/cpufreq-stats -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/cpufreq-stats
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/ebizzy.time.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/ebizzy.time.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/uptime -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/uptime
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/matrix.json.gz -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/matrix.json.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/sched_debug.xz -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/sched_debug.xz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/proc-vmstat.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/proc-vmstat.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/interrupts.gz -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/interrupts.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/ebizzy.time -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/ebizzy.time
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/cpuidle -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/cpuidle
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/bdi_dev_mapping -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/bdi_dev_mapping
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/vmstat.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/vmstat.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/pmeter -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/pmeter
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/ebizzy -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/ebizzy
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/slabinfo.gz -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/slabinfo.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/meminfo.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/meminfo.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/job.yaml -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/job.yaml
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/time.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/time.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/softirqs.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/softirqs.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/diskstats.json.gz -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/diskstats.json.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/diskstats.gz -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/diskstats.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/interrupts.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/interrupts.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/reproduce.sh -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/reproduce.sh
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/env.yaml -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/env.yaml
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/slabinfo.json.gz -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/slabinfo.json.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/kmsg.xz -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/kmsg.xz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/proc-vmstat.gz -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/proc-vmstat.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/uptime.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/uptime.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/softirqs.gz -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/softirqs.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/proc-stat.gz -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/0/proc-stat.gz
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/stddev.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/stddev.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/matrix.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/matrix.json
+pull: /data/ubuntu/result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/avg.json -> lkp_tmp_result/ebizzy/200%-5x-5s/cscw-pc/ubuntu/defconfig/gcc-5/c268d38f062c71acd01c4d5a621e6f7b752c17b7/avg.json
+pull: /data/ubuntu/result/ebizzy/ebizzy_cscw-pc.csv -> lkp_tmp_result/ebizzy/ebizzy_cscw-pc.csv
+pull: /data/ubuntu/result/ebizzy/params.yaml -> lkp_tmp_result/ebizzy/params.yaml
+43 files pulled. 0 files skipped.
+137 KB/s (385203 bytes in 2.731s)
+./ebizzy.sh: line 34: unexpected EOF while looking for matching `"'
+./ebizzy.sh: line 35: syntax error: unexpected end of file

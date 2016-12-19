@@ -1,0 +1,1205 @@
+{
+  "sched_debug.time": [
+    1482158276.4132311
+  ],
+  "sched_debug.ktime": [
+    5231231.44761
+  ],
+  "sched_debug.sched_clk": [
+    5231268.75512
+  ],
+  "sched_debug.cpu_clk": [
+    5231268.755174
+  ],
+  "sched_debug.jiffies": [
+    4299898527
+  ],
+  "sched_debug.sched_clock_stable()": [
+    1
+  ],
+  "sched_debug.sysctl_sched.sysctl_sched_latency": [
+    10.0
+  ],
+  "sched_debug.sysctl_sched.sysctl_sched_min_granularity": [
+    3.0
+  ],
+  "sched_debug.sysctl_sched.sysctl_sched_wakeup_granularity": [
+    2.0
+  ],
+  "sched_debug.sysctl_sched.sysctl_sched_features": [
+    44859
+  ],
+  "sched_debug.sysctl_sched.sysctl_sched_tunable_scaling": [
+    1
+  ],
+  "sched_debug.cpu.nr_switches.0": [
+    1027865
+  ],
+  "sched_debug.cpu.nr_load_updates.0": [
+    282285
+  ],
+  "sched_debug.cpu.nr_uninterruptible.0": [
+    -440
+  ],
+  "sched_debug.cpu.next_balance.0": [
+    4299.898528
+  ],
+  "sched_debug.cpu.clock.0": [
+    5231268.52025
+  ],
+  "sched_debug.cpu.clock_task.0": [
+    5231268.52025
+  ],
+  "sched_debug.cpu.cpu_load[0].0": [
+    18
+  ],
+  "sched_debug.cpu.cpu_load[1].0": [
+    18
+  ],
+  "sched_debug.cpu.cpu_load[2].0": [
+    22
+  ],
+  "sched_debug.cpu.cpu_load[3].0": [
+    30
+  ],
+  "sched_debug.cpu.cpu_load[4].0": [
+    36
+  ],
+  "sched_debug.cpu.yld_count.0": [
+    1091
+  ],
+  "sched_debug.cpu.sched_count.0": [
+    1215691
+  ],
+  "sched_debug.cpu.sched_goidle.0": [
+    520089
+  ],
+  "sched_debug.cpu.avg_idle.0": [
+    1000000
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.0": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.0": [
+    422123
+  ],
+  "sched_debug.cpu.ttwu_local.0": [
+    166023
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.0": [
+    50113.022812
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.0": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.0": [
+    40005.138162
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.0": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.0": [
+    42
+  ],
+  "sched_debug.cfs_rq:/.load_avg.0": [
+    189
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.0": [
+    18
+  ],
+  "sched_debug.cfs_rq:/.util_avg.0": [
+    176
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.0": [
+    189
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.0": [
+    1564
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.0": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.0": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_switches.1": [
+    590589
+  ],
+  "sched_debug.cpu.nr_load_updates.1": [
+    230542
+  ],
+  "sched_debug.cpu.nr_uninterruptible.1": [
+    108
+  ],
+  "sched_debug.cpu.next_balance.1": [
+    4299.898527
+  ],
+  "sched_debug.cpu.clock.1": [
+    5231268.485614
+  ],
+  "sched_debug.cpu.clock_task.1": [
+    5231268.485614
+  ],
+  "sched_debug.cpu.cpu_load[0].1": [
+    31
+  ],
+  "sched_debug.cpu.cpu_load[1].1": [
+    31
+  ],
+  "sched_debug.cpu.cpu_load[2].1": [
+    30
+  ],
+  "sched_debug.cpu.cpu_load[3].1": [
+    31
+  ],
+  "sched_debug.cpu.cpu_load[4].1": [
+    40
+  ],
+  "sched_debug.cpu.yld_count.1": [
+    1524
+  ],
+  "sched_debug.cpu.sched_count.1": [
+    622057
+  ],
+  "sched_debug.cpu.sched_goidle.1": [
+    317654
+  ],
+  "sched_debug.cpu.avg_idle.1": [
+    523879
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.1": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.1": [
+    187518
+  ],
+  "sched_debug.cpu.ttwu_local.1": [
+    80048
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.1": [
+    51005.35844
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.1": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.1": [
+    39894.012427
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.1": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.1": [
+    -111.125735
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.1": [
+    40
+  ],
+  "sched_debug.cfs_rq:/.load_avg.1": [
+    258
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.1": [
+    29
+  ],
+  "sched_debug.cfs_rq:/.util_avg.1": [
+    236
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.1": [
+    258
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.1": [
+    1564
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.1": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.1": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_switches.2": [
+    644042
+  ],
+  "sched_debug.cpu.nr_load_updates.2": [
+    234564
+  ],
+  "sched_debug.cpu.nr_uninterruptible.2": [
+    13
+  ],
+  "sched_debug.cpu.next_balance.2": [
+    4299.898531
+  ],
+  "sched_debug.cpu.clock.2": [
+    5231268.353505
+  ],
+  "sched_debug.cpu.clock_task.2": [
+    5231268.353505
+  ],
+  "sched_debug.cpu.cpu_load[0].2": [
+    13
+  ],
+  "sched_debug.cpu.cpu_load[1].2": [
+    13
+  ],
+  "sched_debug.cpu.cpu_load[2].2": [
+    13
+  ],
+  "sched_debug.cpu.cpu_load[3].2": [
+    14
+  ],
+  "sched_debug.cpu.cpu_load[4].2": [
+    16
+  ],
+  "sched_debug.cpu.yld_count.2": [
+    1262
+  ],
+  "sched_debug.cpu.sched_count.2": [
+    666556
+  ],
+  "sched_debug.cpu.sched_goidle.2": [
+    335540
+  ],
+  "sched_debug.cpu.avg_idle.2": [
+    397953
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.2": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.2": [
+    216191
+  ],
+  "sched_debug.cpu.ttwu_local.2": [
+    98342
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.2": [
+    48611.09058
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.2": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.2": [
+    39223.467893
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.2": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.2": [
+    -781.670269
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.2": [
+    34
+  ],
+  "sched_debug.cfs_rq:/.load_avg.2": [
+    313
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.2": [
+    12
+  ],
+  "sched_debug.cfs_rq:/.util_avg.2": [
+    277
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.2": [
+    313
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.2": [
+    1564
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.2": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.2": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_switches.3": [
+    617690
+  ],
+  "sched_debug.cpu.nr_load_updates.3": [
+    250996
+  ],
+  "sched_debug.cpu.nr_uninterruptible.3": [
+    -47
+  ],
+  "sched_debug.cpu.next_balance.3": [
+    4299.898529
+  ],
+  "sched_debug.cpu.clock.3": [
+    5231269.348186
+  ],
+  "sched_debug.cpu.clock_task.3": [
+    5231269.348186
+  ],
+  "sched_debug.cpu.cpu_load[0].3": [
+    29
+  ],
+  "sched_debug.cpu.cpu_load[1].3": [
+    29
+  ],
+  "sched_debug.cpu.cpu_load[2].3": [
+    29
+  ],
+  "sched_debug.cpu.cpu_load[3].3": [
+    26
+  ],
+  "sched_debug.cpu.cpu_load[4].3": [
+    23
+  ],
+  "sched_debug.cpu.yld_count.3": [
+    1370
+  ],
+  "sched_debug.cpu.sched_count.3": [
+    638743
+  ],
+  "sched_debug.cpu.sched_goidle.3": [
+    321795
+  ],
+  "sched_debug.cpu.avg_idle.3": [
+    525017
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.3": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.3": [
+    165707
+  ],
+  "sched_debug.cpu.ttwu_local.3": [
+    76256
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.3": [
+    48370.977487
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.3": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.3": [
+    39432.100206
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.3": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.3": [
+    -573.037956
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.3": [
+    45
+  ],
+  "sched_debug.cfs_rq:/.load_avg.3": [
+    209
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.3": [
+    29
+  ],
+  "sched_debug.cfs_rq:/.util_avg.3": [
+    187
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.3": [
+    209
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.3": [
+    1574
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.3": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.3": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_running.4": [
+    1
+  ],
+  "sched_debug.cpu.load.4": [
+    1024
+  ],
+  "sched_debug.cpu.nr_switches.4": [
+    1054499
+  ],
+  "sched_debug.cpu.nr_load_updates.4": [
+    224098
+  ],
+  "sched_debug.cpu.nr_uninterruptible.4": [
+    35
+  ],
+  "sched_debug.cpu.next_balance.4": [
+    4299.898651
+  ],
+  "sched_debug.cpu.curr->pid.4": [
+    14416
+  ],
+  "sched_debug.cpu.clock.4": [
+    5231269.310054
+  ],
+  "sched_debug.cpu.clock_task.4": [
+    5231269.310054
+  ],
+  "sched_debug.cpu.cpu_load[0].4": [
+    42
+  ],
+  "sched_debug.cpu.cpu_load[1].4": [
+    159
+  ],
+  "sched_debug.cpu.cpu_load[2].4": [
+    198
+  ],
+  "sched_debug.cpu.cpu_load[3].4": [
+    165
+  ],
+  "sched_debug.cpu.cpu_load[4].4": [
+    112
+  ],
+  "sched_debug.cpu.yld_count.4": [
+    1212
+  ],
+  "sched_debug.cpu.sched_count.4": [
+    1059073
+  ],
+  "sched_debug.cpu.sched_goidle.4": [
+    523088
+  ],
+  "sched_debug.cpu.avg_idle.4": [
+    654913
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.4": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.4": [
+    882281
+  ],
+  "sched_debug.cpu.ttwu_local.4": [
+    461585
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.4": [
+    45609.122904
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.4": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.4": [
+    40452.028475
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.4": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.4": [
+    446.890313
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.4": [
+    17
+  ],
+  "sched_debug.cfs_rq:/.nr_running.4": [
+    1
+  ],
+  "sched_debug.cfs_rq:/.load.4": [
+    1024
+  ],
+  "sched_debug.cfs_rq:/.load_avg.4": [
+    139
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.4": [
+    42
+  ],
+  "sched_debug.cfs_rq:/.util_avg.4": [
+    116
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.4": [
+    139
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.4": [
+    1574
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.4": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.4": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_running.5": [
+    1
+  ],
+  "sched_debug.cpu.load.5": [
+    1024
+  ],
+  "sched_debug.cpu.nr_switches.5": [
+    270663
+  ],
+  "sched_debug.cpu.nr_load_updates.5": [
+    155206
+  ],
+  "sched_debug.cpu.nr_uninterruptible.5": [
+    140
+  ],
+  "sched_debug.cpu.next_balance.5": [
+    4299.898531
+  ],
+  "sched_debug.cpu.curr->pid.5": [
+    14419
+  ],
+  "sched_debug.cpu.clock.5": [
+    5231269.381814
+  ],
+  "sched_debug.cpu.clock_task.5": [
+    5231269.381814
+  ],
+  "sched_debug.cpu.cpu_load[0].5": [
+    26
+  ],
+  "sched_debug.cpu.cpu_load[1].5": [
+    146
+  ],
+  "sched_debug.cpu.cpu_load[2].5": [
+    162
+  ],
+  "sched_debug.cpu.cpu_load[3].5": [
+    117
+  ],
+  "sched_debug.cpu.cpu_load[4].5": [
+    77
+  ],
+  "sched_debug.cpu.yld_count.5": [
+    1338
+  ],
+  "sched_debug.cpu.sched_count.5": [
+    277968
+  ],
+  "sched_debug.cpu.sched_goidle.5": [
+    135211
+  ],
+  "sched_debug.cpu.avg_idle.5": [
+    668917
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.5": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.5": [
+    180424
+  ],
+  "sched_debug.cpu.ttwu_local.5": [
+    75390
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.5": [
+    39174.523476
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.5": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.5": [
+    30230.367938
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.5": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.5": [
+    -9774.770224
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.5": [
+    29
+  ],
+  "sched_debug.cfs_rq:/.nr_running.5": [
+    1
+  ],
+  "sched_debug.cfs_rq:/.load.5": [
+    1024
+  ],
+  "sched_debug.cfs_rq:/.load_avg.5": [
+    148
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.5": [
+    26
+  ],
+  "sched_debug.cfs_rq:/.util_avg.5": [
+    129
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.5": [
+    148
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.5": [
+    1574
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.5": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.5": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_switches.6": [
+    199222
+  ],
+  "sched_debug.cpu.nr_load_updates.6": [
+    124606
+  ],
+  "sched_debug.cpu.nr_uninterruptible.6": [
+    94
+  ],
+  "sched_debug.cpu.next_balance.6": [
+    4299.898529
+  ],
+  "sched_debug.cpu.clock.6": [
+    5231269.34923
+  ],
+  "sched_debug.cpu.clock_task.6": [
+    5231269.34923
+  ],
+  "sched_debug.cpu.cpu_load[0].6": [
+    34
+  ],
+  "sched_debug.cpu.cpu_load[1].6": [
+    34
+  ],
+  "sched_debug.cpu.cpu_load[2].6": [
+    34
+  ],
+  "sched_debug.cpu.cpu_load[3].6": [
+    33
+  ],
+  "sched_debug.cpu.cpu_load[4].6": [
+    31
+  ],
+  "sched_debug.cpu.yld_count.6": [
+    1059
+  ],
+  "sched_debug.cpu.sched_count.6": [
+    205198
+  ],
+  "sched_debug.cpu.sched_goidle.6": [
+    99536
+  ],
+  "sched_debug.cpu.avg_idle.6": [
+    1000000
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.6": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.6": [
+    109526
+  ],
+  "sched_debug.cpu.ttwu_local.6": [
+    47746
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.6": [
+    36300.174098
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.6": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.6": [
+    31693.704031
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.6": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.6": [
+    -8311.434131
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.6": [
+    36
+  ],
+  "sched_debug.cfs_rq:/.load_avg.6": [
+    160
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.6": [
+    33
+  ],
+  "sched_debug.cfs_rq:/.util_avg.6": [
+    126
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.6": [
+    160
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.6": [
+    1574
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.6": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.6": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_switches.7": [
+    183173
+  ],
+  "sched_debug.cpu.nr_load_updates.7": [
+    113636
+  ],
+  "sched_debug.cpu.nr_uninterruptible.7": [
+    97
+  ],
+  "sched_debug.cpu.next_balance.7": [
+    4299.898531
+  ],
+  "sched_debug.cpu.clock.7": [
+    5231269.348188
+  ],
+  "sched_debug.cpu.clock_task.7": [
+    5231269.348188
+  ],
+  "sched_debug.cpu.cpu_load[0].7": [
+    22
+  ],
+  "sched_debug.cpu.cpu_load[1].7": [
+    22
+  ],
+  "sched_debug.cpu.cpu_load[2].7": [
+    25
+  ],
+  "sched_debug.cpu.cpu_load[3].7": [
+    35
+  ],
+  "sched_debug.cpu.cpu_load[4].7": [
+    38
+  ],
+  "sched_debug.cpu.yld_count.7": [
+    1172
+  ],
+  "sched_debug.cpu.sched_count.7": [
+    187740
+  ],
+  "sched_debug.cpu.sched_goidle.7": [
+    89776
+  ],
+  "sched_debug.cpu.avg_idle.7": [
+    848973
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.7": [
+    500000
+  ],
+  "sched_debug.cpu.ttwu_count.7": [
+    109144
+  ],
+  "sched_debug.cpu.ttwu_local.7": [
+    49982
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.7": [
+    34053.449791
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.7": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.7": [
+    28290.671508
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.7": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.7": [
+    -11714.466654
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.7": [
+    35
+  ],
+  "sched_debug.cfs_rq:/.load_avg.7": [
+    158
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.7": [
+    22
+  ],
+  "sched_debug.cfs_rq:/.util_avg.7": [
+    136
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.7": [
+    158
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.7": [
+    1574
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.7": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.7": [
+    800.0
+  ],
+  "sched_debug.cpu.nr_running.max": [
+    1.0
+  ],
+  "sched_debug.cpu.nr_running.avg": [
+    0.25
+  ],
+  "sched_debug.cpu.nr_running.stddev": [
+    0.4330127018922193
+  ],
+  "sched_debug.cpu.load.max": [
+    1024.0
+  ],
+  "sched_debug.cpu.load.avg": [
+    256.0
+  ],
+  "sched_debug.cpu.load.stddev": [
+    443.40500673763256
+  ],
+  "sched_debug.cpu.nr_switches.max": [
+    1054499.0
+  ],
+  "sched_debug.cpu.nr_switches.min": [
+    183173.0
+  ],
+  "sched_debug.cpu.nr_switches.avg": [
+    573467.875
+  ],
+  "sched_debug.cpu.nr_switches.stddev": [
+    321942.9265290812
+  ],
+  "sched_debug.cpu.nr_load_updates.max": [
+    282285.0
+  ],
+  "sched_debug.cpu.nr_load_updates.min": [
+    113636.0
+  ],
+  "sched_debug.cpu.nr_load_updates.avg": [
+    201991.625
+  ],
+  "sched_debug.cpu.nr_load_updates.stddev": [
+    58306.70663812504
+  ],
+  "sched_debug.cpu.nr_uninterruptible.max": [
+    140.0
+  ],
+  "sched_debug.cpu.nr_uninterruptible.min": [
+    -440.0
+  ],
+  "sched_debug.cpu.nr_uninterruptible.stddev": [
+    175.61036415883888
+  ],
+  "sched_debug.cpu.next_balance.max": [
+    4299.898651
+  ],
+  "sched_debug.cpu.next_balance.min": [
+    4299.898527
+  ],
+  "sched_debug.cpu.next_balance.avg": [
+    4299.898544625
+  ],
+  "sched_debug.cpu.next_balance.stddev": [
+    4.023039134419075e-05
+  ],
+  "sched_debug.cpu.curr->pid.max": [
+    14419.0
+  ],
+  "sched_debug.cpu.curr->pid.avg": [
+    3604.375
+  ],
+  "sched_debug.cpu.curr->pid.stddev": [
+    6242.960674581813
+  ],
+  "sched_debug.cpu.clock.max": [
+    5231269.381814
+  ],
+  "sched_debug.cpu.clock.min": [
+    5231268.353505
+  ],
+  "sched_debug.cpu.clock.avg": [
+    5231269.012105125
+  ],
+  "sched_debug.cpu.clock.stddev": [
+    0.4355860869143058
+  ],
+  "sched_debug.cpu.clock_task.max": [
+    5231269.381814
+  ],
+  "sched_debug.cpu.clock_task.min": [
+    5231268.353505
+  ],
+  "sched_debug.cpu.clock_task.avg": [
+    5231269.012105125
+  ],
+  "sched_debug.cpu.clock_task.stddev": [
+    0.4355860869143058
+  ],
+  "sched_debug.cpu.cpu_load[0].max": [
+    42.0
+  ],
+  "sched_debug.cpu.cpu_load[0].min": [
+    13.0
+  ],
+  "sched_debug.cpu.cpu_load[0].avg": [
+    26.875
+  ],
+  "sched_debug.cpu.cpu_load[0].stddev": [
+    8.637671850678283
+  ],
+  "sched_debug.cpu.cpu_load[1].max": [
+    159.0
+  ],
+  "sched_debug.cpu.cpu_load[1].min": [
+    13.0
+  ],
+  "sched_debug.cpu.cpu_load[1].avg": [
+    56.5
+  ],
+  "sched_debug.cpu.cpu_load[1].stddev": [
+    55.8949908310217
+  ],
+  "sched_debug.cpu.cpu_load[2].max": [
+    198.0
+  ],
+  "sched_debug.cpu.cpu_load[2].min": [
+    13.0
+  ],
+  "sched_debug.cpu.cpu_load[2].avg": [
+    64.125
+  ],
+  "sched_debug.cpu.cpu_load[2].stddev": [
+    67.75588074108401
+  ],
+  "sched_debug.cpu.cpu_load[3].max": [
+    165.0
+  ],
+  "sched_debug.cpu.cpu_load[3].min": [
+    14.0
+  ],
+  "sched_debug.cpu.cpu_load[3].avg": [
+    56.375
+  ],
+  "sched_debug.cpu.cpu_load[3].stddev": [
+    50.665415965922946
+  ],
+  "sched_debug.cpu.cpu_load[4].max": [
+    112.0
+  ],
+  "sched_debug.cpu.cpu_load[4].min": [
+    16.0
+  ],
+  "sched_debug.cpu.cpu_load[4].avg": [
+    46.625
+  ],
+  "sched_debug.cpu.cpu_load[4].stddev": [
+    29.93299809574711
+  ],
+  "sched_debug.cpu.yld_count.max": [
+    1524.0
+  ],
+  "sched_debug.cpu.yld_count.min": [
+    1059.0
+  ],
+  "sched_debug.cpu.yld_count.avg": [
+    1253.5
+  ],
+  "sched_debug.cpu.yld_count.stddev": [
+    144.28963926768964
+  ],
+  "sched_debug.cpu.sched_count.max": [
+    1215691.0
+  ],
+  "sched_debug.cpu.sched_count.min": [
+    187740.0
+  ],
+  "sched_debug.cpu.sched_count.avg": [
+    609128.25
+  ],
+  "sched_debug.cpu.sched_count.stddev": [
+    357963.9638789602
+  ],
+  "sched_debug.cpu.sched_goidle.max": [
+    523088.0
+  ],
+  "sched_debug.cpu.sched_goidle.min": [
+    89776.0
+  ],
+  "sched_debug.cpu.sched_goidle.avg": [
+    292836.125
+  ],
+  "sched_debug.cpu.sched_goidle.stddev": [
+    162550.75828755574
+  ],
+  "sched_debug.cpu.avg_idle.max": [
+    1000000.0
+  ],
+  "sched_debug.cpu.avg_idle.min": [
+    397953.0
+  ],
+  "sched_debug.cpu.avg_idle.avg": [
+    702456.5
+  ],
+  "sched_debug.cpu.avg_idle.stddev": [
+    211546.0107127998
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.max": [
+    500000.0
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.min": [
+    500000.0
+  ],
+  "sched_debug.cpu.max_idle_balance_cost.avg": [
+    500000.0
+  ],
+  "sched_debug.cpu.ttwu_count.max": [
+    882281.0
+  ],
+  "sched_debug.cpu.ttwu_count.min": [
+    109144.0
+  ],
+  "sched_debug.cpu.ttwu_count.avg": [
+    284114.25
+  ],
+  "sched_debug.cpu.ttwu_count.stddev": [
+    244095.7469691709
+  ],
+  "sched_debug.cpu.ttwu_local.max": [
+    461585.0
+  ],
+  "sched_debug.cpu.ttwu_local.min": [
+    47746.0
+  ],
+  "sched_debug.cpu.ttwu_local.avg": [
+    131921.5
+  ],
+  "sched_debug.cpu.ttwu_local.stddev": [
+    129302.6648990654
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.max": [
+    51005.35844
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.min": [
+    34053.449791
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.avg": [
+    44154.7149485
+  ],
+  "sched_debug.cfs_rq:/.exec_clock.stddev": [
+    6232.133280070947
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.max": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.min": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.MIN_vruntime.avg": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.max": [
+    40452.028475
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.min": [
+    28290.671508
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.avg": [
+    36152.68633
+  ],
+  "sched_debug.cfs_rq:/.min_vruntime.stddev": [
+    4799.416098337812
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.max": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.min": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.max_vruntime.avg": [
+    1.0e-06
+  ],
+  "sched_debug.cfs_rq:/.spread0.max": [
+    446.890313
+  ],
+  "sched_debug.cfs_rq:/.spread0.min": [
+    -11714.466654
+  ],
+  "sched_debug.cfs_rq:/.spread0.avg": [
+    -3852.451832
+  ],
+  "sched_debug.cfs_rq:/.spread0.stddev": [
+    4799.4160983378115
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.max": [
+    45.0
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.min": [
+    17.0
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.avg": [
+    34.75
+  ],
+  "sched_debug.cfs_rq:/.nr_spread_over.stddev": [
+    8.181534085976786
+  ],
+  "sched_debug.cfs_rq:/.nr_running.max": [
+    1.0
+  ],
+  "sched_debug.cfs_rq:/.nr_running.avg": [
+    0.25
+  ],
+  "sched_debug.cfs_rq:/.nr_running.stddev": [
+    0.4330127018922193
+  ],
+  "sched_debug.cfs_rq:/.load.max": [
+    1024.0
+  ],
+  "sched_debug.cfs_rq:/.load.avg": [
+    256.0
+  ],
+  "sched_debug.cfs_rq:/.load.stddev": [
+    443.40500673763256
+  ],
+  "sched_debug.cfs_rq:/.load_avg.max": [
+    313.0
+  ],
+  "sched_debug.cfs_rq:/.load_avg.min": [
+    139.0
+  ],
+  "sched_debug.cfs_rq:/.load_avg.avg": [
+    196.75
+  ],
+  "sched_debug.cfs_rq:/.load_avg.stddev": [
+    57.052059559668834
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.max": [
+    42.0
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.min": [
+    12.0
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.avg": [
+    26.375
+  ],
+  "sched_debug.cfs_rq:/.runnable_load_avg.stddev": [
+    8.644904568588366
+  ],
+  "sched_debug.cfs_rq:/.util_avg.max": [
+    277.0
+  ],
+  "sched_debug.cfs_rq:/.util_avg.min": [
+    116.0
+  ],
+  "sched_debug.cfs_rq:/.util_avg.avg": [
+    172.875
+  ],
+  "sched_debug.cfs_rq:/.util_avg.stddev": [
+    54.48953454563546
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.max": [
+    313.0
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.min": [
+    139.0
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.avg": [
+    196.75
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg_contrib.stddev": [
+    57.052059559668834
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.max": [
+    1574.0
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.min": [
+    1564.0
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.avg": [
+    1570.25
+  ],
+  "sched_debug.cfs_rq:/.tg_load_avg.stddev": [
+    4.841229182759271
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.max": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.min": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/bg_non_interactive.rt_runtime.avg": [
+    700.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.max": [
+    800.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.min": [
+    800.0
+  ],
+  "sched_debug.rt_rq:/.rt_runtime.avg": [
+    800.0
+  ]
+}
