@@ -1,4 +1,5 @@
-# 自动测试-并发测试（敖权）                                                                                                                                                  
+# 自动测试-并发测试（敖权）
+[ppt链接](http://os.cs.tsinghua.edu.cn/research/kernel/OpenthosCtsTesting2016?action=AttachFile&do=view&target=openthos_pres_aquan.pptx)
 ## 自动化测试
 ### 定时测试
 * 测试程序的入口脚本是[updateGit.sh](https://github.com/openthos/testing-analysis/blob/master/auto-testing-script/kernelci-analysis/updateGIT.sh)，该脚本首先会去检查github中仓库[OTO]（https://github.com/openthos/OTO） 是否有更新，OTO仓库相当于一个标志仓库，openthos的repo中包含的github仓库只要任何一个有更新就会导致OTO仓库的更新，这样可以updateGit.sh脚本通过检测OTO仓库可以知道是否存在了代码的更新，如果有更新则进行编译。
