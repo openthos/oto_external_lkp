@@ -9,6 +9,7 @@ apt-get install -y git
 apt-get install -y ruby-git
 pwd
 rm -rf ./oto_lkp
+rm -rf  /result/
 git clone https://github.com/openthos/oto_lkp.git
 cd ./oto_lkp/lkp-tests-master
 export LKP_SRC=$PWD
