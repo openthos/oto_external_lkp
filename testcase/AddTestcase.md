@@ -62,6 +62,16 @@ lkp split $LKP_SRC/jobs/wechat.yaml
 lkp run $LKP_SRC/wechat-1x.yaml
 lkp collect -c testcase=wechat -o /result/wechat/wechat.csv
   ```
+  
+#### testcase/目录下面增加文件夹的方法：
+以testcase/ebizzy为模板，构造wechat和nbench
+```
+oto_lkp/testcase# cp ebizzy/ -R  wechat
+oto_lkp/testcase# mv wechat/ebizzy.sh   wechat/wechat.sh
+
+oto_lkp/testcase# cp ebizzy/  -R nbench  
+oto_lkp/testcase# mv nbench/ebizzy.sh   nbench/nbench.sh
+ ```
  
  + testcase/lkpwechat/run_withlog.sh #测试的启动脚本【自己本地测试时的启动脚本】
   
