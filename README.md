@@ -44,22 +44,22 @@ su - root
 cd ~
 git clone https://github.com/openthos/oto_lkp
 
-cd ~/oto_lkp/testcase/lkpebizzy
+cd ~/oto_lkp/testcase/ebizzy
 修改 run_withlog.sh
 中ip_of_android="192.168.2.8"【PC2 androidx86 ip地址】
 
-root@elwin-virtual-machine:~/oto_lkp/testcase/lkpebizzy# ./run_withlog.sh
-执行完毕以后结果存放在PC1的~/oto_lkp/testcase/lkpebizzy/lkp_tmp_result目录下面。请检查是否出现json文件。并且json文件是否有内容。
+root@elwin-virtual-machine:~/oto_lkp/testcase/ebizzy# ./run_withlog.sh
+执行完毕以后结果存放在PC1的~/oto_lkp/testcase/ebizzy/lkp_tmp_result目录下面。请检查是否出现json文件。并且json文件是否有内容。
 生成的csv文件存放在lkp_tmp_result/result/ebizzy(即testcase的名字)目录下面，请检查是否出现csv文件。并且csv文件是否有内容。
 如果有内容则测试用例成功执行了。
-测试日志存放在PC1的~/oto_lkp/testcase/lkpebizzy/test_log.txt文件当中。
+测试日志存放在PC1的~/oto_lkp/testcase/ebizzy/test_log.txt文件当中。
 ```
 
-[lkpebizzy在androidx86上面的测试日志](https://github.com/openthos/oto_lkp/blob/master/testcase/lkpebizzy/test_log.txt) 
+[ebizzy在androidx86上面的测试日志](https://github.com/openthos/oto_lkp/blob/master/testcase/ebizzy/test_log.txt) 
 
-[lkpebizzy在androidx86上面的测试数据json](https://github.com/openthos/oto_lkp/tree/master/testcase/lkpebizzy/lkp_tmp_result) 
+[ebizzy在androidx86上面的测试数据json](https://github.com/openthos/oto_lkp/tree/master/testcase/ebizzy/lkp_tmp_result) 
 
-[lkpebizzy在androidx86上面的测试数据csv](https://github.com/openthos/oto_lkp/tree/master/testcase/lkpebizzy/lkp_tmp_result/result/ebizzy)
+[ebizzy在androidx86上面的测试数据csv](https://github.com/openthos/oto_lkp/tree/master/testcase/ebizzy/lkp_tmp_result/)
 ## TODO
 - 编写新增新增测试用例的文档 https://github.com/openthos/oto_lkp/issues/3
 - 增加dev分支。https://github.com/openthos/oto_lkp/issues/4  
