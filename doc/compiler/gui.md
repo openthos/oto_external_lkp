@@ -1,6 +1,6 @@
 # 测试用例的编译-GUI的命令行编译（张琳苹）
 
-##编译环境搭建（参考）：
+##编译环境搭建（参考）：该链接存在错误，正在进行修改。
 https://github.com/openthos/testing-analysis/blob/master/Auto-test/uiautomator/%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md
 
 ##1、查看5.1版本对应SDK的ID值
