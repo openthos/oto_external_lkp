@@ -10,7 +10,7 @@ install()
 cp  -af $BM_NAME  $BM_ROOT
 cp -af *.apk $BM_ROOT
 cp -af *.jar $BM_ROOT
-cp -af  auto_interact.sh    
+cp -af  auto_interact.sh $BM_ROOT  
 cp -af  wechat_benchmark.expt $BM_ROOT   
 $LKP_SRC/pack/wechat_pack.expt
 }
