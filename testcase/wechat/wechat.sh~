@@ -17,11 +17,15 @@ if  [  -d $foldName  ];then
       mkdir -p /tmp/lkp_trash/$trash 
       mv   $foldName/* /tmp/lkp_trash/$trash
 fi
+ source /etc/profile
+./wechatMake.sh
+adb connect $androidIP
+# adb -s $ip_of_android:5555   push ./bin/wechat.jar /data/local/tmp
 
 adb -s $androidIP:$port  shell  rm -rf  /data/lkp_test
-adb -s $androidIP:$port  shell  mkdir /data/lkp_test
+# adb -s $androidIP:$port  shell  mkdir /data/lkp_test
 
-adb -s $androidIP:$port   push ./lkp_test /data/lkp_test/
+adb -s $androidIP:$port   push ./lkp_test /data/
 
 adb -s $androidIP:$port   shell busybox chmod +x /data/lkp_test/chroot_run.sh
 

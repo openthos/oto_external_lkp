@@ -1,329 +1,0 @@
-+ ip_of_android=192.168.0.143
-+ tmp_result_dir=lkp_tmp_result
-+++ pwd
-++ basename /home/xhl/Downloads/oto_lkp/testcase/wechat
-+ testcasename=wechat
-++ dirname ./fortest.sh
-+ cd .
-+ apt-get install -y android-tools-adb
-Reading package lists...
-Building dependency tree...
-Reading state information...
-android-tools-adb is already the newest version.
-The following packages were automatically installed and are no longer required:
-  libntdb1 python-ntdb
-Use 'apt-get autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-+ source /etc/profile
-++ '[' '' ']'
-++ '[' -d /etc/profile.d ']'
-++ for i in '/etc/profile.d/*.sh'
-++ '[' -r /etc/profile.d/appmenu-qt5.sh ']'
-++ . /etc/profile.d/appmenu-qt5.sh
-+++ export QT_QPA_PLATFORMTHEME=appmenu-qt5
-+++ QT_QPA_PLATFORMTHEME=appmenu-qt5
-++ for i in '/etc/profile.d/*.sh'
-++ '[' -r /etc/profile.d/bash_completion.sh ']'
-++ . /etc/profile.d/bash_completion.sh
-+++ '[' -n '4.3.42(1)-release' -a -n '' -a -z '' ']'
-++ for i in '/etc/profile.d/*.sh'
-++ '[' -r /etc/profile.d/cedilla-brazil.sh ']'
-++ . /etc/profile.d/cedilla-brazil.sh
-+++ '[' -n zh_CN.UTF-8 ']'
-+++ '[' zh_CN = pt_BR ']'
-++ for i in '/etc/profile.d/*.sh'
-++ '[' -r /etc/profile.d/vte-2.91.sh ']'
-++ . /etc/profile.d/vte-2.91.sh
-+++ '[' -n '4.3.42(1)-release' -o -n '' ']'
-+++ [[ hxB == *i* ]]
-+++ return 0
-++ unset i
-++ export JAVA_HOME=/usr/lib/jdk8
-++ JAVA_HOME=/usr/lib/jdk8
-++ export JRE_HOME=/usr/lib/jdk8/jre
-++ JRE_HOME=/usr/lib/jdk8/jre
-++ export CLASS_PATH=.:/usr/lib/jdk8/lib:/usr/lib/jdk8/jre/lib
-++ CLASS_PATH=.:/usr/lib/jdk8/lib:/usr/lib/jdk8/jre/lib
-++ export PATH=/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-++ PATH=/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-++ export PATH=/home/xhl/Android/Sdk/tools:/home/xhl/Android/Sdk/platform-tools:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-++ PATH=/home/xhl/Android/Sdk/tools:/home/xhl/Android/Sdk/platform-tools:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-+ ./wechatMake.sh
-+ android create uitest-project -n wechat -t 1 -p .
-Added file ./build.xml
-+ ant build
-Buildfile: /home/xhl/Downloads/oto_lkp/testcase/wechat/build.xml
-
--check-env:
- [checkenv] Android SDK Tools Revision 25.2.4
- [checkenv] Installed at /home/xhl/Android/Sdk
-
--build-setup:
-[getbuildtools] Using latest Build Tools: 25.0.2
-     [echo] Resolving Build Target for wechat...
-[getuitarget] Project Target:   Android 5.1.1
-[getuitarget] API level:        22
-     [echo] ----------
-     [echo] Creating output directories if needed...
-    [mkdir] Created dir: /home/xhl/Downloads/oto_lkp/testcase/wechat/bin/classes
-
--pre-compile:
-
-compile:
-    [javac] Compiling 3 source files to /home/xhl/Downloads/oto_lkp/testcase/wechat/bin/classes
-    [javac] warning: [options] source value 1.5 is obsolete and will be removed in a future release
-    [javac] warning: [options] target value 1.5 is obsolete and will be removed in a future release
-    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
-    [javac] 3 warnings
-
--post-compile:
-
--dex:
-      [dex] input: /home/xhl/Downloads/oto_lkp/testcase/wechat/bin/classes
-      [dex] Converting compiled files and external libraries into /home/xhl/Downloads/oto_lkp/testcase/wechat/bin/classes.dex...
-
--post-dex:
-
--jar:
-      [jar] Building jar: /home/xhl/Downloads/oto_lkp/testcase/wechat/bin/wechat.jar
-
--post-jar:
-
-build:
-
-BUILD SUCCESSFUL
-Total time: 1 second
-+ adb connect 192.168.0.143
-already connected to 192.168.0.143:5555
-+ adb -s 192.168.0.143:5555 push ./bin/wechat.jar /data/local/tmp
-[100%] /data/local/tmp/wechat.jar
-+ adb -s 192.168.0.143:5555 push ./commitId.txt /data/
-[100%] /data/commitId.txt
-+ ./wechat.sh 192.168.0.143 5555 lkp_tmp_result
-+ androidIP=192.168.0.143
-+ port=5555
-+ foldName=lkp_tmp_result
-++ dirname ./wechat.sh
-+ cd .
-+ '[' -z lkp_tmp_result ']'
-+ mkdir lkp_tmp_result
-++ basename ./wechat.sh
-+ filename=wechat.sh
-+ '[' -d lkp_tmp_result ']'
-+ trash=18986
-+ mkdir -p /tmp/lkp_trash/18986
-+ mv 'lkp_tmp_result/*' /tmp/lkp_trash/18986
-mv: cannot stat ‘lkp_tmp_result/*’: No such file or directory
-+ adb -s 192.168.0.143:5555 shell rm -rf /data/lkp_test
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ adb -s 192.168.0.143:5555 push ./lkp_test /data/
-[  0%] /data/lkp_test/before_chroot.sh: 100%
-[  0%] /data/lkp_test/ubuntu_lkp_test.sh: 100%
-[  0%] /data/lkp_test/chroot_run.sh: 100%
-[  2%] /data/lkp_test/mount-static: 2%
-[  4%] /data/lkp_test/mount-static: 4%
-[  6%] /data/lkp_test/mount-static: 6%
-[  8%] /data/lkp_test/mount-static: 8%
-[ 11%] /data/lkp_test/mount-static: 11%
-[ 13%] /data/lkp_test/mount-static: 13%
-[ 15%] /data/lkp_test/mount-static: 15%
-[ 17%] /data/lkp_test/mount-static: 17%
-[ 19%] /data/lkp_test/mount-static: 19%
-[ 22%] /data/lkp_test/mount-static: 22%
-[ 24%] /data/lkp_test/mount-static: 24%
-[ 26%] /data/lkp_test/mount-static: 26%
-[ 28%] /data/lkp_test/mount-static: 28%
-[ 30%] /data/lkp_test/mount-static: 30%
-[ 33%] /data/lkp_test/mount-static: 33%
-[ 35%] /data/lkp_test/mount-static: 35%
-[ 37%] /data/lkp_test/mount-static: 37%
-[ 39%] /data/lkp_test/mount-static: 39%
-[ 41%] /data/lkp_test/mount-static: 41%
-[ 44%] /data/lkp_test/mount-static: 44%
-[ 46%] /data/lkp_test/mount-static: 46%
-[ 48%] /data/lkp_test/mount-static: 48%
-[ 50%] /data/lkp_test/mount-static: 50%
-[ 52%] /data/lkp_test/mount-static: 52%
-[ 55%] /data/lkp_test/mount-static: 55%
-[ 57%] /data/lkp_test/mount-static: 57%
-[ 59%] /data/lkp_test/mount-static: 59%
-[ 61%] /data/lkp_test/mount-static: 61%
-[ 63%] /data/lkp_test/mount-static: 63%
-[ 66%] /data/lkp_test/mount-static: 66%
-[ 68%] /data/lkp_test/mount-static: 68%
-[ 70%] /data/lkp_test/mount-static: 70%
-[ 72%] /data/lkp_test/mount-static: 72%
-[ 74%] /data/lkp_test/mount-static: 74%
-[ 77%] /data/lkp_test/mount-static: 77%
-[ 79%] /data/lkp_test/mount-static: 79%
-[ 81%] /data/lkp_test/mount-static: 81%
-[ 83%] /data/lkp_test/mount-static: 83%
-[ 85%] /data/lkp_test/mount-static: 85%
-[ 88%] /data/lkp_test/mount-static: 88%
-[ 90%] /data/lkp_test/mount-static: 90%
-[ 92%] /data/lkp_test/mount-static: 92%
-[ 94%] /data/lkp_test/mount-static: 94%
-[ 96%] /data/lkp_test/mount-static: 96%
-[ 99%] /data/lkp_test/mount-static: 99%
-[100%] /data/lkp_test/mount-static: 100%
-/data/lkp_test/: 4 files pushed. 0 files skipped. 4.5 MB/s (2975336 bytes in 0.636s)
-+ adb -s 192.168.0.143:5555 shell busybox chmod +x /data/lkp_test/chroot_run.sh
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ adb -s 192.168.0.143:5555 shell /data/lkp_test/chroot_run.sh wechat.sh
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ testcase=wechat.sh
-+ CHMOUNT=/data/ubuntu
-+ BUSYBOX=/system/xbin/busybox
-+ export PATH=/system/xbin/:/sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin:/bin
-+ source /data/lkp_test/before_chroot.sh
-+ cd /data/
-+ /system/xbin/telnetd -l /system/xbin/sh
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ cd -
-/
-+ [ ! -d /data/ubuntu ]
-+ umount /data/ubuntu
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-umount: can't umount /data/ubuntu: Device or resource busy
-+ sleep 3
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ mount -t ext4 /dev/block/sda2 /data/ubuntu
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-mount: mounting /dev/block/sda2 on /data/ubuntu failed: Device or resource busy
-+ sleep 3
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ cp /data/lkp_test/ubuntu_lkp_test.sh /data/ubuntu/root
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ cp /data/commitId.txt /data/ubuntu/root
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ sleep 1
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ grep inet /data/ubuntu/etc/group
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ [ ! inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root
-inet:x:3003:root ]
-+ sleep 2
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ grep net_raw /data/ubuntu/etc/group
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ [ ! net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root
-net_raw:x:3004:root ]
-+ sleep 3
-WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ echo nameserver 8.8.8.8
-+ export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/system/xbin/:/sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin:/bin
-+ mount -t sysfs sysfs /data/ubuntu/sys
-mount: mounting sysfs on /data/ubuntu/sys failed: Device or resource busy
-+ mount -t proc proc /data/ubuntu/proc
-mount: mounting proc on /data/ubuntu/proc failed: Device or resource busy
-+ cp /data/lkp_test/mount-static /system/bin
-+ chmod 777 /system/bin/mount-static
-+ mount-static --bind /dev /data/ubuntu/dev
-+ sleep 2
-+ mount -t devpts devpts /data/ubuntu/dev/pts
-+ sleep 2
-+ [ ! -d /data/ubuntu/dev/shm ]
-+ sleep 2
-+ mount -t tmpfs tmpfs /data/ubuntu/dev/shm
-+ sleep 2
-+ chroot /data/ubuntu su - root -c /root/ubuntu_lkp_test.sh  wechat.sh
-+ testjob=wechat.sh
-++ hostname
-+ echo 'i am in ubuntu: cs-pc'
-i am in ubuntu: cs-pc
-+ hostname -F /etc/hostname
-++ hostname
-+ echo 'i am in ubuntu changed_hostname: cs-pc'
-i am in ubuntu changed_hostname: cs-pc
-+ apt-get update
-0% [Working]            Hit http://cn.archive.ubuntu.com wily InRelease
-            0% [Connecting to security.ubuntu.com (91.189.91.23)]                                                     0% [InRelease gpgv 218 kB] [Waiting for headers] [Connecting to security.ubuntu                                                                               Hit http://cn.archive.ubuntu.com wily-updates InRelease
-                                                                               0% [InRelease gpgv 218 kB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                             5% [Waiting for headers] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                           5% [InRelease gpgv 65.9 kB] [Waiting for headers] [Connecting to security.ubunt                                                                               5% [Waiting for headers] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                           Hit http://cn.archive.ubuntu.com wily-backports InRelease
-                                                                           5% [Connecting to security.ubuntu.com (91.189.91.23)]                                                     5% [InRelease gpgv 65.9 kB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                              6% [Waiting for headers] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                           Hit http://cn.archive.ubuntu.com wily/main Sources
-                                                                           6% [Connecting to security.ubuntu.com (91.189.91.23)]                                                     6% [Sources 0 B] [Waiting for headers] [Connecting to security.ubuntu.com (91.1                                                                               Hit http://cn.archive.ubuntu.com wily/restricted Sources
-                                                                               6% [Sources 5,357 kB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                        Hit http://cn.archive.ubuntu.com wily/universe Sources
-6% [Sources 5,357 kB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                        Hit http://cn.archive.ubuntu.com wily/multiverse Sources
-6% [Sources 5,357 kB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                        Hit http://cn.archive.ubuntu.com wily/main amd64 Packages
-6% [Sources 5,357 kB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                        Hit http://cn.archive.ubuntu.com wily/restricted amd64 Packages
-6% [Sources 5,357 kB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                        Hit http://cn.archive.ubuntu.com wily/universe amd64 Packages
-6% [Sources 5,357 kB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                        100% [Waiting for headers] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                             100% [Sources 0 B] [Waiting for headers] [Connecting to security.ubuntu.com (91                                                                               100% [Waiting for headers] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                             100% [Sources 0 B] [Waiting for headers] [Connecting to security.ubuntu.com (91                                                                               Hit http://cn.archive.ubuntu.com wily/multiverse amd64 Packages
-                                                                               100% [Sources 0 B] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                     Hit http://cn.archive.ubuntu.com wily/main i386 Packages
-                                                                     100% [Sources 32.3 MB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                         Hit http://cn.archive.ubuntu.com wily/restricted i386 Packages
-100% [Sources 32.3 MB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                         Hit http://cn.archive.ubuntu.com wily/universe i386 Packages
-100% [Sources 32.3 MB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                         Hit http://cn.archive.ubuntu.com wily/multiverse i386 Packages
-100% [Sources 32.3 MB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                         Hit http://cn.archive.ubuntu.com wily/main Translation-en
-100% [Sources 32.3 MB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                         Hit http://cn.archive.ubuntu.com wily/multiverse Translation-en
-100% [Sources 32.3 MB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                         Hit http://cn.archive.ubuntu.com wily/restricted Translation-en
-100% [Sources 32.3 MB] [Connecting to security.ubuntu.com (91.189.91.23)]                                                                         Hit http://cn.archive.ubuntu.com wily/universe Translation-en
-                                                                         100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/main Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/restricted Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/universe Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/multiverse Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/main amd64 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/restricted amd64 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/universe amd64 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/multiverse amd64 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/main i386 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/restricted i386 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/universe i386 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/multiverse i386 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/main Translation-en
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/multiverse Translation-en
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/restricted Translation-en
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/universe Translation-en
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-backports/main Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-backports/restricted Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-backports/universe Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            100% [Waiting for headers] [Waiting for headers]                                                100% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                              Hit http://cn.archive.ubuntu.com wily-backports/multiverse Sources
-                                                              100% [Sources 733 kB] [Waiting for headers]                                           100% [Waiting for headers] [Waiting for headers]                                                100% [Packages 0 B] [Waiting for headers] [Waiting for headers]                                                               Hit http://cn.archive.ubuntu.com wily-backports/main amd64 Packages
-                                                               100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/restricted amd64 Packages
-100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/universe amd64 Packages
-100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/multiverse amd64 Packages
-100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/main i386 Packages
-100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/restricted i386 Packages
-100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/universe i386 Packages
-100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/multiverse i386 Packages
-100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/main Translation-en
-100% [Packages 8,565 kB] [Waiting for headers]                                              100% [Waiting for headers] [Waiting for headers]                                                100% [Packages 0 B] [Waiting for headers] [Waiting for headers]                                                               Hit http://cn.archive.ubuntu.com wily-backports/multiverse Translation-en
-                                                               100% [Packages 219 kB] [Waiting for headers]                                            100% [Waiting for headers] [Waiting for headers]                                                100% [Packages 0 B] [Waiting for headers] [Waiting for headers]                                                               Hit http://cn.archive.ubuntu.com wily-backports/restricted Translation-en
-                                                               100% [Packages 0 B] [Waiting for headers]                                         Hit http://cn.archive.ubuntu.com wily-backports/universe Translation-en
-                                         100% [Packages 36.8 MB] [Waiting for headers]100% [Packages 36.8 MB] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Packages 36.7 MB] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]100% [Waiting for headers]100% [Waiting for headers]100% [Waiting for headers]100% [Waiting for headers]100% [Waiting for headers]100% [Waiting for headers]                          100% [Waiting for headers]                                         26.0 MB/s 0s
