@@ -39,5 +39,8 @@
  "x86.android.core.tests.libcore.package.com#com.android.org.bouncycastle.crypto.digests.DigestTest.testSHA256.endtime": "Wed Dec 07 22:59:06 CST 2016", 
  "x86.android.core.tests.libcore.package.com#com.android.org.bouncycastle.crypto.digests.DigestTest.testSHA256.errorMessage": "junit.framework.AssertionFailedError: New hash should be faster\r\nat junit.framework.Assert.fail(Assert.java:50)\r",
  ```
- 名称方式为包名#测试用例名称.元素名称：结果
-  
+ 命名方式为包名#测试用例名称.元素名称：结果
+ 
+##LKP测试结果抽取
+
+  - stats中添加文件，输出中间格式文件
