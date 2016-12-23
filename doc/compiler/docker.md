@@ -24,7 +24,7 @@ docker save IMAGE-ID -o containter.tar
 ```
 docker export <CONTAINER ID>  container.tar  
 ```
-导入docker:可以直接使用[这个docker](https://github.com/openthos/tools_analysis/tree/master/openthos_compile_env)。这是仓库中保存的最新的已安装好所有需要的软件，这个docker的部署方法参见[帮助](https://github.com/openthos/tools_analysis/blob/master/README.md)。
+导入docker:可以直接使用[这个docker](https://github.com/openthos/tools_analysis/tree/master/openthos_compile_env)。这是仓库中保存的最新的已安装好所有需要的软件，这个docker的使用方法参见[帮助](https://github.com/openthos/tools_analysis/blob/master/README.md)。
 ```
 sudo docker load < container.tar
 ```
