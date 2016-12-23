@@ -190,8 +190,7 @@ ant build
  ```
  + 对wechat进行操作的java源码文件：bin和src文件夹
  
- +修改wechat.sh脚本
- 添加如下几行
+ + 修改wechat.sh脚本添加如下几行
  
  ```
  # 使编译环境的配置生效
