@@ -1,4 +1,4 @@
-# 测试用例的编译-LKP的编译框架（薛海龙、毛英明）
+# LKP测试框架（薛海龙、毛英明）
 
 LKP是一个内核测试框架，可以指定内核测试需要的测试用例编译描述；指定测试用例的部署环境和部署方法；在Linux系统上运行测试用例的过程中，利用monitor监控各种内核参数指标；事后对测试过程中获取的系统参数进行分析。[wiki页面](http://os.cs.tsinghua.edu.cn/research/kernel/Openthos4H170pro2016#A20160829-lkp.2BfPt.2B31IGZ5A-)上有一些LKP的分析文档。
 
