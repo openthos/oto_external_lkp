@@ -175,9 +175,34 @@ send "/data/ubuntu/lkp/benchmarks/wechat/auto_interact.sh\r"
 expect "#"
 send "exit\r"
  ```
+### 自动编译jar包需要添加的文件
+- 在测试机上搭建编译环境，[配置文档](https://github.com/openthos/testing-analysis/blob/master/Auto-test/uiautomator/%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md)
+
+- 在/oto_lkp/testcase/wechat文件夹下添加以下文件与脚本
  
+ + wechatMake.sh
+ ```
+#!/bin/bash -x
+#需要根据环境修改-t参数(现在是1)，查看5.1版本对应android stdio的id（ android list target )
+
+android create uitest-project -n wechat -t 1 -p .
+ant build
+ ```
+ + 对wechat进行操作的java源码文件：bin和src文件夹
+ 
+ +修改wechat.sh脚本
+ 添加如下几行
+ 
+ ```
+ # 使编译环境的配置生效
+ source /etc/profile
+./wechatMake.sh
+adb connect $androidIP
+# 把自动编译的jar包push到被测试机上
+adb -s $androidIP:$port  push ./bin/wechat.jar /data/local/tmp
+ ```
 ### 需要注意的问题
 - 所有添加的脚本必须有可执行权限：chmod -R a+x oto_lkp/*
-- 添加oto_lkp/lkp-tests-master/pack/jishigou脚本时，apk的下载链接格式需要注意是否可以下载
-- 添加oto_lkp/benchmark_mirror/jishigou.v0.1/auto_interact.sh 脚本时，定义apk的操作时参考AndroidManifest.xml
+- 添加oto_lkp/lkp-tests-master/pack/wechat脚本时，apk的下载链接格式需要注意是否可以下载
+- 添加oto_lkp/benchmark_mirror/wechat.v0.1/auto_interact.sh 脚本时，定义apk的操作时参考AndroidManifest.xml
 - [运行oto_lkp步骤参考](https://github.com/openthos/oto_lkp/blob/master/README.md)
