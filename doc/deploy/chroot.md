@@ -12,3 +12,6 @@ lkp运行需要apt-get,ruby,git，make,glibc动态链接库等环境支持。而
 chroot带来不需要修改lkp代码即可运行lkp好处的同时，也带来一些负面效应。 
 
 由于chroot根文件系统的隔离，使得在chroot ubuntu里面没法直接执行androidx86里面的命令，例如pm,am等等。因此在chroot前，在androidx86上面开启了telnet服务，使得chroot ubuntu可以通过expect+telnet客户端，向androidx86发送命令，执行命令，达到协作目的。
+
+## 基于chroot的LKP测试
+ * [通过chroot运行lkp测试](https://github.com/openthos/oto_lkp/blob/master/doc/test/lkp.md#为了通过chroot运行lkp并且测试androidx86额外增加的文件)
