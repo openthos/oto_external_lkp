@@ -2,4 +2,4 @@
 * 测试过程中存在许多不可控的因素，其中最为严重的是测试过程中导致整个系统瘫痪，机器的不但adb连接不上机器，整个openthos系统出现死机的情况，即便人工去操作键盘，openthos也没有反应，只能强制性关机，这种情况是最为严重的一种，解决方案只能采用人工参与。
 * 在CTS测试中出现过这种情况，即整个机器死掉，但是后来使用filtered-CTS.xml替换调用了CTS.xml后，机器就没有再出现全部死掉的情况，但这仍然是其中的一种可能的错误。
 * 目前机器死掉后，系统会通过邮件来通知使用者，告诉使用者哪台机器死掉，以便进行人工的恢复。
-* [邮件通知脚本sendEmail.py](https://github.com/openthos/testing-analysis/blob/master/auto-testing-script/cts-autotest/sendEmail.py)是一个python脚本。目前只存在于CTS测试中，其他测试中，真机测试还未发生机器全部瘫痪的情况，因此采用的监控并重启的方式。而在模拟器中，如果发生机器死掉的话,虽然也会进行邮件通知，但测试框架可以杀掉测试进程，并且重新分配一块新的虚拟硬盘，不会导致下次测试的无法进行下去的问题，因此也不需要人工参与其中。
+* 邮件通知脚本[sendEmail.py](https://github.com/openthos/testing-analysis/blob/master/auto-testing-script/cts-autotest/sendEmail.py)是一个python脚本。目前只存在于CTS测试中，其他测试中，真机测试还未发生机器全部瘫痪的情况，因此采用的监控并重启的方式。而在模拟器中，如果发生机器死掉的话,虽然也会进行邮件通知，但测试框架可以杀掉测试进程，并且重新分配一块新的虚拟硬盘，不会导致下次测试的无法进行下去的问题，因此也不需要人工参与其中。
