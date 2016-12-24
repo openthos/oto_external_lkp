@@ -7,7 +7,10 @@
 1. 测试用例执行时系统参数信息（csv 曲线）：可对比查看多次测试时系统参数状态数据。
 
 ## 测试结果的在线展现
+
  * [测试结果在线展现页面](http://os.cs.tsinghua.edu.cn/openthos/result.php)
-  * 测试结果在线展现页面的[校内访问链接](http://166.111.131.12:7780/result.php)
+
+* 测试结果在线展现页面的[校内访问链接](http://166.111.131.12:7780/result.php)
+
 ##参考文档
 https://github.com/openthos/testing-analysis/blob/master/lkp_result_web/README.md
