@@ -6,7 +6,7 @@ lkp运行需要apt-get,ruby,git，make,glibc动态链接库等环境支持。而
 其中第一阶段：shell程序由于shell版本的不使兼容，需要进行适当修改。c程序用glibc等动态链接库的，需要静态编译，对于androidx86上面不兼容或者没有的应用程序(stdbuf,vmstat,ps,nproc,truncat等)需要静态编译。有些程序可以静态编译，但是有的无法静态编译(例如ps,vmstat)。而且lkp需要在/lkp和/result目录下面分别存放benchmark可执行文件和结果数据，而androidx86的/分区是一个ramdisk，重启以后数据就会消失，还有cat,gzip等程序存放路径和linux路径不同，这些都需要通过symbol link或者修改PATH环境变量来解决。总之困难和工作量都比较大。
 
 
-由于androidx86底层也是基于linux kernel,而且是运行在x86指令集上，因此android x86的kernel可以很好的通过chroot进行环境变量和根文件系统的隔离，使得x86_64版本的ubuntu根文件系统运行起来，使得lkp不需要任何修改即可在chroot ubuntu下面运行，并且采集android kernel信息。
+由于androidx86底层也是基于linux kernel,而且是运行在x86指令集上，因此android x86的kernel可以很好的通过chroot进行环境变量和根文件系统的隔离，使得x86_64版本的ubuntu根文件系统运行起来，使得lkp不需要任何修改即可在chroot ubuntu下面运行[chroot_run.sh](https://github.com/openthos/oto_lkp/blob/master/testcase/ebizzy/lkp_test/chroot_run.sh)，并且采集android kernel信息。
 
 ##chroot后带来的问题以及解决方法
 chroot带来不需要修改lkp代码即可运行lkp好处的同时，也带来一些负面效应。 
