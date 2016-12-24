@@ -20,5 +20,6 @@ chroot带来不需要修改lkp代码即可运行lkp好处的同时，也带来�
 1. [openthos下的chroot环境部署](https://github.com/openthos/community-analysis/wiki/chroot%E5%88%B0ubuntu)
 
 1. [chroot的自动化脚本](https://github.com/openthos/system-analysis/blob/master/display/issues/chroot.md)
+
 ## 基于chroot的LKP测试
  * [通过chroot运行lkp测试](https://github.com/openthos/oto_lkp/blob/master/doc/test/lkp.md#为了通过chroot运行lkp并且测试androidx86额外增加的文件)
