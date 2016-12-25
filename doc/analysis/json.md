@@ -28,9 +28,10 @@
   python ctsResultTojson.py 参数1(xml文件) 参数2(结果存放目录)
   ```
   - “.url”表示testResult.xml中指向该测试包的锚点
-  ```
+
+```
  "x86android.core.tests.libcore.package.com.url": "testResult.xml#android.core.tests.libcore.package.com",
- ```
+```
   - 命名方式为测试包#测试套件.测试用例.结果标识
     - result表示结果
     - starttime表示该测试的起始时间
