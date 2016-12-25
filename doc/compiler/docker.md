@@ -63,6 +63,10 @@ lunch 你的编译目标
 make iso_img
 ```
 生成iso  
+
+## 基于docker的openthos编译环境使用
+ * [openthos编译环境使用](https://github.com/openthos/tools_analysis/blob/master/README.md)
+
 ## docker的其他用途:
 启动docker时相当于启动一台虚拟的机器,我们知道在内核启动后会执行一系列用户活动的初始化,因此可以定制在启动docker时启动编译任务;
 ```
