@@ -41,3 +41,5 @@
   
   - stats中添加文件，将benchmark的原始输出，转变为key:value中间结果
   - 例如：[wechat](https://github.com/openthos/oto_lkp/blob/master/lkp-tests-master/stats/wechat)
+    - 生成key:value格式的中间结果后，LKP会自动转为json格式的文件
+    - 由于value必须为数字格式，所以经过筛选结果中只包含launchtime、runtime、result这三种元素
