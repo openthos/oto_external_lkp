@@ -2,8 +2,9 @@
 
 ##GUI测试结果抽取
   
-  - 由原始输出获得中间结果文件，形式符合LKP规范
-    - 用例名称.元素名称:结果
+  - 在执行测试用例时，自动生成tmpResultToJson文件
+    - 该文件与testResult原始结果同时生成，可查看[otoDisplayRun.java](https://github.com/openthos/oto_Uitest/blob/master/calc/src/com/autoTestUI/otoDisplayRun.java)
+    - 格式为用例名称.元素名称:结果
     - 例如：
     ```
     testcalc.starttime:2016-12-07 22:11:585555
@@ -14,24 +15,20 @@
     testcalc.url:testResult
     ```
   
-  - 脚本中执行
-  ```
-  python resultTotmp.py $foldName/testResult > $foldName/tmpResultToJson
-  ```
-  
-  - 由中间文件生成JSON文件
+  - 在测试脚本[calc.sh](https://github.com/openthos/oto_Uitest/blob/master/calc/calc.sh)中执行[TmpTojson.py](https://github.com/openthos/oto_Uitest/blob/master/calc/TmpTojson.py)生成json结果文件
   ```
   python TmpTojson.py $foldName/tmpResultToJson $foldName
   ```
 
 ##CTS测试结果抽取
   
-  - 根据CTS测试生成的xml文件生成JSON
+  - [ctsResultTojson.py](https://github.com/openthos/testing-analysis/blob/master/auto-testing-script/cts-autotest/ctsResultTojson.py)将CTS测试生成的xml文件生成JSON
   
   ```
   python ctsResultTojson.py 参数1(xml文件) 参数2(结果存放目录)
   ```
-  - 例如
+  - 命名方式为包名#测试用例名称.元素名称：结果
+  - 部分结果如下：
   
   ```
   "x86.android.core.tests.libcore.package.com#com.android.org.bouncycastle.crypto.digests.DigestTest.testSHA256.result": 0, 
@@ -39,9 +36,8 @@
  "x86.android.core.tests.libcore.package.com#com.android.org.bouncycastle.crypto.digests.DigestTest.testSHA256.endtime": "Wed Dec 07 22:59:06 CST 2016", 
  "x86.android.core.tests.libcore.package.com#com.android.org.bouncycastle.crypto.digests.DigestTest.testSHA256.errorMessage": "junit.framework.AssertionFailedError: New hash should be faster\r\nat junit.framework.Assert.fail(Assert.java:50)\r",
  ```
- 命名方式为包名#测试用例名称.元素名称：结果
  
 ##LKP测试结果抽取
-
   
-  - stats中添加文件，输出中间格式文件
+  - stats中添加文件，将benchmark的原始输出，转变为key:value中间结果
+  - 例如：[wechat](https://github.com/openthos/oto_lkp/blob/master/lkp-tests-master/stats/wechat)
