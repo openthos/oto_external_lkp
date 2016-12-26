@@ -1,5 +1,5 @@
 # 自动测试分析系统框架（敖权）
-* 测试框架的起始脚本[updateGit.sh](https://github.com/openthos/testing-analysis/blob/master/auto-testing-script/kernelci-analysis/updateGIT.sh)会定时每隔十分钟检测一次OTO仓库的更新情况，存在>更新则进行测试，没有更新则十分钟后再次检查,定时运行updateGit.sh采用crontab工具,即updateGit.sh脚本运行结束之后，再设置一个十分钟后运行updateGit.sh的定时任务
+* 测试框架的起始脚本[updateGit.sh](https://github.com/openthos/testing-analysis/blob/master/auto-testing-script/kernelci-analysis/updateGIT.sh)会定时每隔十分钟检测一次OTO仓库的更新情况，存在更新则进行测试，没有更新则十分钟后再次检查,定时运行updateGit.sh采用crontab工具,即updateGit.sh脚本运行结束之后，再设置一个十分钟后运行updateGit.sh的定时任务
 * 利用repo工具管理了OPENTHOS的代码仓库，检测到更新则repo sync同步本地代码
 * 代码同步完毕执行make，完成编译，生成iso 
 * 编译采用了一共有两套机制: 
@@ -14,7 +14,8 @@
 、拷贝以及修改ubuntu grub启动顺序等。详细信息参考[双系统部署](https://github.com/openthos/oto_lkp/blob/master/doc/deploy/pair.md)
 * 安装完openthos之后，启动openthos，测试服务器连接上openthos之后还需要进行一些环境的设置以及安装CTS测试的apk，此处会重启一次
  
-##测试  
+##测试
+目前测试采用的是多台机器之间并行测试，但是各种类型的测试采用串行测试，测试包含一下三类测试
 * LKP测试
  * LKP测试目前仅仅在真实机器中进行测试，目前依赖chroot技术  
  * chroot之后可以执行完整的LKP测试，新增测试用例按照LKP的规范添加到[oto_lkp](https://github.com/openthos/oto_lkp)仓库中  
@@ -26,8 +27,9 @@
  * 运行测试用例，并把结果取出来
 * CTS测试  
  * 筛选测试包，存入测试计划文件
-* 测试需要注意一个配置文件[testcaseReboot.txt](https://github.com/openthos/testing-analysis/blob/master/auto-testing-script/cts-autotest/testcaseReboot.txt)，该配置文件指定了每测试完一个GUI或者LKP的测试用例之后，是否重启机器  
-* 测试过程中加入一些错误恢复机制，例如重启OPENTHOS、向用户发送邮件
+测试需要注意一个配置文件[testcaseReboot.txt](https://github.com/openthos/testing-analysis/blob/master/auto-testing-script/cts-autotest/testcaseReboot.txt)，该配置文件指定了每测试完一个GUI或者LKP的测试用例之后，是否重启机器  
+
+测试过程中加入一些错误恢复机制，例如重启OPENTHOS、向用户发送邮件
 
 ##结果分析
 测试完毕之后，所有的测试结果将通过web向用户展示,展示内容主要包含一下几个方面
