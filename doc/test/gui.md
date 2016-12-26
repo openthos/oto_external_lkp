@@ -17,10 +17,10 @@
 
 ##所有应用测试用例
   - 源码位置：https://github.com/openthos/oto_Uitest/tree/master/Auto-test/uiautomator
-    - 重命名[env.java.sample](https://github.com/openthos/oto_Uitest/blob/master/Auto-test/uiautomator/src/com/autoTestUI/env.java.sample)文件为env.java，根据环境修改其中的androidTargetId（`android list target`）选择5.1的版本，以及修改
-    - [AutoTest.java](https://github.com/openthos/oto_Uitest/blob/master/Auto-test/uiautomator/src/com/autoTestUI/AutoTest.java)为程序的入口
-    - [otoDisplayRun.java](https://github.com/openthos/oto_Uitest/blob/master/Auto-test/uiautomator/src/com/autoTestUI/otoDisplayRun.java)包含测试用例从编译、运行到结果输出的整个过程
-    - [window_lib.java](https://github.com/openthos/oto_Uitest/blob/master/Auto-test/uiautomator/src/com/autoTestUI/window_lib.java)为每个应用将进行的测试操作，比如窗口的放大、缩小以及拖动等
+    - 重命名[env.java.sample](https://github.com/openthos/oto_Uitest/blob/master/Auto-test/uiautomator/src/com/autoTestUI/env.java.sample)文件为env.java，根据环境修改其中的androidTargetId（`android list target`）选择5.1的版本，以及修改
+    - [AutoTest.java](https://github.com/openthos/oto_Uitest/blob/master/Auto-test/uiautomator/src/com/autoTestUI/AutoTest.java)为程序的入口
+    - [otoDisplayRun.java](https://github.com/openthos/oto_Uitest/blob/master/Auto-test/uiautomator/src/com/autoTestUI/otoDisplayRun.java)包含测试用例从编译、运行到结果输出的整个过程
+    - [window_lib.java](https://github.com/openthos/oto_Uitest/blob/master/Auto-test/uiautomator/src/com/autoTestUI/window_lib.java)为每个应用将进行的测试操作，比如窗口的放大、缩小以及拖动等
     - 应用.java是针对每个应用进行的测试操作，测试各个应用不同的功能
   - 可以通过注释env.java文件中的以下代码进行选择性测试
   
