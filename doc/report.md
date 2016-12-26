@@ -1,6 +1,10 @@
 # openthos自动测试分析课题结题报告
 在这里维护结题报告的素材列表和文档，幻灯片放在[内核分析wiki](http://os.cs.tsinghua.edu.cn/research/kernel/Openthos4H170pro2016#A.2BZeVf1w-)上；
 
+## 自动测试分析系统框架
+
+[自动测试分析系统框架](framework.md)描述整个测试分析系统的模块划分和各模块间的数据交互接口。
+
 ## 自动编译
 1. ISO的编译（[基于git](compiler/git.md)（敖权）、[基于docker](compiler/docker.md)（王建兴））
 1. 测试用例的编译（[测试用例接口规范](compiler/interface.md)、[GUI的命令行编译](compiler/gui.md)（张琳苹）、[LKP的编译框架](compiler/lkp.md)（薛海龙、毛英明））
