@@ -2,14 +2,14 @@
 目前编译整体的框架如下图所示
 ![framework](https://github.com/openthos/oto_lkp/raw/master/doc/testFramework.png)
 ##编译 
-* 每隔一个小时检测OPENTHOS所有的github代码仓库的更新情况，如果存在更新，则向[OTO](https://github.com/openthos/OTO)仓库中提交更新,OTO仓库相当于一个标志仓库，OPENTHOS的repo中包含的github仓库只>要任何一个有更新就会导致OTO仓库的更新
+* 每隔一个小时检测OPENTHOS所有的github代码仓库的更新情况，如果存在更新，则向[OTO](https://github.com/openthos/OTO)仓库中提交更新,OTO仓库相当于一个标志仓库，OPENTHOS的repo中包含的github仓库只要任何一个有更新就会导致OTO仓库的更新
 * 测试框架的起始脚本[updateGit.sh](https://github.com/openthos/testing-analysis/blob/master/auto-testing-script/kernelci-analysis/updateGIT.sh)会定时每隔十分钟检测一次OTO仓库的更新情况，存在更新则进行测试，没有更新则十分钟后再次检查,定时运行updateGit.sh采用crontab工具,即updateGit.sh脚本运行结束之后，再设置一个十分钟后运行updateGit.sh的定时任务
 * 利用repo工具管理了OPENTHOS的代码仓库，检测到更新则repo sync同步本地代码
 * 代码同步完毕执行make，完成编译，生成iso 
 * 编译采用了一共有两套机制: 
  * 最初采用的是直接从github获取源码的方式进行编译，编译信息[普通编译](https://github.com/openthos/oto_lkp/blob/master/doc/compiler/git.md)，但是后来由于实验室的网络访问问题，
 便修改为从内网中的服务器中获取代码进行编译
- * 目前编译过程位于docker容器中，编译具体信息链接[docker中编译](https://github.com/openthos/oto_lkp/blob/master/doc/compiler/docker.md),docker中配置好了所有的编译环境，因此对外界环境依赖少，>环境部署更方便
+ * 目前编译过程位于docker容器中，编译具体信息链接[docker中编译](https://github.com/openthos/oto_lkp/blob/master/doc/compiler/docker.md),docker中配置好了所有的编译环境，因此对外界环境依赖少，环境部署更方便
 
 ##部署
 部署需要指定需要指定被测试机的IP地址以及机器名等信息，该信息有一个配置文件[configs](https://github.com/openthos/testing-analysis/blob/master/auto-testing-script/cts-autotest/configs)指定,详细内容参照[部署文档](https://github.com/openthos/testing-analysis/blob/master/auto-testing-script/README.md)
