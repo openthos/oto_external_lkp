@@ -1,1 +1,41 @@
 
+apt软件版本的变化情况:
+ubuntu14.04 15.10 apt软件版本和ubuntu16.04 apt软件版本不一样。
+区别在于ubuntu14.04和15.10不会建立_apt账户，apt始终以root身份在运行。
+ununtu16.04的apt会建立_apt账户，apt刚开始以root身份运行，中途会降权为_apt身份运行。
+
+这在linux系统里面没有问题，因为root账户和普通账户都有使用网络的权限。
+
+
+
+android网络权限管理策略:
+只有3003，3004这两个group里面的user才能够有使用网络的权限（建立tcp,udp socket）
+
+android内核4.09的情况:
+对【android网络权限管理策略】的履行情况:
+
+android 4.0.9 kernel,并没有限制不属于3003，3004group里面的user使用网络。这个有可能是4.0.9内核的一个安全漏洞，不符合【android网络权限管理策略】
+
+实验现象解释:
+所以4.0.9内核使用ubuntu14.04,15.10，以root身份执行，apt-get没有问题（其实ubuntu 里面root不属于3003,3004group也是可以使用apt-get的）
+
+4.0.9内核使用ubuntu16.04，（_apt不属于3003，3004group），以root身份运行apt-get也是没有问题的，因为虽然apt-get中途由root身份降权为_apt身份，内核没有限制不属于3003，3004group的user使用网络。
+
+android内核4.4.10的情况:
+对【android网络权限管理策略】的履行情况:
+
+android 4.4.10kernel,严格限制了不属于3003，3004group里面的user无法使用网络。这是符合【android网络权限管理策略】
+
+实验现象解释:
+4.4.10使用ubuntu14.04,15.10以root身份(加入了3003，3004group)运行apt-get没有问题，因为
+apt-get始终是以root身份运行的，中途没有降权为其他用户身份
+
+4.4.10使用ubuntu16.04以root身份(加入了3003，3004group)运行apt-get出现了问题，因为apt-get开始以root身份运行的，中途降权为_apt账户了(不属于3003,3004group)，因此没有权限访问网络，导致执行失败
+
+结论:
+kernel4.0.9存在安全漏洞，导致所有版本apt都可以执行
+kernel4.4.10不存在安全漏洞，导致16.04版本apt，由于没有网络使用权限，所以执行失败。
+
+漏洞体现在具体源代码哪里？我还要去查证分析。
+
+
