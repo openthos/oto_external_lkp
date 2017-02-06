@@ -3,12 +3,18 @@ while line = STDIN.gets
     case line
     when /test=/
         name = line.sub(/^.*=/,"").chomp
+    when /starttime/
+        puts starttime = line.gsub(/\D/,"")
+    when /endtime/
+        puts endtime = line.gsub(/\D/,"")
     when /launch/
         lt = line.gsub(/\D/,"")
         puts "#{name}.launchtime: #{lt}"
     when /Time:/
         rt = line.sub(/^.*:\s/,"")
         puts "#{name}.runtime: #{rt}"
+    when /failed/
+        puts "#{name}.testresult:0"
     when /OK/
         puts "#{name}.result: 1"
     when /FAILURES/

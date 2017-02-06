@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./QQ_benchmark.expt
+

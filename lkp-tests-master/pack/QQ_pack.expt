@@ -1,0 +1,8 @@
+#!/usr/bin/expect
+spawn  telnet localhost
+expect "#"
+send "pm install /data/ubuntu/lkp/benchmarks/QQ/QQ_1466565094405.apk\r"
+expect "#"
+send "sleep 1"
+expect "#"
+send "exit\r"
