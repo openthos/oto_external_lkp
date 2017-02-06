@@ -4,9 +4,11 @@ while line = STDIN.gets
     when /test=/
         name = line.sub(/^.*=/,"").chomp
     when /starttime/
-        puts starttime = line.gsub(/\D/,"")
+        st = line.gsub(/\D/,"")
+        puts "#{name}.starttime:#{st}"
     when /endtime/
-        puts endtime = line.gsub(/\D/,"")
+        et = line.gsub(/\D/,"")
+        puts "#{name}.endtime:#{et}"
     when /launch/
         lt = line.gsub(/\D/,"")
         puts "#{name}.launchtime: #{lt}"
