@@ -1,7 +1,0 @@
-testcase: QQ
-category: benchmark
-
-iterations: 1x
-
-wechat:
-  duration: 600s
