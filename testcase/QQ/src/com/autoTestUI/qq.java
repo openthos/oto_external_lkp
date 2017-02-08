@@ -27,23 +27,41 @@ public class qq extends UiAutomatorTestCase {
 		Date starttime;
 		Date endtime;
 		long launchTime;	
+		int runCount = 0;
 		SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
-
+		
 		starttime = new Date();
 		System.out.println("----------Start time： " +  format.format(starttime));
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		
+		String processCmd = "ps" + "|" + "grep" + apppackage;
+		System.out.println("----Process judgment:" + processCmd);
+		int found = 0;
+		while(runCount < 10){
+			if(otoDisplayRun.execCmdNoSave(processCmd) == 0){
+				found = 1;
+				break;
+			}
+			Thread.sleep(500);
+			runCount++;
+		}
+		
 		endtime = new Date();
-		System.out.println("----------结束时间： " +  format.format(endtime));
-		System.out.println("endtime:" +  System.currentTimeMillis());
+		if(found == 0){
+			System.out.println("app not running");
+		}
+		else{
+			System.out.println("----------结束时间： " +  format.format(endtime));
+			System.out.println("endtime:" +  System.currentTimeMillis());
+		}
 		
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
 		Thread.sleep(3000);
+		
 		//关闭温馨提示弹窗
 		otoTest.ClickById("android:id/button1");
-		
 		window_lib.windowtest(otoTest.mydevice, appName);
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		sleep(1000);
