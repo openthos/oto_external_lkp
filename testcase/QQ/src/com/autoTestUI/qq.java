@@ -35,11 +35,11 @@ public class qq extends UiAutomatorTestCase {
 		otoTest.ClickById("com.tencent.mobileqq:id/btn_login");
 		
 		UiObject username=new UiObject(new UiSelector().className("android.widget.EditText"));
-		username.click();
+		otoTest.ClickByClassname("android.widget.EditText");
 		username.setText("3050840977");
 		
 		UiObject passwd=new UiObject(new UiSelector().resourceId("com.tencent.mobileqq:id/password"));
-		passwd.click();
+		otoTest.ClickById("com.tencent.mobileqq:id/password");
 		passwd.setText("abc123");
 		
 		otoTest.ClickById("com.tencent.mobileqq:id/btn_login");

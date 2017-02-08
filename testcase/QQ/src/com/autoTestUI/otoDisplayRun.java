@@ -22,12 +22,17 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 
 	final int CLICK_ID = 1111;
 	final int CLICK_TEXT = 2222;
+	final int CLICK_CLASSNAME = 3333;
 	public boolean ClickById(String id){
 		return ClickByInfo(CLICK_ID,id);
 	}
 	
 	public boolean ClickByText(String text){
 		return ClickByInfo(CLICK_TEXT,text);
+	}
+	
+	public boolean ClickByClassname(String classname){
+		return ClickByInfo(CLICK_CLASSNAME,classname);
 	}
 	
 	private boolean ClickByInfo(int CLICK,String str){
@@ -39,6 +44,9 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 			break;
 		case CLICK_TEXT:	
 			uiselector = new UiSelector().text(str);
+			break;
+		case CLICK_CLASSNAME:
+			uiselector = new UiSelector().className(str);
 			break;
 		default:
 			return false;
@@ -55,15 +63,15 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 			}
 			i++;
 		}
-			try {
-				myobject.click();
-				System.out.println("点击"+str);
-			} catch (UiObjectNotFoundException e) {
-				e.printStackTrace();
-			}
+		try {
+			myobject.click();
+		} catch (UiObjectNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return true;
 	}
-	
+
 //	private void SolveProblems(){
 //		
 //	}

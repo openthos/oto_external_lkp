@@ -55,12 +55,13 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 			}
 			i++;
 		}
-			try {
-				myobject.click();
-				System.out.println("点击"+str);
-			} catch (UiObjectNotFoundException e) {
-				e.printStackTrace();
-			}
+		try {
+			myobject.click();
+		} catch (UiObjectNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("点击"+str);
 		return true;
 	}
 	
