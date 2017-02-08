@@ -1,8 +1,7 @@
 #!/bin/bash
 
 VERSION="2.2.3"
-WEB_URL="https://github.com/openthos/oto_lkp/blob/master/benchmark_mirror/QQ.tar.gz"
-#WEB_URL="https://github.com/openthos/oto_lkp/raw/master/benchmark_mirror/QQ.tar.gz"
+WEB_URL="https://github.com/openthos/oto_lkp/raw/master/benchmark_mirror/QQ.tar.gz"
 
 install()
 {
