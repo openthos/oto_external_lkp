@@ -58,10 +58,14 @@ public class qq extends UiAutomatorTestCase {
 		
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		Thread.sleep(8000);
+		Thread.sleep(3000);
 		
 		//关闭温馨提示弹窗
-		otoTest.ClickByText("确定");
+		UiObject mySide = new UiObject(new UiSelector().resourceId("android:id/content"));
+		int x = mySide.getBounds().left;
+		int y = mySide.getBounds().top;
+		otoTest.mydevice.click(x+100,y-100);
+		Thread.sleep(3000);
 		window_lib.windowtest(otoTest.mydevice, appName);
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		sleep(1000);
