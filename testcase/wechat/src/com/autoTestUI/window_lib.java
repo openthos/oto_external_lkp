@@ -1,8 +1,6 @@
 package com.autoTestUI;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import android.os.RemoteException;
 import com.android.uiautomator.core.UiDevice;
 import com.android.uiautomator.core.UiObject;
@@ -14,23 +12,6 @@ public class window_lib extends UiAutomatorTestCase{
 
 	public static void windowtest(UiDevice device, String appName)
 			throws UiObjectNotFoundException, RemoteException, IOException, InterruptedException {
-		Date starttime;
-		Date endtime;
-		long launchTime;	
-		SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
-
-		starttime = new Date();
-		System.out.println("----------Start time： " +  format.format(starttime));
-		System.out.println("starttime:" +  System.currentTimeMillis());
-		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		
-		endtime = new Date();
-		System.out.println("----------结束时间： " +  format.format(endtime));
-		System.out.println("endtime:" +  System.currentTimeMillis());
-		
-		launchTime = endtime.getTime() - starttime.getTime();
-		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		Thread.sleep(3000);
 		
 		// 改变窗体大小 将左边框向右侧拉动 改变大小
 		UiObject objectSide = new UiObject(new UiSelector().resourceId("android:id/mwOuterBorder"));
