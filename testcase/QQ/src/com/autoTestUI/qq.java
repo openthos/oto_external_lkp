@@ -3,7 +3,6 @@ package com.autoTestUI;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import android.os.RemoteException;
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
@@ -27,7 +26,6 @@ public class qq extends UiAutomatorTestCase {
 		Date starttime;
 		Date endtime;
 		long launchTime;	
-		int runCount = 0;
 		SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
 		
 		starttime = new Date();
@@ -35,26 +33,9 @@ public class qq extends UiAutomatorTestCase {
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		
-		String processCmd = "ps " + "| " + "grep " + apppackage;
-		System.out.println("----Process judgment:" + processCmd);
-		int found = 0;
-		while(runCount < 10){
-			if(otoDisplayRun.execCmdNoSave(processCmd) == 0){
-				found = 1;
-				break;
-			}
-			Thread.sleep(500);
-			runCount++;
-		}
-		
 		endtime = new Date();
-		if(found == 0){
-			System.out.println("app not running");
-		}
-		else{
-			System.out.println("----------结束时间： " +  format.format(endtime));
-			System.out.println("endtime:" +  System.currentTimeMillis());
-		}
+		System.out.println("----------结束时间： " +  format.format(endtime));
+		System.out.println("endtime:" +  System.currentTimeMillis());
 		
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
