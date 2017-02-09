@@ -54,7 +54,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 		UiObject myobject = new UiObject(uiselector);
 		int i = 0;
 		while(!myobject.exists() && i < 5){
-//			SolveProblems();
+			SolveProblems();
 			sleep(1000);
 			if(i == 4){
 				TakeScreen(str.substring(str.indexOf('/')+1)+"----not find");
@@ -72,9 +72,16 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 		return true;
 	}
 
-//	private void SolveProblems(){
-//		
-//	}
+	private void SolveProblems(){
+		UiObject prompt = new UiObject(new UiSelector().resourceId("android:id/button1"));
+		try {
+			prompt.click();
+		} catch (UiObjectNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		sleep(1000);
+	}
 	
 	public void TakeScreen(String descript){
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");

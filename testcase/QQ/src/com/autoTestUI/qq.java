@@ -35,7 +35,7 @@ public class qq extends UiAutomatorTestCase {
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		
-		String processCmd = "ps" + "|" + "grep" + apppackage;
+		String processCmd = "ps " + "| " + "grep " + apppackage;
 		System.out.println("----Process judgment:" + processCmd);
 		int found = 0;
 		while(runCount < 10){
@@ -58,18 +58,14 @@ public class qq extends UiAutomatorTestCase {
 		
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		Thread.sleep(3000);
+		sleep(2000);
 		
 		//关闭温馨提示弹窗
-		UiObject mySide = new UiObject(new UiSelector().resourceId("android:id/content"));
-		int x = mySide.getBounds().left;
-		int y = mySide.getBounds().top;
-		otoTest.mydevice.click(x+100,y-100);
-		Thread.sleep(3000);
-		window_lib.windowtest(otoTest.mydevice, appName);
-		otoDisplayRun.execCmdNoSave("am start -n " + appName);
+		otoTest.ClickById("android:id/button1");
 		sleep(1000);
+		window_lib.windowtest(otoTest.mydevice,appName );
 		// 最大化
+		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		// 关闭程序
@@ -87,7 +83,7 @@ public class qq extends UiAutomatorTestCase {
 		otoTest.ClickById("com.tencent.mobileqq:id/password");
 		passwd.setText("abc123");
 		
-		otoTest.ClickById("com.tencent.mobileqq:id/btn_login");
+		otoTest.ClickById("com.tencent.mobileqq:id/login");
 		//最小化
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		//强制关闭程序
