@@ -63,8 +63,11 @@ public class calc extends UiAutomatorTestCase {
 		} else {
 			System.out.println("testing calc fail!!!!" + result);
 		}
-		
+		otoTest.ClickById("android:id/mwMaximizeBtn");
+		otoTest.ClickById("android:id/mwMaximizeBtn");
 		otoTest.ClickById("android:id/mwCloseBtn");
+		otoDisplayRun.execCmdNoSave("am start -n " + appName);
+		otoTest.ClickById("android:id/mwMinimizeBtn");
 		// 强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));
 		

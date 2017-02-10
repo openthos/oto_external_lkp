@@ -1,0 +1,7 @@
+testcase: word
+category: benchmark
+
+iterations: 1x
+
+word:
+  duration: 600s
