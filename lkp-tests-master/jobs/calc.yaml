@@ -1,0 +1,7 @@
+testcase: calc
+category: benchmark
+
+iterations: 1x
+
+calc:
+  duration: 600s
