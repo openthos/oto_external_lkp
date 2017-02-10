@@ -77,7 +77,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 				e.printStackTrace();
 			}
 		}
-		boolean dumpFirstStart1 = new UiObject(new UiSelector().text("新版本检测")).exists();
+		boolean dumpFirstStart1 = new UiObject(new UiSelector().text("检测到新版本")).exists();
 		if (dumpFirstStart1 == true) {
 			UiObject sureButton = new UiObject(new UiSelector().text("以后再说"));
 			try {
