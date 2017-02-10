@@ -42,7 +42,7 @@ public class microsoft_word extends UiAutomatorTestCase {
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		window_lib.windowtest(otoTest.mydevice,appName );
 
-		Runtime.getRuntime().exec("am start -n " + appName);	
+		otoDisplayRun.execCmdNoSave("am start -n " + appName);	
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		// 强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));

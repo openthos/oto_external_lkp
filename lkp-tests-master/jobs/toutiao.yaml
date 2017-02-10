@@ -1,0 +1,7 @@
+testcase: toutiao
+category: benchmark
+
+iterations: 1x
+
+toutiao:
+  duration: 600s

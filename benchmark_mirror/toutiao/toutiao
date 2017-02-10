@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./toutiao_benchmark.expt
+
