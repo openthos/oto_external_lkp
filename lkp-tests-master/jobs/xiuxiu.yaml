@@ -1,0 +1,7 @@
+testcase: xiuxiu
+category: benchmark
+
+iterations: 1x
+
+xiuxiu:
+  duration: 600s
