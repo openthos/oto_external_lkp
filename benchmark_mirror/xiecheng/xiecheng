@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./xiecheng_benchmark.expt
+

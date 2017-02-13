@@ -1,0 +1,7 @@
+testcase: xiecheng
+category: benchmark
+
+iterations: 1x
+
+xiecheng:
+  duration: 600s
