@@ -1,0 +1,7 @@
+testcase: wymusic
+category: benchmark
+
+iterations: 1x
+
+wymusic:
+  duration: 600s
