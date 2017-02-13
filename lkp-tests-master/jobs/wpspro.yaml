@@ -1,0 +1,7 @@
+testcase: wpspro
+category: benchmark
+
+iterations: 1x
+
+wpspro:
+  duration: 600s
