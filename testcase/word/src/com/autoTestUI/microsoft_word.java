@@ -48,6 +48,4 @@ public class microsoft_word extends UiAutomatorTestCase {
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));
 
 	}
-
-	
 }
