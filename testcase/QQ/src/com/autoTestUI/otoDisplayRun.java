@@ -80,7 +80,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 	private void SolveProblems(){
 		sleep(2000);
 		boolean dumpFirstStart = new UiObject(
-				new UiSelector().resourceId("android:id/alertTitle")).exists();
+				new UiSelector().text("温馨提示")).exists();
 		if (dumpFirstStart == true) {
 			UiObject skipButton = new UiObject(
 					new UiSelector().resourceId("android:id/button1"));
