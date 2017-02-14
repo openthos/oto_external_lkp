@@ -78,7 +78,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 	}
 
 	private void SolveProblems(){
-		sleep(2000);
+		sleep(1000);
 		boolean dumpFirstStart = new UiObject(
 				new UiSelector().text("温馨提示")).exists();
 		if (dumpFirstStart == true) {
