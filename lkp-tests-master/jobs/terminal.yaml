@@ -1,0 +1,7 @@
+testcase: terminal
+category: benchmark
+
+iterations: 1x
+
+terminal:
+  duration: 600s
