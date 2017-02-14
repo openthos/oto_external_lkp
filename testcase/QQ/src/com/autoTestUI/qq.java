@@ -49,6 +49,7 @@ public class qq extends UiAutomatorTestCase {
 		otoTest.SetTextById("com.tencent.mobileqq:id/password", "abc123");
 		otoTest.ClickById("com.tencent.mobileqq:id/login");
 		window_lib.windowtest(otoTest.mydevice,appName );
+		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		//最小化
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		//强制关闭程序
