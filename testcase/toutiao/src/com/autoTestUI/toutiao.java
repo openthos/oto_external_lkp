@@ -50,5 +50,4 @@ public class toutiao extends UiAutomatorTestCase {
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));
 
 	}
-
 }

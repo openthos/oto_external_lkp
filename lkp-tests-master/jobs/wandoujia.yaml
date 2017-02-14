@@ -1,0 +1,7 @@
+testcase: wandoujia
+category: benchmark
+
+iterations: 1x
+
+wandoujia:
+  duration: 600s
