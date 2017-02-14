@@ -4,9 +4,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import android.os.RemoteException;
-import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
-import com.android.uiautomator.core.UiSelector;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 public class wyiyunmusic extends UiAutomatorTestCase {
@@ -47,17 +45,8 @@ public class wyiyunmusic extends UiAutomatorTestCase {
 		sleep(1000);
 		otoTest.ClickById("com.netease.cloudmusic:id/loginOrRegister");
 		otoTest.ClickById("com.netease.cloudmusic:id/login");
-		
-		UiObject username=new UiObject(new UiSelector().resourceId("com.netease.cloudmusic:id/phoneNumber"));
-		username.click();
-		username.setText("18710140362");
-		sleep(200);
-		
-		UiObject passwd=new UiObject(new UiSelector().resourceId("com.netease.cloudmusic:id/password"));
-		passwd.click();
-		passwd.setText("qwer1234");
-		sleep(200);	
-		
+		otoTest.SetTextById("com.netease.cloudmusic:id/phoneNumber", "18710140362");
+		otoTest.SetTextById("com.netease.cloudmusic:id/password", "qwer1234");
 		otoTest.ClickById("com.netease.cloudmusic:id/login");
 		// 最大化
 		otoTest.ClickById("android:id/mwMaximizeBtn");

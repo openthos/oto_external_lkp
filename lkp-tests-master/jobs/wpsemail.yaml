@@ -1,0 +1,7 @@
+testcase: wpsemail
+category: benchmark
+
+iterations: 1x
+
+wpsemail:
+  duration: 600s

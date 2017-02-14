@@ -4,9 +4,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import android.os.RemoteException;
-import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
-import com.android.uiautomator.core.UiSelector;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 public class qq extends UiAutomatorTestCase {
@@ -55,15 +53,8 @@ public class qq extends UiAutomatorTestCase {
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		//执行其他操作，如：登录等
 		otoTest.ClickById("com.tencent.mobileqq:id/btn_login");
-		
-		UiObject username=new UiObject(new UiSelector().className("android.widget.EditText"));
-		otoTest.ClickByClassname("android.widget.EditText");
-		username.setText("3050840977");
-		
-		UiObject passwd=new UiObject(new UiSelector().resourceId("com.tencent.mobileqq:id/password"));
-		otoTest.ClickById("com.tencent.mobileqq:id/password");
-		passwd.setText("abc123");
-		
+		otoTest.SetTextByClassname("android.widget.EditText", "3050840977");
+		otoTest.SetTextById("com.tencent.mobileqq:id/password", "abc123");
 		otoTest.ClickById("com.tencent.mobileqq:id/login");
 		//最小化
 		otoTest.ClickById("android:id/mwMinimizeBtn");

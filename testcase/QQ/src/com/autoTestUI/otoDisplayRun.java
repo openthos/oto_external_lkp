@@ -23,19 +23,23 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 	final int CLICK_ID = 1111;
 	final int CLICK_TEXT = 2222;
 	final int CLICK_CLASSNAME = 3333;
-	public boolean ClickById(String id){
-		return ClickByInfo(CLICK_ID,id);
+	public boolean ClickById(String id) throws UiObjectNotFoundException{
+		return ClickByInfo(CLICK_ID,id,null);
 	}
 	
-	public boolean ClickByText(String text){
-		return ClickByInfo(CLICK_TEXT,text);
+	public boolean ClickByText(String text) throws UiObjectNotFoundException{
+		return ClickByInfo(CLICK_TEXT,text,null);
 	}
 	
-	public boolean ClickByClassname(String classname){
-		return ClickByInfo(CLICK_CLASSNAME,classname);
+	public boolean SetTextByClassname(String cname,String text) throws UiObjectNotFoundException{
+		return ClickByInfo(CLICK_CLASSNAME,cname,text);
 	}
 	
-	private boolean ClickByInfo(int CLICK,String str){
+	public boolean SetTextById(String id,String text) throws UiObjectNotFoundException{
+		return ClickByInfo(CLICK_ID,id,text);
+	}
+
+	private boolean ClickByInfo(int CLICK,String str,String text) throws UiObjectNotFoundException{
 		UiSelector uiselector = null;
 		switch(CLICK)
 		{
@@ -45,7 +49,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 		case CLICK_TEXT:	
 			uiselector = new UiSelector().text(str);
 			break;
-		case CLICK_CLASSNAME:
+		case CLICK_CLASSNAME:	
 			uiselector = new UiSelector().className(str);
 			break;
 		default:
@@ -55,7 +59,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 		int i = 0;
 		while(!myobject.exists() && i < 5){
 			SolveProblems();
-			sleep(1000);
+			sleep(2000);
 			if(i == 4){
 				TakeScreen(str.substring(str.indexOf('/')+1)+"----not find");
 				System.out.println("----------[failed]:" + str + " not find !!!测试未通过");
@@ -63,24 +67,30 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 			}
 			i++;
 		}
-		try {
+		if(text == null){
 			myobject.click();
-		} catch (UiObjectNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		}
+		else{
+			myobject.click();
+			myobject.setText(text);
 		}
 		return true;
 	}
 
 	private void SolveProblems(){
-		UiObject prompt = new UiObject(new UiSelector().resourceId("android:id/button1"));
-		try {
-			prompt.click();
-		} catch (UiObjectNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		sleep(2000);
+		boolean dumpFirstStart = new UiObject(
+				new UiSelector().resourceId("android:id/alertTitle")).exists();
+		if (dumpFirstStart == true) {
+			UiObject skipButton = new UiObject(
+					new UiSelector().resourceId("android:id/button1"));
+			try {
+				skipButton.click();
+			} catch (UiObjectNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-		sleep(1000);
 	}
 	
 	public void TakeScreen(String descript){

@@ -23,15 +23,19 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 	final int CLICK_ID = 1111;
 	final int CLICK_TEXT = 2222;
 	
-	public boolean ClickById(String id){
-		return ClickByInfo(CLICK_ID,id);
+	public boolean ClickById(String id) throws UiObjectNotFoundException{
+		return ClickByInfo(CLICK_ID,id,null);
 	}
 	
-	public boolean ClickByText(String text){
-		return ClickByInfo(CLICK_TEXT,text);
+	public boolean ClickByText(String text) throws UiObjectNotFoundException{
+		return ClickByInfo(CLICK_TEXT,text,null);
 	}
 	
-	private boolean ClickByInfo(int CLICK,String str){
+	public boolean SetTextById(String id,String text) throws UiObjectNotFoundException{
+		return ClickByInfo(CLICK_ID,id,text);
+	}
+
+	private boolean ClickByInfo(int CLICK,String str,String text) throws UiObjectNotFoundException{
 		UiSelector uiselector = null;
 		switch(CLICK)
 		{
@@ -56,11 +60,12 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 			}
 			i++;
 		}
-		try {
+		if(text == null){
 			myobject.click();
-		} catch (UiObjectNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		}
+		else{
+			myobject.click();
+			myobject.setText(text);
 		}
 		return true;
 	}

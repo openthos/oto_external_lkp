@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./wpsemail_benchmark.expt
+
