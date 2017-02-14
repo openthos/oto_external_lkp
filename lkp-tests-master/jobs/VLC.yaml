@@ -1,0 +1,7 @@
+testcase: VLC
+category: benchmark
+
+iterations: 1x
+
+VLC:
+  duration: 600s
