@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./tuniu_benchmark.expt
+

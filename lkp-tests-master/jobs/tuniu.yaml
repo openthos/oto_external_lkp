@@ -1,0 +1,7 @@
+testcase: tuniu
+category: benchmark
+
+iterations: 1x
+
+tuniu:
+  duration: 600s
