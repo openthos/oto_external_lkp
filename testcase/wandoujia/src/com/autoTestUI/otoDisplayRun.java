@@ -47,7 +47,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 		UiObject myobject = new UiObject(uiselector);
 		int i = 0;
 		while(!myobject.exists() && i < 5){
-			SolveProblems();
+//			SolveProblems();
 			sleep(2000);
 			if(i == 4){
 				TakeScreen(str.substring(str.indexOf('/')+1)+"----not find");
@@ -65,19 +65,9 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 		return true;
 	}
 
-	private void SolveProblems(){
-		sleep(2000);
-		boolean dumpFirstStart = new UiObject(new UiSelector().text("是否创建桌面快捷方式")).exists();
-		if (dumpFirstStart == true) {
-			UiObject sureButton = new UiObject(new UiSelector().text("确定"));
-			try {
-				sureButton.click();
-			} catch (UiObjectNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
+//	private void SolveProblems(){
+//
+//	}
 	
 	public void TakeScreen(String descript){
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
