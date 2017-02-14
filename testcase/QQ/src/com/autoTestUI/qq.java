@@ -39,23 +39,16 @@ public class qq extends UiAutomatorTestCase {
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
 		sleep(2000);
 		
-		//关闭温馨提示弹窗
-		otoTest.ClickById("android:id/button1");
-		sleep(1000);
-		window_lib.windowtest(otoTest.mydevice,appName );
-		// 最大化
-		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		otoTest.ClickById("android:id/mwMaximizeBtn");
-		// 关闭程序
 		otoTest.ClickById("android:id/mwCloseBtn");
-		// 重新启动程序
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		//执行其他操作，如：登录等
 		otoTest.ClickById("com.tencent.mobileqq:id/btn_login");
 		otoTest.SetTextByClassname("android.widget.EditText", "3050840977");
 		otoTest.SetTextById("com.tencent.mobileqq:id/password", "abc123");
 		otoTest.ClickById("com.tencent.mobileqq:id/login");
+		window_lib.windowtest(otoTest.mydevice,appName );
 		//最小化
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		//强制关闭程序
