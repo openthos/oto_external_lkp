@@ -57,5 +57,4 @@ public class wechat extends UiAutomatorTestCase {
 		//强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));
 	}
-	
 }

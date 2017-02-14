@@ -1,0 +1,7 @@
+testcase: wps
+category: benchmark
+
+iterations: 1x
+
+wps:
+  duration: 600s
