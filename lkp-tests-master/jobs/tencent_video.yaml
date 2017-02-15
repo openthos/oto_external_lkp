@@ -1,0 +1,7 @@
+testcase: tencent_video
+category: benchmark
+
+iterations: 1x
+
+tencent_video:
+  duration: 600s

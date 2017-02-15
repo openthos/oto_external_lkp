@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./tencent_video_benchmark.expt
+
