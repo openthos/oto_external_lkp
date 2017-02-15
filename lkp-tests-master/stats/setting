@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+while line = STDIN.gets
+    case line
+    when /test=/
+        name = line.sub(/^.*=/,"").chomp
+    when /starttime/
+        st = line.gsub(/\D/,"")
+        puts "#{name}.starttime:#{st}"
+    when /endtime/
+        et = line.gsub(/\D/,"")
+        puts "#{name}.endtime:#{et}"
+    when /launch/
+        lt = line.gsub(/\D/,"")
+        puts "#{name}.launchtime: #{lt}"
+    when /Time:/
+        rt = line.sub(/^.*:\s/,"")
+        puts "#{name}.runtime: #{rt}"
+    when /failed/
+        puts "#{name}.testresult:0"
+    when /OK/
+        puts "#{name}.result: 1"
+    when /FAILURES/
+        puts "#{name}.result: 0"
+    end
+end

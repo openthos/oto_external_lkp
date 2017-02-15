@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./setting_benchmark.expt
+

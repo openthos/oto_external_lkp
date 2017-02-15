@@ -1,0 +1,7 @@
+testcase: setting
+category: benchmark
+
+iterations: 1x
+
+setting:
+  duration: 600s
