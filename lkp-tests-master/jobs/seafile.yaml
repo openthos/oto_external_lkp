@@ -1,0 +1,7 @@
+testcase: seafile
+category: benchmark
+
+iterations: 1x
+
+seafile:
+  duration: 600s
