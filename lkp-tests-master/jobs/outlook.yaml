@@ -1,0 +1,7 @@
+testcase: outlook
+category: benchmark
+
+iterations: 1x
+
+outlook:
+  duration: 600s

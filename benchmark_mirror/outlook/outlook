@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./outlook_benchmark.expt
+
