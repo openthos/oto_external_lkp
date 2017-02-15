@@ -1,0 +1,7 @@
+testcase: taijie_video
+category: benchmark
+
+iterations: 1x
+
+taijie_video:
+  duration: 600s

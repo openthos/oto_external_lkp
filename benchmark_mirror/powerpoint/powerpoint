@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./powerpoint_benchmark.expt
+

@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./taijie_video_benchmark.expt
+

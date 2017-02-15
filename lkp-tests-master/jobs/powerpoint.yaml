@@ -1,0 +1,7 @@
+testcase: powerpoint
+category: benchmark
+
+iterations: 1x
+
+powerpoint:
+  duration: 600s
