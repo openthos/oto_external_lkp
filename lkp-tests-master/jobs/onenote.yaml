@@ -1,0 +1,7 @@
+testcase: onenote
+category: benchmark
+
+iterations: 1x
+
+onenote:
+  duration: 600s
