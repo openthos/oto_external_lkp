@@ -1,0 +1,7 @@
+testcase: taobao
+category: benchmark
+
+iterations: 1x
+
+taobao:
+  duration: 600s

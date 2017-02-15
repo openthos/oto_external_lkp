@@ -38,16 +38,16 @@ public class tencent_video extends UiAutomatorTestCase {
 		
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(5000);
+		sleep(6000);
 		
 		window_lib.windowtest(otoTest.mydevice, appName);
 		
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		sleep(3000);
 		otoTest.ClickById("android:id/mwMaximizeBtn");
-		sleep(2000);
+		sleep(1000);
 		otoTest.ClickById("android:id/mwMaximizeBtn");
-		sleep(2000);
+		sleep(1000);
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));
 	}
