@@ -1,0 +1,7 @@
+testcase: fennec
+category: benchmark
+
+iterations: 1x
+
+fennec:
+  duration: 600s
