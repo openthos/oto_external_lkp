@@ -1,0 +1,7 @@
+testcase: gallery
+category: benchmark
+
+iterations: 1x
+
+gallery:
+  duration: 600s
