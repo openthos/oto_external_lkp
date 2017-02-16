@@ -1,0 +1,7 @@
+testcase: excel
+category: benchmark
+
+iterations: 1x
+
+excel:
+  duration: 600s

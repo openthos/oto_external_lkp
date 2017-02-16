@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./excel_benchmark.expt
+
