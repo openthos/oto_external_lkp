@@ -1,0 +1,7 @@
+testcase: jd
+category: benchmark
+
+iterations: 1x
+
+jd:
+  duration: 600s

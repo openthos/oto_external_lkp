@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./jd_benchmark.expt
+
