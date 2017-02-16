@@ -1,0 +1,7 @@
+testcase: music
+category: benchmark
+
+iterations: 1x
+
+music:
+  duration: 600s
