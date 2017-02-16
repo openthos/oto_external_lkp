@@ -1,0 +1,7 @@
+testcase: gdmap
+category: benchmark
+
+iterations: 1x
+
+gdmap:
+  duration: 600s
