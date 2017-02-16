@@ -1,0 +1,7 @@
+testcase: note
+category: benchmark
+
+iterations: 1x
+
+note:
+  duration: 600s
