@@ -1,0 +1,7 @@
+testcase: gugeinput
+category: benchmark
+
+iterations: 1x
+
+gugeinput:
+  duration: 600s
