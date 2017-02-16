@@ -1,0 +1,7 @@
+testcase: fm
+category: benchmark
+
+iterations: 1x
+
+fm:
+  duration: 600s

@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./fm_benchmark.expt
+
