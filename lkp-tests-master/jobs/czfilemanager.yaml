@@ -1,0 +1,7 @@
+testcase: czfilemanager
+category: benchmark
+
+iterations: 1x
+
+czfilemanager:
+  duration: 600s

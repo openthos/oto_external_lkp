@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./czfilemanager_benchmark.expt
+
