@@ -1,0 +1,7 @@
+testcase: date
+category: benchmark
+
+iterations: 1x
+
+date:
+  duration: 600s
