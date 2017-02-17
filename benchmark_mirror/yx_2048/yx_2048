@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./yx_2048_benchmark.expt
+

@@ -1,7 +1,7 @@
 #!/usr/bin/expect
 spawn  telnet localhost
 expect "#"
-send "pm install /data/ubuntu/lkp/benchmarks/2048/2048.apk\r"
+send "pm install /data/ubuntu/lkp/benchmarks/yx_2048/yx_2048.apk\r"
 expect "#"
 send "sleep 1"
 expect "#"

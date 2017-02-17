@@ -18,9 +18,9 @@ if  [  -d $foldName  ];then
       mv   $foldName/* /tmp/lkp_trash/$trash
 fi
  source /etc/profile
-./2048Make.sh
+./yx_2048Make.sh
 adb connect $androidIP
-adb -s $androidIP:$port   push ./bin/2048.jar /data/local/tmp
+adb -s $androidIP:$port   push ./bin/yx_2048.jar /data/local/tmp
 
 adb -s $androidIP:$port  shell  rm -rf  /data/lkp_test
 adb -s $androidIP:$port  shell  mkdir /data/lkp_test

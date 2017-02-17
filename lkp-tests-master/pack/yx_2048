@@ -2,7 +2,7 @@
 
 VERSION="2.2.3"
 #WEB_URL="http://www.tux.org/~mayer/linux/nbench-byte-2.2.3.tar.gz"
-WEB_URL="https://github.com/openthos/oto_lkp/raw/master/benchmark_mirror/2048.tar.gz"
+WEB_URL="https://github.com/openthos/oto_lkp/raw/master/benchmark_mirror/yx_2048.tar.gz"
 
 install()
 {
@@ -10,6 +10,6 @@ install()
 cp  -af $BM_NAME  $BM_ROOT
 cp -af *.apk $BM_ROOT
 cp -af  auto_interact.sh $BM_ROOT  
-cp -af  2048_benchmark.expt $BM_ROOT   
-$LKP_SRC/pack/2048_pack.expt
+cp -af  yx_2048_benchmark.expt $BM_ROOT   
+$LKP_SRC/pack/yx_2048_pack.expt
 }
