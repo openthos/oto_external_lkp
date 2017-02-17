@@ -1,0 +1,7 @@
+testcase: 2048
+category: benchmark
+
+iterations: 1x
+
+2048:
+  duration: 600s
