@@ -1,0 +1,7 @@
+testcase: clock
+category: benchmark
+
+iterations: 1x
+
+clock:
+  duration: 600s

@@ -7,14 +7,14 @@ import android.os.RemoteException;
 import com.android.uiautomator.core.UiObjectNotFoundException;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
-public class czfilemanager extends UiAutomatorTestCase {
+public class clock extends UiAutomatorTestCase {
 	
-	public static String apppackage = "com.chaozhuo.filemanager";
-	public static String appactivity = "com.chaozhuo.filemanager.activities.MainActivitys";
-	public static String appName = "com.chaozhuo.filemanager/com.chaozhuo.filemanager.activities.MainActivity";
+	public static String apppackage = "com.android.deskclock";
+	public static String appactivity = "com.android.deskclock.DeskClock";
+	public static String appName = "com.android.deskclock/com.android.deskclock.DeskClock";
 	public static String port = "5555";
 	
-	public void testczfilemanager() throws UiObjectNotFoundException, RemoteException,
+	public void testclock() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
@@ -39,7 +39,6 @@ public class czfilemanager extends UiAutomatorTestCase {
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
 		sleep(2000);
 		
-		otoTest.ClickById("android:id/mwMaximizeBtn");
 		window_lib.windowtest(otoTest.mydevice,appName );
 		
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
