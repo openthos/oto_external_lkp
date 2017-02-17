@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./esfilemanager_benchmark.expt
+

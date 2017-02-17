@@ -1,0 +1,7 @@
+testcase: esfilemanager
+category: benchmark
+
+iterations: 1x
+
+esfilemanager:
+  duration: 600s
