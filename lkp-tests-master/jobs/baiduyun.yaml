@@ -1,0 +1,7 @@
+testcase: baiduyun
+category: benchmark
+
+iterations: 1x
+
+baiduyun:
+  duration: 600s
