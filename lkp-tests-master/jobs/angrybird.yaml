@@ -1,0 +1,7 @@
+testcase: angrybird
+category: benchmark
+
+iterations: 1x
+
+angrybird:
+  duration: 600s
