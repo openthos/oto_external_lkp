@@ -43,7 +43,7 @@ public class calc extends UiAutomatorTestCase {
 		
 		window_lib.windowtest(otoTest.mydevice,appName );
 		// 测试(1 + 1) x 5 x 5 =  50
-		Runtime.getRuntime().exec( " am start -n " + appName);
+		otoDisplayRun.execCmdNoSave("am start -n " + appName);	
 		
 		otoTest.ClickById("com.android.calculator2:id/lparen");
 		otoTest.ClickById("com.android.calculator2:id/digit_1");

@@ -1,0 +1,7 @@
+testcase: email
+category: benchmark
+
+iterations: 1x
+
+email:
+  duration: 600s
