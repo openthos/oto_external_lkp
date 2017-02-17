@@ -1,0 +1,7 @@
+testcase: acrobat
+category: benchmark
+
+iterations: 1x
+
+acrobat:
+  duration: 600s
