@@ -1,0 +1,7 @@
+testcase: dazhihui
+category: benchmark
+
+iterations: 1x
+
+dazhihui:
+  duration: 600s
