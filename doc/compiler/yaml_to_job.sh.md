@@ -9,6 +9,7 @@ job.sh脚本的存放路径如下（以ebizzy为例）：
 /result/ebizzy/200%-5x-5s/elwin-virtual-machine/ubuntu/defconfig/gcc-5/4.4.0-45-generic/1/job.sh  
 然后执行job.sh便可以执行以上yaml文件指定的测试任务。
 
+
 ## /bin/run-local函数的关键件地方注释：
 
 ```
@@ -40,6 +41,13 @@ job_script = result_root + '/job.sh'
 File.open(job_script, mode='w', perm=0775) do |file|
 	job2sh(deepcopy(job.to_hash), file)
 end
+
+
+system job_script, 'run_job'  ##执行job.sh里面的run_job函数：即执行benchmark和mointor进行信息收集
+system LKP_SRC + '/bin/post-run'    ##benchmark执行完毕以后，会kill调monitor进程
+system LKP_SRC + '/monitors/event/wakeup', 'job-finished'  
+system job_script, 'extract_stats'   ##执行job.sh里面的'extract_stats'函数，对monitor的原始输出进行处理为key:vale形式，供后续生产json文件。
+###json文件的生成，以及多次测试的平均值、和方差计算。
 ```	
 
 ## job2sh函数关键地方注释：	
