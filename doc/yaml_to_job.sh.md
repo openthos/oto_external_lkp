@@ -3,6 +3,9 @@
 ## 资源文件
 [yaml文件  ebizzy-200%-5x-5s.yaml](ebizzy-200%25-5x-5s.yaml)  
 [生成的  job.sh](job.sh)  
+[run-lcocal脚本](/lkp-tests-master/bin/run-local)  
+[job2sh.rub脚本](/lkp-tests-master/lib/job2sh.rb)  
+
 ## 过程概述
 lkp run $LKP_SRC/ebizzy-200%-5x-5s.yaml  
 这个命令会调用/bin/run-local   
