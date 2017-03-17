@@ -1,4 +1,8 @@
 # yaml文件到job.sh文件的转换过程分析：
+
+## 资源文件
+[yaml文件  ebizzy-200%-5x-5s.yaml](ebizzy-200%-5x-5s.yaml)  
+[生成的  job.sh](job.sh)  
 ## 过程概述
 lkp run $LKP_SRC/ebizzy-200%-5x-5s.yaml  
 这个命令会调用/bin/run-local   
