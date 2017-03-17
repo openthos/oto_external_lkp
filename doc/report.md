@@ -17,7 +17,7 @@
 1. [并发测试](test/concurrent.md)（敖权）
 1. [GUI的自动测试用例](test/gui.md)（张琳苹）
 1. [LKP测试](test/lkp.md)（毛英明、薛海龙）
-1. [YAML文件到sh脚本的转换过程](yaml_to_job.sh.md)
+1. [YAML文件到sh脚本的转换过程](yaml_to_job.sh.md)（毛英明）
 1. [CTS测试](test/cts.md)（敖权）
 1. 测试错误恢复（[重启](test/reboot.md)、[发邮件](test/email.md)）（敖权）
 
