@@ -1,0 +1,52 @@
+---
+
+#此benchmark运行时的一些参数信息
+#! ./jobs/ebizzy.yaml
+testcase: ebizzy
+category: benchmark
+nr_threads: 200%
+iterations: 5x
+ebizzy:
+  duration: 5s
+job_origin: "./jobs/ebizzy.yaml"
+testbox: elwin-virtual-machine
+tbox_group: elwin-virtual-machine
+
+#! hosts/elwin-virtual-machine
+memory: 0G
+hdd_partitions: 
+ssd_partitions: 
+
+##默认开启哪些monitor
+#! include/category/benchmark
+kmsg: 
+uptime: 
+iostat: 
+heartbeat: 
+vmstat: 
+numa-numastat: 
+numa-vmstat: 
+numa-meminfo: 
+proc-vmstat: 
+proc-stat: 
+meminfo: 
+slabinfo: 
+interrupts: 
+lock_stat: 
+latency_stats: 
+softirqs: 
+bdi_dev_mapping: 
+diskstats: 
+nfsstat: 
+cpuidle: 
+cpufreq-stats: 
+turbostat: 
+sched_debug: 
+perf-stat: 
+perf-profile: 
+
+
+#内核的配置参数信息
+#! default params
+kconfig: x86_64-rhel-7.2
+compiler: gcc-6
