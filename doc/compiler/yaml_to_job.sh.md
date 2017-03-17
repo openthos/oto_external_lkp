@@ -1,6 +1,6 @@
 # yaml文件到job.sh文件的转换过程分析：
 ## 过程概述
-lkp run $LKP_SRC/ebizzy-200%-5x-5s.yaml  #
+lkp run $LKP_SRC/ebizzy-200%-5x-5s.yaml  
 这个命令会调用/bin/run-local   
 即等效于/bin/run-local   $LKP_SRC/ebizzy-200%-5x-5s.yaml  
 然后/bin/run-local会解析$LKP_SRC/ebizzy-200%-5x-5s.yaml 文件，并利用函数job2sh生成一个job.sh脚本。  
@@ -10,7 +10,7 @@ job.sh脚本的存放路径如下（以ebizzy为例）：
 然后执行job.sh便可以执行以上yaml文件指定的测试任务。
 
 
-## /bin/run-local函数的关键件地方注释：
+## /bin/run-local 文件的关键地方注释：
 
 ```
 jobfile = ARGV[0]  ##jobfile=$LKP_SRC/ebizzy-200%-5x-5s.yaml
