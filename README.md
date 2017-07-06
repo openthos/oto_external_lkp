@@ -1,9 +1,11 @@
 # oto_lkp
 
-##使用前必读
+## 使用前必读 
 lkp本身需要在root权限执行。因此以下所有操作请在root账号下操作。以免出现不必要的麻烦。  
 vim /etc/hostname
 修改各个机器中ubuntu系统的hostname为不同的名字，不要出现重复的hostname。
+
+修改次仓库的代码的时候，请在dev分支上做修改提交，测试没有问题以后，再merge到master分支上面，这样master分支上面的版本用永远是稳定状态的版本。
 
 下文的PC2中的linux必须是ubuntu15.10 x86-64版本，并且以uefi+gpt形式安装到PC2。必须注意，以免做无用功。
 ## 概述
