@@ -4,18 +4,18 @@ import sys
 import os
 
 
-debug_log=open("/strace_debug.log",'w')
+#debug_log=open("/strace_debug.log",'w')
 
 
-result_root=os.environ["RESULT_ROOT"]
-debug_log.writeline(result_root)
-result_root_strace=result_root+"/strace"
-debug_log.writeline(result_root_strace)
+#result_root=os.environ["RESULT_ROOT"]
+#debug_log.writeline(result_root)
+#result_root_strace=result_root+"/strace"
+#debug_log.writeline(result_root_strace)
 
-os.system("mv /strace.log "+result_root_strace)
+#os.system("mv /strace.log "+result_root_strace)
 
-#log=sys.stdin
-log=open(result_root_strace,'r')
+log=sys.stdin
+#log=open(result_root_strace,'r')
 
 
 syserror_dic={}
