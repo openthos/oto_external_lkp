@@ -1,4 +1,3 @@
 #!/bin/sh
 #do nothing it is done by $LKP_SRC/bin/cmd
-#mv strace.log strace
-
+cat /strace_pipe
