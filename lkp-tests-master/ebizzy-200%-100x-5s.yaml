@@ -25,11 +25,15 @@ default-monitors:
   cpufreq-stats: 
   turbostat: 
   pmeter: 
+  strace: 
   sched_debug:
     interval: 60
+memory: 15G
+hdd_partitions: 
+ssd_partitions: 
 category: benchmark
 nr_threads: 200%
 iterations: 100x
 ebizzy:
   duration: 5s
-enqueue_time: 2016-11-07 01:16:00.592180108 -05:00
+enqueue_time: 2017-07-06 12:22:53.363668308 +08:00

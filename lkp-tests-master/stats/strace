@@ -1,0 +1,38 @@
+#!/usr/bin/python
+
+import sys
+import os
+
+
+debug_log=open("/strace_debug.log",'w')
+
+
+result_root=os.environ["RESULT_ROOT"]
+debug_log.writeline(result_root)
+result_root_strace=result_root+"/strace"
+debug_log.writeline(result_root_strace)
+
+os.system("mv /strace.log "+result_root_strace)
+
+#log=sys.stdin
+log=open(result_root_strace,'r')
+
+
+syserror_dic={}
+
+while True:
+    line=log.readline()
+    if not line : break
+    if ("ENOENT" in line):
+        words=line.split()
+        syscall_name=words[1].strip()
+        syscall_name=syscall_name.strip(",")
+        if not syscall_name in syserror_dic:
+            syserror_dic[syscall_name]=1
+        else :
+            #print syscall_name
+            #syserror_dic[syscall_name]=syserror_dic[syscall_name]+1
+            syserror_dic[syscall_name]+=1
+
+for key, value in syserror_dic.items():
+    print key+": "+str(value)

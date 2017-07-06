@@ -3,5 +3,5 @@
 date=$(date +'%F %T')
 echo "$date $@"
 echo "$date $@" >> $RESULT_ROOT/reproduce.sh
-
-exec "$@"
+makefifo /strace_pipe
+exec strace -o /strace_pipe  -f -yy  "$@"
