@@ -36,4 +36,4 @@ nr_threads: 200%
 iterations: 100x
 ebizzy:
   duration: 5s
-enqueue_time: 2017-07-06 12:22:53.363668308 +08:00
+enqueue_time: 2017-07-20 15:39:56.141811039 +08:00
