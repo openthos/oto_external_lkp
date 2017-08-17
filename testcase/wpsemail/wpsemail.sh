@@ -13,8 +13,8 @@ mkdir $foldName
 
 filename=$(basename $0)
 if  [  -d $foldName  ];then
-      trash=$RANDOM  
-      mkdir -p /tmp/lkp_trash/$trash 
+      trash=$RANDOM
+      mkdir -p /tmp/lkp_trash/$trash
       mv   $foldName/* /tmp/lkp_trash/$trash
 fi
  source /etc/profile
@@ -23,8 +23,7 @@ adb connect $androidIP
 adb -s $androidIP:$port   push ./bin/wpsemail.jar /data/local/tmp
 
 adb -s $androidIP:$port  shell  rm -rf  /data/lkp_test
-adb -s $androidIP:$port  shell  mkdir /data/lkp_test
-adb -s $androidIP:$port   push ./lkp_test /data/lkp_test
+adb -s $androidIP:$port   push ./lkp_test /data/
 adb -s $androidIP:$port   shell busybox chmod +x /data/lkp_test/chroot_run.sh
 
 adb -s $androidIP:$port   shell /data/lkp_test/chroot_run.sh $filename

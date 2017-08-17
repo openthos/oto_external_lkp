@@ -13,15 +13,13 @@ mkdir $foldName
 
 filename=$(basename $0)
 if  [  -d $foldName  ];then
-      trash=$RANDOM  
-      mkdir -p /tmp/lkp_trash/$trash 
+      trash=$RANDOM
+      mkdir -p /tmp/lkp_trash/$trash
       mv   $foldName/* /tmp/lkp_trash/$trash
 fi
 
 adb -s $androidIP:$port  shell  rm -rf  /data/lkp_test
-adb -s $androidIP:$port  shell  mkdir /data/lkp_test
-
-adb -s $androidIP:$port   push ./lkp_test /data/lkp_test/
+adb -s $androidIP:$port   push ./lkp_test /data/
 
 adb -s $androidIP:$port   shell busybox chmod +x /data/lkp_test/chroot_run.sh
 
