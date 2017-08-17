@@ -42,7 +42,7 @@ public class acrobat extends UiAutomatorTestCase {
 
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		sleep(1000);
-		window_lib.windowtest(otoTest.mydevice,appName );
+		//window_lib.windowtest(otoTest.mydevice,appName );
 
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		otoTest.ClickById("android:id/mwMaximizeBtn");

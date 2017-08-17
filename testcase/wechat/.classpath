@@ -3,7 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/zhanglp/oto_Uitest/libs/uiautomator.jar"/>
-	<classpathentry kind="lib" path="/home/zhanglp/oto_Uitest/libs/android.jar"/>
+	<classpathentry kind="lib" path="/home/zhanglp/mylibs/android.jar"/>
+	<classpathentry kind="lib" path="/home/zhanglp/mylibs/uiautomator.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
