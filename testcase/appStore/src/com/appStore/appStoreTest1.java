@@ -86,9 +86,10 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         uninstall("Internet 浏览器","卸载更新");
 
         /*通过下载界面的列表移除应用*/
-        for (int i=0;i<appList2.length;i++) {
-            removeApp(appList2[i]);
+        for (int i=0;i<appList1.length;i++) {
+            removeApp(appList1[i]);
         }
+        removeApp("Internet 浏览器");
         removeApp("2048");
         removeApp("Angry Birds");
     }
