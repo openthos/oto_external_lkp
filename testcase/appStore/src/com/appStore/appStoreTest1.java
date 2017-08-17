@@ -66,10 +66,11 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         getUiDevice();
 
         /*通过点击软件和游戏页面的下载文字下载安装应用*/
-        for (int i=0;i<appList2.length;i++) {
-            installByText(appList2[i], "com.openthos.appstore:id/rb_software","com.openthos.appstore:id/app_item_install");
+        for (int i=0;i<appList.length;i++) {
+            installByText(appList[i], "com.openthos.appstore:id/rb_software","com.openthos.appstore:id/app_item_install");
         }
-
+        installByText("Internet 浏览器", "com.openthos.appstore:id/rb_software","com.openthos.appstore:id/app_item_install");
+        installByText("网易云音乐", "com.openthos.appstore:id/rb_software","com.openthos.appstore:id/app_item_install");
         installByText("2048","com.openthos.appstore:id/rb_game","com.openthos.appstore:id/app_item_install");
         //installByText("Angry Birds","com.openthos.appstore:id/rb_game","下载");
 
