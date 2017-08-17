@@ -146,6 +146,8 @@ public class appStoreTest1 extends UiAutomatorTestCase {
 
         UiObject search= new UiObject((new UiSelector().resourceId("com.openthos.appstore:id/activity_title_search_text")));
         search.setText("flash");
+        uiDevice.pressEnter();
+        uiDevice.pressEnter();
 
         UiObject open = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/app_item_install"));
         open.clickAndWaitForNewWindow(10000);
