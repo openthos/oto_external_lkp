@@ -70,7 +70,6 @@ public class appStoreTest1 extends UiAutomatorTestCase {
             installByText(appList[i], "com.openthos.appstore:id/rb_software","com.openthos.appstore:id/app_item_install");
         }
         installByText("Internet 浏览器", "com.openthos.appstore:id/rb_software","com.openthos.appstore:id/app_item_install");
-        installByText("网易云音乐", "com.openthos.appstore:id/rb_software","com.openthos.appstore:id/app_item_install");
         installByText("2048","com.openthos.appstore:id/rb_game","com.openthos.appstore:id/app_item_install");
         //installByText("Angry Birds","com.openthos.appstore:id/rb_game","下载");
 
