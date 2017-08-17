@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./appStore_benchmark.expt
+

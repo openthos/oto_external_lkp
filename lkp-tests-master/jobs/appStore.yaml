@@ -1,0 +1,7 @@
+testcase: appStore
+category: benchmark
+
+iterations: 1x
+
+appStore:
+  duration: 600s
