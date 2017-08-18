@@ -107,6 +107,7 @@ public class appStoreTest1 extends UiAutomatorTestCase {
 
         /*通过管理更新页面的更新按钮更新应用*/
         uninstall("Internet 浏览器","卸载更新");
+        sleep(4000);
         removeApp("Internet 浏览器");
         UiObject label_manage = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_manager"));
         label_manage.click();
