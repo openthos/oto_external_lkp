@@ -43,6 +43,13 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 		return ClickByInfo(CLICK_ID,t,text);
 	}
 
+	public void MoveToTop() throws UiObjectNotFoundException{
+        UiObject objectSide4 = new UiObject( new UiSelector().resourceId("android:id/mwOuterBorder"));
+        android.graphics.Rect myAppSide4 = objectSide4.getVisibleBounds();
+        sleep(1000);
+        mydevice.click(100, myAppSide4.top);
+	}
+	
 	private boolean ClickByInfo(int CLICK,String str,String text) throws UiObjectNotFoundException{
 		UiSelector uiselector = null;
 		switch(CLICK)

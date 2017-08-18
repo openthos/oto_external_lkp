@@ -20,6 +20,7 @@ public class excel extends UiAutomatorTestCase {
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
 		otoTest.mydevice.pressEnter();
+		otoTest.mydevice.pressKeyCode(111);
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 		//启动时间
 		Date starttime;
@@ -40,13 +41,13 @@ public class excel extends UiAutomatorTestCase {
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
 		sleep(7000);
 
+		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		window_lib.windowtest(otoTest.mydevice,appName );
 
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		sleep(1000);
-		otoTest.ClickById("android:id/mwMaximizeBtn");
-		otoTest.ClickById("android:id/mwMaximizeBtn");
+		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		// 强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));

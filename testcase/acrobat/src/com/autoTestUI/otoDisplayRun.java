@@ -35,7 +35,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
         UiObject objectSide4 = new UiObject( new UiSelector().resourceId("android:id/mwOuterBorder"));
         android.graphics.Rect myAppSide4 = objectSide4.getVisibleBounds();
         sleep(1000);
-       mydevice.click(100, myAppSide4.top);
+        mydevice.click(100, myAppSide4.top);
 	}
 	
 	private boolean ClickByInfo(int CLICK,String str){

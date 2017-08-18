@@ -20,6 +20,7 @@ public class note extends UiAutomatorTestCase {
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
 		otoTest.mydevice.pressEnter();
+		otoTest.mydevice.pressKeyCode(111);
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 		//启动时间
 		Date starttime;
@@ -44,6 +45,8 @@ public class note extends UiAutomatorTestCase {
 
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		otoTest.ClickById("android:id/mwMaximizeBtn");
+		sleep(1000);
+		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		// 强制关闭程序
