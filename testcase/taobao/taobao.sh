@@ -31,7 +31,7 @@ adb -s $androidIP:$port   shell /data/lkp_test/chroot_run.sh $filename
 filename1=${filename%.sh}
 mkdir $foldName/$filename1
 adb -s $androidIP:$port pull  /data/ubuntu/result/$filename1  $foldName/$filename1/
-
+adb -s $androidIP:$port shell pm uninstall -k com.taobao.taobao
 rm -rf /tmp/lkp_trash/
 
 

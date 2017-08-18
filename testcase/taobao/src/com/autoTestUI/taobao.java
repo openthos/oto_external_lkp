@@ -20,6 +20,7 @@ public class taobao extends UiAutomatorTestCase {
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
 		otoTest.mydevice.pressEnter();
+		otoTest.mydevice.pressKeyCode(111);
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 		//启动时间
 		Date starttime;
@@ -38,10 +39,11 @@ public class taobao extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(5000);
+		sleep(7000);
 
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		sleep(1000);
+		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		sleep(1000);
 		window_lib.windowtest(otoTest.mydevice,appName );
