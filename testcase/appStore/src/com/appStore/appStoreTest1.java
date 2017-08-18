@@ -1,13 +1,9 @@
 package com.appStore;
 
-import android.bluetooth.BluetoothClass;
-import android.os.RemoteException;
+
 import android.util.Log;
 import android.widget.LinearLayout;
-import android.widget.Toast;
-
 import java.io.IOException;
-
 import com.android.uiautomator.core.UiDevice;
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
