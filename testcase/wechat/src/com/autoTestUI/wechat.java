@@ -21,6 +21,7 @@ public class wechat extends UiAutomatorTestCase {
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
 		otoTest.mydevice.pressEnter();
+		otoTest.mydevice.pressKeyCode(111);
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 
 		//启动时间
@@ -47,6 +48,8 @@ public class wechat extends UiAutomatorTestCase {
 		sleep(1000);
 		// 最大化
 		otoTest.ClickById("android:id/mwMaximizeBtn");
+		sleep(1000);
+		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		// 关闭程序
 		otoTest.ClickById("android:id/mwCloseBtn");

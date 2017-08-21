@@ -20,6 +20,7 @@ public class wpspro extends UiAutomatorTestCase {
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
 		otoTest.mydevice.pressEnter();
+		otoTest.mydevice.pressKeyCode(111);
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 		//启动时间
 		Date starttime;
@@ -40,6 +41,7 @@ public class wpspro extends UiAutomatorTestCase {
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
 		sleep(3000);
 
+		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		sleep(1000);
 		window_lib.windowtest(otoTest.mydevice,appName );
@@ -47,13 +49,14 @@ public class wpspro extends UiAutomatorTestCase {
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		sleep(1000);
 
-		// 最大化
-		otoTest.ClickById("android:id/mwMaximizeBtn");
+		// 最大化至窗口模式
+		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		// 关闭程序
 		otoTest.ClickById("android:id/mwCloseBtn");
 
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
+		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		// 强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));

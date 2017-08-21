@@ -34,6 +34,7 @@ mkdir $foldName/$filename1
 adb -s $androidIP:$port pull  /data/ubuntu/result/$filename1  $foldName/$filename1/
 
 rm -rf /tmp/lkp_trash/
+adb -s $androidIP:$port shell pm uninstall -k com.microsoft.office.word
 
 
 echo "test over! all done!"

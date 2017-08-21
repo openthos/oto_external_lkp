@@ -20,6 +20,7 @@ public class wyiyunmusic extends UiAutomatorTestCase {
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
 		otoTest.mydevice.pressEnter();
+		otoTest.mydevice.pressKeyCode(111);
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 		//启动时间
 		Date starttime;
@@ -51,6 +52,8 @@ public class wyiyunmusic extends UiAutomatorTestCase {
 		otoTest.ClickById("com.netease.cloudmusic:id/login");
 		// 最大化
 		otoTest.ClickById("android:id/mwMaximizeBtn");
+		sleep(1000);
+		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		// 关闭程序
 		otoTest.ClickById("android:id/mwCloseBtn");
