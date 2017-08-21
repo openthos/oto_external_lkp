@@ -23,7 +23,8 @@ adb connect $androidIP
 adb -s $androidIP:$port   push ./bin/gugeinput.jar /data/local/tmp
 
 adb -s $androidIP:$port  shell  rm -rf  /data/lkp_test
-adb -s $androidIP:$port   push ./lkp_test /data/
+adb -s $androidIP:$port   shell  mkdir /data/lkp_test
+adb -s $androidIP:$port   push ./lkp_test /data/lkp_test
 adb -s $androidIP:$port   shell busybox chmod +x /data/lkp_test/chroot_run.sh
 
 adb -s $androidIP:$port   shell /data/lkp_test/chroot_run.sh $filename
