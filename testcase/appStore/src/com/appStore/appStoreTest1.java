@@ -47,13 +47,43 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         }
         sleep(1000);
         new UiObject(new UiSelector().resourceId("android:id/mwCloseBtn")).click();
+        
+        otoDisplayRun.execCmdNoSave("am start -n com.openthos.appstore/.MainActivity");
+        new UiObject(new UiSelector().resourceId("android:id/mwMaximizeBtn")).click();
+        
+        UiObject label_manage = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_manager"));
+        label_manage.click();
+
+        UiObject label_installed = new UiObject(new UiSelector().text("已安装"));
+        label_installed.click();
+
+        for (int i=0;i<appList0.length;i++){
+        UiScrollable settingsList = new UiScrollable(new UiSelector().resourceId("com.openthos.appstore:id/customlistView"));
+        if (settingsList.getChildByText(new UiSelector().className(LinearLayout.class.getName()), appList0[i], true).exists())
+        {
+        	if (appList0[i] == "Internet 浏览器"){
+        	uninstall(appList0[i],"卸载更新");
+        	}
+        	else{
+        		uninstall(appList0[i],"卸载");
+        	}
+        }
+        }
+        
+        UiObject label_download = new UiObject(new UiSelector().text("下载"));
+        label_download.click();
+
+        for (int i=0;i<appList0.length;i++){
+        UiScrollable settingsList = new UiScrollable(new UiSelector().resourceId("com.openthos.appstore:id/customlistView"));
+        if (settingsList.getChildByText(new UiSelector().className(LinearLayout.class.getName()), appList0[i], true).exists())
+        {
+        	removeApp(appList0[i]);
+        }
+        }
     }
     
     public void testDemo1() throws UiObjectNotFoundException,IOException, InterruptedException {
         UiDevice uiDevice =getUiDevice();
-        otoDisplayRun.execCmdNoSave("am start -n com.openthos.appstore/.MainActivity");
-        new UiObject(new UiSelector().resourceId("android:id/mwMaximizeBtn")).click();
-
         //暂停下载
         new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_game")).click();
         //UiSelector textAll = new UiSelector().text("全部");
