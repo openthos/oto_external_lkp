@@ -1,9 +1,13 @@
 package com.appStore;
 
-
+import android.bluetooth.BluetoothClass;
+import android.os.RemoteException;
 import android.util.Log;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
 import java.io.IOException;
+
 import com.android.uiautomator.core.UiDevice;
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
@@ -25,9 +29,28 @@ public class appStoreTest1 extends UiAutomatorTestCase {
 
     String[] appList2 = {"WPS邮箱","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","搜狗输入法","OS Monitor","绿色守护","央视影音","哔哩哔哩","Internet 浏览器","网易云音乐"};
 
+    public void testDemo0() throws UiObjectNotFoundException,IOException, InterruptedException {
+        UiDevice uiDevice =getUiDevice();
+        otoDisplayRun.execCmdNoSave("am start -n com.android.settings/.Settings");
+        UiScrollable  setList = new UiScrollable(new UiSelector().resourceId("com.android.settings:id/dashboard"));
+        UiObject securityItem = setList.getChildByText(new UiSelector().className(LinearLayout.class.getName()), "安全", true);
+        securityItem.getChild(new UiSelector().text("安全"));
+        new UiObject(new UiSelector().text("安全")).click();
+        UiScrollable  securityList = new UiScrollable(new UiSelector().resourceId("android:id/list"));
+        UiObject btItem = securityList.getChildByText(new UiSelector().className(LinearLayout.class.getName()), "未知来源", true);
+
+        UiObject btSwitch = btItem.getChild(new UiSelector().resourceId("android:id/switchWidget"));
+
+        if(btSwitch.isChecked()==false) {
+            btSwitch.click();
+            new UiObject(new UiSelector().text("确定")).click();
+        }
+        sleep(1000);
+        new UiObject(new UiSelector().resourceId("android:id/mwCloseBtn")).click();
+    }
+    
     public void testDemo1() throws UiObjectNotFoundException,IOException, InterruptedException {
         UiDevice uiDevice =getUiDevice();
-        uiDevice.pressEnter();
         otoDisplayRun.execCmdNoSave("am start -n com.openthos.appstore/.MainActivity");
         new UiObject(new UiSelector().resourceId("android:id/mwMaximizeBtn")).click();
 
@@ -60,13 +83,19 @@ public class appStoreTest1 extends UiAutomatorTestCase {
 
     public void testDemo2() throws UiObjectNotFoundException {
         getUiDevice();
+        new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_home")).click();
+        UiSelector textApp = new UiSelector().text("影梭");
+        UiObject downloadApp = new UiObject(textApp.fromParent(new UiSelector().resourceId("com.openthos.appstore:id/app_item_install")));
+        downloadApp.click();
+
+        installInSetting("影梭");
 
         /*通过点击软件和游戏页面的下载文字下载安装应用*/
         for (int i=0;i<appList.length;i++) {
             installByText(appList[i], "com.openthos.appstore:id/rb_software","com.openthos.appstore:id/app_item_install");
         }
-        installByText("Internet 浏览器", "com.openthos.appstore:id/rb_software","com.openthos.appstore:id/app_item_install");
-        installByText("2048","com.openthos.appstore:id/rb_game","com.openthos.appstore:id/app_item_install");
+
+        //installByText("2048","com.openthos.appstore:id/rb_game","com.openthos.appstore:id/app_item_install");
         //installByText("Angry Birds","com.openthos.appstore:id/rb_game","下载");
 
 
@@ -85,25 +114,23 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         for (int i=0;i<appList.length;i++) {
             removeApp(appList[i]);
         }
-        removeApp("Internet 浏览器");
-        removeApp("2048");
+        //removeApp("2048");
         removeApp("Angry Birds");
     }
 
     public void testDemo4() throws UiObjectNotFoundException {
 /*通过进入应用详情界面点击按钮下载安装应用*/
         getUiDevice();
-        for (int i=0;i<appList.length;i++) {
+        /*for (int i=0;i<appList.length;i++) {
             installByButton(appList[i],"com.openthos.appstore:id/rb_software","下载");
-        }
-
-        installByButton("2048","com.openthos.appstore:id/rb_game","下载");
-        installByButton("Angry Birds","com.openthos.appstore:id/rb_game","下载");
+        }*/
+        installByButton("Flash Master","com.openthos.appstore:id/rb_software","下载");
+        //installByButton("2048","com.openthos.appstore:id/rb_game","下载");
+        //installByButton("Angry Birds","com.openthos.appstore:id/rb_game","下载");
         installByButton("Internet 浏览器","com.openthos.appstore:id/rb_software","更新");
 
         /*通过管理更新页面的更新按钮更新应用*/
         uninstall("Internet 浏览器","卸载更新");
-        sleep(4000);
         removeApp("Internet 浏览器");
         UiObject label_manage = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_manager"));
         label_manage.click();
@@ -143,8 +170,6 @@ public class appStoreTest1 extends UiAutomatorTestCase {
 
         UiObject search= new UiObject((new UiSelector().resourceId("com.openthos.appstore:id/activity_title_search_text")));
         search.setText("flash");
-        uiDevice.pressEnter();
-        uiDevice.pressEnter();
 
         UiObject open = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/app_item_install"));
         open.clickAndWaitForNewWindow(10000);
