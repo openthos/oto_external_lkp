@@ -21,14 +21,16 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
  */
 
 public class appStoreTest1 extends UiAutomatorTestCase {
-    String[] appList = {"PowerPoint","Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","影梭","QQ","微信","搜狗输入法",
-            "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器"};
+    String[] appList = {"PowerPoint","Internet 浏览器"/*,"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","影梭","QQ","微信","搜狗输入法",
+    "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器"*/};
 
-    String[] appList3 = {"PowerPoint","Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","快图浏览","OtoVirtualGUI","模拟炒股","影梭","QQ","微信","搜狗输入法",
-            "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器","2048","Angry Birds"};
+	String[] appList3 = {"PowerPoint",/*"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","快图浏览","OtoVirtualGUI","模拟炒股","影梭","QQ","微信","搜狗输入法",
+    "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器","2048",*/"Angry Birds"};
 
-    String[] appList2 = {"WPS邮箱","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","搜狗输入法","OS Monitor","绿色守护","央视影音","哔哩哔哩","Internet 浏览器","网易云音乐"};
-
+	String[] appList2 = {"WPS邮箱","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","搜狗输入法","OS Monitor","绿色守护","央视影音","哔哩哔哩","Internet 浏览器","网易云音乐"};
+    
+	String[] appList0={"PowerPoint","Internet 浏览器","Angry Birds","Flash Master","影梭"};
+    
     public void testDemo0() throws UiObjectNotFoundException,IOException, InterruptedException {
         UiDevice uiDevice =getUiDevice();
         otoDisplayRun.execCmdNoSave("am start -n com.android.settings/.Settings");
@@ -49,6 +51,7 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         new UiObject(new UiSelector().resourceId("android:id/mwCloseBtn")).click();
         
         otoDisplayRun.execCmdNoSave("am start -n com.openthos.appstore/.MainActivity");
+        if (new UiObject(new UiSelector().resourceId("android:id/mwMaximizeBtn")).exists());
         new UiObject(new UiSelector().resourceId("android:id/mwMaximizeBtn")).click();
         
         UiObject label_manage = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_manager"));
