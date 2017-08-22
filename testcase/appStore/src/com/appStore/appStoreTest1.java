@@ -21,7 +21,7 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
  */
 
 public class appStoreTest1 extends UiAutomatorTestCase {
-    String[] appList = {"PowerPoint","Internet 浏览器","影梭"/*,"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","QQ","微信","搜狗输入法",
+    String[] appList = {"PowerPoint","Internet 浏览器"/*,"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","QQ","微信","搜狗输入法",
             "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器"*/};
 
     String[] appList3 = {"PowerPoint","影梭",/*"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","快图浏览","OtoVirtualGUI","模拟炒股","QQ","微信","搜狗输入法",
@@ -112,15 +112,14 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         for (int i=0;i<appList3.length;i++) {
             uninstall(appList3[i],"卸载");
         }
-
         uninstall("Internet 浏览器","卸载更新");
 
         /*通过下载界面的列表移除应用*/
-        for (int i=0;i<appList.length;i++) {
-            removeApp(appList[i]);
+        for (int i=0;i<appList3.length;i++) {
+            removeApp(appList3[i]);
         }
+        removeApp("Internet 浏览器");
         //removeApp("2048");
-        removeApp("Angry Birds");
     }
 
     public void testDemo4() throws UiObjectNotFoundException {
