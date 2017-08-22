@@ -21,16 +21,14 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
  */
 
 public class appStoreTest1 extends UiAutomatorTestCase {
-    String[] appList = {"PowerPoint","Internet 浏览器"/*,"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","影梭","QQ","微信","搜狗输入法",
-    "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器"*/};
+    String[] appList = {"PowerPoint","Internet 浏览器","影梭"/*,"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","QQ","微信","搜狗输入法",
+            "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器"*/};
 
-	String[] appList3 = {"PowerPoint",/*"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","快图浏览","OtoVirtualGUI","模拟炒股","影梭","QQ","微信","搜狗输入法",
-    "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器","2048",*/"Angry Birds"};
+    String[] appList3 = {"PowerPoint","影梭",/*"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","快图浏览","OtoVirtualGUI","模拟炒股","QQ","微信","搜狗输入法",
+            "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器","2048",*/"Angry Birds"};
 
-	String[] appList2 = {"WPS邮箱","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","搜狗输入法","OS Monitor","绿色守护","央视影音","哔哩哔哩","Internet 浏览器","网易云音乐"};
-    
-	String[] appList0={"PowerPoint","Internet 浏览器","Angry Birds","Flash Master","影梭"};
-    
+    String[] appList2 = {"WPS邮箱","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","搜狗输入法","OS Monitor","绿色守护","央视影音","哔哩哔哩","Internet 浏览器","网易云音乐"};
+
     public void testDemo0() throws UiObjectNotFoundException,IOException, InterruptedException {
         UiDevice uiDevice =getUiDevice();
         otoDisplayRun.execCmdNoSave("am start -n com.android.settings/.Settings");
@@ -49,44 +47,18 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         }
         sleep(1000);
         new UiObject(new UiSelector().resourceId("android:id/mwCloseBtn")).click();
-        
-        otoDisplayRun.execCmdNoSave("am start -n com.openthos.appstore/.MainActivity");
-        if (new UiObject(new UiSelector().resourceId("android:id/mwMaximizeBtn")).exists());
-        new UiObject(new UiSelector().resourceId("android:id/mwMaximizeBtn")).click();
-        
-        UiObject label_manage = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_manager"));
-        label_manage.click();
-
-        UiObject label_installed = new UiObject(new UiSelector().text("已安装"));
-        label_installed.click();
-
-        for (int i=0;i<appList0.length;i++){
-        UiScrollable settingsList = new UiScrollable(new UiSelector().resourceId("com.openthos.appstore:id/customlistView"));
-        if (settingsList.getChildByText(new UiSelector().className(LinearLayout.class.getName()), appList0[i], true).exists())
-        {
-        	if (appList0[i] == "Internet 浏览器"){
-        	uninstall(appList0[i],"卸载更新");
-        	}
-        	else{
-        		uninstall(appList0[i],"卸载");
-        	}
-        }
-        }
-        
-        UiObject label_download = new UiObject(new UiSelector().text("下载"));
-        label_download.click();
-
-        for (int i=0;i<appList0.length;i++){
-        UiScrollable settingsList = new UiScrollable(new UiSelector().resourceId("com.openthos.appstore:id/customlistView"));
-        if (settingsList.getChildByText(new UiSelector().className(LinearLayout.class.getName()), appList0[i], true).exists())
-        {
-        	removeApp(appList0[i]);
-        }
-        }
     }
-    
+
     public void testDemo1() throws UiObjectNotFoundException,IOException, InterruptedException {
         UiDevice uiDevice =getUiDevice();
+
+        otoDisplayRun.execCmdNoSave("am start -n com.openthos.appstore/.MainActivity");
+        sleep(5000);
+        UiObject mwMaximizeBtn = new UiObject(new UiSelector().resourceId("android:id/mwMaximizeBtn"));
+        if (mwMaximizeBtn.exists()) {
+            new UiObject(new UiSelector().resourceId("android:id/mwMaximizeBtn")).click();
+        }
+
         //暂停下载
         new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_game")).click();
         //UiSelector textAll = new UiSelector().text("全部");
@@ -208,6 +180,16 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         open.clickAndWaitForNewWindow(10000);
         assertTrue(new UiObject(new UiSelector().text("Install Dolphin for FREE")).exists());
         otoDisplayRun.execCmdNoSave("am force-stop com.tako.flash.master");
+
+        UiObject label_manage = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_manager"));
+        label_manage.click();
+
+        uninstall("Internet 浏览器","卸载更新");
+        removeApp("Internet 浏览器");
+        uninstall("Flash Master","卸载");
+        removeApp("Flash Master");
+
+
         otoDisplayRun.execCmdNoSave("am force-stop com.openthos.appstore");
     }
 
@@ -280,9 +262,9 @@ public class appStoreTest1 extends UiAutomatorTestCase {
             }
         }
         while (install_install.exists()) {
-            if (install_install.exists()) {
-                install_install.click();
-            }
+                if (install_install.exists()) {
+                    install_install.click();
+                }
         }
         UiObject install_finish = new UiObject(new UiSelector().resourceId("com.android.packageinstaller:id/done_button"));
         while (!install_finish.exists() ) {
@@ -304,8 +286,8 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         UiScrollable settingsList = new UiScrollable(new UiSelector().resourceId("com.openthos.appstore:id/customlistView"));
         UiObject btItem = settingsList.getChildByText(new UiSelector().className(LinearLayout.class.getName()), appName, true);
 
-        UiObject btSwitch = btItem.getChild(new UiSelector().text("卸载"));
-        btSwitch.click();
+            UiObject btSwitch = btItem.getChild(new UiSelector().text("卸载"));
+            btSwitch.click();
 
         if (option == "卸载更新"){
             UiObject uninstallButton = new UiObject(new UiSelector().text("卸载更新"));
