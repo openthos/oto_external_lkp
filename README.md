@@ -1,4 +1,4 @@
-# oto_lkp
+# oto_external_lkp
 
 ## 使用前必读 
 lkp本身需要在root权限执行。因此以下所有操作请在root账号下操作。以免出现不必要的麻烦。  
@@ -22,11 +22,11 @@ testcase目录存放的是打包好的测试用例。
 
 ##自动运行测试用例的方法【用于合并到自动化测试框架】：
 ```
-git clone https://github.com/openthos/oto_lkp
-cd oto_lkp
+git clone https://github.com/openthos/oto_external_lkp
+cd oto_external_lkp
 cd -
-mv ./oto_lkp/testcase/*   somewhere
-rm -rf ./oto_lkp
+mv ./oto_external_lkp/testcase/*   somewhere
+rm -rf ./oto_external_lkp
 cd somewhere
 for adir in `ls `
 do
@@ -44,27 +44,27 @@ PC2 linux和androidx86双系统。linux在sda2【目前必须在sda2，代码写
 在PC1上面执行以下操作即可完成lkp的本地化测试以验证测试用例是否正常执行。
 su - root
 cd ~
-git clone https://github.com/openthos/oto_lkp
+git clone https://github.com/openthos/oto_external_lkp
 
-cd ~/oto_lkp/testcase/ebizzy
+cd ~/oto_external_lkp/testcase/ebizzy
 修改 run_withlog.sh
 中ip_of_android="192.168.2.8"【PC2 androidx86 ip地址】
 
-root@elwin-virtual-machine:~/oto_lkp/testcase/ebizzy# ./run_withlog.sh
-执行完毕以后结果存放在PC1的~/oto_lkp/testcase/ebizzy/lkp_tmp_result目录下面。请检查是否出现json文件。并且json文件是否有内容。
+root@elwin-virtual-machine:~/oto_external_lkp/testcase/ebizzy# ./run_withlog.sh
+执行完毕以后结果存放在PC1的~/oto_external_lkp/testcase/ebizzy/lkp_tmp_result目录下面。请检查是否出现json文件。并且json文件是否有内容。
 生成的csv文件存放在lkp_tmp_result/result/ebizzy(即testcase的名字)目录下面，请检查是否出现csv文件。并且csv文件是否有内容。
 如果有内容则测试用例成功执行了。
-测试日志存放在PC1的~/oto_lkp/testcase/ebizzy/test_log.txt文件当中。
+测试日志存放在PC1的~/oto_external_lkp/testcase/ebizzy/test_log.txt文件当中。
 ```
 
-[ebizzy在androidx86上面的测试日志](https://github.com/openthos/oto_lkp/blob/master/testcase/ebizzy/test_log.txt) 
+[ebizzy在androidx86上面的测试日志](https://github.com/openthos/oto_external_lkp/blob/master/testcase/ebizzy/test_log.txt) 
 
-[ebizzy在androidx86上面的测试数据json](https://github.com/openthos/oto_lkp/tree/master/testcase/ebizzy/lkp_tmp_result) 
+[ebizzy在androidx86上面的测试数据json](https://github.com/openthos/oto_external_lkp/tree/master/testcase/ebizzy/lkp_tmp_result) 
 
-[ebizzy在androidx86上面的测试数据csv](https://github.com/openthos/oto_lkp/tree/master/testcase/ebizzy/lkp_tmp_result/)
+[ebizzy在androidx86上面的测试数据csv](https://github.com/openthos/oto_external_lkp/tree/master/testcase/ebizzy/lkp_tmp_result/)
 ## TODO
-- 编写新增新增测试用例的文档 https://github.com/openthos/oto_lkp/issues/3
-- 增加dev分支。https://github.com/openthos/oto_lkp/issues/4  
+- 编写新增新增测试用例的文档 https://github.com/openthos/oto_external_lkp/issues/3
+- 增加dev分支。https://github.com/openthos/oto_external_lkp/issues/4  
 
 ##感谢
 - openthos项目提供的chroot环境支持
@@ -75,5 +75,5 @@ root@elwin-virtual-machine:~/oto_lkp/testcase/ebizzy# ./run_withlog.sh
 - [lkp项目原始出处](https://github.com/fengguang/lkp-tests)本repo中lkp-tests-master中的代码是其2016.6月份左右的一个版本。
 
 ##LKP官方帮助信息
-- https://github.com/openthos/oto_lkp/blob/master/lkp-tests-master/README.md
-- https://github.com/openthos/oto_lkp/blob/master/lkp-tests-master/doc/lkp-howto.md
+- https://github.com/openthos/oto_external_lkp/blob/master/lkp-tests-master/README.md
+- https://github.com/openthos/oto_external_lkp/blob/master/lkp-tests-master/doc/lkp-howto.md

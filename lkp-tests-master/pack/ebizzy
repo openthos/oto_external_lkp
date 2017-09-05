@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION=0.3
-WEB_URL="https://github.com/openthos/oto_lkp/raw/master/benchmark_mirror/ebizzy-0.3.tar.gz"
+WEB_URL="https://github.com/openthos/oto_external_lkp/raw/master/benchmark_mirror/ebizzy-0.3.tar.gz"
 
 install()
 {

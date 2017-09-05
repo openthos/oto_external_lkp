@@ -67,11 +67,11 @@
     ```
 
 ##基于LKP框架的测试用例(以微信为例)
-  - 源码位置：https://github.com/openthos/oto_lkp/tree/master/testcase/wechat
+  - 源码位置：https://github.com/openthos/oto_external_lkp/tree/master/testcase/wechat
     - 将编译过程从上述测试用例中拆分出来
     - 将原始结果的保存和后续处理剔除，按照LKP框架添加相关文件
   - 编译源码
-    - [wechatMake.sh](https://github.com/openthos/oto_lkp/blob/master/testcase/wechat/wechatMake.sh)将源码编译为jar包
+    - [wechatMake.sh](https://github.com/openthos/oto_external_lkp/blob/master/testcase/wechat/wechatMake.sh)将源码编译为jar包
   - 处理原始结果
-    - [wechat](https://github.com/openthos/oto_lkp/blob/master/lkp-tests-master/stats/wechat)将原始结果处理为wechat.result:1的形式
-  - 可参考[LKP官方需要添加的文件（以下均以wechat为例）](https://github.com/openthos/oto_lkp/blob/master/testcase/AddTestcase.md)
+    - [wechat](https://github.com/openthos/oto_external_lkp/blob/master/lkp-tests-master/stats/wechat)将原始结果处理为wechat.result:1的形式
+  - 可参考[LKP官方需要添加的文件（以下均以wechat为例）](https://github.com/openthos/oto_external_lkp/blob/master/testcase/AddTestcase.md)

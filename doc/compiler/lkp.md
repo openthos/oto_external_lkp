@@ -43,19 +43,19 @@ LKP每个benchmark需要提供一个$LKP_SRC/pack/$benchmarkname文件，来实�
 
 
 ##例如ebizzy
-https://github.com/openthos/oto_lkp/blob/master/lkp-tests-master/pack/ebizzy
+https://github.com/openthos/oto_external_lkp/blob/master/lkp-tests-master/pack/ebizzy
 ```
 #!/bin/bash
 
 VERSION=0.3
-WEB_URL="https://github.com/openthos/oto_lkp/raw/master/benchmark_mirror/ebizzy-0.3.tar.gz"
+WEB_URL="https://github.com/openthos/oto_external_lkp/raw/master/benchmark_mirror/ebizzy-0.3.tar.gz"
 
 install()
 {
 	cp -af $BM_NAME $BM_ROOT
 }
 ```
-其中WEB_URL指定了测试用例的下载URL。lkp install阶段会，通过wget从WEB_URL下载该benchmark压缩包到/tmp目录。（因为随着时间的流逝一些benmark的url失效了，导致wget失败，因此我们采取了将其原来的url(例如sourceforge)放到https://github.com/openthos/oto_lkp/tree/master/benchmark_mirror 上的措施） 
+其中WEB_URL指定了测试用例的下载URL。lkp install阶段会，通过wget从WEB_URL下载该benchmark压缩包到/tmp目录。（因为随着时间的流逝一些benmark的url失效了，导致wget失败，因此我们采取了将其原来的url(例如sourceforge)放到https://github.com/openthos/oto_external_lkp/tree/master/benchmark_mirror 上的措施） 
 
 压缩包下载完毕以后，会进行解压，然后执行该目录中的./configure 然后make编译benchmark，make install,安装benchmark。(如果没有configure文件，有Makefile文件，则会直接执行make命令) 
 
@@ -63,8 +63,8 @@ install()
 
 ##新增测试用例(以jishigou apk为例)：
 ###需要benchmark包：
-https://github.com/openthos/oto_lkp/raw/master/benchmark_mirror/jishigou.v0.1.tar.gz
-https://github.com/openthos/oto_lkp/tree/master/benchmark_mirror/jishigou.v0.1
+https://github.com/openthos/oto_external_lkp/raw/master/benchmark_mirror/jishigou.v0.1.tar.gz
+https://github.com/openthos/oto_external_lkp/tree/master/benchmark_mirror/jishigou.v0.1
 ```
 auto_interact.sh #该文件会被jishigou调用，用来启动apk,自动执行app
 jishigou  #该文件会被lkp run调用，用来执行benchmark
@@ -74,13 +74,13 @@ net.jishigou.t2.8.0.apk #待测试的apk
 ```
 
 ###需要pack文件
-https://github.com/openthos/oto_lkp/blob/master/lkp-tests-master/pack/jishigou
+https://github.com/openthos/oto_external_lkp/blob/master/lkp-tests-master/pack/jishigou
 ```
 #!/bin/bash
 
 VERSION="2.2.3"
 #WEB_URL="http://www.tux.org/~mayer/linux/nbench-byte-2.2.3.tar.gz"
-WEB_URL="https://github.com/openthos/oto_lkp/raw/master/benchmark_mirror/jishigou.v0.1.tar.gz"
+WEB_URL="https://github.com/openthos/oto_external_lkp/raw/master/benchmark_mirror/jishigou.v0.1.tar.gz"
 
 install()
 {
@@ -96,7 +96,7 @@ $LKP_SRC/pack/jishigou_pack.expt         #安装apk
 因为lkp运行在chroot环境中，编译完benchmark（即自动运行apk的程序）后，需要安装apk到androidx86，因此使用了telent+expect方式，在chroot ubuntu环境中发送pm install命令给androidx86，来安装apk. 
 
 即install函数中的$LKP_SRC/pack/jishigou_pack.expt命令和
-脚本https://github.com/openthos/oto_lkp/blob/master/lkp-tests-master/pack/jishigou_pack.expt
+脚本https://github.com/openthos/oto_external_lkp/blob/master/lkp-tests-master/pack/jishigou_pack.expt
 ```
 #!/usr/bin/expect
 spawn  telnet localhost  #通过telnet连接到androidx86

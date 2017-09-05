@@ -31,17 +31,17 @@ fi
 #apt-get install -y git
 #apt-get install -y ruby-git
 pwd
-#rm -rf ./oto_lkp
+#rm -rf ./oto_external_lkp
 #rm -rf  /result/
-#git clone https://github.com/openthos/oto_lkp.git
-#cd ./oto_lkp/lkp-tests-master
-# rm -rf ./oto_lkp
+#git clone https://github.com/openthos/oto_external_lkp.git
+#cd ./oto_external_lkp/lkp-tests-master
+# rm -rf ./oto_external_lkp
 rm -rf  /result/
-if  [ ! -d "./oto_lkp" ] ;then
-    git clone https://github.com/openthos/oto_lkp.git
-    cd ./oto_lkp/lkp-tests-master
+if  [ ! -d "./oto_external_lkp" ] ;then
+    git clone https://github.com/openthos/oto_external_lkp.git
+    cd ./oto_external_lkp/lkp-tests-master
 else
-    cd ./oto_lkp
+    cd ./oto_external_lkp
     git pull
     cd lkp-tests-master
 fi
