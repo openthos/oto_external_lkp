@@ -1,0 +1,272 @@
++ ip_of_android=192.168.0.146
++ tmp_result_dir=lkp_tmp_result
++++ pwd
+++ basename /root/oto_lkp/testcase/cntvhd
++ testcasename=cntvhd
+++ dirname ./fortest.sh
++ cd .
++ apt-get install -y android-tools-adb
+Reading package lists...
+Building dependency tree...
+Reading state information...
+android-tools-adb is already the newest version.
+The following packages were automatically installed and are no longer required:
+  libntdb1 python-ntdb
+Use 'apt-get autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
++ adb connect 192.168.0.146
+connected to 192.168.0.146:5555
++ adb -s 192.168.0.146:5555 push ./commitId.txt /data/
+1 KB/s (50 bytes in 0.040s)
++ ./cntvhd.sh 192.168.0.146 5555 lkp_tmp_result
++ androidIP=192.168.0.146
++ port=5555
++ foldName=lkp_tmp_result
+++ dirname ./cntvhd.sh
++ cd .
++ '[' -z lkp_tmp_result ']'
++ mkdir lkp_tmp_result
+mkdir: cannot create directory ‘lkp_tmp_result’: File exists
+++ basename ./cntvhd.sh
++ filename=cntvhd.sh
++ '[' -d lkp_tmp_result ']'
++ trash=18538
++ mkdir -p /tmp/lkp_trash/18538
++ mv lkp_tmp_result/cntvhd /tmp/lkp_trash/18538
++ source /etc/profile
+++ '[' '' ']'
+++ '[' -d /etc/profile.d ']'
+++ for i in '/etc/profile.d/*.sh'
+++ '[' -r /etc/profile.d/appmenu-qt5.sh ']'
+++ . /etc/profile.d/appmenu-qt5.sh
++++ export QT_QPA_PLATFORMTHEME=appmenu-qt5
++++ QT_QPA_PLATFORMTHEME=appmenu-qt5
+++ for i in '/etc/profile.d/*.sh'
+++ '[' -r /etc/profile.d/bash_completion.sh ']'
+++ . /etc/profile.d/bash_completion.sh
++++ '[' -n '4.3.42(1)-release' -a -n '' -a -z '' ']'
+++ for i in '/etc/profile.d/*.sh'
+++ '[' -r /etc/profile.d/cedilla-brazil.sh ']'
+++ . /etc/profile.d/cedilla-brazil.sh
++++ '[' -n en_US.UTF-8 ']'
++++ '[' en_US = pt_BR ']'
+++ for i in '/etc/profile.d/*.sh'
+++ '[' -r /etc/profile.d/vte-2.91.sh ']'
+++ . /etc/profile.d/vte-2.91.sh
++++ '[' -n '4.3.42(1)-release' -o -n '' ']'
++++ [[ hxB == *i* ]]
++++ return 0
+++ unset i
+++ export JAVA_HOME=/usr/lib/jdk8
+++ JAVA_HOME=/usr/lib/jdk8
+++ export JRE_HOME=/usr/lib/jdk8/jre
+++ JRE_HOME=/usr/lib/jdk8/jre
+++ export CLASSPATH=.:/usr/lib/jdk8/lib:/usr/lib/jdk8/jre/lib
+++ CLASSPATH=.:/usr/lib/jdk8/lib:/usr/lib/jdk8/jre/lib
+++ export PATH=/usr/lib/jdk8/bin:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin
+++ PATH=/usr/lib/jdk8/bin:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin
+++ export PATH=/usr/lib/jdk8/bin:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin
+++ PATH=/usr/lib/jdk8/bin:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin
++ ./cntvMake.sh
+./cntvhd.sh: line 21: ./cntvMake.sh: No such file or directory
++ adb connect 192.168.0.146
+already connected to 192.168.0.146:5555
++ adb -s 192.168.0.146:5555 push ./bin/cntvhd.jar /data/local/tmp
+cannot stat './bin/cntvhd.jar': No such file or directory
++ adb -s 192.168.0.146:5555 shell rm -rf /data/lkp_test
++ adb -s 192.168.0.146:5555 shell mkdir /data/lkp_test
++ adb -s 192.168.0.146:5555 push ./lkp_test /data/lkp_test
+push: ./lkp_test/chroot_run.sh -> /data/lkp_test/chroot_run.sh
+push: ./lkp_test/ubuntu_lkp_test.sh -> /data/lkp_test/ubuntu_lkp_test.sh
+push: ./lkp_test/mount-static -> /data/lkp_test/mount-static
+push: ./lkp_test/before_chroot.sh -> /data/lkp_test/before_chroot.sh
+4 files pushed. 0 files skipped.
+3540 KB/s (2976076 bytes in 0.820s)
++ adb -s 192.168.0.146:5555 shell busybox chmod +x /data/lkp_test/chroot_run.sh
++ adb -s 192.168.0.146:5555 shell /data/lkp_test/chroot_run.sh cntvhd.sh
++ testcase=cntvhd.sh
++ CHMOUNT=/data/ubuntu
++ BUSYBOX=/system/xbin/busybox
++ export PATH=/system/xbin/:/sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin
++ source /data/lkp_test/before_chroot.sh
++ cd /data/
++ /system/xbin/telnetd -l /system/xbin/sh
++ cd -
+/
++ [ ! -d /data/ubuntu ]
++ umount /data/ubuntu
+umount: can't umount /data/ubuntu: Invalid argument
++ sleep 3
++ mount -t ext4 /dev/block/sda2 /data/ubuntu
++ sleep 3
++ cp /data/lkp_test/ubuntu_lkp_test.sh /data/ubuntu/root
++ cp /data/commitId.txt /data/ubuntu/root
++ sleep 1
++ grep inet /data/ubuntu/etc/group
++ [ ! inet:x:3003:root ]
++ sleep 2
++ grep net_raw /data/ubuntu/etc/group
++ [ ! net_raw:x:3004:root ]
++ sleep 3
++ echo nameserver 8.8.8.8
++ export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/system/xbin/:/sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin
++ mount -t sysfs sysfs /data/ubuntu/sys
++ mount -t proc proc /data/ubuntu/proc
++ cp /data/lkp_test/mount-static /system/bin
++ chmod 777 /system/bin/mount-static
++ mount-static --bind /dev /data/ubuntu/dev
++ sleep 2
++ mount -t devpts devpts /data/ubuntu/dev/pts
++ sleep 2
++ [ ! -d /data/ubuntu/dev/shm ]
++ mkdir /data/ubuntu/dev/shm
++ sleep 2
++ mount -t tmpfs tmpfs /data/ubuntu/dev/shm
++ sleep 2
++ chroot /data/ubuntu su - root -c /root/ubuntu_lkp_test.sh  cntvhd.sh
+mesg: ttyname failed: Success
++ testjob=cntvhd.sh
+++ hostname
++ echo 'i am in ubuntu: localhost'
+i am in ubuntu: localhost
++ hostname -F /etc/hostname
+++ hostname
++ echo 'i am in ubuntu changed_hostname: q-pc'
+i am in ubuntu changed_hostname: q-pc
++ apt-get update
+0% [Working]            Hit http://cn.archive.ubuntu.com wily InRelease
+            0% [Connecting to security.ubuntu.com (91.189.91.26)]                                                     0% [InRelease gpgv 218 kB] [Waiting for headers] [Connecting to security.ubuntu                                                                               Hit http://cn.archive.ubuntu.com wily-updates InRelease
+                                                                               0% [InRelease gpgv 218 kB] [Connecting to security.ubuntu.com (91.189.91.26)]                                                                             Hit http://cn.archive.ubuntu.com wily-backports InRelease
+0% [InRelease gpgv 218 kB] [Connecting to security.ubuntu.com (91.189.91.26)]                                                                             4% [Waiting for headers]                        4% [InRelease gpgv 65.9 kB] [Waiting for headers]                                                 Hit http://cn.archive.ubuntu.com wily/main Sources
+4% [InRelease gpgv 65.9 kB] [Waiting for headers]                                                 5% [Waiting for headers]                        5% [Sources 0 B] [Waiting for headers]                                      5% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers]                                                               Hit http://cn.archive.ubuntu.com wily/restricted Sources
+5% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers]                                                               Hit http://cn.archive.ubuntu.com wily/universe Sources
+                                                               5% [Sources 5,357 kB] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting f                                                                               5% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers]                                                                 Hit http://cn.archive.ubuntu.com wily/multiverse Sources
+                                                                 5% [Sources 5,357 kB] [Waiting for headers]                                           Hit http://security.ubuntu.com wily-security InRelease
+5% [Sources 5,357 kB] [Waiting for headers]                                           5% [Sources 5,357 kB] [InRelease gpgv 65.9 kB] [Waiting for headers]                                                                    5% [Sources 5,357 kB] [Waiting for headers]                                           Hit http://cn.archive.ubuntu.com wily/main amd64 Packages
+5% [Sources 5,357 kB] [Waiting for headers]                                           Hit http://cn.archive.ubuntu.com wily/restricted amd64 Packages
+                                           5% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers]                                                                 100% [Waiting for headers] [Waiting for headers]                                                100% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                              100% [Waiting for headers] [Waiting for headers]                                                100% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                              Hit http://cn.archive.ubuntu.com wily/universe amd64 Packages
+                                                              100% [Sources 0 B] [Waiting for headers]                                        Hit http://cn.archive.ubuntu.com wily/multiverse amd64 Packages
+100% [Sources 0 B] [Waiting for headers]                                        Hit http://cn.archive.ubuntu.com wily/main i386 Packages
+                                        100% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                              Hit http://cn.archive.ubuntu.com wily/restricted i386 Packages
+100% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                              Hit http://cn.archive.ubuntu.com wily/universe i386 Packages
+                                                              100% [Sources 0 B] [Waiting for headers]                                        Hit http://security.ubuntu.com wily-security/main Sources
+100% [Sources 0 B] [Waiting for headers]                                        Hit http://cn.archive.ubuntu.com wily/multiverse i386 Packages
+100% [Sources 0 B] [Waiting for headers]                                        Hit http://cn.archive.ubuntu.com wily/main Translation-en
+100% [Sources 0 B] [Waiting for headers]                                        Hit http://cn.archive.ubuntu.com wily/main Translation-zh_CN
+100% [Sources 0 B] [Waiting for headers]                                        Hit http://cn.archive.ubuntu.com wily/multiverse Translation-en
+                                        100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily/multiverse Translation-zh_CN
+100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily/restricted Translation-en
+100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://security.ubuntu.com wily-security/restricted Sources
+                                            100% [Sources 32.3 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://cn.archive.ubuntu.com wily/restricted Translation-zh_CN
+                                                                  100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily/universe Translation-en
+100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily/universe Translation-zh_CN
+100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/main Sources
+100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/restricted Sources
+100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/universe Sources
+100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://security.ubuntu.com wily-security/universe Sources
+                                            100% [Sources 32.3 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://cn.archive.ubuntu.com wily-updates/multiverse Sources
+                                                                  100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/main amd64 Packages
+100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/restricted amd64 Packages
+100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/universe amd64 Packages
+100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/multiverse amd64 Packages
+100% [Sources 32.3 MB] [Waiting for headers]                                            100% [Waiting for headers] [Waiting for headers]                                                100% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                              Hit http://cn.archive.ubuntu.com wily-updates/main i386 Packages
+                                                              100% [Sources 0 B] [Waiting for headers]                                        Hit http://cn.archive.ubuntu.com wily-updates/restricted i386 Packages
+100% [Sources 0 B] [Waiting for headers]                                        Hit http://security.ubuntu.com wily-security/multiverse Sources
+                                        100% [Waiting for headers] [Waiting for headers]                                                100% [Packages 0 B] [Waiting for headers] [Waiting for headers]                                                               Hit http://cn.archive.ubuntu.com wily-updates/universe i386 Packages
+                                                               100% [Packages 0 B] [Waiting for headers]                                         Hit http://cn.archive.ubuntu.com wily-updates/multiverse i386 Packages
+100% [Packages 0 B] [Waiting for headers]                                         Hit http://cn.archive.ubuntu.com wily-updates/main Translation-en
+100% [Packages 0 B] [Waiting for headers]                                         Hit http://cn.archive.ubuntu.com wily-updates/multiverse Translation-en
+                                         100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-updates/restricted Translation-en
+100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://security.ubuntu.com wily-security/main amd64 Packages
+                                              100% [Packages 8,565 kB] [Waiting for headers] [Waiting for headers]                                                                    Hit http://cn.archive.ubuntu.com wily-updates/universe Translation-en
+                                                                    100% [Packages 8,565 kB] [Waiting for headers]                                              100% [Waiting for headers] [Waiting for headers]                                                100% [Packages 0 B] [Waiting for headers] [Waiting for headers]                                                               Hit http://cn.archive.ubuntu.com wily-backports/main Sources
+                                                               100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers] [Waiting for headers]                                                100% [Packages 0 B] [Waiting for headers] [Waiting for headers]                                                               Hit http://cn.archive.ubuntu.com wily-backports/restricted Sources
+                                                               100% [Packages 0 B] [Waiting for headers]                                         Hit http://cn.archive.ubuntu.com wily-backports/universe Sources
+100% [Packages 0 B] [Waiting for headers]                                         Hit http://cn.archive.ubuntu.com wily-backports/multiverse Sources
+100% [Packages 0 B] [Waiting for headers]                                         Hit http://cn.archive.ubuntu.com wily-backports/main amd64 Packages
+                                         100% [Packages 0 B] [Waiting for headers] [Waiting for headers]                                                               Hit http://cn.archive.ubuntu.com wily-backports/restricted amd64 Packages
+                                                               Hit http://security.ubuntu.com wily-security/restricted amd64 Packages
+100% [Packages 0 B] [Waiting for headers] [Waiting for headers]                                                               Hit http://cn.archive.ubuntu.com wily-backports/universe amd64 Packages
+                                                               100% [Packages 0 B] [Waiting for headers]                                         Hit http://cn.archive.ubuntu.com wily-backports/multiverse amd64 Packages
+100% [Packages 0 B] [Waiting for headers]                                         Hit http://cn.archive.ubuntu.com wily-backports/main i386 Packages
+100% [Packages 0 B] [Waiting for headers]                                         Hit http://cn.archive.ubuntu.com wily-backports/restricted i386 Packages
+                                         100% [Packages 36.8 MB] [Waiting for headers] [Waiting for headers]                                                                   Hit http://cn.archive.ubuntu.com wily-backports/universe i386 Packages
+100% [Packages 36.8 MB] [Waiting for headers] [Waiting for headers]                                                                   Hit http://cn.archive.ubuntu.com wily-backports/multiverse i386 Packages
+100% [Packages 36.8 MB] [Waiting for headers] [Waiting for headers]                                                                   Hit http://security.ubuntu.com wily-security/universe amd64 Packages
+100% [Packages 36.8 MB] [Waiting for headers] [Waiting for headers]                                                                   Hit http://cn.archive.ubuntu.com wily-backports/main Translation-en
+100% [Packages 36.8 MB] [Waiting for headers] [Waiting for headers]                                                                   Hit http://cn.archive.ubuntu.com wily-backports/multiverse Translation-en
+100% [Packages 36.8 MB] [Waiting for headers] [Waiting for headers]                                                                   Hit http://cn.archive.ubuntu.com wily-backports/restricted Translation-en
+100% [Packages 36.8 MB] [Waiting for headers] [Waiting for headers]                                                                   Hit http://cn.archive.ubuntu.com wily-backports/universe Translation-en
+                                                                   100% [Packages 36.8 MB] [Waiting for headers]                                             Hit http://security.ubuntu.com wily-security/multiverse amd64 Packages
+100% [Packages 36.8 MB] [Waiting for headers]                                             Hit http://security.ubuntu.com wily-security/main i386 Packages
+                                             100% [Packages 36.8 MB]                       100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         Hit http://security.ubuntu.com wily-security/restricted i386 Packages
+                                         100% [Packages 8,536 kB]                        100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         Hit http://security.ubuntu.com wily-security/universe i386 Packages
+                                         100% [Packages 0 B]                   Hit http://security.ubuntu.com wily-security/multiverse i386 Packages
+100% [Packages 0 B]                   Hit http://security.ubuntu.com wily-security/main Translation-en
+                   100% [Packages 36.7 MB]                       Hit http://security.ubuntu.com wily-security/multiverse Translation-en
+100% [Packages 36.7 MB]                       100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         Hit http://security.ubuntu.com wily-security/restricted Translation-en
+                                         100% [Packages 699 kB]                      100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-zh_CN 0 B] [Waiting for headers]                                                  100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-zh_CN 0 B] [Waiting for headers]                                                  Hit http://security.ubuntu.com wily-security/universe Translation-en
+                                                  100% [Translation-zh_CN 0 B]                            100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Translation-zh_CN 0 B]                            100% [Working]              100% [Translation-en 0 B]                         100% [Translation-en 21.0 MB]                             100% [Working]              100% [Translation-zh_CN 0 B]                            100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Sources 0 B]                  100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Packages 0 B]                   100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              100% [Translation-en 0 B]                         100% [Working]              Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 33%Reading package lists... 34%Reading package lists... 34%Reading package lists... 35%Reading package lists... 35%Reading package lists... 41%Reading package lists... 41%Reading package lists... 42%Reading package lists... 42%Reading package lists... 70%Reading package lists... 70%Reading package lists... 70%Reading package lists... 70%Reading package lists... 70%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 90%Reading package lists... 90%Reading package lists... 91%Reading package lists... 91%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... Done
++ echo 'install expect'
+install expect
++ apt-get install -y expect
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+expect is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 232 not upgraded.
+++ which expect
++ a=/usr/bin/expect
++ '[' '!' -n /usr/bin/expect ']'
++ echo 'install git'
+install git
++ apt-get install -y git
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+git is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 232 not upgraded.
+++ which git
++ b=/usr/bin/git
++ '[' '!' -n /usr/bin/git ']'
++ echo 'install ruby-git'
+install ruby-git
++ apt-get install -y ruby-git
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+ruby-git is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 232 not upgraded.
+++ dpkg -l
+++ grep ruby-git
++ c='ii  ruby-git                                      1.2.8-1                                    all          Ruby interface to the Git revision control system'
++ '[' '!' -n 'ii  ruby-git                                      1.2.8-1                                    all          Ruby interface to the Git revision control system' ']'
++ pwd
+/root
++ rm -rf /result/
++ '[' '!' -d ./oto_lkp ']'
++ cd ./oto_lkp
++ git pull
+Already up-to-date.
++ cd lkp-tests-master
++ export LKP_SRC=/root/oto_lkp/lkp-tests-master
++ LKP_SRC=/root/oto_lkp/lkp-tests-master
++ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/oto_lkp/lkp-tests-master/bin
++ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/oto_lkp/lkp-tests-master/bin
++ source ../joblist/cntvhd.sh
+/root/ubuntu_lkp_test.sh: line 50: ../joblist/cntvhd.sh: No such file or directory
++ echo 'lkp test over, leave ubuntu'
+lkp test over, leave ubuntu
++ echo chroot over
+chroot over
++ echo do not  ctrl+c please wait until prompt all done
+do not  ctrl+c please wait until prompt all done
++ filename1=cntvhd
++ mkdir lkp_tmp_result/cntvhd
++ adb -s 192.168.0.146:5555 pull /data/ubuntu/result/cntvhd lkp_tmp_result/cntvhd/
+remote object '/data/ubuntu/result/cntvhd' does not exist
++ adb -s 192.168.0.146:5555 shell pm uninstall -k cn.cntvhd
+Failure [DELETE_FAILED_INTERNAL_ERROR]
++ rm -rf /tmp/lkp_trash/
++ echo 'test over! all done!'
+test over! all done!
