@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>acrobat</name>
+	<name>system_ui</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>mylibs</name>
-			<type>2</type>
-			<location>/home/zhanglp/mylibs</location>
-		</link>
-	</linkedResources>
 </projectDescription>

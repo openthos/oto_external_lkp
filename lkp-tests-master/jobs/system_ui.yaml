@@ -1,0 +1,7 @@
+testcase: system_ui
+category: benchmark
+
+iterations: 1x
+
+system_ui:
+  duration: 600s
