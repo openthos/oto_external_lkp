@@ -54,7 +54,7 @@ public class system_ui extends UiAutomatorTestCase {
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickByText("截屏");
-		sleep(3000);
+		sleep(5000);
 		assertTrue("截屏成功", new UiObject(new UiSelector().resourceId("android:id/title")).getText().equals("已抓取屏幕截图。"));
 		//点击清除所有
 		otoTest.ClickById("com.android.systemui:id/clearAll");
