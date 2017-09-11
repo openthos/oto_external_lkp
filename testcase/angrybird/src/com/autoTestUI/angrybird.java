@@ -39,7 +39,7 @@ public class angrybird extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(2000);
+		sleep(5000);
 
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
