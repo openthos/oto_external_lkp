@@ -83,6 +83,7 @@ public class system_ui extends UiAutomatorTestCase {
 		UiObject act = new UiObject(new UiSelector().resourceId("com.android.systemui:id/status_bar_activity_contents"));
 		UiObject act1 = act.getChild(new UiSelector().className("android.widget.FrameLayout").instance(0));
 		act1.click();
+		sleep(2000);
 		assertEquals("filemanager open success","com.openthos.filemanager",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
 		//打开Internet浏览器
@@ -91,6 +92,7 @@ public class system_ui extends UiAutomatorTestCase {
 		otoTest.mydevice.openNotification();
 		UiObject act2 = act.getChild(new UiSelector().className("android.widget.FrameLayout").instance(1));
 		act2.click();
+		sleep(3000);
 		assertEquals("Internet浏览器 open success","org.mozilla.fennec_root",otoTest.mydevice.getCurrentPackageName());
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwCloseBtn");
