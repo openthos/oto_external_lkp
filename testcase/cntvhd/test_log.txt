@@ -1,339 +1,0 @@
-+ ip_of_android=192.168.0.224
-+ tmp_result_dir=lkp_tmp_result
-+++ pwd
-++ basename /root/oto_lkp/testcase/cntvhd
-+ testcasename=cntvhd
-++ dirname ./fortest.sh
-+ cd .
-+ apt-get install -y android-tools-adb
-Reading package lists...
-Building dependency tree...
-Reading state information...
-android-tools-adb is already the newest version.
-The following packages were automatically installed and are no longer required:
-  libntdb1 python-ntdb
-Use 'apt-get autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-+ adb connect 192.168.0.224
-already connected to 192.168.0.224:5555
-+ adb -s 192.168.0.224:5555 push ./commitId.txt /data/
-1 KB/s (50 bytes in 0.040s)
-+ ./cntvhd.sh 192.168.0.224 5555 lkp_tmp_result
-+ androidIP=192.168.0.224
-+ port=5555
-+ foldName=lkp_tmp_result
-++ dirname ./cntvhd.sh
-+ cd .
-+ '[' -z lkp_tmp_result ']'
-+ mkdir lkp_tmp_result
-++ basename ./cntvhd.sh
-+ filename=cntvhd.sh
-+ '[' -d lkp_tmp_result ']'
-+ trash=219
-+ mkdir -p /tmp/lkp_trash/219
-+ mv 'lkp_tmp_result/*' /tmp/lkp_trash/219
-mv: cannot stat ‘lkp_tmp_result/*’: No such file or directory
-+ source /etc/profile
-++ '[' '' ']'
-++ '[' -d /etc/profile.d ']'
-++ for i in '/etc/profile.d/*.sh'
-++ '[' -r /etc/profile.d/appmenu-qt5.sh ']'
-++ . /etc/profile.d/appmenu-qt5.sh
-+++ export QT_QPA_PLATFORMTHEME=appmenu-qt5
-+++ QT_QPA_PLATFORMTHEME=appmenu-qt5
-++ for i in '/etc/profile.d/*.sh'
-++ '[' -r /etc/profile.d/bash_completion.sh ']'
-++ . /etc/profile.d/bash_completion.sh
-+++ '[' -n '4.3.42(1)-release' -a -n '' -a -z '' ']'
-++ for i in '/etc/profile.d/*.sh'
-++ '[' -r /etc/profile.d/cedilla-brazil.sh ']'
-++ . /etc/profile.d/cedilla-brazil.sh
-+++ '[' -n en_US.UTF-8 ']'
-+++ '[' en_US = pt_BR ']'
-++ for i in '/etc/profile.d/*.sh'
-++ '[' -r /etc/profile.d/vte-2.91.sh ']'
-++ . /etc/profile.d/vte-2.91.sh
-+++ '[' -n '4.3.42(1)-release' -o -n '' ']'
-+++ [[ hxB == *i* ]]
-+++ return 0
-++ unset i
-++ export JAVA_HOME=/usr/lib/jdk8
-++ JAVA_HOME=/usr/lib/jdk8
-++ export JRE_HOME=/usr/lib/jdk8/jre
-++ JRE_HOME=/usr/lib/jdk8/jre
-++ export CLASSPATH=.:/usr/lib/jdk8/lib:/usr/lib/jdk8/jre/lib
-++ CLASSPATH=.:/usr/lib/jdk8/lib:/usr/lib/jdk8/jre/lib
-++ export PATH=/usr/lib/jdk8/bin:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin
-++ PATH=/usr/lib/jdk8/bin:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin
-++ export PATH=/usr/lib/jdk8/bin:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin
-++ PATH=/usr/lib/jdk8/bin:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin
-+ ./cntvMake.sh
-./cntvhd.sh: line 21: ./cntvMake.sh: No such file or directory
-+ adb connect 192.168.0.224
-already connected to 192.168.0.224:5555
-+ adb -s 192.168.0.224:5555 push ./bin/cntvhd.jar /data/local/tmp
-cannot stat './bin/cntvhd.jar': No such file or directory
-+ adb -s 192.168.0.224:5555 shell rm -rf /data/lkp_test
-+ adb -s 192.168.0.224:5555 shell mkdir /data/lkp_test
-+ adb -s 192.168.0.224:5555 push ./lkp_test /data/lkp_test
-push: ./lkp_test/chroot_run.sh -> /data/lkp_test/chroot_run.sh
-push: ./lkp_test/ubuntu_lkp_test.sh -> /data/lkp_test/ubuntu_lkp_test.sh
-push: ./lkp_test/mount-static -> /data/lkp_test/mount-static
-push: ./lkp_test/before_chroot.sh -> /data/lkp_test/before_chroot.sh
-4 files pushed. 0 files skipped.
-3557 KB/s (2976076 bytes in 0.816s)
-+ adb -s 192.168.0.224:5555 shell busybox chmod +x /data/lkp_test/chroot_run.sh
-+ adb -s 192.168.0.224:5555 shell /data/lkp_test/chroot_run.sh cntvhd.sh
-+ testcase=cntvhd.sh
-+ CHMOUNT=/data/ubuntu
-+ BUSYBOX=/system/xbin/busybox
-+ export PATH=/system/xbin/:/sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin
-+ source /data/lkp_test/before_chroot.sh
-+ cd /data/
-+ /system/xbin/telnetd -l /system/xbin/sh
-+ cd -
-/
-+ [ ! -d /data/ubuntu ]
-+ umount /data/ubuntu
-umount: can't umount /data/ubuntu: Device or resource busy
-+ sleep 3
-+ mount -t ext4 /dev/block/sda2 /data/ubuntu
-mount: mounting /dev/block/sda2 on /data/ubuntu failed: Device or resource busy
-+ sleep 3
-+ cp /data/lkp_test/ubuntu_lkp_test.sh /data/ubuntu/root
-+ cp /data/commitId.txt /data/ubuntu/root
-+ sleep 1
-+ grep inet /data/ubuntu/etc/group
-+ [ ! inet:x:3003:root ]
-+ sleep 2
-+ grep net_raw /data/ubuntu/etc/group
-+ [ ! net_raw:x:3004:root ]
-+ sleep 3
-+ echo nameserver 8.8.8.8
-+ export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/system/xbin/:/sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin
-+ mount -t sysfs sysfs /data/ubuntu/sys
-mount: mounting sysfs on /data/ubuntu/sys failed: Device or resource busy
-+ mount -t proc proc /data/ubuntu/proc
-mount: mounting proc on /data/ubuntu/proc failed: Device or resource busy
-+ cp /data/lkp_test/mount-static /system/bin
-+ chmod 777 /system/bin/mount-static
-+ mount-static --bind /dev /data/ubuntu/dev
-+ sleep 2
-+ mount -t devpts devpts /data/ubuntu/dev/pts
-+ sleep 2
-+ [ ! -d /data/ubuntu/dev/shm ]
-+ sleep 2
-+ mount -t tmpfs tmpfs /data/ubuntu/dev/shm
-+ sleep 2
-+ chroot /data/ubuntu su - root -c /root/ubuntu_lkp_test.sh  cntvhd.sh
-mesg: ttyname failed: Success
-+ testjob=cntvhd.sh
-++ hostname
-+ echo 'i am in ubuntu: jiangqin-pc'
-i am in ubuntu: jiangqin-pc
-+ hostname -F /etc/hostname
-++ hostname
-+ echo 'i am in ubuntu changed_hostname: jiangqin-pc'
-i am in ubuntu changed_hostname: jiangqin-pc
-+ apt-get update
-0% [Working]            Hit http://cn.archive.ubuntu.com wily InRelease
-            0% [Connecting to security.ubuntu.com (91.189.88.161)]                                                      0% [InRelease gpgv 218 kB] [Waiting for headers] [Connecting to security.ubuntu                                                                               Hit http://cn.archive.ubuntu.com wily-updates InRelease
-                                                                               0% [InRelease gpgv 218 kB] [Connecting to security.ubuntu.com (91.189.88.161)]                                                                              Hit http://cn.archive.ubuntu.com wily-backports InRelease
-0% [InRelease gpgv 218 kB] [Connecting to security.ubuntu.com (91.189.88.161)]                                                                              5% [Waiting for headers]                        5% [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for headers]                                                                       Hit http://cn.archive.ubuntu.com wily/main Sources
-                                                                       5% [InRelease gpgv 65.9 kB] [Waiting for headers]                                                 5% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for he                                                                               5% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                            5% [Sources 0 B] [InRelease gpgv 65.9 kB] [Waiting for headers] [Waiting for he                                                                               Hit http://cn.archive.ubuntu.com wily/restricted Sources
-                                                                               5% [Sources 5,357 kB] [InRelease gpgv 65.9 kB] [Waiting for headers]                                                                    6% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers]                                                                 Hit http://cn.archive.ubuntu.com wily/universe Sources
-                                                                 6% [Sources 5,357 kB] [Waiting for headers]                                           Hit http://cn.archive.ubuntu.com wily/multiverse Sources
-                                           6% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers]                                                                 Hit http://cn.archive.ubuntu.com wily/main amd64 Packages
-                                                                 6% [Sources 5,357 kB] [Waiting for headers]                                           Hit http://cn.archive.ubuntu.com wily/restricted amd64 Packages
-                                           6% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers]                                                                 Hit http://cn.archive.ubuntu.com wily/universe amd64 Packages
-6% [Sources 5,357 kB] [Waiting for headers] [Waiting for headers]                                                                 100% [Waiting for headers] [Waiting for headers]                                                100% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                              100% [Waiting for headers] [Waiting for headers]                                                100% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                              Hit http://cn.archive.ubuntu.com wily/multiverse amd64 Packages
-                                                              100% [Sources 0 B] [Waiting for headers]                                        Hit http://cn.archive.ubuntu.com wily/main i386 Packages
-                                        100% [Sources 32.3 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://cn.archive.ubuntu.com wily/restricted i386 Packages
-                                                                  100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily/universe i386 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily/multiverse i386 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily/main Translation-en
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily/multiverse Translation-en
-                                            100% [Sources 32.3 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://cn.archive.ubuntu.com wily/restricted Translation-en
-                                                                  100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://security.ubuntu.com wily-security InRelease
-100% [Sources 32.3 MB] [Waiting for headers]                                            100% [Sources 32.3 MB] [InRelease gpgv 65.9 kB] [Waiting for headers]                                                                     100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily/universe Translation-en
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/main Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/restricted Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/universe Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/multiverse Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/main amd64 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/restricted amd64 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/universe amd64 Packages
-                                            100% [Sources 32.3 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://cn.archive.ubuntu.com wily-updates/multiverse amd64 Packages
-                                                                  100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/main i386 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/restricted i386 Packages
-                                            100% [Sources 32.3 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://cn.archive.ubuntu.com wily-updates/universe i386 Packages
-                                                                  100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/multiverse i386 Packages
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/main Translation-en
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/multiverse Translation-en
-                                            100% [Sources 32.3 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://cn.archive.ubuntu.com wily-updates/restricted Translation-en
-                                                                  100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-updates/universe Translation-en
-                                            100% [Sources 32.3 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://cn.archive.ubuntu.com wily-backports/main Sources
-                                                                  100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://security.ubuntu.com wily-security/main Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-backports/restricted Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            Hit http://cn.archive.ubuntu.com wily-backports/universe Sources
-100% [Sources 32.3 MB] [Waiting for headers]                                            100% [Waiting for headers] [Waiting for headers]                                                100% [Sources 0 B] [Waiting for headers] [Waiting for headers]                                                              Hit http://cn.archive.ubuntu.com wily-backports/multiverse Sources
-                                                              100% [Sources 733 kB] [Waiting for headers]                                           100% [Waiting for headers] [Waiting for headers]                                                100% [Packages 0 B] [Waiting for headers] [Waiting for headers]                                                               Hit http://cn.archive.ubuntu.com wily-backports/main amd64 Packages
-                                                               100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/restricted amd64 Packages
-100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/universe amd64 Packages
-100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/multiverse amd64 Packages
-100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/main i386 Packages
-                                              100% [Packages 8,565 kB] [Waiting for headers] [Waiting for headers]                                                                    Hit http://cn.archive.ubuntu.com wily-backports/restricted i386 Packages
-                                                                    100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/universe i386 Packages
-                                              100% [Packages 8,565 kB] [Waiting for headers] [Waiting for headers]                                                                    Hit http://cn.archive.ubuntu.com wily-backports/multiverse i386 Packages
-                                                                    100% [Packages 8,565 kB] [Waiting for headers]                                              Hit http://cn.archive.ubuntu.com wily-backports/main Translation-en
-100% [Packages 8,565 kB] [Waiting for headers]                                              100% [Waiting for headers] [Waiting for headers]                                                100% [Packages 0 B] [Waiting for headers] [Waiting for headers]                                                               100% [Waiting for headers] [Waiting for headers]                                                100% [Packages 0 B] [Waiting for headers] [Waiting for headers]                                                               Hit http://cn.archive.ubuntu.com wily-backports/multiverse Translation-en
-                                                               100% [Packages 0 B] [Waiting for headers]                                         Hit http://cn.archive.ubuntu.com wily-backports/restricted Translation-en
-                                         100% [Packages 36.8 MB] [Waiting for headers]                                             Hit http://cn.archive.ubuntu.com wily-backports/universe Translation-en
-100% [Packages 36.8 MB] [Waiting for headers]                                             Hit http://security.ubuntu.com wily-security/restricted Sources
-100% [Packages 36.8 MB] [Waiting for headers]                                             Hit http://security.ubuntu.com wily-security/universe Sources
-100% [Packages 36.8 MB] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         Hit http://security.ubuntu.com wily-security/multiverse Sources
-                                         100% [Packages 8,536 kB] [Waiting for headers]                                              100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         Hit http://security.ubuntu.com wily-security/main amd64 Packages
-                                         100% [Packages 36.7 MB] [Waiting for headers]                                             Hit http://security.ubuntu.com wily-security/restricted amd64 Packages
-100% [Packages 36.7 MB] [Waiting for headers]                                             100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               Hit http://security.ubuntu.com wily-security/universe amd64 Packages
-                                               100% [Translation-en 21.0 MB]                             100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         Hit http://security.ubuntu.com wily-security/multiverse amd64 Packages
-                                         100% [Packages 1,352 kB]                        100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Sources 0 B] [Waiting for headers]                                        100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          Hit http://security.ubuntu.com wily-security/main i386 Packages
-100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          Hit http://security.ubuntu.com wily-security/restricted i386 Packages
-100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          Hit http://security.ubuntu.com wily-security/universe i386 Packages
-100% [Waiting for headers]                          100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          Hit http://security.ubuntu.com wily-security/multiverse i386 Packages
-                          100% [Working]              100% [Packages 0 B] [Waiting for headers]                                         100% [Waiting for headers]                          Hit http://security.ubuntu.com wily-security/main Translation-en
-100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          Hit http://security.ubuntu.com wily-security/multiverse Translation-en
-100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          Hit http://security.ubuntu.com wily-security/restricted Translation-en
-100% [Waiting for headers]                          100% [Translation-en 0 B] [Waiting for headers]                                               100% [Waiting for headers]                          Hit http://security.ubuntu.com wily-security/universe Translation-en
-                          100% [Working]              100% [Translation-en 0 B]                         100% [Working]              Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 31%Reading package lists... 35%Reading package lists... 35%Reading package lists... 35%Reading package lists... 35%Reading package lists... 42%Reading package lists... 42%Reading package lists... 42%Reading package lists... 42%Reading package lists... 70%Reading package lists... 70%Reading package lists... 71%Reading package lists... 71%Reading package lists... 71%Reading package lists... 74%Reading package lists... 74%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 75%Reading package lists... 91%Reading package lists... 91%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... Done
-+ echo 'install expect'
-install expect
-+ apt-get install -y expect
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-expect is already the newest version.
-0 upgraded, 0 newly installed, 0 to remove and 232 not upgraded.
-++ which expect
-+ a=/usr/bin/expect
-+ '[' '!' -n /usr/bin/expect ']'
-+ echo 'install git'
-install git
-+ apt-get install -y git
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-git is already the newest version.
-0 upgraded, 0 newly installed, 0 to remove and 232 not upgraded.
-++ which git
-+ b=/usr/bin/git
-+ '[' '!' -n /usr/bin/git ']'
-+ echo 'install ruby-git'
-install ruby-git
-+ apt-get install -y ruby-git
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-ruby-git is already the newest version.
-0 upgraded, 0 newly installed, 0 to remove and 232 not upgraded.
-++ dpkg -l
-++ grep ruby-git
-+ c='ii  ruby-git                                      1.2.8-1                                    all          Ruby interface to the Git revision control system'
-+ '[' '!' -n 'ii  ruby-git                                      1.2.8-1                                    all          Ruby interface to the Git revision control system' ']'
-+ pwd
-/root
-+ rm -rf /result/
-+ '[' '!' -d ./oto_lkp ']'
-+ cd ./oto_lkp
-+ git pull
-remote: Counting objects: 7, done.        
-remote: Compressing objects:  50% (1/2)           remote: Compressing objects: 100% (2/2)           remote: Compressing objects: 100% (2/2), done.        
-Unpacking objects:  14% (1/7)   Unpacking objects:  28% (2/7)   Unpacking objects:  42% (3/7)   remote: Total 7 (delta 5), reused 7 (delta 5), pack-reused 0        
-Unpacking objects:  57% (4/7)   Unpacking objects:  71% (5/7)   Unpacking objects:  85% (6/7)   Unpacking objects: 100% (7/7)   Unpacking objects: 100% (7/7), done.
-From https://github.com/openthos/oto_lkp
-   1851d70..f1c2df9  master     -> origin/master
-Updating 1851d70..f1c2df9
-Fast-forward
- benchmark_mirror/cntvhd.tar.gz | Bin 35534033 -> 35534048 bytes
- testcase/cntvhd/run_withlog.sh |   2 +-
- 2 files changed, 1 insertion(+), 1 deletion(-)
-+ cd lkp-tests-master
-+ export LKP_SRC=/root/oto_lkp/lkp-tests-master
-+ LKP_SRC=/root/oto_lkp/lkp-tests-master
-+ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/oto_lkp/lkp-tests-master/bin
-+ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/oto_lkp/lkp-tests-master/bin
-+ source ../joblist/cntvhd.sh
-++ lkp install /root/oto_lkp/lkp-tests-master/jobs/cntvhd.yaml
-make -C /root/oto_lkp/lkp-tests-master/monitors/event
-Creating testbox configuration file: /root/oto_lkp/lkp-tests-master/hosts/jiangqin-pc.
-/root/oto_lkp/lkp-tests-master/lkp-exec/install: 87: /root/oto_lkp/lkp-tests-master/lkp-exec/install: Bad substitution
-Use: /root/oto_lkp/lkp-tests-master/distro/installer/ubuntu install bc gawk linux-tools-generic ruby ruby-gnuplot ruby-git sysstat time kmod gzip xz-utils make automake gcc libtool patch git cpio wget 
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-automake is already the newest version.
-bc is already the newest version.
-gawk is already the newest version.
-gcc is already the newest version.
-gzip is already the newest version.
-kmod is already the newest version.
-libtool is already the newest version.
-make is already the newest version.
-patch is already the newest version.
-ruby is already the newest version.
-sysstat is already the newest version.
-time is already the newest version.
-xz-utils is already the newest version.
-ruby-git is already the newest version.
-ruby-gnuplot is already the newest version.
-cpio is already the newest version.
-git is already the newest version.
-linux-tools-generic is already the newest version.
-wget is already the newest version.
-0 upgraded, 0 newly installed, 0 to remove and 232 not upgraded.
-Making cntvhd benchmark for ubuntu
---2017-09-08 17:39:05--  https://github.com/openthos/oto_external_lkp/raw/master/benchmark_mirror/cntvhd.tar.gz
-Resolving github.com (github.com)... 192.30.253.112, 192.30.253.113
-Connecting to github.com (github.com)|192.30.253.112|:443... connected.
-HTTP request sent, awaiting response... 302 Found
-Location: https://raw.githubusercontent.com/openthos/oto_external_lkp/master/benchmark_mirror/cntvhd.tar.gz [following]
---2017-09-08 17:39:06--  https://raw.githubusercontent.com/openthos/oto_external_lkp/master/benchmark_mirror/cntvhd.tar.gz
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 35534048 (34M) [application/octet-stream]
-Saving to: ‘cntvhd.tar.gz’
-
-cntvhd.tar.gz         0%[                      ]       0  --.-KB/s             cntvhd.tar.gz         0%[                      ]  39.18K   164KB/s             cntvhd.tar.gz         0%[                      ] 199.18K   431KB/s             cntvhd.tar.gz         2%[                      ] 871.18K  1.23MB/s             cntvhd.tar.gz         4%[>                     ]   1.57M  1.69MB/s             cntvhd.tar.gz         8%[>                     ]   2.99M  2.58MB/s             cntvhd.tar.gz        10%[=>                    ]   3.65M  2.68MB/s             cntvhd.tar.gz        12%[=>                    ]   4.27M  2.73MB/s             cntvhd.tar.gz        14%[==>                   ]   4.93M  2.79MB/s             cntvhd.tar.gz        16%[==>                   ]   5.60M  2.84MB/s             cntvhd.tar.gz        18%[===>                  ]   6.24M  2.87MB/s             cntvhd.tar.gz        19%[===>                  ]   6.54M  2.75MB/s             cntvhd.tar.gz        21%[===>                  ]   7.38M  2.86MB/s             cntvhd.tar.gz        22%[====>                 ]   7.71M  2.77MB/s             cntvhd.tar.gz        23%[====>                 ]   7.99M  2.61MB/s   eta 10s   cntvhd.tar.gz        24%[====>                 ]   8.44M  2.59MB/s   eta 10s   cntvhd.tar.gz        25%[====>                 ]   8.71M  2.61MB/s   eta 10s   cntvhd.tar.gz        26%[====>                 ]   8.96M  2.65MB/s   eta 10s   cntvhd.tar.gz        27%[=====>                ]   9.29M  2.56MB/s   eta 10s   cntvhd.tar.gz        27%[=====>                ]   9.43M  2.40MB/s   eta 11s   cntvhd.tar.gz        28%[=====>                ]   9.57M  2.08MB/s   eta 11s   cntvhd.tar.gz        28%[=====>                ]   9.73M  1.89MB/s   eta 11s   cntvhd.tar.gz        29%[=====>                ]   9.87M  1.76MB/s   eta 11s   cntvhd.tar.gz        29%[=====>                ]  10.02M  1.64MB/s   eta 11s   cntvhd.tar.gz        30%[=====>                ]  10.18M  1.39MB/s   eta 12s   cntvhd.tar.gz        30%[=====>                ]  10.38M  1.27MB/s   eta 12s   cntvhd.tar.gz        31%[=====>                ]  10.51M  1.14MB/s   eta 12s   cntvhd.tar.gz        31%[=====>                ]  10.63M   993KB/s   eta 12s   cntvhd.tar.gz        31%[=====>                ]  10.77M   935KB/s   eta 12s   cntvhd.tar.gz        32%[======>               ]  10.91M   887KB/s   eta 14s   cntvhd.tar.gz        32%[======>               ]  10.98M   775KB/s   eta 14s   cntvhd.tar.gz        32%[======>               ]  11.15M   751KB/s   eta 14s   cntvhd.tar.gz        33%[======>               ]  11.24M   710KB/s   eta 14s   cntvhd.tar.gz        33%[======>               ]  11.35M   697KB/s   eta 14s   cntvhd.tar.gz        33%[======>               ]  11.46M   628KB/s   eta 15s   cntvhd.tar.gz        34%[======>               ]  11.57M   621KB/s   eta 15s   cntvhd.tar.gz        34%[======>               ]  11.68M   611KB/s   eta 15s   cntvhd.tar.gz        34%[======>               ]  11.79M   594KB/s   eta 15s   cntvhd.tar.gz        35%[======>               ]  11.90M   584KB/s   eta 15s   cntvhd.tar.gz        35%[======>               ]  12.01M   574KB/s   eta 16s   cntvhd.tar.gz        35%[======>               ]  12.13M   580KB/s   eta 16s   cntvhd.tar.gz        36%[======>               ]  12.26M   554KB/s   eta 16s   cntvhd.tar.gz        36%[=======>              ]  12.37M   553KB/s   eta 16s   cntvhd.tar.gz        36%[=======>              ]  12.44M   526KB/s   eta 16s   cntvhd.tar.gz        37%[=======>              ]  12.60M   530KB/s   eta 16s   cntvhd.tar.gz        37%[=======>              ]  12.68M   522KB/s   eta 16s   cntvhd.tar.gz        37%[=======>              ]  12.79M   503KB/s   eta 16s   cntvhd.tar.gz        37%[=======>              ]  12.87M   496KB/s   eta 16s   cntvhd.tar.gz        38%[=======>              ]  12.94M   487KB/s   eta 16s   cntvhd.tar.gz        38%[=======>              ]  13.02M   479KB/s   eta 17s   cntvhd.tar.gz        38%[=======>              ]  13.10M   472KB/s   eta 17s   cntvhd.tar.gz        38%[=======>              ]  13.18M   463KB/s   eta 17s   cntvhd.tar.gz        39%[=======>              ]  13.26M   455KB/s   eta 17s   cntvhd.tar.gz        39%[=======>              ]  13.32M   432KB/s   eta 17s   cntvhd.tar.gz        39%[=======>              ]  13.41M   415KB/s   eta 18s   cntvhd.tar.gz        39%[=======>              ]  13.48M   402KB/s   eta 18s   cntvhd.tar.gz        39%[=======>              ]  13.55M   372KB/s   eta 18s   cntvhd.tar.gz        40%[=======>              ]  13.62M   353KB/s   eta 18s   cntvhd.tar.gz        40%[=======>              ]  13.68M   358KB/s   eta 19s   cntvhd.tar.gz        40%[=======>              ]  13.71M   327KB/s   eta 19s   cntvhd.tar.gz        40%[=======>              ]  13.76M   320KB/s   eta 19s   cntvhd.tar.gz        40%[=======>              ]  13.80M   298KB/s   eta 19s   cntvhd.tar.gz        40%[=======>              ]  13.85M   287KB/s   eta 19s   cntvhd.tar.gz        41%[========>             ]  13.90M   268KB/s   eta 21s   cntvhd.tar.gz        41%[========>             ]  13.96M   266KB/s   eta 21s   cntvhd.tar.gz        41%[========>             ]  13.99M   253KB/s   eta 21s   cntvhd.tar.gz        41%[========>             ]  14.04M   241KB/s   eta 21s   cntvhd.tar.gz        41%[========>             ]  14.08M   235KB/s   eta 21s   cntvhd.tar.gz        41%[========>             ]  14.13M   227KB/s   eta 22s   cntvhd.tar.gz        41%[========>             ]  14.18M   231KB/s   eta 22s   cntvhd.tar.gz        41%[========>             ]  14.23M   219KB/s   eta 22s   cntvhd.tar.gz        42%[========>             ]  14.27M   217KB/s   eta 22s   cntvhd.tar.gz        42%[========>             ]  14.33M   211KB/s   eta 22s   cntvhd.tar.gz        42%[========>             ]  14.38M   214KB/s   eta 22s   cntvhd.tar.gz        42%[========>             ]  14.44M   214KB/s   eta 22s   cntvhd.tar.gz        42%[========>             ]  14.51M   214KB/s   eta 22s   cntvhd.tar.gz        42%[========>             ]  14.55M   215KB/s   eta 22s   cntvhd.tar.gz        43%[========>             ]  14.63M   222KB/s   eta 22s   cntvhd.tar.gz        43%[========>             ]  14.68M   223KB/s   eta 23s   cntvhd.tar.gz        43%[========>             ]  14.74M   225KB/s   eta 23s   cntvhd.tar.gz        43%[========>             ]  14.80M   238KB/s   eta 23s   cntvhd.tar.gz        43%[========>             ]  14.87M   236KB/s   eta 23s   cntvhd.tar.gz        44%[========>             ]  14.93M   241KB/s   eta 23s   cntvhd.tar.gz        44%[========>             ]  14.99M   252KB/s   eta 24s   cntvhd.tar.gz        44%[========>             ]  15.05M   256KB/s   eta 24s   cntvhd.tar.gz        44%[========>             ]  15.12M   261KB/s   eta 24s   cntvhd.tar.gz        44%[========>             ]  15.18M   265KB/s   eta 24s   cntvhd.tar.gz        44%[========>             ]  15.24M   271KB/s   eta 24s   cntvhd.tar.gz        45%[========>             ]  15.32M   276KB/s   eta 24s   cntvhd.tar.gz        45%[========>             ]  15.40M   283KB/s   eta 24s   cntvhd.tar.gz        45%[=========>            ]  15.48M   288KB/s   eta 24s   cntvhd.tar.gz        45%[=========>            ]  15.55M   293KB/s   eta 24s   cntvhd.tar.gz        46%[=========>            ]  15.63M   307KB/s   eta 24s   cntvhd.tar.gz        46%[=========>            ]  15.71M   304KB/s   eta 24s   cntvhd.tar.gz        46%[=========>            ]  15.76M   300KB/s   eta 24s   cntvhd.tar.gz        46%[=========>            ]  15.83M   307KB/s   eta 24s   cntvhd.tar.gz        46%[=========>            ]  15.88M   303KB/s   eta 24s   cntvhd.tar.gz        47%[=========>            ]  15.94M   300KB/s   eta 24s   cntvhd.tar.gz        47%[=========>            ]  16.01M   297KB/s   eta 25s   cntvhd.tar.gz        47%[=========>            ]  16.07M   294KB/s   eta 25s   cntvhd.tar.gz        47%[=========>            ]  16.13M   293KB/s   eta 25s   cntvhd.tar.gz        47%[=========>            ]  16.18M   283KB/s   eta 25s   cntvhd.tar.gz        47%[=========>            ]  16.24M   283KB/s   eta 25s   cntvhd.tar.gz        48%[=========>            ]  16.29M   278KB/s   eta 25s   cntvhd.tar.gz        48%[=========>            ]  16.33M   274KB/s   eta 25s   cntvhd.tar.gz        48%[=========>            ]  16.39M   272KB/s   eta 25s   cntvhd.tar.gz        48%[=========>            ]  16.44M   265KB/s   eta 25s   cntvhd.tar.gz        48%[=========>            ]  16.51M   261KB/s   eta 26s   cntvhd.tar.gz        48%[=========>            ]  16.57M   253KB/s   eta 26s   cntvhd.tar.gz        49%[=========>            ]  16.63M   258KB/s   eta 26s   cntvhd.tar.gz        49%[=========>            ]  16.69M   249KB/s   eta 26s   cntvhd.tar.gz        49%[=========>            ]  16.76M   252KB/s   eta 26s   cntvhd.tar.gz        49%[=========>            ]  16.82M   257KB/s   eta 26s   cntvhd.tar.gz        49%[=========>            ]  16.88M   260KB/s   eta 26s   cntvhd.tar.gz        50%[==========>           ]  16.94M   265KB/s   eta 26s   cntvhd.tar.gz        50%[==========>           ]  17.02M   270KB/s   eta 26s   cntvhd.tar.gz        50%[==========>           ]  17.10M   277KB/s   eta 26s   cntvhd.tar.gz        50%[==========>           ]  17.18M   283KB/s   eta 26s   cntvhd.tar.gz        50%[==========>           ]  17.24M   287KB/s   eta 26s   cntvhd.tar.gz        51%[==========>           ]  17.33M   298KB/s   eta 26s   cntvhd.tar.gz        51%[==========>           ]  17.40M   302KB/s   eta 26s   cntvhd.tar.gz        51%[==========>           ]  17.46M   302KB/s   eta 26s   cntvhd.tar.gz        51%[==========>           ]  17.54M   308KB/s   eta 26s   cntvhd.tar.gz        51%[==========>           ]  17.62M   318KB/s   eta 26s   cntvhd.tar.gz        52%[==========>           ]  17.69M   322KB/s   eta 26s   cntvhd.tar.gz        52%[==========>           ]  17.74M   317KB/s   eta 26s   cntvhd.tar.gz        52%[==========>           ]  17.80M   314KB/s   eta 26s   cntvhd.tar.gz        52%[==========>           ]  17.85M   305KB/s   eta 26s   cntvhd.tar.gz        52%[==========>           ]  17.90M   296KB/s   eta 26s   cntvhd.tar.gz        52%[==========>           ]  17.94M   288KB/s   eta 26s   cntvhd.tar.gz        53%[==========>           ]  17.99M   283KB/s   eta 26s   cntvhd.tar.gz        53%[==========>           ]  18.04M   269KB/s   eta 26s   cntvhd.tar.gz        53%[==========>           ]  18.08M   257KB/s   eta 26s   cntvhd.tar.gz        53%[==========>           ]  18.13M   241KB/s   eta 26s   cntvhd.tar.gz        53%[==========>           ]  18.18M   236KB/s   eta 26s   cntvhd.tar.gz        53%[==========>           ]  18.23M   232KB/s   eta 26s   cntvhd.tar.gz        53%[==========>           ]  18.27M   228KB/s   eta 26s   cntvhd.tar.gz        54%[==========>           ]  18.32M   223KB/s   eta 27s   cntvhd.tar.gz        54%[==========>           ]  18.37M   214KB/s   eta 27s   cntvhd.tar.gz        54%[==========>           ]  18.41M   197KB/s   eta 27s   cntvhd.tar.gz        54%[==========>           ]  18.46M   200KB/s   eta 27s   cntvhd.tar.gz        54%[===========>          ]  18.51M   193KB/s   eta 27s   cntvhd.tar.gz        54%[===========>          ]  18.55M   195KB/s   eta 27s   cntvhd.tar.gz        54%[===========>          ]  18.60M   197KB/s   eta 27s   cntvhd.tar.gz        55%[===========>          ]  18.65M   199KB/s   eta 27s   cntvhd.tar.gz        55%[===========>          ]  18.69M   201KB/s   eta 27s   cntvhd.tar.gz        55%[===========>          ]  18.74M   202KB/s   eta 27s   cntvhd.tar.gz        55%[===========>          ]  18.80M   205KB/s   eta 27s   cntvhd.tar.gz        55%[===========>          ]  18.85M   208KB/s   eta 27s   cntvhd.tar.gz        55%[===========>          ]  18.91M   216KB/s   eta 27s   cntvhd.tar.gz        55%[===========>          ]  18.96M   220KB/s   eta 27s   cntvhd.tar.gz        56%[===========>          ]  19.01M   219KB/s   eta 27s   cntvhd.tar.gz        56%[===========>          ]  19.05M   221KB/s   eta 27s   cntvhd.tar.gz        56%[===========>          ]  19.12M   222KB/s   eta 27s   cntvhd.tar.gz        56%[===========>          ]  19.18M   229KB/s   eta 27s   cntvhd.tar.gz        56%[===========>          ]  19.24M   230KB/s   eta 27s   cntvhd.tar.gz        56%[===========>          ]  19.30M   237KB/s   eta 27s   cntvhd.tar.gz        57%[===========>          ]  19.37M   242KB/s   eta 27s   cntvhd.tar.gz        57%[===========>          ]  19.43M   245KB/s   eta 27s   cntvhd.tar.gz        57%[===========>          ]  19.49M   249KB/s   eta 27s   cntvhd.tar.gz        57%[===========>          ]  19.55M   254KB/s   eta 27s   cntvhd.tar.gz        57%[===========>          ]  19.60M   252KB/s   eta 27s   cntvhd.tar.gz        58%[===========>          ]  19.68M   258KB/s   eta 27s   cntvhd.tar.gz        58%[===========>          ]  19.74M   258KB/s   eta 27s   cntvhd.tar.gz        58%[===========>          ]  19.80M   258KB/s   eta 27s   cntvhd.tar.gz        58%[===========>          ]  19.87M   259KB/s   eta 27s   cntvhd.tar.gz        58%[===========>          ]  19.93M   270KB/s   eta 27s   cntvhd.tar.gz        58%[===========>          ]  19.99M   269KB/s   eta 27s   cntvhd.tar.gz        59%[============>         ]  20.05M   275KB/s   eta 27s   cntvhd.tar.gz        59%[============>         ]  20.12M   278KB/s   eta 27s   cntvhd.tar.gz        59%[============>         ]  20.18M   281KB/s   eta 27s   cntvhd.tar.gz        59%[============>         ]  20.24M   284KB/s   eta 26s   cntvhd.tar.gz        59%[============>         ]  20.32M   287KB/s   eta 26s   cntvhd.tar.gz        60%[============>         ]  20.40M   292KB/s   eta 26s   cntvhd.tar.gz        60%[============>         ]  20.48M   297KB/s   eta 26s   cntvhd.tar.gz        60%[============>         ]  20.55M   301KB/s   eta 26s   cntvhd.tar.gz        60%[============>         ]  20.63M   307KB/s   eta 26s   cntvhd.tar.gz        61%[============>         ]  20.71M   320KB/s   eta 26s   cntvhd.tar.gz        61%[============>         ]  20.79M   325KB/s   eta 26s   cntvhd.tar.gz        61%[============>         ]  20.88M   334KB/s   eta 26s   cntvhd.tar.gz        61%[============>         ]  20.98M   345KB/s   eta 26s   cntvhd.tar.gz        62%[============>         ]  21.07M   353KB/s   eta 25s   cntvhd.tar.gz        62%[============>         ]  21.16M   365KB/s   eta 25s   cntvhd.tar.gz        62%[============>         ]  21.26M   372KB/s   eta 25s   cntvhd.tar.gz        63%[============>         ]  21.35M   381KB/s   eta 25s   cntvhd.tar.gz        63%[============>         ]  21.46M   391KB/s   eta 25s   cntvhd.tar.gz        63%[=============>        ]  21.57M   405KB/s   eta 24s   cntvhd.tar.gz        63%[=============>        ]  21.68M   416KB/s   eta 24s   cntvhd.tar.gz        64%[=============>        ]  21.79M   433KB/s   eta 24s   cntvhd.tar.gz        64%[=============>        ]  21.90M   441KB/s   eta 24s   cntvhd.tar.gz        64%[=============>        ]  22.01M   453KB/s   eta 24s   cntvhd.tar.gz        65%[=============>        ]  22.13M   465KB/s   eta 23s   cntvhd.tar.gz        65%[=============>        ]  22.26M   483KB/s   eta 23s   cntvhd.tar.gz        66%[=============>        ]  22.40M   499KB/s   eta 23s   cntvhd.tar.gz        66%[=============>        ]  22.54M   515KB/s   eta 23s   cntvhd.tar.gz        66%[=============>        ]  22.69M   542KB/s   eta 23s   cntvhd.tar.gz        67%[=============>        ]  22.87M   566KB/s   eta 22s   cntvhd.tar.gz        68%[=============>        ]  23.05M   595KB/s   eta 22s   cntvhd.tar.gz        68%[==============>       ]  23.24M   635KB/s   eta 22s   cntvhd.tar.gz        69%[==============>       ]  23.46M   670KB/s   eta 22s   cntvhd.tar.gz        69%[==============>       ]  23.69M   711KB/s   eta 22s   cntvhd.tar.gz        70%[==============>       ]  23.94M   767KB/s   eta 19s   cntvhd.tar.gz        71%[==============>       ]  24.21M   815KB/s   eta 19s   cntvhd.tar.gz        72%[==============>       ]  24.52M   873KB/s   eta 19s   cntvhd.tar.gz        73%[===============>      ]  24.76M   906KB/s   eta 19s   cntvhd.tar.gz        74%[===============>      ]  25.16M   993KB/s   eta 19s   cntvhd.tar.gz        74%[===============>      ]  25.33M  1006KB/s   eta 16s   cntvhd.tar.gz        75%[===============>      ]  25.49M  1015KB/s   eta 16s   cntvhd.tar.gz        75%[===============>      ]  25.62M  1006KB/s   eta 16s   cntvhd.tar.gz        75%[===============>      ]  25.69M   994KB/s   eta 16s   cntvhd.tar.gz        76%[===============>      ]  25.85M   987KB/s   eta 16s   cntvhd.tar.gz        76%[===============>      ]  25.94M   968KB/s   eta 15s   cntvhd.tar.gz        76%[===============>      ]  26.01M   929KB/s   eta 15s   cntvhd.tar.gz        77%[===============>      ]  26.13M   903KB/s   eta 15s   cntvhd.tar.gz        77%[================>     ]  26.21M   870KB/s   eta 15s   cntvhd.tar.gz        77%[================>     ]  26.29M   834KB/s   eta 15s   cntvhd.tar.gz        77%[================>     ]  26.32M   767KB/s   eta 14s   cntvhd.tar.gz        77%[================>     ]  26.43M   724KB/s   eta 14s   cntvhd.tar.gz        78%[================>     ]  26.49M   669KB/s   eta 14s   cntvhd.tar.gz        78%[================>     ]  26.57M   572KB/s   eta 14s   cntvhd.tar.gz        78%[================>     ]  26.65M   544KB/s   eta 14s   cntvhd.tar.gz        78%[================>     ]  26.73M   482KB/s   eta 13s   cntvhd.tar.gz        79%[================>     ]  26.80M   425KB/s   eta 13s   cntvhd.tar.gz        79%[================>     ]  26.88M   384KB/s   eta 13s   cntvhd.tar.gz        79%[================>     ]  26.96M   374KB/s   eta 13s   cntvhd.tar.gz        79%[================>     ]  27.04M   359KB/s   eta 13s   cntvhd.tar.gz        80%[================>     ]  27.12M   355KB/s   eta 13s   cntvhd.tar.gz        80%[================>     ]  27.19M   351KB/s   eta 13s   cntvhd.tar.gz        80%[================>     ]  27.29M   351KB/s   eta 13s   cntvhd.tar.gz        80%[================>     ]  27.38M   353KB/s   eta 13s   cntvhd.tar.gz        81%[================>     ]  27.48M   354KB/s   eta 13s   cntvhd.tar.gz        81%[================>     ]  27.57M   373KB/s   eta 12s   cntvhd.tar.gz        81%[================>     ]  27.66M   369KB/s   eta 12s   cntvhd.tar.gz        81%[=================>    ]  27.76M   380KB/s   eta 12s   cntvhd.tar.gz        82%[=================>    ]  27.85M   389KB/s   eta 12s   cntvhd.tar.gz        82%[=================>    ]  27.94M   402KB/s   eta 12s   cntvhd.tar.gz        82%[=================>    ]  28.05M   413KB/s   eta 11s   cntvhd.tar.gz        83%[=================>    ]  28.16M   424KB/s   eta 11s   cntvhd.tar.gz        83%[=================>    ]  28.27M   438KB/s   eta 11s   cntvhd.tar.gz        83%[=================>    ]  28.38M   448KB/s   eta 11s   cntvhd.tar.gz        84%[=================>    ]  28.51M   461KB/s   eta 11s   cntvhd.tar.gz        84%[=================>    ]  28.62M   467KB/s   eta 10s   cntvhd.tar.gz        84%[=================>    ]  28.71M   467KB/s   eta 10s   cntvhd.tar.gz        84%[=================>    ]  28.80M   473KB/s   eta 10s   cntvhd.tar.gz        85%[=================>    ]  28.90M   464KB/s   eta 10s   cntvhd.tar.gz        85%[=================>    ]  29.01M   471KB/s   eta 10s   cntvhd.tar.gz        85%[=================>    ]  29.04M   454KB/s   eta 9s    cntvhd.tar.gz        85%[=================>    ]  29.13M   452KB/s   eta 9s    cntvhd.tar.gz        86%[=================>    ]  29.19M   439KB/s   eta 9s    cntvhd.tar.gz        86%[=================>    ]  29.23M   420KB/s   eta 9s    cntvhd.tar.gz        86%[==================>   ]  29.29M   404KB/s   eta 9s    cntvhd.tar.gz        86%[==================>   ]  29.32M   385KB/s   eta 9s    cntvhd.tar.gz        86%[==================>   ]  29.36M   364KB/s   eta 9s    cntvhd.tar.gz        86%[==================>   ]  29.38M   343KB/s   eta 9s    cntvhd.tar.gz        86%[==================>   ]  29.43M   325KB/s   eta 9s    cntvhd.tar.gz        86%[==================>   ]  29.48M   289KB/s   eta 9s    cntvhd.tar.gz        87%[==================>   ]  29.52M   273KB/s   eta 9s    cntvhd.tar.gz        87%[==================>   ]  29.55M   262KB/s   eta 9s    cntvhd.tar.gz        87%[==================>   ]  29.60M   234KB/s   eta 9s    cntvhd.tar.gz        87%[==================>   ]  29.65M   215KB/s   eta 8s    cntvhd.tar.gz        87%[==================>   ]  29.69M   206KB/s   eta 8s    cntvhd.tar.gz        87%[==================>   ]  29.74M   189KB/s   eta 8s    cntvhd.tar.gz        87%[==================>   ]  29.79M   191KB/s   eta 8s    cntvhd.tar.gz        88%[==================>   ]  29.83M   180KB/s   eta 8s    cntvhd.tar.gz        88%[==================>   ]  29.88M   179KB/s   eta 8s    cntvhd.tar.gz        88%[==================>   ]  29.93M   183KB/s   eta 8s    cntvhd.tar.gz        88%[==================>   ]  29.99M   184KB/s   eta 8s    cntvhd.tar.gz        88%[==================>   ]  30.05M   188KB/s   eta 8s    cntvhd.tar.gz        88%[==================>   ]  30.12M   196KB/s   eta 8s    cntvhd.tar.gz        89%[==================>   ]  30.18M   207KB/s   eta 8s    cntvhd.tar.gz        89%[==================>   ]  30.24M   213KB/s   eta 8s    cntvhd.tar.gz        89%[==================>   ]  30.30M   224KB/s   eta 8s    cntvhd.tar.gz        89%[==================>   ]  30.38M   234KB/s   eta 8s    cntvhd.tar.gz        89%[==================>   ]  30.44M   247KB/s   eta 8s    cntvhd.tar.gz        90%[==================>   ]  30.52M   255KB/s   eta 7s    cntvhd.tar.gz        90%[==================>   ]  30.58M   259KB/s   eta 7s    cntvhd.tar.gz        90%[==================>   ]  30.65M   266KB/s   eta 7s    cntvhd.tar.gz        90%[==================>   ]  30.66M   257KB/s   eta 7s    cntvhd.tar.gz        90%[==================>   ]  30.73M   255KB/s   eta 7s    cntvhd.tar.gz        90%[==================>   ]  30.76M   245KB/s   eta 7s    cntvhd.tar.gz        90%[==================>   ]  30.79M   241KB/s   eta 7s    cntvhd.tar.gz        90%[===================>  ]  30.82M   227KB/s   eta 7s    cntvhd.tar.gz        91%[===================>  ]  30.85M   220KB/s   eta 7s    cntvhd.tar.gz        91%[===================>  ]  30.88M   210KB/s   eta 6s    cntvhd.tar.gz        91%[===================>  ]  30.91M   201KB/s   eta 6s    cntvhd.tar.gz        91%[===================>  ]  30.95M   196KB/s   eta 6s    cntvhd.tar.gz        91%[===================>  ]  30.98M   183KB/s   eta 6s    cntvhd.tar.gz        91%[===================>  ]  31.01M   176KB/s   eta 6s    cntvhd.tar.gz        91%[===================>  ]  31.04M   168KB/s   eta 6s    cntvhd.tar.gz        91%[===================>  ]  31.07M   160KB/s   eta 6s    cntvhd.tar.gz        91%[===================>  ]  31.12M   156KB/s   eta 6s    cntvhd.tar.gz        91%[===================>  ]  31.16M   151KB/s   eta 6s    cntvhd.tar.gz        92%[===================>  ]  31.21M   147KB/s   eta 6s    cntvhd.tar.gz        92%[===================>  ]  31.26M   143KB/s   eta 6s    cntvhd.tar.gz        92%[===================>  ]  31.30M   151KB/s   eta 6s    cntvhd.tar.gz        92%[===================>  ]  31.35M   150KB/s   eta 6s    cntvhd.tar.gz        92%[===================>  ]  31.41M   161KB/s   eta 6s    cntvhd.tar.gz        92%[===================>  ]  31.48M   168KB/s   eta 5s    cntvhd.tar.gz        93%[===================>  ]  31.54M   180KB/s   eta 5s    cntvhd.tar.gz        93%[===================>  ]  31.60M   195KB/s   eta 5s    cntvhd.tar.gz        93%[===================>  ]  31.66M   205KB/s   eta 5s    cntvhd.tar.gz        93%[===================>  ]  31.73M   216KB/s   eta 5s    cntvhd.tar.gz        93%[===================>  ]  31.80M   232KB/s   eta 5s    cntvhd.tar.gz        94%[===================>  ]  31.87M   243KB/s   eta 5s    cntvhd.tar.gz        94%[===================>  ]  31.94M   255KB/s   eta 5s    cntvhd.tar.gz        94%[===================>  ]  32.02M   267KB/s   eta 5s    cntvhd.tar.gz        94%[===================>  ]  32.10M   277KB/s   eta 5s    cntvhd.tar.gz        94%[===================>  ]  32.18M   292KB/s   eta 4s    cntvhd.tar.gz        95%[===================>  ]  32.27M   304KB/s   eta 4s    cntvhd.tar.gz        95%[====================> ]  32.37M   317KB/s   eta 4s    cntvhd.tar.gz        95%[====================> ]  32.48M   343KB/s   eta 4s    cntvhd.tar.gz        96%[====================> ]  32.60M   362KB/s   eta 4s    cntvhd.tar.gz        96%[====================> ]  32.74M   387KB/s   eta 3s    cntvhd.tar.gz        97%[====================> ]  32.90M   422KB/s   eta 3s    cntvhd.tar.gz        97%[====================> ]  33.07M   455KB/s   eta 3s    cntvhd.tar.gz        97%[====================> ]  33.18M   472KB/s   eta 3s    cntvhd.tar.gz        98%[====================> ]  33.43M   523KB/s   eta 3s    cntvhd.tar.gz        99%[====================> ]  33.55M   534KB/s   eta 1s    cntvhd.tar.gz        99%[====================> ]  33.74M   572KB/s   eta 1s    cntvhd.tar.gz        99%[====================> ]  33.85M   580KB/s   eta 1s    cntvhd.tar.gz       100%[=====================>]  33.89M   583KB/s   in 73s    
-
-2017-09-08 17:40:21 (474 KB/s) - ‘cntvhd.tar.gz’ saved [35534048/35534048]
-
-chmod  777  ./cntvhd
-chmod  777  ./auto_interact.sh
-chmod  777 ./cntvhd_benchmark.expt
-chmod: cannot access ‘./cntvhd_benchmark.expt’: No such file or directory
-Makefile:2: recipe for target 'all' failed
-make: *** [all] Error 1
-cp: cannot stat ‘cntvhd_benchmark.expt’: No such file or directory
-spawn telnet localhost
-Trying 127.0.0.1...
-Connected to localhost.
-Escape character is '^]'.
-
-/data # [6npm install /data/ubuntu/lkp/benchmarks/cntvhd/cntvhd.apk
-        pkg: /data/ubuntu/lkp/benchmarks/cntvhd/cntvhd.apk
-Success
-/data # [6nsleep 1dpkg-deb: building package 'cntvhd-lkp' in 'cntvhd-LKP.deb'.
-Installing cntvhd-LKP
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 213883 files and directories currently installed.)
-Preparing to unpack /tmp/cntvhd-LKP.deb ...
-Unpacking cntvhd-lkp (2017-09-08) over (2017-09-08) ...
-Setting up cntvhd-lkp (2017-09-08) ...
-++ lkp split /root/oto_lkp/lkp-tests-master/jobs/cntvhd.yaml
-/root/oto_lkp/lkp-tests-master/jobs/cntvhd.yaml => ./cntvhd-1x.yaml
-++ lkp run /root/oto_lkp/lkp-tests-master/cntvhd-1x.yaml
-/root/oto_lkp/lkp-tests-master/monitors/turbostat: 10: cd: can't cd to /lkp/benchmarks/turbostat
-Iteration: 1
-2017-09-08 17:41:00 ./cntvhd
-+ ./cntvhd_benchmark.expt
-./cntvhd: line 2: ./cntvhd_benchmark.expt: No such file or directory
-wait for background monitors: uptime proc-vmstat proc-stat meminfo slabinfo interrupts softirqs diskstats cpuidle sched_debug

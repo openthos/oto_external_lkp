@@ -24,13 +24,15 @@ public class appStoreTest1 extends UiAutomatorTestCase {
     String[] appList = {"PowerPoint","Internet 浏览器"/*,"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","QQ","微信","搜狗输入法",
             "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器"*/};
 
-    String[] appList3 = {"PowerPoint","影梭",/*"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","快图浏览","OtoVirtualGUI","模拟炒股","QQ","微信","搜狗输入法",
+    String[] appList3 = {"PowerPoint","泰捷视频",/*"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","快图浏览","OtoVirtualGUI","模拟炒股","QQ","微信","搜狗输入法",
             "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器","2048",*/"Angry Birds"};
 
     String[] appList2 = {"WPS邮箱","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","搜狗输入法","OS Monitor","绿色守护","央视影音","哔哩哔哩","Internet 浏览器","网易云音乐"};
 
     public void testDemo0() throws UiObjectNotFoundException,IOException, InterruptedException {
         UiDevice uiDevice =getUiDevice();
+	uiDevice.pressEnter();
+	uiDevice.pressKeyCode(111);
         otoDisplayRun.execCmdNoSave("am start -n com.android.settings/.Settings");
         UiScrollable  setList = new UiScrollable(new UiSelector().resourceId("com.android.settings:id/dashboard"));
         UiObject securityItem = setList.getChildByText(new UiSelector().className(LinearLayout.class.getName()), "安全", true);
@@ -89,11 +91,11 @@ public class appStoreTest1 extends UiAutomatorTestCase {
     public void testDemo2() throws UiObjectNotFoundException {
         getUiDevice();
         new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_home")).click();
-        UiSelector textApp = new UiSelector().text("影梭");
+        UiSelector textApp = new UiSelector().text("泰捷视频");
         UiObject downloadApp = new UiObject(textApp.fromParent(new UiSelector().resourceId("com.openthos.appstore:id/app_item_install")));
         downloadApp.click();
 
-        installInSetting("影梭");
+        installInSetting("泰捷视频");
 
         /*通过点击软件和游戏页面的下载文字下载安装应用*/
         for (int i=0;i<appList.length;i++) {
@@ -142,13 +144,13 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         UiObject label_update = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/update"));
         label_update.click();
 
-        UiScrollable settingsList = new UiScrollable(new UiSelector().resourceId("com.openthos.appstore:id/customlistView"));
+       /*UiScrollable settingsList = new UiScrollable(new UiSelector().resourceId("com.openthos.appstore:id/customlistView"));
         UiObject btItem = settingsList.getChildByText(new UiSelector().className(LinearLayout.class.getName()), "Internet 浏览器", true);
 
         UiObject btSwitch = btItem.getChild(new UiSelector().text("更新"));
         btSwitch.click();
 
-        installInSetting("Internet 浏览器");
+        installInSetting("Internet 浏览器");*/
     }
 
     public void testDemo5() throws UiObjectNotFoundException{
@@ -164,7 +166,7 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/activity_title_back")).click();
         assertFalse(new UiObject(new UiSelector().text("最新推荐")).exists());
         new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/activity_title_back")).click();
-        assertTrue(new UiObject(new UiSelector().text("最新推荐")).exists());
+        //assertTrue(new UiObject(new UiSelector().text("最新推荐")).exists());
     }
 
     public void testDemo6() throws UiObjectNotFoundException,IOException, InterruptedException {
@@ -174,17 +176,19 @@ public class appStoreTest1 extends UiAutomatorTestCase {
 
         UiObject search= new UiObject((new UiSelector().resourceId("com.openthos.appstore:id/activity_title_search_text")));
         search.setText("flash");
+	uiDevice.pressEnter();
 
         UiObject open = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/app_item_install"));
-        open.clickAndWaitForNewWindow(10000);
+        open.clickAndWaitForNewWindow(20000);
+	sleep(10000);
         assertTrue(new UiObject(new UiSelector().text("Install Dolphin for FREE")).exists());
         otoDisplayRun.execCmdNoSave("am force-stop com.tako.flash.master");
 
         UiObject label_manage = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_manager"));
         label_manage.click();
 
-        uninstall("Internet 浏览器","卸载更新");
-        removeApp("Internet 浏览器");
+        //uninstall("Internet 浏览器","卸载更新");
+        //removeApp("Internet 浏览器");
         uninstall("Flash Master","卸载");
         removeApp("Flash Master");
 
@@ -294,6 +298,7 @@ public class appStoreTest1 extends UiAutomatorTestCase {
             UiDevice.getInstance().pressEnter();
             UiDevice.getInstance().pressDPadRight();
             UiDevice.getInstance().pressEnter();
+		sleep(2000);
             UiDevice.getInstance().pressDPadRight();
             UiDevice.getInstance().pressEnter();
             UiObject setting_close = new UiObject(new UiSelector().resourceId("android:id/mwCloseBtn"));
