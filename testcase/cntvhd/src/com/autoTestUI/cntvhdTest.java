@@ -20,6 +20,8 @@ public class cntvhdTest extends UiAutomatorTestCase {
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
 		otoTest.mydevice.pressEnter();
+		otoTest.mydevice.pressKeyCode(111);
+		testcase/cntvhd/src/com/autoTestUI/cntvhdTest.java
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 		//启动时间
 		Date starttime;
