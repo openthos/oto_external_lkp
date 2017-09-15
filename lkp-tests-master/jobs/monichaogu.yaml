@@ -1,0 +1,7 @@
+testcase: monichaogu
+category: benchmark
+
+iterations: 1x
+
+monichaogu:
+  duration: 600s

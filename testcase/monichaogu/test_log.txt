@@ -1,0 +1,132 @@
++ ip_of_android=192.168.0.224
++ tmp_result_dir=lkp_tmp_result
++++ pwd
+++ basename /root/oto_external_lkp/testcase/monichaogu
++ testcasename=monichaogu
+++ dirname ./fortest.sh
++ cd .
++ apt-get install -y android-tools-adb
+Reading package lists...
+Building dependency tree...
+Reading state information...
+android-tools-adb is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
++ adb connect 192.168.0.224
+already connected to 192.168.0.224:5555
++ adb -s 192.168.0.224:5555 push ./commitId.txt /data/
+1 KB/s (50 bytes in 0.040s)
++ ./monichaogu.sh 192.168.0.224 5555 lkp_tmp_result
++ androidIP=192.168.0.224
++ port=5555
++ foldName=lkp_tmp_result
+++ dirname ./monichaogu.sh
++ cd .
++ '[' -z lkp_tmp_result ']'
++ mkdir lkp_tmp_result
+++ basename ./monichaogu.sh
++ filename=monichaogu.sh
++ '[' -d lkp_tmp_result ']'
++ trash=24989
++ mkdir -p /tmp/lkp_trash/24989
++ mv 'lkp_tmp_result/*' /tmp/lkp_trash/24989
+mv: cannot stat ‘lkp_tmp_result/*’: No such file or directory
++ source /etc/profile
+++ '[' '' ']'
+++ '[' -d /etc/profile.d ']'
+++ for i in '/etc/profile.d/*.sh'
+++ '[' -r /etc/profile.d/appmenu-qt5.sh ']'
+++ . /etc/profile.d/appmenu-qt5.sh
++++ export QT_QPA_PLATFORMTHEME=appmenu-qt5
++++ QT_QPA_PLATFORMTHEME=appmenu-qt5
+++ for i in '/etc/profile.d/*.sh'
+++ '[' -r /etc/profile.d/bash_completion.sh ']'
+++ . /etc/profile.d/bash_completion.sh
++++ '[' -n '4.3.42(1)-release' -a -n '' -a -z '' ']'
+++ for i in '/etc/profile.d/*.sh'
+++ '[' -r /etc/profile.d/cedilla-brazil.sh ']'
+++ . /etc/profile.d/cedilla-brazil.sh
++++ '[' -n en_US.UTF-8 ']'
++++ '[' en_US = pt_BR ']'
+++ for i in '/etc/profile.d/*.sh'
+++ '[' -r /etc/profile.d/vte-2.91.sh ']'
+++ . /etc/profile.d/vte-2.91.sh
++++ '[' -n '4.3.42(1)-release' -o -n '' ']'
++++ [[ hxB == *i* ]]
++++ return 0
+++ unset i
+++ export JAVA_HOME=/usr/lib/jdk8
+++ JAVA_HOME=/usr/lib/jdk8
+++ export JRE_HOME=/usr/lib/jdk8/jre
+++ JRE_HOME=/usr/lib/jdk8/jre
+++ export CLASSPATH=.:/usr/lib/jdk8/lib:/usr/lib/jdk8/jre/lib
+++ CLASSPATH=.:/usr/lib/jdk8/lib:/usr/lib/jdk8/jre/lib
+++ export PATH=/usr/lib/jdk8/bin:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin
+++ PATH=/usr/lib/jdk8/bin:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin
+++ export PATH=/usr/lib/jdk8/bin:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin
+++ PATH=/usr/lib/jdk8/bin:/usr/lib/jdk8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin:/root/Android/Sdk/tools:/root/Android/Sdk/platform-tools:/root/Android/Sdk/tools/bin
++ ./monichaoguMake.sh
++ android create uitest-project -n monichaoguTest -t 1 -p .
+Added file ./build.xml
++ ant build
+Buildfile: /root/oto_external_lkp/testcase/monichaogu/build.xml
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 24.0.0
+ [checkenv] Installed at /root/Android/Sdk
+
+-build-setup:
+[getbuildtools] Using latest Build Tools: 26.0.1
+     [echo] Resolving Build Target for monichaoguTest...
+[getuitarget] Project Target:   Android 5.1.1
+[getuitarget] API level:        22
+     [echo] ----------
+     [echo] Creating output directories if needed...
+    [mkdir] Created dir: /root/oto_external_lkp/testcase/monichaogu/bin/classes
+
+-pre-compile:
+
+compile:
+    [javac] Compiling 3 source files to /root/oto_external_lkp/testcase/monichaogu/bin/classes
+    [javac] warning: [options] source value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] 3 warnings
+
+-post-compile:
+
+-dex:
+      [dex] input: /root/oto_external_lkp/testcase/monichaogu/bin/classes
+      [dex] Converting compiled files and external libraries into /root/oto_external_lkp/testcase/monichaogu/bin/classes.dex...
+
+-post-dex:
+
+-jar:
+      [jar] Building jar: /root/oto_external_lkp/testcase/monichaogu/bin/monichaoguTest.jar
+
+-post-jar:
+
+build:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
++ adb connect 192.168.0.224
+already connected to 192.168.0.224:5555
++ adb -s 192.168.0.224:5555 push ./bin/monichaoguTest.jar /data/local/tmp
+103 KB/s (4345 bytes in 0.041s)
++ adb -s 192.168.0.224:5555 shell rm -rf /data/lkp_test
++ adb -s 192.168.0.224:5555 shell mkdir /data/lkp_test
++ adb -s 192.168.0.224:5555 push ./lkp_test /data/lkp_test
+cannot stat './lkp_test': No such file or directory
++ adb -s 192.168.0.224:5555 shell busybox chmod +x /data/lkp_test/chroot_run.sh
+chmod: /data/lkp_test/chroot_run.sh: No such file or directory
++ adb -s 192.168.0.224:5555 shell /data/lkp_test/chroot_run.sh monichaogu.sh
+/system/bin/sh: /data/lkp_test/chroot_run.sh: not found
++ filename1=monichaogu
++ mkdir lkp_tmp_result/monichaogu
++ adb -s 192.168.0.224:5555 pull /data/ubuntu/result/monichaogu lkp_tmp_result/monichaogu/
+remote object '/data/ubuntu/result/monichaogu' does not exist
++ adb -s 192.168.0.224:5555 shell pm uninstall -k com.hexin.plat.monitrade
+Success
++ rm -rf /tmp/lkp_trash/
++ echo 'test over! all done!'
+test over! all done!
