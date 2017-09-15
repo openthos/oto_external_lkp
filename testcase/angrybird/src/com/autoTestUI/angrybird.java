@@ -39,21 +39,21 @@ public class angrybird extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(5000);
+		otoTest.mydevice.waitForWindowUpdate(apppackage, 5000);
 
-		otoTest.MoveToTop();
-		otoTest.ClickById("android:id/mwMaximizeBtn");
-		sleep(1000);
-		window_lib.windowtest(otoTest.mydevice,appName );
-
-		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		otoTest.MoveToTop();
-		otoTest.ClickById("android:id/mwMaximizeBtn");
-		sleep(1000);
-		otoTest.ClickById("android:id/mwMaximizeBtn");
-		sleep(1000);
-		otoTest.MoveToTop();
-		otoTest.ClickById("android:id/mwMinimizeBtn");
+//		otoTest.MoveToTop();
+//		otoTest.ClickById("android:id/mwMaximizeBtn");
+//		sleep(1000);
+//		window_lib.windowtest(otoTest.mydevice,appName );
+//
+//		otoDisplayRun.execCmdNoSave("am start -n " + appName);
+//		otoTest.MoveToTop();
+//		otoTest.ClickById("android:id/mwMaximizeBtn");
+//		sleep(1000);
+//		otoTest.ClickById("android:id/mwMaximizeBtn");
+//		sleep(1000);
+//		otoTest.MoveToTop();
+//		otoTest.ClickById("android:id/mwMinimizeBtn");
 		// 强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));
 	}

@@ -15,7 +15,7 @@ public class system_ui extends UiAutomatorTestCase {
 
 	public static String port = "5555";
 
-	public void testsetting() throws UiObjectNotFoundException, RemoteException,
+	public void testsystem_ui() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
