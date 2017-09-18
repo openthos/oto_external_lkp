@@ -20,7 +20,7 @@ fi
  source /etc/profile
 ./monichaoguMake.sh
 adb connect $androidIP
-adb -s $androidIP:$port   push ./bin/monichaoguTest.jar /data/local/tmp
+adb -s $androidIP:$port   push ./bin/monichaogu.jar /data/local/tmp
 
 adb -s $androidIP:$port  shell  rm -rf  /data/lkp_test
 adb -s $androidIP:$port   shell  mkdir /data/lkp_test
