@@ -18,7 +18,7 @@ if  [  -d $foldName  ];then
       mv   $foldName/* /tmp/lkp_trash/$trash
 fi
  source /etc/profile
-./cntvMake.sh
+./cntvhdMake.sh
 adb connect $androidIP
 adb -s $androidIP:$port   push ./bin/cntvhd.jar /data/local/tmp
 
