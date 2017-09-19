@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./yingsuo_benchmark.expt
+

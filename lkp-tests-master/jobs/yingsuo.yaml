@@ -1,0 +1,7 @@
+testcase: yingsuo
+category: benchmark
+
+iterations: 1x
+
+yingsuo:
+  duration: 600s
