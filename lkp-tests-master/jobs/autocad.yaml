@@ -1,0 +1,7 @@
+testcase: autocad
+category: benchmark
+
+iterations: 1x
+
+autocad:
+  duration: 600s
