@@ -1,0 +1,7 @@
+testcase: launcher
+category: benchmark
+
+iterations: 1x
+
+launcher:
+  duration: 600s
