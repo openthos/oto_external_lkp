@@ -7,8 +7,7 @@ WEB_URL="https://github.com/openthos/oto_external_lkp/raw/master/benchmark_mirro
 install()
 {
     #make  
-cp  -af $BM_NAME  $BM_ROOT
-cp -af *.apk $BM_ROOT
+cp -af  $BM_NAME  $BM_ROOT
 cp -af  auto_interact.sh $BM_ROOT  
 cp -af  launcher_benchmark.expt $BM_ROOT   
 $LKP_SRC/pack/launcher_pack.expt
