@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./OSmonitor_benchmark.expt
+

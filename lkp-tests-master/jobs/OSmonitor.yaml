@@ -1,0 +1,7 @@
+testcase: OSmonitor
+category: benchmark
+
+iterations: 1x
+
+OSmonitor:
+  duration: 600s
