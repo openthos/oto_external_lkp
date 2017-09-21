@@ -1,0 +1,7 @@
+testcase: PCMark
+category: benchmark
+
+iterations: 1x
+
+PCMark:
+  duration: 600s
