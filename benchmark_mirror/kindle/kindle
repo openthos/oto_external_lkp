@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./kindle_benchmark.expt
+

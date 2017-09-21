@@ -1,0 +1,7 @@
+testcase: kindle
+category: benchmark
+
+iterations: 1x
+
+kindle:
+  duration: 600s
