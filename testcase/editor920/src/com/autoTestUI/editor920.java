@@ -14,7 +14,7 @@ public class editor920 extends UiAutomatorTestCase {
 	public static String appName = "com.jecelyin.editor.v2/com.jecelyin.editor.v2.ui.MainActivity";
 	public static String port = "5555";
 
-	public void testadobe_editor920_dc() throws UiObjectNotFoundException, RemoteException,
+	public void testeditor920() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());

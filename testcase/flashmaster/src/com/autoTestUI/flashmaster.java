@@ -14,7 +14,7 @@ public class flashmaster extends UiAutomatorTestCase {
 	public static String appName = "com.tako.flash.master/com.tako.flash.master.MainActivity";
 	public static String port = "5555";
 
-	public void testadobe_flashmaster_dc() throws UiObjectNotFoundException, RemoteException,
+	public void testflashmaster() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());

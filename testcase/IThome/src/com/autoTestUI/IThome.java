@@ -14,7 +14,7 @@ public class IThome extends UiAutomatorTestCase {
 	public static String appName = "com.ruanmei.ithome/com.ruanmei.ithome.ui.MainActivity";
 	public static String port = "5555";
 
-	public void testadobe_IThome_dc() throws UiObjectNotFoundException, RemoteException,
+	public void testIThome() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());

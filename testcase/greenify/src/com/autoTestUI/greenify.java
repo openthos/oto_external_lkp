@@ -14,7 +14,7 @@ public class greenify extends UiAutomatorTestCase {
 	public static String appName = "com.oasisfeng.greenify/com.oasisfeng.greenify.GreenifyActivity";
 	public static String port = "5555";
 
-	public void testadobe_greenify_dc() throws UiObjectNotFoundException, RemoteException,
+	public void testgreenify() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());

@@ -14,7 +14,7 @@ public class android3dmark extends UiAutomatorTestCase {
 	public static String appName = "com.futuremark.dmandroid.application/com.futuremark.dmandroid.application.activity.SplashPageActivity";
 	public static String port = "5555";
 
-	public void testadobe_android3dmark_dc() throws UiObjectNotFoundException, RemoteException,
+	public void testandroid3dmark() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
