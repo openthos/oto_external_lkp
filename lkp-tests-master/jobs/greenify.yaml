@@ -1,0 +1,7 @@
+testcase: greenify
+category: benchmark
+
+iterations: 1x
+
+greenify:
+  duration: 600s
