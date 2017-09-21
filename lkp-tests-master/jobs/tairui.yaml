@@ -1,0 +1,7 @@
+testcase: tairui
+category: benchmark
+
+iterations: 1x
+
+tairui:
+  duration: 600s

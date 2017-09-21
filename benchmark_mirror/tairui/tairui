@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./tairui_benchmark.expt
+
