@@ -1,0 +1,7 @@
+testcase: quickpicker
+category: benchmark
+
+iterations: 1x
+
+quickpicker:
+  duration: 600s
