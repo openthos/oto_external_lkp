@@ -1,0 +1,7 @@
+testcase: xuetang
+category: benchmark
+
+iterations: 1x
+
+xuetang:
+  duration: 600s
