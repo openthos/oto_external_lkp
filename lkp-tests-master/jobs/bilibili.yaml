@@ -1,0 +1,7 @@
+testcase: bilibili
+category: benchmark
+
+iterations: 1x
+
+bilibili:
+  duration: 600s
