@@ -1,0 +1,12 @@
+#!/bin/sh
+# - test
+
+cd $BENCHMARK_ROOT/editor920 || exit
+
+start_time=$(date +%s)
+
+for i in $(seq 1 $iterations)
+do
+	echo Iteration: $i
+	cmd ./editor920
+done
