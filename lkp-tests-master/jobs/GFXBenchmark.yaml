@@ -1,0 +1,7 @@
+testcase: GFXBenchmark
+category: benchmark
+
+iterations: 1x
+
+GFXBenchmark:
+  duration: 600s

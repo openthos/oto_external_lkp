@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./GFXBenchmark_benchmark.expt
+
