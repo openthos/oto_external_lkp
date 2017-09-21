@@ -1,0 +1,7 @@
+testcase: android3dmark
+category: benchmark
+
+iterations: 1x
+
+android3dmark:
+  duration: 600s

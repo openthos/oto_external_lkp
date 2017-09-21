@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./android3dmark_benchmark.expt
+
