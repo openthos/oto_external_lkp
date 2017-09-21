@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./IThome_benchmark.expt
+

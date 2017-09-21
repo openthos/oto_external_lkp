@@ -1,0 +1,7 @@
+testcase: IThome
+category: benchmark
+
+iterations: 1x
+
+IThome:
+  duration: 600s
