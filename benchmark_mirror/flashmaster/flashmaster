@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./flashmaster_benchmark.expt
+

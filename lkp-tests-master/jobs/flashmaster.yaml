@@ -1,0 +1,7 @@
+testcase: flashmaster
+category: benchmark
+
+iterations: 1x
+
+flashmaster:
+  duration: 600s
