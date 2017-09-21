@@ -15,7 +15,7 @@ public class system_ui extends UiAutomatorTestCase {
 
 	public static String port = "5555";
 
-	public void testsystem_ui() throws UiObjectNotFoundException, RemoteException,
+	public void testsetting() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
@@ -28,15 +28,18 @@ public class system_ui extends UiAutomatorTestCase {
 		Date endtime;
 		long launchTime;
 		SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
-
+		sleep(1000);
+		
 		starttime = new Date();
 		System.out.println("----------Start time： " +  format.format(starttime));
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		//启动通知中心
-		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
-		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
-		otoTest.mydevice.openNotification();
 
+		sleep(1000);
+		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ESCAPE);
+		otoTest.mydevice.openNotification();
+		
 		endtime = new Date();
 		System.out.println("----------结束时间： " +  format.format(endtime));
 		System.out.println("endtime:" +  System.currentTimeMillis());
@@ -44,7 +47,17 @@ public class system_ui extends UiAutomatorTestCase {
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
 		sleep(1000);
+		
+		//音量调节
+		otoTest.ClickById("com.android.systemui:id/status_bar_sound");
+		otoTest.ClickById("com.android.systemui:id/media_volume_btn");
+		otoTest.ClickById("com.android.systemui:id/media_volume_btn");
+		sleep(1000);
 		//点击通知管理
+		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
+		otoTest.mydevice.openNotification();
+		sleep(500);
 		otoTest.ClickById("com.android.systemui:id/notificationManager");
 		sleep(1000);
 		assertEquals("notificationManager open success","com.android.settings",otoTest.mydevice.getCurrentPackageName());
@@ -54,7 +67,7 @@ public class system_ui extends UiAutomatorTestCase {
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickByText("截屏");
-		sleep(5000);
+		sleep(6000);
 		assertTrue("截屏成功", new UiObject(new UiSelector().resourceId("android:id/title")).getText().equals("已抓取屏幕截图。"));
 		//点击清除所有
 		otoTest.ClickById("com.android.systemui:id/clearAll");
@@ -83,7 +96,6 @@ public class system_ui extends UiAutomatorTestCase {
 		UiObject act = new UiObject(new UiSelector().resourceId("com.android.systemui:id/status_bar_activity_contents"));
 		UiObject act1 = act.getChild(new UiSelector().className("android.widget.FrameLayout").instance(0));
 		act1.click();
-		sleep(2000);
 		assertEquals("filemanager open success","com.openthos.filemanager",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
 		//打开Internet浏览器
@@ -92,7 +104,6 @@ public class system_ui extends UiAutomatorTestCase {
 		otoTest.mydevice.openNotification();
 		UiObject act2 = act.getChild(new UiSelector().className("android.widget.FrameLayout").instance(1));
 		act2.click();
-		sleep(3000);
 		assertEquals("Internet浏览器 open success","org.mozilla.fennec_root",otoTest.mydevice.getCurrentPackageName());
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwCloseBtn");
@@ -117,6 +128,12 @@ public class system_ui extends UiAutomatorTestCase {
 		otoTest.ClickByText("选择键盘");
 		assertEquals("打开输入法设置","com.android.settings",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
+		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
+		otoTest.mydevice.openNotification();
+		otoTest.ClickById("com.android.systemui:id/status_bar_input_method");
+		input2.click();
+		otoTest.ClickByText("谷歌拼音输入法");
 		//电池
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
@@ -154,13 +171,6 @@ public class system_ui extends UiAutomatorTestCase {
 		//otoTest.ClickById("com.android.systemui:id/ethernet_configure");
 		//assertEquals("打开以太网设置","com.android.settings",otoTest.mydevice.getCurrentPackageName());
 		//otoTest.ClickById("android:id/mwCloseBtn");
-		//音量调节
-		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
-		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
-		otoTest.mydevice.openNotification();
-		otoTest.ClickById("com.android.systemui:id/status_bar_sound");
-		otoTest.ClickById("com.android.systemui:id/media_volume_btn");
-		otoTest.ClickById("com.android.systemui:id/media_volume_btn");
 		//日历
 		//此处有[bug 873] 通知中心切换到日期需要点击两次，其他（声音\电池等）均可正常切换
 		//返回桌面按钮
