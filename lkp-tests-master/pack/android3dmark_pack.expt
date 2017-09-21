@@ -1,7 +1,7 @@
 #!/usr/bin/expect
 spawn  telnet localhost
 expect "#"
-send "pm install /data/ubuntu/lkp/benchmarks/android3dmark/android3dmark\r"
+send "pm install /data/ubuntu/lkp/benchmarks/android3dmark/android3dmark.apk\r"
 expect "#"
 send "sleep 1"
 expect "#"
