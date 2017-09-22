@@ -1,0 +1,7 @@
+testcase: cut
+category: benchmark
+
+iterations: 1x
+
+cut:
+  duration: 600s
