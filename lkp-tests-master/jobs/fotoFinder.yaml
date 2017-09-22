@@ -1,0 +1,7 @@
+testcase: fotoFinder
+category: benchmark
+
+iterations: 1x
+
+fotoFinder:
+  duration: 600s
