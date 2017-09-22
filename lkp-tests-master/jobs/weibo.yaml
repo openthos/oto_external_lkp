@@ -1,0 +1,7 @@
+testcase: weibo
+category: benchmark
+
+iterations: 1x
+
+weibo:
+  duration: 600s
