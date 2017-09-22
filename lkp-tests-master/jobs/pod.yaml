@@ -1,0 +1,7 @@
+testcase: pod
+category: benchmark
+
+iterations: 1x
+
+pod:
+  duration: 600s
