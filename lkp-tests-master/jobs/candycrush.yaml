@@ -1,0 +1,7 @@
+testcase: candycrush
+category: benchmark
+
+iterations: 1x
+
+candycrush:
+  duration: 600s

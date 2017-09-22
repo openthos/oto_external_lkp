@@ -1,0 +1,15 @@
+#!/bin/bash
+
+VERSION="2.2.3"
+#WEB_URL="http://www.tux.org/~mayer/linux/nbench-byte-2.2.3.tar.gz"
+WEB_URL="https://github.com/openthos/oto_external_lkp/raw/master/benchmark_mirror/candycrush.tar.gz"
+
+install()
+{
+    #make  
+cp  -af $BM_NAME  $BM_ROOT
+cp -af *.apk $BM_ROOT
+cp -af  auto_interact.sh $BM_ROOT  
+cp -af  candycrush_benchmark.expt $BM_ROOT   
+$LKP_SRC/pack/candycrush_pack.expt
+}

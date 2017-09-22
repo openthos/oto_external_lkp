@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./candycrush_benchmark.expt
+
