@@ -41,7 +41,7 @@ public class window_lib extends UiAutomatorTestCase{
 		
 		//拖动右下角，扩大窗口
 		device.drag(myAppSide2.right - 1, myAppSide2.bottom - 1,myAppSide2.right + 100, myAppSide2.bottom + 100, 2);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 
 		// 重新通过resourceId 获取窗口边界坐标 下面拖动时，差几个像素点到边界 所以-2
 		UiObject objectSide3 = new UiObject(new UiSelector().resourceId("android:id/mwOuterBorder"));

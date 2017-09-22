@@ -32,7 +32,7 @@ public class SkypeTest1 extends UiAutomatorTestCase{
 		System.out.println("----------Start time： " +  format.format(starttime));
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		sleep(5000);
+		sleep(10000);
 
 		endtime = new Date();
 		System.out.println("----------结束时间： " +  format.format(endtime));
@@ -47,10 +47,10 @@ public class SkypeTest1 extends UiAutomatorTestCase{
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		sleep(5000);
 		otoTest.ClickById("android:id/mwMaximizeBtn");
-		sleep(1000);
+		sleep(3000);
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
-		sleep(1000);
+		sleep(2000);
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		// 强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));
