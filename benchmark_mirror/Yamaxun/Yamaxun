@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./Yamaxun_benchmark.expt
+

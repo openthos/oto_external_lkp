@@ -1,0 +1,7 @@
+testcase: Yamaxun
+category: benchmark
+
+iterations: 1x
+
+Yamaxun:
+  duration: 600s
