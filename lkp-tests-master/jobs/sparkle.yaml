@@ -1,0 +1,7 @@
+testcase: sparkle
+category: benchmark
+
+iterations: 1x
+
+sparkle:
+  duration: 600s
