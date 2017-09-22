@@ -1,0 +1,7 @@
+testcase: YinxiangNote
+category: benchmark
+
+iterations: 1x
+
+YinxiangNote:
+  duration: 600s
