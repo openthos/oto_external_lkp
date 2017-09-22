@@ -1,0 +1,7 @@
+testcase: Taiwan
+category: benchmark
+
+iterations: 1x
+
+Taiwan:
+  duration: 600s
