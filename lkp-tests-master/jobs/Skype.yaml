@@ -1,0 +1,7 @@
+testcase: Skype
+category: benchmark
+
+iterations: 1x
+
+Skype:
+  duration: 600s
