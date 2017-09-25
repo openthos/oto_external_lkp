@@ -1,2 +1,2 @@
 #!/system/xbin/sh
-uiautomator runtest bilibiliTest.jar -c com.autoTestUI.bilibiliTest1
+uiautomator runtest bilibili.jar -c com.autoTestUI.bilibiliTest1

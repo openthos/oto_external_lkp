@@ -20,7 +20,7 @@ fi
  source /etc/profile
 ./bilibiliMake.sh
 adb connect $androidIP
-adb -s $androidIP:$port   push ./bin/bilibiliTest.jar /data/local/tmp
+adb -s $androidIP:$port   push ./bin/bilibili.jar /data/local/tmp
 
 adb -s $androidIP:$port  shell  rm -rf  /data/lkp_test
 adb -s $androidIP:$port   shell  mkdir /data/lkp_test

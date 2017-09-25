@@ -1,2 +1,2 @@
 #!/system/xbin/sh
-uiautomator runtest PCMarkTest.jar -c com.autoTestUI.PCMarkTest1
+uiautomator runtest PCMark.jar -c com.autoTestUI.PCMarkTest1

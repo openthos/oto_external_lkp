@@ -20,7 +20,7 @@ fi
  source /etc/profile
 ./candycrushMake.sh
 adb connect $androidIP
-adb -s $androidIP:$port   push ./bin/candycrushTest.jar /data/local/tmp
+adb -s $androidIP:$port   push ./bin/candycrush.jar /data/local/tmp
 
 adb -s $androidIP:$port  shell  rm -rf  /data/lkp_test
 adb -s $androidIP:$port   shell  mkdir /data/lkp_test

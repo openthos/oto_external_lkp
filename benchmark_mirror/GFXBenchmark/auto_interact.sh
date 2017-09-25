@@ -1,2 +1,2 @@
 #!/system/xbin/sh
-uiautomator runtest GFXBenchmarkTest.jar -c com.autoTestUI.GFXBenchmarkTest1
+uiautomator runtest GFXBenchmark.jar -c com.autoTestUI.GFXBenchmarkTest1

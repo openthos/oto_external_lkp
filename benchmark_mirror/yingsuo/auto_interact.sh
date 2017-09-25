@@ -1,2 +1,2 @@
 #!/system/xbin/sh
-uiautomator runtest yingsuoTest.jar -c com.autoTestUI.yingsuoTest1
+uiautomator runtest yingsuo.jar -c com.autoTestUI.yingsuoTest1

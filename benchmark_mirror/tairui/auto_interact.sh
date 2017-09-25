@@ -1,2 +1,2 @@
 #!/system/xbin/sh
-uiautomator runtest tairuiTest.jar -c com.autoTestUI.tairuiTest1
+uiautomator runtest tairui.jar -c com.autoTestUI.tairuiTest1

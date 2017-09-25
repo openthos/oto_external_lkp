@@ -20,7 +20,7 @@ fi
  source /etc/profile
 ./yingsuoMake.sh
 adb connect $androidIP
-adb -s $androidIP:$port   push ./bin/yingsuoTest.jar /data/local/tmp
+adb -s $androidIP:$port   push ./bin/yingsuo.jar /data/local/tmp
 
 adb -s $androidIP:$port  shell  rm -rf  /data/lkp_test
 adb -s $androidIP:$port   shell  mkdir /data/lkp_test

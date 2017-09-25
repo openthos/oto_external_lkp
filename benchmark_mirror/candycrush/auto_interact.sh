@@ -1,2 +1,2 @@
 #!/system/xbin/sh
-uiautomator runtest candycrushTest.jar -c com.autoTestUI.candycrushTest1
+uiautomator runtest candycrush.jar -c com.autoTestUI.candycrushTest1
