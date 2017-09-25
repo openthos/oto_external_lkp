@@ -34,7 +34,7 @@ public class bilibiliTest1 extends UiAutomatorTestCase {
 		System.out.println("----------Start time： " +  format.format(starttime));
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		sleep(10000)
+		sleep(10000);
 		UiObject okbutton = new UiObject(new UiSelector().resourceId("tv.danmaku.bili:id/update_cancel"));
        		if (okbutton.exists()) {
 			new UiObject(new UiSelector().resourceId("tv.danmaku.bili:id/update_cancel")).click();		}
