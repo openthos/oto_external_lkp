@@ -34,7 +34,10 @@ public class bilibiliTest1 extends UiAutomatorTestCase {
 		System.out.println("----------Start time： " +  format.format(starttime));
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		new UiObject(new UiSelector().text("以后再说")).click();
+		sleep(10000)
+		UiObject okbutton = new UiObject(new UiSelector().text("以后再说"));
+       		if (okbutton.exists()) {
+			new UiObject(new UiSelector().text("以后再说")).click();		}
 
 		endtime = new Date();
 		System.out.println("----------结束时间： " +  format.format(endtime));
