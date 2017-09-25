@@ -10,8 +10,8 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 public class wpspro extends UiAutomatorTestCase {
 
 	public static String apppackage = "com.kingsoft.moffice_pro";
-	public static String appactivity = "cn.wps.moffice.main.local.home.PadHomeActivity";
-	public static String appName = "com.kingsoft.moffice_pro/cn.wps.moffice.main.local.home.PadHomeActivity";
+	public static String appactivity = "cn.wps.moffice.documentmanager.PreStartActivity";
+	public static String appName = "com.kingsoft.moffice_pro/cn.wps.moffice.documentmanager.PreStartActivity";
 	public static String port = "5555";
 
 	public void testwpspro() throws UiObjectNotFoundException, RemoteException,

@@ -10,8 +10,8 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 public class jd extends UiAutomatorTestCase {
 
 	public static String apppackage = "com.jingdong.app.mall";
-	public static String appactivity = "com.jingdong.app.mall.MainFrameActivity";
-	public static String appName = "com.jingdong.app.mall/com.jingdong.app.mall.MainFrameActivity";
+	public static String appactivity = "com.jingdong.app.mall.main.MainActivity";
+	public static String appName = "com.jingdong.app.mall/com.jingdong.app.mall.main.MainActivity";
 	public static String port = "5555";
 
 	public void testjd() throws UiObjectNotFoundException, RemoteException,

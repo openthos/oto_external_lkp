@@ -10,8 +10,8 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 public class baiduyun extends UiAutomatorTestCase {
 
 	public static String apppackage = "com.baidu.netdisk";
-	public static String appactivity = "com.baidu.netdisk.ui.account.LoginRegisterActivity";
-	public static String appName = "com.baidu.netdisk/com.baidu.netdisk.ui.account.LoginRegisterActivity";
+	public static String appactivity = "com.baidu.netdisk.ui.Navigate";
+	public static String appName = "com.baidu.netdisk/com.baidu.netdisk.ui.Navigate";
 	public static String port = "5555";
 
 	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,

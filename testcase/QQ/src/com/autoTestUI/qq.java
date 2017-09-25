@@ -10,8 +10,8 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 public class qq extends UiAutomatorTestCase {
 
 	public static String apppackage = "com.tencent.mobileqq";
-	public static String appactivity = "com.tencent.mobileqq.activity.RegisterGuideActivity";
-	public static String appName = "com.tencent.mobileqq/com.tencent.mobileqq.activity.RegisterGuideActivity";
+	public static String appactivity = "com.tencent.mobileqq.activity.SplashActivity";
+	public static String appName = "com.tencent.mobileqq/com.tencent.mobileqq.activity.SplashActivity";
 	public static String port = "5555";
 
 	public void testqq() throws UiObjectNotFoundException, RemoteException,

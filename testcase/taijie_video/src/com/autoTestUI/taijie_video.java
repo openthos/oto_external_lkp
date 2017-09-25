@@ -10,8 +10,8 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 public class taijie_video extends UiAutomatorTestCase {
 
 	public static String apppackage = "com.togic.livevideo";
-	public static String appactivity = "com.togic.launcher.MainActivity";
-	public static String appName = "com.togic.livevideo/com.togic.launcher.MainActivity";
+	public static String appactivity = "com.togic.launcher.SplashActivity";
+	public static String appName = "com.togic.livevideo/com.togic.launcher.SplashActivity";
 	public static String port = "5555";
 
 	public void testtaijievideo() throws UiObjectNotFoundException, RemoteException,

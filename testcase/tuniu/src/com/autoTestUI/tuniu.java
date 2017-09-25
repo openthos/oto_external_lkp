@@ -11,8 +11,8 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 public class tuniu extends UiAutomatorTestCase {
 
 	public static String apppackage = "com.tuniu.HD.ui";
-	public static String appactivity = "com.tuniu.HD.ui.activity.main.MainActivity";
-	public static String appName = "com.tuniu.HD.ui/com.tuniu.HD.ui.activity.main.MainActivity";
+	public static String appactivity = "com.tuniu.HD.ui.activity.launch.LaunchActivity";
+	public static String appName = "com.tuniu.HD.ui/com.tuniu.HD.ui.activity.launch.LaunchActivity";
 	public static String port = "5555";
 
 	public void testtuniu() throws UiObjectNotFoundException, RemoteException,
