@@ -39,13 +39,20 @@ public class cntvhdTest extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(7000);
+		sleep(6000);
 
-//		otoTest.ClickById("android:id/mwMaximizeBtn");
-//		window_lib.windowtest(otoTest.mydevice,appName );
-//
-//		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-//		otoTest.ClickById("android:id/mwMinimizeBtn");
+		otoTest.ClickById("cn.cntvhd:id/guid_jump");
+		sleep(2000);
+		otoTest.ClickById("cn.cntvhd:id/right_button");
+		sleep(2000);
+		otoTest.MoveToTop();
+		otoTest.ClickById("android:id/mwMaximizeBtn");
+		window_lib.windowtest(otoTest.mydevice,appName );
+
+		otoDisplayRun.execCmdNoSave("am start -n " + appName);
+		sleep(6000);
+		otoTest.MoveToTop();
+		otoTest.ClickById("android:id/mwMinimizeBtn");
 		// 强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));
 	}

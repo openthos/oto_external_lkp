@@ -50,13 +50,14 @@ public class seafile extends UiAutomatorTestCase {
 		sleep(1000);
 		otoTest.ClickById("android:id/text1");
 
-		otoTest.SetTextById("com.seafile.seadroid2:id/server_url", "https://dev.openthos.org/");
+		otoTest.SetTextById("com.seafile.seadroid2:id/server_url", "dev.openthos.org/");
 		otoTest.SetTextById("com.seafile.seadroid2:id/email_address", "asptest@126.com");
 		otoTest.SetTextById("com.seafile.seadroid2:id/password", "abc123");
 		//目前无法登录
 		//otoTest.ClickById("com.seafile.seadroid2:id/login_button");
 
 		// 关闭程序
+		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwCloseBtn");
 
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);

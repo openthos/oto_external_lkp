@@ -1,11 +1,7 @@
 package com.appStore;
 
-import android.bluetooth.BluetoothClass;
-import android.os.RemoteException;
 import android.util.Log;
 import android.widget.LinearLayout;
-import android.widget.Toast;
-
 import java.io.IOException;
 
 import com.android.uiautomator.core.UiDevice;
@@ -52,7 +48,6 @@ public class appStoreTest1 extends UiAutomatorTestCase {
     }
 
     public void testDemo1() throws UiObjectNotFoundException,IOException, InterruptedException {
-        UiDevice uiDevice =getUiDevice();
 
         otoDisplayRun.execCmdNoSave("am start -n com.openthos.appstore/.MainActivity");
         sleep(5000);

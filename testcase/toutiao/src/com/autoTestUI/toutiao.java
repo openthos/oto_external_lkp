@@ -10,8 +10,8 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 public class toutiao extends UiAutomatorTestCase {
 
 	public static String apppackage = "com.ss.android.article.news";
-	public static String appactivity = "com.ss.android.article.news.activity.MainActivity";
-	public static String appName = "com.ss.android.article.news/com.ss.android.article.news.activity.MainActivity";
+	public static String appactivity = "com.ss.android.article.news.activity.SplashBadgeActivity";
+	public static String appName = "com.ss.android.article.news/com.ss.android.article.news.activity.SplashBadgeActivity";
 	public static String port = "5555";
 
 	public void testtoutiao() throws UiObjectNotFoundException, RemoteException,
@@ -40,16 +40,15 @@ public class toutiao extends UiAutomatorTestCase {
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
 		sleep(7000);
-
+		
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		sleep(1000);
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		otoTest.ClickById("android:id/mwCloseBtn");
-
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		window_lib.windowtest(otoTest.mydevice,appName );
-		otoTest.ClickById("android:id/mwMinimizeBtn");
+		
 		// 强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));
 

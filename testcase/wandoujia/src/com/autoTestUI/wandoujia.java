@@ -10,8 +10,8 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 public class wandoujia extends UiAutomatorTestCase {
 
 	public static String apppackage = "com.wandoujia.phoenix2";
-	public static String appactivity = "com.wandoujia.jupiter.activity.HomeActivity";
-	public static String appName = "com.wandoujia.phoenix2/com.wandoujia.jupiter.activity.HomeActivity";
+	public static String appactivity = "com.pp.assistant.activity.PPMainActivity";
+	public static String appName = "com.wandoujia.phoenix2/com.pp.assistant.activity.PPMainActivity";
 	public static String port = "5555";
 
 	public void testwandoujia() throws UiObjectNotFoundException, RemoteException,

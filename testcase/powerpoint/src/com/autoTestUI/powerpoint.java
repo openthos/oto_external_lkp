@@ -41,6 +41,8 @@ public class powerpoint extends UiAutomatorTestCase {
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
 		sleep(7000);
 
+		otoTest.ClickById("com.microsoft.office.powerpoint:id/docsui_signinview_skipsignin");
+		sleep(1000);
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		window_lib.windowtest(otoTest.mydevice,appName );

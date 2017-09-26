@@ -39,12 +39,12 @@ public class wyiyunmusic extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(3000);
+		sleep(5000);
 
 		window_lib.windowtest(otoTest.mydevice,appName );
 
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		sleep(1000);
+		sleep(3000);
 		otoTest.ClickById("com.netease.cloudmusic:id/loginOrRegister");
 		otoTest.ClickById("com.netease.cloudmusic:id/login");
 		otoTest.SetTextById("com.netease.cloudmusic:id/phoneNumber", "18710140362");

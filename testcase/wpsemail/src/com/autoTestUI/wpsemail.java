@@ -9,8 +9,8 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 public class wpsemail extends UiAutomatorTestCase {
 
-	public static String apppackage = "com.microsoft.office.word";
-	public static String appactivity = "com.microsoft.office.apphost.LaunchActivity";
+	public static String apppackage = "com.kingsoft.email";
+	public static String appactivity = "com.kingsoft.email.activity.setup.AccountSetupBasics";
 	public static String appName = "com.kingsoft.email/com.kingsoft.email.activity.setup.AccountSetupBasics";
 	public static String port = "5555";
 

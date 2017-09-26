@@ -46,6 +46,7 @@ public class YY extends UiAutomatorTestCase {
 		window_lib.windowtest(otoTest.mydevice,appName );
 
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
+		sleep(1000);
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		// 强制关闭程序

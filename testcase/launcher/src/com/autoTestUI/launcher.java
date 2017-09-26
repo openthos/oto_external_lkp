@@ -78,8 +78,11 @@ public class launcher extends UiAutomatorTestCase {
 		Configurator.getInstance().setActionAcknowledgmentTimeout(0);
 		wallpaper.click();
 		wallpaper.click();
+		sleep(1000);
+		wallpaper.click();
+		wallpaper.click();
 		otoTest.ClickById("com.android.launcher3:id/set_wallpaper_button");
-		sleep(2000);
+		sleep(3000);
 		assertEquals("set wallpaper success","com.android.launcher3",otoTest.mydevice.getCurrentPackageName());
 		Configurator.getInstance().setActionAcknowledgmentTimeout(actiontime);
 		//显示设置
@@ -160,7 +163,7 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest.mydevice.pressEnter();
 		sleep(500);
 		otoTest.ClickById("com.openthos.compress:id/bt_co_compress");
-		sleep(1000);
+		sleep(3000);
 		UiObject Uzip =new UiObject(new UiSelector().text("usercomp.zip"));
 		assertTrue("压缩zip",Uzip.exists());
 		//压缩新建文件夹为.7z,并设置密码123
@@ -182,6 +185,7 @@ public class launcher extends UiAutomatorTestCase {
 		UiObject co_passwd = new UiObject(new UiSelector().resourceId("com.openthos.compress:id/et_co_passwd"));
 		co_passwd.setText("123");
 		otoTest.ClickById("com.openthos.compress:id/bt_co_compress");
+		sleep(3000);
 		//压缩新建文件
 		newtxt.longClick();
 		otoTest.ClickByText("压缩");
@@ -190,6 +194,7 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest.ClickById("com.openthos.compress:id/sp_co_type");
 		otoTest.ClickByText(".tar");
 		otoTest.ClickById("com.openthos.compress:id/bt_co_compress");
+		sleep(3000);
 		UiObject txttar = new UiObject(new UiSelector().text("txtcomp.tar"));
 		assertTrue("压缩txt",txttar.exists());
 		//剪切txt
@@ -243,10 +248,11 @@ public class launcher extends UiAutomatorTestCase {
 		fold7z.click();
 		fold7z.click();
 		otoTest.ClickById("com.openthos.compress:id/bt_decompress");
-		sleep(1000);
+		sleep(2000);
 		assertTrue("解压fold7z",newfolder.exists());
 		Configurator.getInstance().setActionAcknowledgmentTimeout(actiontime);
 		otoTest.ClickById("android:id/mwCloseBtn");
+		sleep(1000);
 		//删除
 		lch.click();
 		txttar.longClick();

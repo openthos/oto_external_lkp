@@ -44,18 +44,13 @@ public class tuniu extends UiAutomatorTestCase {
 
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
-		sleep(1000);
-		otoTest.ClickById("android:id/mwMaximizeBtn");
-		sleep(1000);
-		otoTest.MoveToTop();
-		otoTest.ClickById("android:id/mwCloseBtn");
-
-		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		otoTest.MoveToTop();
-		otoTest.ClickById("android:id/mwMaximizeBtn");
 		window_lib.windowtest(otoTest.mydevice,appName );
+		
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
+		sleep(4000);
 		otoTest.MoveToTop();
+		otoTest.ClickById("android:id/mwMaximizeBtn");
+		sleep(1000);
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		// 强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));

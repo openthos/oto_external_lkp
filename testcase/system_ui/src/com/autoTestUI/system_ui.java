@@ -112,27 +112,30 @@ public class system_ui extends UiAutomatorTestCase {
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickById("com.android.systemui:id/status_bar_input_method");
-		UiObject input = new UiObject(new UiSelector().resourceId("com.android.systemui:id/input_lv_view"));
-		UiObject input1 = input.getChild(new UiSelector().resourceId("com.android.systemui:id/input_method_name").instance(0));
-		input1.click();
+		otoTest.ClickByText("Android 键盘 (AOSP)");
+		sleep(1000);
 		assertTrue("打开切换输入法界面",new UiObject(new UiSelector().resourceId("android:id/alertTitle")).getText().equals("更改键盘"));
 		otoTest.ClickByText("Android 键盘 (AOSP)");
+		
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickById("com.android.systemui:id/status_bar_input_method");
-		UiObject inputcheck1 = input.getChild(new UiSelector().resourceId("com.android.systemui:id/input_method_checkbox").instance(0));
+		UiObject input = new UiObject(new UiSelector().text("Android 键盘 (AOSP)"));
+		UiObject inputcheck1 = input.getFromParent(new UiSelector().resourceId("com.android.systemui:id/input_method_checkbox"));
 		assertTrue("切换输入法成功",inputcheck1.isChecked());
-		UiObject input2 = input.getChild(new UiSelector().resourceId("com.android.systemui:id/input_method_name").instance(1));
-		input2.click();
+		
+		otoTest.ClickByText("谷歌拼音输入法");
 		otoTest.ClickByText("选择键盘");
 		assertEquals("打开输入法设置","com.android.settings",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
+		
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickById("com.android.systemui:id/status_bar_input_method");
-		input2.click();
+		otoTest.ClickByText("谷歌拼音输入法");
+		sleep(1000);
 		otoTest.ClickByText("谷歌拼音输入法");
 		//电池
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
