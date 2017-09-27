@@ -40,7 +40,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 	}
 	
 	public boolean SetTextByText(String t,String text) throws UiObjectNotFoundException{
-		return ClickByInfo(CLICK_ID,t,text);
+		return ClickByInfo(CLICK_TEXT,t,text);
 	}
 
 	public void MoveToTop() throws UiObjectNotFoundException{

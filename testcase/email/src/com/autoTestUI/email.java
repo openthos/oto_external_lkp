@@ -82,30 +82,14 @@ public class email extends UiAutomatorTestCase {
 		sleep(500);
 
 		//modify pop server
-		UiObject popserver = new UiObject(new UiSelector().text("126.com"));
-		//if (popserver.exists() && popserver.isEnabled())
-		//{
-		//String text = popserver.getText();
-		sleep(500);
-		popserver.longClick();
-		sleep(500);
-		popserver.setText("pop.126.com");
-	//	}
+		otoTest.SetTextByText("126.com", "pop.126.com");
 		sleep(1000);
 		otoTest.ClickById("com.android.email:id/next");
 		sleep(5000);
 		//modify smtp server
-		UiObject smtpserver = new UiObject(new UiSelector().resourceId("com.android.email:id/account_server"));
-		if (smtpserver.exists() && smtpserver.isEnabled())
-		{
-			popserver.longClick();
-			sleep(500);
-			smtpserver.setText("smtp.126.com");
-			sleep(500);
-		}
-		UiObject smtpport = new UiObject(new UiSelector().resourceId("com.android.email:id/account_port"));
-		smtpport.longClick();
-		smtpport.setText("25");
+		otoTest.SetTextById("com.android.email:id/account_server", "smtp.126.com");
+		sleep(500);
+		otoTest.SetTextById("com.android.email:id/account_port", "25");
 		sleep(500);
 		UiObject button5 = new UiObject(new UiSelector().text(objStr[1][language]));
 		button5.click();
