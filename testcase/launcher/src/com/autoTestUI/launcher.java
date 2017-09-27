@@ -171,6 +171,8 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest.ClickByText("压缩");
 		otoTest.ClickById("com.openthos.compress:id/bt_co_destination");
 		sleep(500);
+		UiObject bf = new UiObject(new UiSelector().resourceId("com.openthos.compress:id/lv_file_list")).getChild(new UiSelector().className("android.widget.RelativeLayout").instance(9));
+		bf.dragTo(0,0,40);
 		otoTest.ClickByText("Desktop");
 		sleep(500);
 		otoTest.ClickByText("新建文件夹1");
@@ -205,6 +207,7 @@ public class launcher extends UiAutomatorTestCase {
 		sleep(2000);
 		assertTrue("剪切txt文件",newtxt.exists());
 		//复制doc
+		lch.click();
 		newdoc.longClick();
 		otoTest.ClickByText("复制");
 		lch.longClick();
@@ -271,6 +274,7 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest.ClickByText("删除");
 		otoTest.ClickById("android:id/button1");
 		sleep(1000);
+		lch.click();
 		newfolder.longClick();
 		otoTest.ClickByText("删除");
 		otoTest.ClickById("android:id/button1");

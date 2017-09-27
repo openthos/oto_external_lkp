@@ -71,6 +71,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 			myobject.click();
 		}
 		else{
+			myobject.click();
 			myobject.setText(text);
 		}
 		return true;
