@@ -20,7 +20,8 @@ fi
  source /etc/profile
 ./launcherMake.sh
 adb connect $androidIP
-adb -s $androidIP:$port   push ./wallpaper.jpg /sdcard/Pictures/
+adb -s $androidIP:$port shell mkdir /sdcard/Pictures/awall
+adb -s $androidIP:$port   push ./wallpaper.jpg /sdcard/Pictures/awall
 adb -s $androidIP:$port   push ./bin/launcher.jar /data/local/tmp
 
 adb -s $androidIP:$port  shell  rm -rf  /data/lkp_test
