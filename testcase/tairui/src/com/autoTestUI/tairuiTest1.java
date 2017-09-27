@@ -13,7 +13,7 @@ public class tairuiTest1 extends UiAutomatorTestCase {
 	public static String appName = "com.disney.WMPLite/.WMWActivity";
 	public static String port = "5555";
 
-	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,
+	public void testtairui() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());

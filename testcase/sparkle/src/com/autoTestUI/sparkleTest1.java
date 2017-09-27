@@ -14,7 +14,7 @@ public class sparkleTest1 extends UiAutomatorTestCase{
 	public static String appName = "com.the10tons.sparkle.free/com.the10tons.JNexusInterface";
 	public static String port = "5555";
 
-	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,
+	public void testsparkle() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
@@ -32,7 +32,6 @@ public class sparkleTest1 extends UiAutomatorTestCase{
 		System.out.println("----------Start time： " +  format.format(starttime));
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		sleep(5000);
 
 		endtime = new Date();
 		System.out.println("----------结束时间： " +  format.format(endtime));
@@ -40,7 +39,7 @@ public class sparkleTest1 extends UiAutomatorTestCase{
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(2000);
+		sleep(7000);
 
 		window_lib.windowtest(otoTest.mydevice,appName );
 

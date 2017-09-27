@@ -14,7 +14,7 @@ public class cutTest1 extends UiAutomatorTestCase{
 	public static String appName = "com.zeptolab.ctr.ads/com.zeptolab.ctr.CtrApp";
 	public static String port = "5555";
 
-	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,
+	public void testcut() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
@@ -32,7 +32,6 @@ public class cutTest1 extends UiAutomatorTestCase{
 		System.out.println("----------Start time： " +  format.format(starttime));
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		sleep(5000);
 
 		endtime = new Date();
 		System.out.println("----------结束时间： " +  format.format(endtime));

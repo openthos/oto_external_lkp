@@ -3,12 +3,8 @@ package com.autoTestUI;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import android.os.RemoteException;
-
-import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
-import com.android.uiautomator.core.UiSelector;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 public class YamaxunTest1 extends UiAutomatorTestCase{
@@ -16,7 +12,7 @@ public class YamaxunTest1 extends UiAutomatorTestCase{
 	public static String appName = "com.amazon.windowshop/com.amazon.mShop.splashscreen.StartupActivity";
 	public static String port = "5555";
 
-	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,
+	public void testYamaxun() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
@@ -34,15 +30,13 @@ public class YamaxunTest1 extends UiAutomatorTestCase{
 		System.out.println("----------Start time： " +  format.format(starttime));
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		sleep(5000);
-		
 		endtime = new Date();
 		System.out.println("----------结束时间： " +  format.format(endtime));
 		System.out.println("endtime:" +  System.currentTimeMillis());
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(2000);
+		sleep(7000);
 
 		window_lib.windowtest(otoTest.mydevice,appName );
 

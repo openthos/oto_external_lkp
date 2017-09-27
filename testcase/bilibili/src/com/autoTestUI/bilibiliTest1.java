@@ -16,7 +16,7 @@ public class bilibiliTest1 extends UiAutomatorTestCase {
 	public static String appName = "tv.danmaku.bili/.ui.splash.SplashActivity";
 	public static String port = "5555";
 
-	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,
+	public void testbilibili() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
@@ -34,7 +34,6 @@ public class bilibiliTest1 extends UiAutomatorTestCase {
 		System.out.println("----------Start time： " +  format.format(starttime));
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		sleep(10000);
 		UiObject okbutton = new UiObject(new UiSelector().resourceId("tv.danmaku.bili:id/update_cancel"));
        		if (okbutton.exists()) {
 			new UiObject(new UiSelector().resourceId("tv.danmaku.bili:id/update_cancel")).click();		}
@@ -45,7 +44,7 @@ public class bilibiliTest1 extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(2000);
+		sleep(7000);
 
 		window_lib.windowtest(otoTest.mydevice,appName );
 

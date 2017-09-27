@@ -13,7 +13,7 @@ public class YinxiangNoteTest1 extends UiAutomatorTestCase {
 	public static String appName = "com.evernote/.ui.WidgetNoUINewNoteActivity";
 	public static String port = "5555";
 
-	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,
+	public void testYinxiangNote() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());

@@ -14,7 +14,7 @@ public class SkypeTest1 extends UiAutomatorTestCase{
 	public static String appName = "com.skype.raider/com.skype.android.app.main.SplashActivity";
 	public static String port = "5555";
 
-	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,
+	public void testskype() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
@@ -32,15 +32,13 @@ public class SkypeTest1 extends UiAutomatorTestCase{
 		System.out.println("----------Start time： " +  format.format(starttime));
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		sleep(10000);
-
 		endtime = new Date();
 		System.out.println("----------结束时间： " +  format.format(endtime));
 		System.out.println("endtime:" +  System.currentTimeMillis());
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(2000);
+		sleep(10000);
 
 		window_lib.windowtest(otoTest.mydevice,appName );
 

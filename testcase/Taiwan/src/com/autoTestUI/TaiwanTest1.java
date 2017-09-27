@@ -16,7 +16,7 @@ public class TaiwanTest1 extends UiAutomatorTestCase{
 	public static String appName = "com.avector.itw.itwmj16hd/.Xa_spl";
 	public static String port = "5555";
 
-	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,
+	public void testtaiwan() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
@@ -34,7 +34,6 @@ public class TaiwanTest1 extends UiAutomatorTestCase{
 		System.out.println("----------Start time： " +  format.format(starttime));
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		sleep(5000);
 		new UiObject(new UiSelector().text("确定")).click();
 
 		endtime = new Date();
@@ -43,7 +42,7 @@ public class TaiwanTest1 extends UiAutomatorTestCase{
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(2000);
+		sleep(7000);
 
 		window_lib.windowtest(otoTest.mydevice,appName );
 

@@ -13,7 +13,7 @@ public class yingsuoTest1 extends UiAutomatorTestCase {
 	public static String appName = "com.github.shadowsocks/.MainActivity";
 	public static String port = "5555";
 
-	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,
+	public void testyingsuo() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());

@@ -13,7 +13,7 @@ public class PCMarkTest1 extends UiAutomatorTestCase {
 	public static String appName = "com.futuremark.pcmark.android.benchmark/com.futuremark.gypsum.activity.SplashPageActivity";
 	public static String port = "5555";
 
-	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,
+	public void testPCMark() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());

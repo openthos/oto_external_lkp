@@ -13,7 +13,7 @@ public class candycrushTest1 extends UiAutomatorTestCase {
 	public static String appName = "com.king.candycrushsaga/.CandyCrushSagaActivity";
 	public static String port = "5555";
 
-	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,
+	public void testcandycrush() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());

@@ -4,10 +4,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import android.os.RemoteException;
-
-import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
-import com.android.uiautomator.core.UiSelector;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 public class GFXBenchmarkTest1 extends UiAutomatorTestCase {
@@ -16,7 +13,7 @@ public class GFXBenchmarkTest1 extends UiAutomatorTestCase {
 	public static String appName = "com.glbenchmark.glbenchmark27/net.kishonti.app.MainActivity";
 	public static String port = "5555";
 
-	public void testtaijievideo() throws UiObjectNotFoundException, RemoteException,
+	public void testGFXBenchmark() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
