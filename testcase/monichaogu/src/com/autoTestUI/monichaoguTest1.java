@@ -13,7 +13,7 @@ public class monichaoguTest1 extends UiAutomatorTestCase {
 	public static String appName = "com.hexin.plat.monitrade/com.hexin.plat.android.AndroidLogoActivity";
 	public static String port = "5555";
 
-	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,
+	public void testmonichaogu() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
