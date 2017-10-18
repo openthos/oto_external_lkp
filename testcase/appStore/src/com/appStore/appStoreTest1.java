@@ -18,6 +18,8 @@ import com.appStore.otoDisplayRun;
  */
 
 public class appStoreTest1 extends UiAutomatorTestCase {
+    int max_count = 30; //下载超时，单位（秒）
+
     String[] appList = {"PowerPoint","Internet 浏览器","影梭"/*,"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","QQ","微信","搜狗输入法",
             "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器"*/};
 
@@ -28,7 +30,7 @@ public class appStoreTest1 extends UiAutomatorTestCase {
 
     String[] appList4 = {"Angry Birds","央视影音","Flash Master","Internet 浏览器"};
 
-    public void testDemo0() throws UiObjectNotFoundException,IOException,InterruptedException,RemoteException {
+    public void testDemo0() throws UiObjectNotFoundException,IOException,RemoteException,InterruptedException {
     	otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
@@ -165,10 +167,14 @@ public class appStoreTest1 extends UiAutomatorTestCase {
 
     public void testDemo6() throws UiObjectNotFoundException,IOException,InterruptedException {
         /*搜索应用并下载安装*/
+    	otoDisplayRun otoTest;
+    	otoTest = new otoDisplayRun(getUiDevice());
         new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_home")).click();
 
         UiObject search= new UiObject((new UiSelector().resourceId("com.openthos.appstore:id/activity_title_search_text")));
         search.setText("flash");
+        otoTest.mydevice.pressEnter();
+        otoTest.mydevice.pressEnter();
 
         UiObject open = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/app_item_install"));
         open.clickAndWaitForNewWindow(10000);
@@ -237,20 +243,33 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         }*/
         UiObject install_install = new UiObject(new UiSelector().resourceId("com.android.packageinstaller:id/ok_button"));
 
-        while (!install_install.exists() ) {
+        int count=0;
+        while (!install_install.exists()) {
             if (!install_install.exists()) {
                 sleep(2000);
+                count++;
+            }
+            if(count>max_count){
+                assertTrue(false);
             }
         }
+        count=0;
         while (install_install.exists()) {
                 if (install_install.exists()) {
                     install_install.click();
                 }
+            if(count>max_count){
+                assertTrue(false);
+            }
         }
+        count=0;
         UiObject install_finish = new UiObject(new UiSelector().resourceId("com.android.packageinstaller:id/done_button"));
         while (!install_finish.exists() ) {
             if (!install_finish.exists()) {
                 sleep(1000);
+            }
+            if(count>max_count){
+                assertTrue(false);
             }
         }
         install_finish.click();
@@ -273,11 +292,14 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         if (option == "卸载更新"){
             UiObject uninstallButton = new UiObject(new UiSelector().text("卸载更新"));
             uninstallButton.click();
+            sleep(1000);
             UiDevice.getInstance().pressEnter();
             UiDevice.getInstance().pressDPadRight();
             UiDevice.getInstance().pressEnter();
+            sleep(2000);
             UiDevice.getInstance().pressDPadRight();
             UiDevice.getInstance().pressEnter();
+            sleep(2000);
             UiObject setting_close = new UiObject(new UiSelector().resourceId("android:id/mwCloseBtn"));
             setting_close.click();
         }else {
