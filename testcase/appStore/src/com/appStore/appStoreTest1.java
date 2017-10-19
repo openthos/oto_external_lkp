@@ -18,7 +18,7 @@ import com.appStore.otoDisplayRun;
  */
 
 public class appStoreTest1 extends UiAutomatorTestCase {
-    int max_count = 30; //下载超时，单位（秒）
+	int max_count = 30; //下载超时，单位（秒）
 
     String[] appList = {"PowerPoint","Internet 浏览器","影梭"/*,"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","QQ","微信","搜狗输入法",
             "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器"*/};
@@ -30,13 +30,13 @@ public class appStoreTest1 extends UiAutomatorTestCase {
 
     String[] appList4 = {"Angry Birds","央视影音","Flash Master","Internet 浏览器"};
 
-    public void testDemo0() throws UiObjectNotFoundException,IOException,RemoteException,InterruptedException {
+    public void test0preparation() throws UiObjectNotFoundException,IOException,InterruptedException,RemoteException {
     	otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
 		otoTest.mydevice.pressEnter();
 		otoTest.mydevice.pressKeyCode(111);
-        otoDisplayRun.execCmdNoSave("am start -n com.android.settings/.Settings");
+		otoDisplayRun.execCmdNoSave("am start -n com.android.settings/.Settings");
         UiScrollable  setList = new UiScrollable(new UiSelector().resourceId("com.android.settings:id/dashboard"));
         UiObject securityItem = setList.getChildByText(new UiSelector().className(LinearLayout.class.getName()), "安全", true);
         securityItem.getChild(new UiSelector().text("安全"));
@@ -52,9 +52,6 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         }
         sleep(1000);
         new UiObject(new UiSelector().resourceId("android:id/mwCloseBtn")).click();
-    }
-
-    public void testDemo1() throws UiObjectNotFoundException,IOException,InterruptedException {
 
         otoDisplayRun.execCmdNoSave("am start -n com.openthos.appstore/.MainActivity");
         sleep(5000);
@@ -62,6 +59,37 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         if (mwMaximizeBtn.exists()) {
             new UiObject(new UiSelector().resourceId("android:id/mwMaximizeBtn")).click();
         }
+
+        new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_game")).click();
+        new UiObject(new UiSelector().text("益智游戏").fromParent(new UiSelector().text("所有"))).click();
+        new UiObject(new UiSelector().text(appList4[0])).click();
+        String buttonText = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/fragment_detail_download")).getText();
+        if(buttonText.equals("安装")){
+            removeApp(appList4[0]);
+        }
+        else if(buttonText.equals("打开")){
+            uninstall(appList4[0],"卸载");
+            removeApp(appList4[0]);
+        }
+        for (int i=1;i<appList4.length;i++) {
+            new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_software")).click();
+            new UiObject(new UiSelector().text("全部").fromParent(new UiSelector().text("所有"))).click();
+            new UiObject(new UiSelector().text(appList4[i])).click();
+            String buttonText1 = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/fragment_detail_download")).getText();
+            if (buttonText1.equals("安装")) {
+                removeApp(appList4[i]);
+            } else if (buttonText1.equals("打开")) {
+                if(appList4[i]=="Internet 浏览器"){
+                    uninstall(appList4[i], "卸载更新");
+                }else {
+                    uninstall(appList4[i], "卸载");
+                }
+                removeApp(appList4[i]);
+            }
+        }
+    }
+
+    public void testDemo1() throws UiObjectNotFoundException,IOException {
 
         //暂停下载
         new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_game")).click();
@@ -140,13 +168,13 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         UiObject label_update = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/update"));
         label_update.click();
 
-        UiScrollable settingsList = new UiScrollable(new UiSelector().resourceId("com.openthos.appstore:id/customlistView"));
-        UiObject btItem = settingsList.getChildByText(new UiSelector().className(LinearLayout.class.getName()), appList4[appList4.length-1], true);
+        //UiScrollable settingsList = new UiScrollable(new UiSelector().resourceId("com.openthos.appstore:id/customlistView"));
+        //UiObject btItem = settingsList.getChildByText(new UiSelector().className(LinearLayout.class.getName()), appList4[appList4.length-1], true);
 
-        UiObject btSwitch = btItem.getChild(new UiSelector().text("更新"));
-        btSwitch.click();
+        //UiObject btSwitch = btItem.getChild(new UiSelector().text("更新"));
+        //btSwitch.click();
 
-        installInSetting(appList4[appList4.length-1]);
+        //installInSetting(appList4[appList4.length-1]);
     }
 
     public void testDemo5() throws UiObjectNotFoundException{
@@ -162,19 +190,18 @@ public class appStoreTest1 extends UiAutomatorTestCase {
         new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/activity_title_back")).click();
         assertFalse(new UiObject(new UiSelector().text("最新推荐")).exists());
         new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/activity_title_back")).click();
-        assertTrue(new UiObject(new UiSelector().text("最新推荐")).exists());
+        //assertTrue(new UiObject(new UiSelector().text("最新推荐")).exists());
     }
 
     public void testDemo6() throws UiObjectNotFoundException,IOException,InterruptedException {
         /*搜索应用并下载安装*/
-    	otoDisplayRun otoTest;
-    	otoTest = new otoDisplayRun(getUiDevice());
+        UiDevice uiDevice = getUiDevice();
         new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_home")).click();
 
         UiObject search= new UiObject((new UiSelector().resourceId("com.openthos.appstore:id/activity_title_search_text")));
         search.setText("flash");
-        otoTest.mydevice.pressEnter();
-        otoTest.mydevice.pressEnter();
+        uiDevice.pressEnter();
+        uiDevice.pressEnter();
 
         UiObject open = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/app_item_install"));
         open.clickAndWaitForNewWindow(10000);
