@@ -37,7 +37,7 @@ public class weiboTest1 extends UiAutomatorTestCase{
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(5000);
+		sleep(10000);
 
 		window_lib.windowtest(otoTest.mydevice,appName );
 

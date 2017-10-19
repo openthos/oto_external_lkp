@@ -19,7 +19,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 	otoDisplayRun(UiDevice device){
 		mydevice = device;
 	}
-
+	
 	final int CLICK_ID = 1111;
 	final int CLICK_TEXT = 2222;
 	

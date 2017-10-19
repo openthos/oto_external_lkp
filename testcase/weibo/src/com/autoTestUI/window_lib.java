@@ -12,7 +12,7 @@ public class window_lib extends UiAutomatorTestCase{
 
 	public static void windowtest(UiDevice device, String appName)
 			throws UiObjectNotFoundException, RemoteException, IOException, InterruptedException {
-		
+
 		// 改变窗体大小 将左边框向右侧拉动 改变大小
 		UiObject objectSide = new UiObject(new UiSelector().resourceId("android:id/mwOuterBorder"));
 		android.graphics.Rect myAppSide = objectSide.getVisibleBounds();
@@ -50,7 +50,6 @@ public class window_lib extends UiAutomatorTestCase{
 		if (myAppSide3.right < (myAppSide2.right + 40)|| myAppSide3.right > (myAppSide2.right + 60)) {
 			System.out.println("----------[failed]:"+myAppSide2.right+"->"+myAppSide3.right+"拖拽右下角扩大窗口失败！");
 		}
-		
 		device.drag(myAppSide3.right - 1, myAppSide3.bottom - 1,myAppSide3.right - 100, myAppSide3.bottom - 100, 2);
 		Thread.sleep(2000);
 

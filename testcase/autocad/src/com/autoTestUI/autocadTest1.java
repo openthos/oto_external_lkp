@@ -12,7 +12,7 @@ public class autocadTest1 extends UiAutomatorTestCase {
 	public static String apppackage = "com.autodesk.autocadws";
 	public static String appName = "com.autodesk.autocadws/.view.activities.StartupActivity";
 	public static String port = "5555";
-
+	
 	public void testautocad() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;

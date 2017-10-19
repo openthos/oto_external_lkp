@@ -102,5 +102,4 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 		}
 		return ret;
 	}
-	
 }

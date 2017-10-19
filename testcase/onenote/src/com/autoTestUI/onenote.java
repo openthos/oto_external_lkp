@@ -39,17 +39,17 @@ public class onenote extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(5000);
+		sleep(9000);
 
-		window_lib.windowtest(otoTest.mydevice,appName );
-
-		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		otoTest.ClickById("android:id/mwMaximizeBtn");
-		sleep(1000);
+		sleep(500);
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
-		otoTest.ClickById("android:id/mwMinimizeBtn");
-		// 强制关闭程序
-		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));
+		otoTest.ClickById("android:id/mwCloseBtn");
+		
+		otoDisplayRun.execCmdNoSave("am start -n " + appName);
+		sleep(3000);
+		otoTest.ClickById("com.microsoft.office.onenote:id/negativeButton");
+		window_lib.windowtest(otoTest.mydevice,appName);
 	}
 }
