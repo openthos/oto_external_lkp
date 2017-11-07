@@ -205,6 +205,7 @@ public class appStoreTest1 extends UiAutomatorTestCase {
 
         UiObject open = new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/app_item_install"));
         open.clickAndWaitForNewWindow(10000);
+	sleep(10000);
         assertTrue(new UiObject(new UiSelector().text("Install Dolphin for FREE")).exists());
         otoDisplayRun.execCmdNoSave("am force-stop com.tako.flash.master");
 
