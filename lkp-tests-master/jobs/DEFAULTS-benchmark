@@ -25,6 +25,5 @@ default-monitors:
   cpufreq-stats:
   turbostat:
   pmeter:
-  strace:
   sched_debug:
     interval: 60
