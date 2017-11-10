@@ -261,7 +261,6 @@ def job2sh(job, out_script)
 	$cur_func = :extract_stats
 	out_line "extract_stats()"
 	out_line "{"
-        out_line "mv /strace.log  $RESULT_ROOT/strace"
 	create_programs_hash "stats/**/*"
 	parse_hash [], job
 	out_line
