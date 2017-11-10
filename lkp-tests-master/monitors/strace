@@ -1,3 +1,0 @@
-#!/bin/sh
-#do nothing it is done by $LKP_SRC/bin/cmd
-#cat /strace_pipe
