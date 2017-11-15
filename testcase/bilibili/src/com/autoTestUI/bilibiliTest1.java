@@ -34,10 +34,6 @@ public class bilibiliTest1 extends UiAutomatorTestCase {
 		System.out.println("----------Start time： " +  format.format(starttime));
 		System.out.println("starttime:" +  System.currentTimeMillis());
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		UiObject okbutton = new UiObject(new UiSelector().resourceId("tv.danmaku.bili:id/update_cancel"));
-       		if (okbutton.exists()) {
-			new UiObject(new UiSelector().resourceId("tv.danmaku.bili:id/update_cancel")).click();		}
-
 		endtime = new Date();
 		System.out.println("----------结束时间： " +  format.format(endtime));
 		System.out.println("endtime:" +  System.currentTimeMillis());
@@ -45,7 +41,9 @@ public class bilibiliTest1 extends UiAutomatorTestCase {
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
 		sleep(7000);
-
+		UiObject okbutton = new UiObject(new UiSelector().resourceId("tv.danmaku.bili:id/update_cancel"));
+                if (okbutton.exists()) {
+                        new UiObject(new UiSelector().resourceId("tv.danmaku.bili:id/update_cancel")).click();          }
 		window_lib.windowtest(otoTest.mydevice,appName );
 
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
