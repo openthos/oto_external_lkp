@@ -85,9 +85,11 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 	}
 
 	private void SolveProblems(){
-		sleep(1000);
+		sleep(2000);
 		boolean dumpFirstStart = new UiObject(
 				new UiSelector().text("温馨提示")).exists();
+		boolean loginExist = new UiObject(
+                                new UiSelector().text("登 录")).exists();
 		if (dumpFirstStart == true) {
 			UiObject skipButton = new UiObject(
 					new UiSelector().resourceId("android:id/button1"));
@@ -98,6 +100,16 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 				e.printStackTrace();
 			}
 		}
+		if (loginExist == true) {
+                        UiObject loginButton = new UiObject(
+                                        new UiSelector().text("登 录"));
+                        try {
+                                loginButton.click();
+                        } catch (UiObjectNotFoundException e) {
+                                // TODO Auto-generated catch block
+                                e.printStackTrace();
+                        }
+                }
 	}
 	
 	public void TakeScreen(String descript){
