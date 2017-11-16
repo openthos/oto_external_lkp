@@ -36,7 +36,7 @@ WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
 + adb -s 192.168.2.74:5555 shell mkdir /data/lkp_test
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
 WARNING: linker: [vdso]: unused DT entry: type 0x6ffffef5 arg 0x160
-+ adb -s 192.168.2.74:5555 push ./lkp_test /data/lkp_test/
++ adb -s 192.168.2.74:5555 push ./lkp_test /data//
 push: ./lkp_test/ubuntu_lkp_test.sh -> /data/lkp_test/ubuntu_lkp_test.sh
 push: ./lkp_test/chroot_run.sh -> /data/lkp_test/chroot_run.sh
 push: ./lkp_test/before_chroot.sh -> /data/lkp_test/before_chroot.sh
@@ -397,6 +397,6 @@ pull: /data/ubuntu/result/ebizzy/ebizzy_cscw-pc.csv -> lkp_tmp_result/ebizzy/ebi
 pull: /data/ubuntu/result/ebizzy/params.yaml -> lkp_tmp_result/ebizzy/params.yaml
 43 files pulled. 0 files skipped.
 123 KB/s (391736 bytes in 3.087s)
-+ rm -rf /tmp/lkp_trash/
++ rm -rf /tmp/lkp_trash/$trash
 + echo 'test over! all done!'
 test over! all done!

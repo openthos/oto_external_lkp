@@ -3,7 +3,7 @@ testjob="$1"
 echo  "i am in ubuntu: `hostname`"
 hostname -F /etc/hostname
 echo  "i am in ubuntu changed_hostname: `hostname`"
-apt-get update
+#apt-get update
 echo "install expect"
 apt-get install -y expect
 a=$(which expect)
@@ -38,7 +38,7 @@ if  [ ! -d "./oto_external_lkp" ] ;then
     cd ./oto_external_lkp/lkp-tests-master
 else
     cd ./oto_external_lkp
-    git pull
+    #git pull
     cd lkp-tests-master
 fi
 
