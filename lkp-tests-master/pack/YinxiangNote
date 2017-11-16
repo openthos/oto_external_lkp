@@ -2,7 +2,7 @@
 
 VERSION="2.2.3"
 #WEB_URL="http://www.tux.org/~mayer/linux/nbench-byte-2.2.3.tar.gz"
-WEB_URL="https://github.com/openthos/oto_external_lkp/raw/master/benchmark_mirror/YinxiangNote.tar.gz"
+WEB_URL="http://192.168.0.180/openthos/oto_test/benchmark_mirror/YinxiangNote.tar.gz"
 
 install()
 {
