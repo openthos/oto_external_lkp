@@ -254,6 +254,7 @@ public class launcher extends UiAutomatorTestCase {
 		Configurator.getInstance().setActionAcknowledgmentTimeout(0);
 		fold7z.click();
 		fold7z.click();
+		otoTest.ClickById("com.openthos.compress:id/bt_extract_all");
 		otoTest.ClickById("com.openthos.compress:id/bt_decompress");
 		sleep(2000);
 		assertTrue("解压fold7z",newfolder.exists());
