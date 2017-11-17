@@ -1,7 +1,7 @@
 #!/usr/bin/expect
 spawn  telnet localhost
 expect "#"
-send "pm install /data/ubuntu/lkp/benchmarks/gdmap/gaodemap.apk\r"
+send "pm install /data/ubuntu/lkp/benchmarks/gdmap/gdmap.apk\r"
 expect "#"
 send "sleep 1"
 expect "#"
