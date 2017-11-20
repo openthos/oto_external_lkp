@@ -41,7 +41,7 @@ public class dazhihui extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(5000);
+		sleep(10000);
 		if(new UiObject(new UiSelector().resourceId("com.android.dazhihui:id/update_cancel_menu")).exists()){
 			otoTest.ClickById("com.android.dazhihui:id/update_cancel_menu");
 			sleep(1000);
