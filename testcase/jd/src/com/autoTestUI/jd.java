@@ -39,14 +39,14 @@ public class jd extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(3000);
+		sleep(5000);
 		otoTest.ClickById("com.jingdong.app.mall:id/bom");
-		sleep(15000);
+		sleep(20000);
 
 		window_lib.windowtest(otoTest.mydevice,appName );
 
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		sleep(3000);
+		sleep(5000);
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		sleep(1000);
 		otoTest.MoveToTop();
