@@ -54,7 +54,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 		UiObject myobject = new UiObject(uiselector);
 		int i = 0;
 		while(!myobject.exists() && i < 5){
-//			SolveProblems();
+			SolveProblems();
 			sleep(2000);
 			if(i == 4){
 				TakeScreen(str.substring(str.indexOf('/')+1)+"----not find");
@@ -72,9 +72,23 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 		return true;
 	}
 
-//	private void SolveProblems(){
-//
-//	}
+	private void SolveProblems(){
+		sleep(2000);
+                System.out.println("start solveProblems");
+                boolean upgradeExist=new UiObject(
+                                new UiSelector().resourceId("com.wandoujia.phoenix2:id/re")).exists();
+                if (upgradeExist == true) {
+                        System.out.println("upgrade exists");
+                        UiObject skipButton = new UiObject(
+                                        new UiSelector().resourceId("com.wandoujia.phoenix2:id/re"));
+                        try {
+                                skipButton.click();
+                        } catch (UiObjectNotFoundException e) {
+                                // TODO Auto-generated catch block
+                                e.printStackTrace();
+                        }
+		}
+	}
 	
 	public void TakeScreen(String descript){
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
