@@ -39,12 +39,12 @@ public class xiecheng extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(5000);
+		sleep(7000);
 
 		window_lib.windowtest(otoTest.mydevice,appName );
 
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		sleep(3000);
+		sleep(7000);
 		// 最大化
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		sleep(1000);
@@ -54,6 +54,7 @@ public class xiecheng extends UiAutomatorTestCase {
 		otoTest.ClickById("android:id/mwCloseBtn");
 
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
+		sleep(5000);
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		// 强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));
