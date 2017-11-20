@@ -106,7 +106,7 @@ install_packages() {
 
 	$LKP_SRC/distro/installer/$distro $packages || {
 		echo "Cannot install some packages in $LKP_SRC/distro/depends/${script}"
-		exit 1
+		#exit 1
 	}
 }
 
@@ -157,7 +157,7 @@ distro=$_system_name_lowercase
 make_wakeup
 create_lkp_dirs
 create_host_config
-install_packages "lkp" $distro
+#install_packages "lkp" $distro
 
 for filename in "$@"
 do
@@ -177,7 +177,7 @@ do
 	for script in $scripts
 	do
 		[ -z "$makepkg_once" ] && [ -d "$LKP_SRC/pkg/$script" ] && ! [ -x "$LKP_SRC/pack/$script" ] && {
-			install_packages "makepkg" $distro
+			#install_packages "makepkg" $distro
 			makepkg_once=1
 		}
 		install_packages "$script" $distro

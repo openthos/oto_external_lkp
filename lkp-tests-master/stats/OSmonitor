@@ -19,6 +19,6 @@ while line = STDIN.gets
     when /OK/
         puts "#{name}.result: 1"
     when /FAILURES/
-        puts "#{name}.result: 0"
+        puts "#{name}.result: -1"
     end
 end

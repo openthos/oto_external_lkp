@@ -11,7 +11,8 @@ source  /data/lkp_test/before_chroot.sh
 if [ ! -d $CHMOUNT ];then
    mkdir $CHMOUNT
 fi
-umount  $CHMOUNT
+
+mountpoint -q $CHMOUNT && umount $CHMOUNT
 ##看android x86的isolinux的判断目录是否mount的写法。
 sleep 3
 mount -t ext4 /dev/block/sda2 $CHMOUNT
@@ -30,12 +31,7 @@ if [ ! "`grep net_raw $CHMOUNT/etc/group`" ];then
 fi
 
 sleep 3
-echo "nameserver 8.8.8.8" > $CHMOUNT/etc/resolv.conf
-
-
-
-
-
+echo "nameserver 101.6.6.6" > $CHMOUNT/etc/resolv.conf
 
 export PATH=/usr/bin:/usr/sbin:/bin:/sbin:$PATH
 
@@ -56,5 +52,13 @@ sleep 2
 chroot $CHMOUNT  su - root -c "/root/ubuntu_lkp_test.sh  $testcase"
 
 ##下面的代码会在chroot 结束以后执行
+
+umount $CHMOUNT/dev/shm
+umount $CHMOUNT/dev/pts
+umount $CHMOUNT/dev
+umount $CHMOUNT/proc
+umount $CHMOUNT/sys
+#umount $CHMOUNT
+
 echo "chroot over"
 echo 'do not  ctrl+c please wait until prompt all done'
