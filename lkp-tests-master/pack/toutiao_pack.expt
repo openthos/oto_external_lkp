@@ -1,7 +1,7 @@
 #!/usr/bin/expect
 spawn  telnet localhost
 expect "#"
-send "pm install /data/ubuntu/lkp/benchmarks/toutiao/com.toutiao.apk\r"
+send "pm install /data/ubuntu/lkp/benchmarks/toutiao/jinritoutiao.apk\r"
 expect "#"
 send "sleep 1"
 expect "#"
