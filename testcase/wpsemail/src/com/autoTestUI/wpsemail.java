@@ -47,6 +47,7 @@ public class wpsemail extends UiAutomatorTestCase {
 		otoTest.SetTextById("com.kingsoft.email:id/account_email", "asptest@126.com");
 		otoTest.SetTextById("com.kingsoft.email:id/account_password", "abc123");
 		otoTest.ClickById("com.kingsoft.email:id/next");
+		sleep(7000);
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		sleep(1000);
 		otoTest.MoveToTop();
