@@ -1,7 +1,7 @@
 #!/usr/bin/expect
 spawn  telnet localhost
 expect "#"
-send "pm install /data/ubuntu/lkp/benchmarks/onenote/com.microsoft.onenote.apk\r"
+send "pm install /data/ubuntu/lkp/benchmarks/onenote/com.microsoft.office.onenote.apk\r"
 expect "#"
 send "sleep 1"
 expect "#"
