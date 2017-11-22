@@ -188,6 +188,7 @@ public class system_ui extends UiAutomatorTestCase {
 			System.out.println("打开时间日历失败");
 		}
 		assertEquals("设置日期与时间","com.android.settings",otoTest.mydevice.getCurrentPackageName());
+		otoTest.ClickById("android:id/mwCloseBtn");
 		//返回桌面按钮
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
