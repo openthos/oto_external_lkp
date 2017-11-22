@@ -176,11 +176,35 @@ public class system_ui extends UiAutomatorTestCase {
 		//otoTest.ClickById("android:id/mwCloseBtn");
 		//日历
 		//此处有[bug 873] 通知中心切换到日期需要点击两次，其他（声音\电池等）均可正常切换
+		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
+		otoTest.mydevice.openNotification();
+		otoTest.ClickById("com.android.systemui:id/clock");
+		UiObject datebtn = new UiObject(new UiSelector().resourceId("com.android.systemui:id/popupwindow_calendar_bt_enter"));
+		if(datebtn.exists()){
+			datebtn.click();
+			sleep(1000);
+		}else{
+			System.out.println("打开时间日历失败");
+		}
+		assertEquals("设置日期与时间","com.android.settings",otoTest.mydevice.getCurrentPackageName());
 		//返回桌面按钮
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickById("com.android.systemui:id/status_bar_home");
 		assertEquals("返回桌面","com.android.launcher3",otoTest.mydevice.getCurrentPackageName());
+		sleep(1000);
+		//键盘映射测试(与bug 873相同）通知中心打开后，点击键盘映射会关闭通知中心，此时无法识别任务栏
+		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
+		otoTest.mydevice.openNotification();
+		otoTest.ClickById("com.android.systemui:id/status_bar_keyboard");
+		
+		otoTest.ClickById("com.openthos.keyboardmap:id/add_button");
+		sleep(500);
+		otoTest.ClickById("com.openthos.keyboardmap:id/reset");
+		sleep(500);
+		otoTest.ClickById("com.openthos.keyboardmap:id/exit");
 	}
 }
