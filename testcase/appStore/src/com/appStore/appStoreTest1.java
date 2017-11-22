@@ -18,7 +18,7 @@ import com.appStore.otoDisplayRun;
  */
 
 public class appStoreTest1 extends UiAutomatorTestCase {
-	int max_count = 30; //下载超时，单位（秒）
+	int max_count = 90; //下载超时，单位（秒）
 
     String[] appList = {"PowerPoint","Internet 浏览器","影梭"/*,"Word","Excel","OneNote","Outlook","WPS邮箱","WPS Office","IT之家","Flash Master","Quick Picker","OtoVirtualGUI","模拟炒股","QQ","微信","搜狗输入法",
             "OS Monitor","绿色守护","泰捷视频","网易云音乐","央视影音","哔哩哔哩", "VLC","图片管理器"*/};
