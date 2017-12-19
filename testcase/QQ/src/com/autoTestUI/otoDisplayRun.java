@@ -91,6 +91,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 		boolean loginExist = new UiObject(
                                 new UiSelector().text("登 录")).exists();
 		if (dumpFirstStart == true) {
+			System.out.println("tips exists");
 			UiObject skipButton = new UiObject(
 					new UiSelector().resourceId("android:id/button1"));
 			try {
@@ -101,6 +102,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 			}
 		}
 		if (loginExist == true) {
+			System.out.println("login exists");
                         UiObject loginButton = new UiObject(
                                         new UiSelector().text("登 录"));
                         try {
