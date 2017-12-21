@@ -18,6 +18,7 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
 		otoTest.mydevice.pressEnter();
+		sleep(5000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ESCAPE);
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 	
@@ -95,6 +96,7 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest.ClickByText("亮度");
 		sleep(1000);
 		assertTrue("调节亮度",new UiObject(new UiSelector().resourceId("com.android.systemui:id/slider")).exists());
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ESCAPE);
 		sleep(1000);
 		otoTest.ClickByText("壁纸");

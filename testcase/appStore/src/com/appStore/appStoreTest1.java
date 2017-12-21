@@ -35,7 +35,6 @@ public class appStoreTest1 extends UiAutomatorTestCase {
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
 		otoTest.mydevice.pressEnter();
-		otoTest.mydevice.pressKeyCode(111);
 		otoDisplayRun.execCmdNoSave("am start -n com.android.settings/.Settings");
         UiScrollable  setList = new UiScrollable(new UiSelector().resourceId("com.android.settings:id/dashboard"));
         UiObject securityItem = setList.getChildByText(new UiSelector().className(LinearLayout.class.getName()), "安全", true);

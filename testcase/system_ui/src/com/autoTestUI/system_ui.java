@@ -21,6 +21,7 @@ public class system_ui extends UiAutomatorTestCase {
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
 		otoTest.mydevice.pressEnter();
+		sleep(5000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ESCAPE);
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 
@@ -37,6 +38,7 @@ public class system_ui extends UiAutomatorTestCase {
 
 		sleep(1000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		sleep(5000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ESCAPE);
 		otoTest.mydevice.openNotification();
 		
@@ -54,7 +56,9 @@ public class system_ui extends UiAutomatorTestCase {
 		otoTest.ClickById("com.android.systemui:id/media_volume_btn");
 		sleep(1000);
 		//点击通知管理
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		sleep(500);
@@ -63,7 +67,9 @@ public class system_ui extends UiAutomatorTestCase {
 		assertEquals("notificationManager open success","com.android.settings",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
 		//点击截屏
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickByText("截屏");
@@ -72,7 +78,9 @@ public class system_ui extends UiAutomatorTestCase {
 		//点击清除所有
 		otoTest.ClickById("com.android.systemui:id/clearAll");
 		//点击打印任务管理器
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickById("com.android.systemui:id/printManager");
@@ -81,7 +89,9 @@ public class system_ui extends UiAutomatorTestCase {
 		otoTest.ClickById("android:id/mwCloseBtn");
 		//隔离模式导致网络断开，暂时不测；投影按钮暂无功能
 		//点击设置
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickByText("设置");
@@ -90,7 +100,9 @@ public class system_ui extends UiAutomatorTestCase {
 		//点击Startmenu时会关闭通知中心，然后焦点消失，无法点击
 		//otoTest.ClickById("com.android.systemui:id/status_bar_startup_menu");
 		//打开文件管理器
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		UiObject act = new UiObject(new UiSelector().resourceId("com.android.systemui:id/status_bar_activity_contents"));
@@ -108,7 +120,9 @@ public class system_ui extends UiAutomatorTestCase {
 //		otoTest.MoveToTop();
 //		otoTest.ClickById("android:id/mwCloseBtn");
 		//输入法设置
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickById("com.android.systemui:id/status_bar_input_method");
@@ -117,7 +131,9 @@ public class system_ui extends UiAutomatorTestCase {
 		assertTrue("打开切换输入法界面",new UiObject(new UiSelector().resourceId("android:id/alertTitle")).getText().equals("更改键盘"));
 		otoTest.ClickByText("Android 键盘 (AOSP)");
 		
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickById("com.android.systemui:id/status_bar_input_method");
@@ -130,7 +146,9 @@ public class system_ui extends UiAutomatorTestCase {
 		assertEquals("打开输入法设置","com.android.settings",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
 		
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickById("com.android.systemui:id/status_bar_input_method");
@@ -138,7 +156,9 @@ public class system_ui extends UiAutomatorTestCase {
 		sleep(1000);
 		otoTest.ClickByText("谷歌拼音输入法");
 		//电池
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickById("com.android.systemui:id/status_bar_battery");
@@ -147,7 +167,9 @@ public class system_ui extends UiAutomatorTestCase {
 		assertEquals("打开节能设置","com.android.settings",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
 		//网络设置
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickById("com.android.systemui:id/status_bar_wifi");
@@ -165,7 +187,9 @@ public class system_ui extends UiAutomatorTestCase {
 			sleep(1000);
 			assertEquals("打开WLAN设置","com.android.settings",otoTest.mydevice.getCurrentPackageName());
 			otoTest.ClickById("android:id/mwCloseBtn");
+			sleep(3000);
 			otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+			sleep(3000);
 			otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 			otoTest.mydevice.openNotification();
 			otoTest.ClickById("com.android.systemui:id/status_bar_wifi");
@@ -176,7 +200,9 @@ public class system_ui extends UiAutomatorTestCase {
 		//otoTest.ClickById("android:id/mwCloseBtn");
 		//日历
 		//此处有[bug 873] 通知中心切换到日期需要点击两次，其他（声音\电池等）均可正常切换
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
+		sleep(3000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickById("com.android.systemui:id/clock");
