@@ -47,7 +47,7 @@ public class tuniu extends UiAutomatorTestCase {
 		window_lib.windowtest(otoTest.mydevice,appName );
 		
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
-		sleep(4000);
+		sleep(10000);
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		sleep(1000);
