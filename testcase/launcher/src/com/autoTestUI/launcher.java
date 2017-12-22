@@ -2,7 +2,6 @@ package com.autoTestUI;
 
 import java.io.IOException;
 import android.os.RemoteException;
-import android.view.KeyEvent;
 import com.android.uiautomator.core.Configurator;
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
@@ -18,8 +17,6 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
 		otoTest.mydevice.pressEnter();
-		sleep(5000);
-		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ESCAPE);
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 	
 		UiObject lch = new UiObject(new UiSelector().resourceId("com.android.launcher3:id/launcher"));
@@ -96,8 +93,6 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest.ClickByText("亮度");
 		sleep(1000);
 		assertTrue("调节亮度",new UiObject(new UiSelector().resourceId("com.android.systemui:id/slider")).exists());
-		sleep(3000);
-		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ESCAPE);
 		sleep(1000);
 		otoTest.ClickByText("壁纸");
 		sleep(500);
@@ -321,7 +316,6 @@ public class launcher extends UiAutomatorTestCase {
 		sleep(1000);
 		assertEquals("打开回收站","com.openthos.filemanager",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
-		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ESCAPE);
 		rb.longClick();
 		otoTest.ClickByText("清空回收站");
 		assertTrue("清空回收站",new UiObject(new UiSelector().text("确认清空回收站?")).exists());
