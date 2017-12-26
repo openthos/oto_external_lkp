@@ -74,6 +74,7 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 
 	private void SolveProblems(){
 		UiObject ew = new UiObject(new UiSelector().resourceId("com.xuetangx.mobile:id/signin_close"));
+		UiObject updatecancel = new UiObject(new UiSelector().resourceId("com.xuetangx.mobile:id/btnUpdateCancel"));
 		if(ew.exists()){
 			try {
 				ew.click();
@@ -82,6 +83,15 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 				e.printStackTrace();
 			}
 		}
+		if(updatecancel.exists()){
+                        try {
+                                System.out.println("update exists");
+                                updatecancel.click();
+                        } catch (UiObjectNotFoundException e) {
+                                // TODO Auto-generated catch block
+                                e.printStackTrace();
+                        }
+                }
 	}
 	
 	public void TakeScreen(String descript){
