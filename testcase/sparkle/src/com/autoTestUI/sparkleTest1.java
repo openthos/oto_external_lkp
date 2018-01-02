@@ -40,15 +40,18 @@ public class sparkleTest1 extends UiAutomatorTestCase{
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
 		sleep(7000);
 
+		otoTest.MoveToTop();
+		otoTest.ClickById("android:id/mwMaximizeBtn");
 		window_lib.windowtest(otoTest.mydevice,appName );
 
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		sleep(5000);
-		otoTest.ClickById("android:id/mwMaximizeBtn");
-		sleep(1000);
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		sleep(1000);
+		otoTest.ClickById("android:id/mwMaximizeBtn");
+		sleep(1000);
+		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		// 强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));

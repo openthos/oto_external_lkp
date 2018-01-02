@@ -20,12 +20,16 @@ public class launcher extends UiAutomatorTestCase {
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 	
 		UiObject lch = new UiObject(new UiSelector().resourceId("com.android.launcher3:id/launcher"));
+		lch.click();
+		sleep(500);
     	//新建文件夹
 		lch.longClick();
 		otoTest.ClickByText("新建文件夹");
 		UiObject newfolder = new UiObject(new UiSelector().text("新建文件夹1"));
 		assertTrue("新建文件夹",newfolder.exists());
 		//新建文件
+		lch.click();
+		sleep(500);
 		lch.longClick();
 		otoTest.ClickByText("新建文件");
 		otoTest.ClickByText("TXT文本文档");
@@ -35,6 +39,7 @@ public class launcher extends UiAutomatorTestCase {
 		assertTrue("新建TXT文本文档",newtxt.exists());
 		
 		lch.click();
+		sleep(500);
 		lch.longClick();
 		otoTest.ClickByText("新建文件");
 		otoTest.ClickByText("Word文本文档");
@@ -43,6 +48,8 @@ public class launcher extends UiAutomatorTestCase {
 		UiObject newdoc = new UiObject(new UiSelector().text("新建文件1.doc"));
 		assertTrue("新建Word文本文档",newdoc.exists());	
 		
+		lch.click();
+		sleep(500);
 		lch.longClick();
 		otoTest.ClickByText("新建文件");
 		otoTest.ClickByText("PowerPoint幻灯片文档");
@@ -51,6 +58,8 @@ public class launcher extends UiAutomatorTestCase {
 		UiObject newppt = new UiObject(new UiSelector().text("新建文件1.ppt"));
 		assertTrue("新建PowerPoint幻灯片文档",newppt.exists());
 		
+		lch.click();
+		sleep(500);
 		lch.longClick();
 		otoTest.ClickByText("新建文件");
 		otoTest.ClickByText("Excel表格文档");
@@ -83,6 +92,12 @@ public class launcher extends UiAutomatorTestCase {
 		wallpaper.click();
 		otoTest.ClickById("com.android.launcher3:id/set_wallpaper_button");
 		sleep(3000);
+		//bug2139
+		if(new UiObject(new UiSelector().resourceId("android:id/mwCloseBtn")).exists())
+		{
+			otoTest.ClickById("android:id/mwCloseBtn");
+		}
+		sleep(1000);
 		assertEquals("set wallpaper success","com.android.launcher3",otoTest.mydevice.getCurrentPackageName());
 		Configurator.getInstance().setActionAcknowledgmentTimeout(actiontime);
 		//显示设置
@@ -93,6 +108,7 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest.ClickByText("亮度");
 		sleep(1000);
 		assertTrue("调节亮度",new UiObject(new UiSelector().resourceId("com.android.systemui:id/slider")).exists());
+		otoTest.mydevice.pressKeyCode(111);
 		sleep(1000);
 		otoTest.ClickByText("壁纸");
 		sleep(500);
@@ -116,10 +132,13 @@ public class launcher extends UiAutomatorTestCase {
 		sleep(1000);
 		assertEquals("验证字体大小","普通",new UiObject(new UiSelector().resourceId("android:id/summary")).getText());
 		otoTest.ClickById("android:id/mwCloseBtn");
+		sleep(1000);
 		//我的电脑
 		//双击打开
 		lch.click();
 		UiObject mc = new UiObject(new UiSelector().text("我的电脑"));
+		mc.click();
+		sleep(2000);
 		Configurator.getInstance().setActionAcknowledgmentTimeout(0);
 		mc.click();	
 		mc.click();
