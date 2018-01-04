@@ -8,10 +8,8 @@ import com.android.uiautomator.core.UiObjectNotFoundException;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 public class VLC extends UiAutomatorTestCase {
-
-	public static String apppackage = "org.videolan.vlc";
-	public static String appactivity = "org.videolan.vlc.StartActivity";
-	public static String appName = "org.videolan.vlc/org.videolan.vlc.StartActivity";
+	
+	public static String appName = "org.videolan.vlc/org.videolan.vlc.gui.MainActivity";
 	public static String port = "5555";
 
 	public void testVLC() throws UiObjectNotFoundException, RemoteException,
@@ -19,7 +17,6 @@ public class VLC extends UiAutomatorTestCase {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
-		otoTest.mydevice.pressEnter();
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 		//启动时间
 		Date starttime;

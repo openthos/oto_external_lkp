@@ -9,8 +9,6 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 public class editor920 extends UiAutomatorTestCase {
 
-	public static String apppackage = "com.jecelyin.editor.v2";
-	public static String appactivity = "com.jecelyin.editor.v2.ui.MainActivity";
 	public static String appName = "com.jecelyin.editor.v2/com.jecelyin.editor.v2.ui.MainActivity";
 	public static String port = "5555";
 
@@ -19,7 +17,6 @@ public class editor920 extends UiAutomatorTestCase {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
-		otoTest.mydevice.pressEnter();
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 		//启动时间
 		Date starttime;
@@ -38,7 +35,7 @@ public class editor920 extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(2000);
+		sleep(4000);
 
 		window_lib.windowtest(otoTest.mydevice,appName );
 
