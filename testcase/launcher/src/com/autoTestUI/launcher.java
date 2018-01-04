@@ -2,7 +2,9 @@ package com.autoTestUI;
 
 import java.io.IOException;
 import android.os.RemoteException;
+import android.view.KeyEvent;
 import com.android.uiautomator.core.Configurator;
+import com.android.uiautomator.core.UiDevice;
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
 import com.android.uiautomator.core.UiScrollable;
@@ -11,23 +13,24 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 public class launcher extends UiAutomatorTestCase {
 
-	public void testsetting() throws UiObjectNotFoundException, RemoteException,
+	public void testlauncher() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
-		otoTest.mydevice.pressEnter();
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 	
 		UiObject lch = new UiObject(new UiSelector().resourceId("com.android.launcher3:id/launcher"));
+    	//新建文件夹
+		System.out.println("Test:新建文件夹");
 		lch.click();
 		sleep(500);
-    	//新建文件夹
 		lch.longClick();
 		otoTest.ClickByText("新建文件夹");
 		UiObject newfolder = new UiObject(new UiSelector().text("新建文件夹1"));
 		assertTrue("新建文件夹",newfolder.exists());
 		//新建文件
+		System.out.println("Test:新建文件");
 		lch.click();
 		sleep(500);
 		lch.longClick();
@@ -75,9 +78,13 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest.ClickById("com.android.launcher3:id/cancel");
 		assertFalse("取消新建文件",new UiObject(new UiSelector().text("请选择要创建的文件的格式")).exists());
 		//排序
+		System.out.println("Test:排序");
+		lch.click();
+		sleep(500);
 		lch.longClick();
 		otoTest.ClickByText("排序");
 		//更改壁纸
+		System.out.println("Test:更改壁纸");
 		lch.longClick();
 		otoTest.ClickByText("更改壁纸");
 		sleep(1000);
@@ -93,6 +100,7 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest.ClickById("com.android.launcher3:id/set_wallpaper_button");
 		sleep(3000);
 		//bug2139
+		System.out.println(new UiObject(new UiSelector().resourceId("android:id/mwCloseBtn")).exists());
 		if(new UiObject(new UiSelector().resourceId("android:id/mwCloseBtn")).exists())
 		{
 			otoTest.ClickById("android:id/mwCloseBtn");
@@ -101,6 +109,7 @@ public class launcher extends UiAutomatorTestCase {
 		assertEquals("set wallpaper success","com.android.launcher3",otoTest.mydevice.getCurrentPackageName());
 		Configurator.getInstance().setActionAcknowledgmentTimeout(actiontime);
 		//显示设置
+		System.out.println("Test:显示设置");
 		lch.longClick();
 		otoTest.ClickByText("显示设置");
 		sleep(1000);
@@ -108,7 +117,7 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest.ClickByText("亮度");
 		sleep(1000);
 		assertTrue("调节亮度",new UiObject(new UiSelector().resourceId("com.android.systemui:id/slider")).exists());
-		otoTest.mydevice.pressKeyCode(111);
+		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ESCAPE);
 		sleep(1000);
 		otoTest.ClickByText("壁纸");
 		sleep(500);
@@ -132,21 +141,20 @@ public class launcher extends UiAutomatorTestCase {
 		sleep(1000);
 		assertEquals("验证字体大小","普通",new UiObject(new UiSelector().resourceId("android:id/summary")).getText());
 		otoTest.ClickById("android:id/mwCloseBtn");
-		sleep(1000);
 		//我的电脑
+		System.out.println("Test:我的电脑");
 		//双击打开
 		lch.click();
-		UiObject mc = new UiObject(new UiSelector().text("我的电脑"));
-		mc.click();
-		sleep(2000);
 		Configurator.getInstance().setActionAcknowledgmentTimeout(0);
-		mc.click();	
-		mc.click();
-		sleep(1000);
+		for(int i=0;i<2;i++){
+			UiDevice.getInstance().click(55, 40);
+		}
+		sleep(2000);
 		assertEquals("打开计算机目录","com.openthos.filemanager",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
 		Configurator.getInstance().setActionAcknowledgmentTimeout(actiontime);
 		//右键菜单
+		UiObject mc = new UiObject(new UiSelector().text("我的电脑"));
 		mc.longClick();
 		otoTest.ClickByText("打开");
 		sleep(1000);
@@ -158,6 +166,7 @@ public class launcher extends UiAutomatorTestCase {
 		assertEquals("设备信息","com.android.settings",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
 		//UserGuide.html
+		System.out.println("Test:用户手册");
 		UiObject user = new UiObject(new UiSelector().text("UserGuide.html"));
 		user.longClick();
 		otoTest.ClickByText("打开");
@@ -174,6 +183,7 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwCloseBtn");
 		//压缩UserGuide.html为zip
+		System.out.println("Test:压缩");
 		user.longClick();
 		otoTest.ClickByText("压缩");
 		UiObject co_name = new UiObject(new UiSelector().resourceId("com.openthos.compress:id/et_co_name"));
@@ -220,6 +230,7 @@ public class launcher extends UiAutomatorTestCase {
 		UiObject txttar = new UiObject(new UiSelector().text("txtcomp.tar"));
 		assertTrue("压缩txt",txttar.exists());
 		//剪切txt
+		System.out.println("Test:剪切");
 		newtxt.longClick();
 		otoTest.ClickByText("剪切");
 		lch.longClick();
@@ -227,6 +238,7 @@ public class launcher extends UiAutomatorTestCase {
 		sleep(2000);
 		assertTrue("剪切txt文件",newtxt.exists());
 		//复制doc
+		System.out.println("Test:复制");
 		lch.click();
 		newdoc.longClick();
 		otoTest.ClickByText("复制");
@@ -236,6 +248,7 @@ public class launcher extends UiAutomatorTestCase {
 		UiObject newdoc2 = new UiObject(new UiSelector().text("新建文件1.2.doc"));
 		assertTrue("复制word文件",newdoc2.exists());
 		//重命名ppt
+		System.out.println("Test:重命名");
 		lch.click();
 		newppt.longClick();
 		sleep(500);
@@ -256,6 +269,7 @@ public class launcher extends UiAutomatorTestCase {
 		sleep(1000);
 		otoTest.ClickById("com.android.launcher3:id/confirm");
 		//解压缩
+		System.out.println("Test:解压缩");
 		txttar.longClick();
 		otoTest.ClickByText("解压");
 		sleep(500);
@@ -278,6 +292,7 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest.ClickById("android:id/mwCloseBtn");
 		sleep(1000);
 		//删除
+		System.out.println("Test:删除");
 		lch.click();
 		txttar.longClick();
 		otoTest.ClickByText("删除");
@@ -313,17 +328,19 @@ public class launcher extends UiAutomatorTestCase {
 		otoTest.ClickById("android:id/button1");
 		sleep(2000);
 		//回收站
+		System.out.println("Test:回收站");
 		otoTest.mydevice.pressBack();
 		Configurator.getInstance().setActionAcknowledgmentTimeout(0);
-		UiObject rb = new UiObject(new UiSelector().text("回收站"));
-		rb.click();
-		rb.click();
+		for(int i=0;i<2;i++){
+			UiDevice.getInstance().click(55, 180);
+		}
 		sleep(1000);
 		assertEquals("打开回收站","com.openthos.filemanager",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
 		Configurator.getInstance().setActionAcknowledgmentTimeout(actiontime);
 		sleep(1000);
 		//右键菜单
+		UiObject rb = new UiObject(new UiSelector().text("回收站"));
 		rb.longClick();
 		otoTest.ClickByText("清空回收站");
 		assertTrue("清空回收站",new UiObject(new UiSelector().text("确认清空回收站?")).exists());
