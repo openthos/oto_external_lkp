@@ -3,5 +3,5 @@ category: benchmark
 
 iterations: 1x
 
-appStore:
+appstore:
   duration: 600s
