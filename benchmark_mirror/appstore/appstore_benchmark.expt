@@ -2,6 +2,6 @@
 set timeout 6000
 spawn  telnet localhost
 expect "#"
-send "/data/ubuntu/lkp/benchmarks/appStore/auto_interact.sh\r"
+send "/data/ubuntu/lkp/benchmarks/appstore/auto_interact.sh\r"
 expect "#"
 send "exit\r"

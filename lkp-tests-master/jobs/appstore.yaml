@@ -1,4 +1,4 @@
-testcase: appStore
+testcase: appstore
 category: benchmark
 
 iterations: 1x

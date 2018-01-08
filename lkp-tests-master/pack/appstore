@@ -2,7 +2,7 @@
 
 VERSION="2.2.3"
 #WEB_URL="http://www.tux.org/~mayer/linux/nbench-byte-2.2.3.tar.gz"
-WEB_URL="http://192.168.0.180/openthos/oto_test/benchmark_mirror/appStore.tar.gz"
+WEB_URL="http://192.168.0.180/openthos/oto_test/benchmark_mirror/appstore.tar.gz"
 
 install()
 {
@@ -10,6 +10,6 @@ install()
 cp  -af $BM_NAME  $BM_ROOT
 cp -af *.apk $BM_ROOT
 cp -af  auto_interact.sh $BM_ROOT  
-cp -af  appStore_benchmark.expt $BM_ROOT   
-$LKP_SRC/pack/appStore_pack.expt
+cp -af  appstore_benchmark.expt $BM_ROOT   
+$LKP_SRC/pack/appstore_pack.expt
 }
