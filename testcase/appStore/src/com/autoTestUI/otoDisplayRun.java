@@ -1,4 +1,4 @@
-package com.appStore;
+package com.autoTestUI;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,24 +22,23 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 
 	final int CLICK_ID = 1111;
 	final int CLICK_TEXT = 2222;
-	final int CLICK_CLASSNAME = 3333;
-	public boolean ClickById(String id) throws UiObjectNotFoundException{
-		return ClickByInfo(CLICK_ID,id,null);
+	
+	public boolean ClickById(String id){
+		return ClickByInfo(CLICK_ID,id);
 	}
 	
-	public boolean ClickByText(String text) throws UiObjectNotFoundException{
-		return ClickByInfo(CLICK_TEXT,text,null);
+	public boolean ClickByText(String text){
+		return ClickByInfo(CLICK_TEXT,text);
 	}
 	
-	public boolean SetTextByClassname(String cname,String text) throws UiObjectNotFoundException{
-		return ClickByInfo(CLICK_CLASSNAME,cname,text);
+	public void MoveToTop() throws UiObjectNotFoundException{
+        UiObject objectSide4 = new UiObject( new UiSelector().resourceId("android:id/mwOuterBorder"));
+        android.graphics.Rect myAppSide4 = objectSide4.getVisibleBounds();
+        sleep(1000);
+        mydevice.click(100, myAppSide4.top);
 	}
 	
-	public boolean SetTextById(String id,String text) throws UiObjectNotFoundException{
-		return ClickByInfo(CLICK_ID,id,text);
-	}
-
-	private boolean ClickByInfo(int CLICK,String str,String text) throws UiObjectNotFoundException{
+	private boolean ClickByInfo(int CLICK,String str){
 		UiSelector uiselector = null;
 		switch(CLICK)
 		{
@@ -49,17 +48,14 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 		case CLICK_TEXT:	
 			uiselector = new UiSelector().text(str);
 			break;
-		case CLICK_CLASSNAME:	
-			uiselector = new UiSelector().className(str);
-			break;
 		default:
 			return false;
 		}
 		UiObject myobject = new UiObject(uiselector);
 		int i = 0;
 		while(!myobject.exists() && i < 5){
-			SolveProblems();
-			sleep(2000);
+//			SolveProblems();
+			sleep(1000);
 			if(i == 4){
 				TakeScreen(str.substring(str.indexOf('/')+1)+"----not find");
 				System.out.println("----------[failed]:" + str + " not find !!!测试未通过");
@@ -67,31 +63,19 @@ public class otoDisplayRun extends UiAutomatorTestCase{
 			}
 			i++;
 		}
-		if(text == null){
+		try {
 			myobject.click();
-		}
-		else{
-			myobject.click();
-			myobject.setText(text);
+			sleep(500);
+		} catch (UiObjectNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return true;
 	}
 
-	private void SolveProblems(){
-		sleep(1000);
-		boolean dumpFirstStart = new UiObject(
-				new UiSelector().text("温馨提示")).exists();
-		if (dumpFirstStart == true) {
-			UiObject skipButton = new UiObject(
-					new UiSelector().resourceId("android:id/button1"));
-			try {
-				skipButton.click();
-			} catch (UiObjectNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
+//	private void SolveProblems(){
+//
+//	}
 	
 	public void TakeScreen(String descript){
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
