@@ -37,7 +37,7 @@ public class YY extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(5000);
+		sleep(10000);
 
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
