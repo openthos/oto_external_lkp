@@ -1,7 +1,0 @@
-testcase: printerhp
-category: benchmark
-
-iterations: 1x
-
-printerhp:
-  duration: 600s

@@ -1,3 +1,0 @@
-#!/bin/bash -x
-./printerhp_benchmark.expt
-
