@@ -68,7 +68,7 @@ public class email extends UiAutomatorTestCase {
 		otoTest.SetTextByClassname("android.widget.EditText", "asptest@126.com");
 		sleep(500);
 		otoTest.ClickById("com.android.email:id/next");
-		sleep(500);
+		sleep(1500);
 		UiObject button2 = new UiObject(new UiSelector().text(objStr[0][language]));
 		button2.click();
 		sleep(500);
