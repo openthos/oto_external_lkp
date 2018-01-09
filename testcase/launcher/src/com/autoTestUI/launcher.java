@@ -21,7 +21,8 @@ public class launcher extends UiAutomatorTestCase {
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 	
 		UiObject lch = new UiObject(new UiSelector().resourceId("com.android.launcher3:id/launcher"));
-    	//新建文件夹
+ 	   	//新建文件夹
+		otoTest.mydevice.getCurrentPackageName();
 		System.out.println("Test:新建文件夹");
 		lch.click();
 		sleep(500);
