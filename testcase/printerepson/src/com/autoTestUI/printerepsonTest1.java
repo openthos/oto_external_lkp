@@ -18,8 +18,6 @@ public class printerepsonTest1 extends UiAutomatorTestCase {
 		otoDisplayRun otoTest;
 		otoTest = new otoDisplayRun(getUiDevice());
 		otoTest.mydevice.wakeUp();
-		otoTest.mydevice.pressEnter();
-		otoTest.mydevice.pressKeyCode(111);
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
 		//启动时间
 		Date starttime;
@@ -38,16 +36,16 @@ public class printerepsonTest1 extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(2000);
+		sleep(5000);
 
-		window_lib.windowtest(otoTest.mydevice,appName );
-
-		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		sleep(1000);
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		sleep(1000);
+		window_lib.windowtest(otoTest.mydevice,appName );
+                otoDisplayRun.execCmdNoSave("am start -n " + appName);
+		sleep(2000);
 		otoTest.ClickById("android:id/mwMinimizeBtn");
 		// 强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));
