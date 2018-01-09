@@ -1,0 +1,7 @@
+testcase: printerepson
+category: benchmark
+
+iterations: 1x
+
+printerepson:
+  duration: 600s

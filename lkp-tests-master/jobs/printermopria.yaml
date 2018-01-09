@@ -1,0 +1,7 @@
+testcase: printermopria
+category: benchmark
+
+iterations: 1x
+
+printermopria:
+  duration: 600s
