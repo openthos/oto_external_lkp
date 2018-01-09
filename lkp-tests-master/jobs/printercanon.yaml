@@ -1,0 +1,7 @@
+testcase: printercanon
+category: benchmark
+
+iterations: 1x
+
+printercanon:
+  duration: 600s
