@@ -1,0 +1,7 @@
+testcase: editor
+category: benchmark
+
+iterations: 1x
+
+editor:
+  duration: 600s
