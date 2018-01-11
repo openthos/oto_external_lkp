@@ -1,0 +1,7 @@
+testcase: otaupgrade
+category: benchmark
+
+iterations: 1x
+
+otaupgrade:
+  duration: 600s

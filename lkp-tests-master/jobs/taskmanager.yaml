@@ -1,0 +1,7 @@
+testcase: taskmanager
+category: benchmark
+
+iterations: 1x
+
+taskmanager:
+  duration: 600s

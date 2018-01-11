@@ -1,0 +1,3 @@
+#!/bin/bash -x
+./authoritymanager_benchmark.expt
+

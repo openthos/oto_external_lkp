@@ -1,0 +1,7 @@
+testcase: windowsrecover
+category: benchmark
+
+iterations: 1x
+
+windowsrecover:
+  duration: 600s

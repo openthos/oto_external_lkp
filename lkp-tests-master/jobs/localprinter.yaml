@@ -1,0 +1,7 @@
+testcase: localprinter
+category: benchmark
+
+iterations: 1x
+
+localprinter:
+  duration: 600s

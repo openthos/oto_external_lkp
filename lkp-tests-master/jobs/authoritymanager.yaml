@@ -1,0 +1,7 @@
+testcase: authoritymanager
+category: benchmark
+
+iterations: 1x
+
+authoritymanager:
+  duration: 600s
