@@ -1,7 +1,7 @@
 #!/usr/bin/expect
 spawn  telnet localhost
 expect "#"
-send "pm install /data/ubuntu/lkp/benchmarks/excel/com.microsoft.excel.apk\r"
+send "pm install /data/ubuntu/lkp/benchmarks/excel/com.microsoft.office.excel.apk\r"
 expect "#"
 send "sleep 1"
 expect "#"
