@@ -119,7 +119,7 @@ public class appstoreTest1 extends UiAutomatorTestCase {
 
     //测试用例2：测试在应用商店首页下载安装应用2、测试在所有软件页面下载安装应用3、测试在所有软件页面更新应用4
     public void testDemo2() throws UiObjectNotFoundException,InterruptedException {
-	System.out.println("测试用例2：测试在应用商店首页下载安装应用、测试在所有软>件页面下载安装应用、测试在所有软件页面更新应用");
+	System.out.println("测试用例2：测试在应用商店首页下载安装应用、测试在所有软件页面下载安装应用、测试在所有软件页面更新应用");
         getUiDevice();
         //测试在应用商店首页下载应用2
         new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_home")).click();
@@ -155,7 +155,7 @@ public class appstoreTest1 extends UiAutomatorTestCase {
 
     //测试用例4：测试进入应用详情页面下载安装应用3和4，测试进入管理页面在更新列表中更新应用4
     public void testDemo4() throws UiObjectNotFoundException,InterruptedException {
-	System.out.println("测试用例4：测试进入应用详情页面下载安装应用，测试进入管>理页面在更新列表中更新应用");
+	System.out.println("测试用例4：测试进入应用详情页面下载安装应用，测试进入管理页面在更新列表中更新应用");
         getUiDevice();
     	//进入应用详情页面下载安装应用3和4
         installByButton(appList4[2],"com.openthos.appstore:id/rb_software","下载");
@@ -198,7 +198,7 @@ public class appstoreTest1 extends UiAutomatorTestCase {
     
 	//测试用例6：测试右上角搜索应用，测试打开应用，卸载测试相关应用并关闭应用商店
     public void testDemo6() throws UiObjectNotFoundException,IOException,InterruptedException {
-	System.out.println("测试用例6：测试右上角搜索应用，测试打开应用，卸载测试相>关应用并关闭应用商店");
+	System.out.println("测试用例6：测试右上角搜索应用，测试打开应用，卸载测试相关应用并关闭应用商店");
         UiDevice uiDevice = getUiDevice();
         //测试右上角搜索应用
         new UiObject(new UiSelector().resourceId("com.openthos.appstore:id/rb_home")).click();
