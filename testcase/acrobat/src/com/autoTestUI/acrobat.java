@@ -22,6 +22,13 @@ public class acrobat extends UiAutomatorTestCase {
 		otoTest.mydevice.pressEnter();
 		otoTest.mydevice.pressKeyCode(111);
 		assertTrue("screen on :can't wakeup", otoTest.mydevice.isScreenOn());
+		//设置不锁定屏幕
+		otoDisplayRun.execCmdNoSave("am start -n com.android.settings/com.android.settings.Settings");
+		sleep(2000);
+		otoTest.ClickByText("电源管理");
+		sleep(1000);
+		otoTest.ClickByText("不锁定屏幕");
+
 		//启动时间
 		Date starttime;
 		Date endtime;
