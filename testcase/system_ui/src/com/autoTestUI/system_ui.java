@@ -35,7 +35,7 @@ public class system_ui extends UiAutomatorTestCase {
 
 		sleep(1000);
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
-		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ESCAPE);
+		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		
 		endtime = new Date();
@@ -52,8 +52,6 @@ public class system_ui extends UiAutomatorTestCase {
 		otoTest.ClickById("com.android.systemui:id/media_volume_btn");
 		otoTest.ClickById("com.android.systemui:id/media_volume_btn");
 		sleep(1000);
-		//点击清除所有,（bug2145）在通知中心有通知消息的情况下，点击通知管理，通知中心不会关闭
-		otoTest.ClickById("com.android.systemui:id/clearAll");
 		//点击通知管理
 		System.out.println("通知管理");
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_TAB,2);
@@ -61,6 +59,9 @@ public class system_ui extends UiAutomatorTestCase {
 		otoTest.mydevice.openNotification();
 		sleep(500);
 		otoTest.ClickById("com.android.systemui:id/notificationManager");
+		sleep(1000);
+		//点击清除所有,（bug2145）在通知中心有通知消息的情况下，点击通知管理，通知中心不会关闭
+		otoTest.ClickById("com.android.systemui:id/clearAll");
 		sleep(1000);
 		assertEquals("notificationManager open success","com.android.settings",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
@@ -82,6 +83,9 @@ public class system_ui extends UiAutomatorTestCase {
 		otoTest.mydevice.openNotification();
 		otoTest.ClickById("com.android.systemui:id/printManager");
 		sleep(1000);
+		//点击清除所有,（bug2145）在通知中心有通知消息的情况下，点击通知管理，通知中心不会关闭
+		otoTest.ClickById("com.android.systemui:id/clearAll");
+		sleep(1000);
 		assertEquals("printManager open success","com.github.openthos.printer.localprint",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
 		//隔离模式导致网络断开，暂时不测；投影按钮暂无功能
@@ -91,7 +95,11 @@ public class system_ui extends UiAutomatorTestCase {
 		otoTest.mydevice.pressKeyCode(KeyEvent.KEYCODE_ENTER);
 		otoTest.mydevice.openNotification();
 		otoTest.ClickByText("设置");
-		assertEquals("notificationManager open success","com.android.settings",otoTest.mydevice.getCurrentPackageName());
+		sleep(1000);
+		//点击清除所有,（bug2145）在通知中心有通知消息的情况下，点击通知管理，通知中心不会关闭
+		otoTest.ClickById("com.android.systemui:id/clearAll");
+		sleep(1000);
+		assertEquals("settings open success","com.android.settings",otoTest.mydevice.getCurrentPackageName());
 		otoTest.ClickById("android:id/mwCloseBtn");
 		//点击Startmenu时会关闭通知中心，然后焦点消失，无法点击
 		//otoTest.ClickById("com.android.systemui:id/status_bar_startup_menu");
