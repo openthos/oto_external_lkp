@@ -28,6 +28,7 @@ public class acrobat extends UiAutomatorTestCase {
 		otoTest.ClickByText("电源管理");
 		sleep(1000);
 		otoTest.ClickByText("不锁定屏幕");
+		otoTest.ClickById("android:id/mwCloseBtn");
 
 		//启动时间
 		Date starttime;
