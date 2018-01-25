@@ -9,8 +9,7 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 public class editorTest1 extends UiAutomatorTestCase {
 
-	public static String apppackage = "com.jecelyin.editor.v2";
-	public static String appName = "com.jecelyin.editor.v2/.ui.MainActivity";
+	public static String appName = "com.jecelyin.editor.v2s/com.jecelyin.editor.v2.ui.MainActivity";
 	public static String port = "5555";
 
 	public void testbaiduy() throws UiObjectNotFoundException, RemoteException,
