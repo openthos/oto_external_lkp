@@ -18,7 +18,7 @@ import com.autoTestUI.otoDisplayRun;
  */
 
 public class appstoreTest1 extends UiAutomatorTestCase {
-	int max_count = 90; //下载应用最长时间，超过会算作超时并停止下载，单位（秒）
+	int max_count = 120; //下载应用最长时间，超过会算作超时并停止下载，单位（秒）
 	
 	otoDisplayRun otoTest;
 	
