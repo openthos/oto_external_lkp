@@ -32,6 +32,8 @@ public class launcher extends UiAutomatorTestCase {
 		assertTrue("新建文件夹",newfolder.exists());
 		//新建文件
 		System.out.println("Test:新建文件");
+		UiDevice.getInstance().click(0, 0);
+		assertEquals("launcher on","com.android.launcher3",otoTest.mydevice.getCurrentPackageName());
 		lch.click();
 		sleep(500);
 		lch.longClick();
