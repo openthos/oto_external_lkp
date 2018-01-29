@@ -332,7 +332,9 @@ public class launcher extends UiAutomatorTestCase {
 		sleep(2000);
 		//回收站
 		System.out.println("Test:回收站");
-		otoTest.mydevice.pressBack();
+		UiDevice.getInstance().click(0, 0);
+                sleep(500);
+		assertEquals("launcher on","com.android.launcher3",otoTest.mydevice.getCurrentPackageName());
 		Configurator.getInstance().setActionAcknowledgmentTimeout(0);
 		for(int i=0;i<2;i++){
 			UiDevice.getInstance().click(55, 180);
