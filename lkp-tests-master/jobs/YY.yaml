@@ -1,7 +1,0 @@
-testcase: YY
-category: benchmark
-
-iterations: 1x
-
-YY:
-  duration: 600s
