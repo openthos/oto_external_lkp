@@ -22,7 +22,8 @@ public class launcher extends UiAutomatorTestCase {
 	
 		UiObject lch = new UiObject(new UiSelector().resourceId("com.android.launcher3:id/launcher"));
  	   	//新建文件夹
-		otoTest.mydevice.getCurrentPackageName();
+		UiDevice.getInstance().click(0, 0);
+                assertEquals("launcher on","com.android.launcher3",otoTest.mydevice.getCurrentPackageName());
 		System.out.println("Test:新建文件夹");
 		lch.click();
 		sleep(500);
