@@ -9,10 +9,7 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 public class fennec extends UiAutomatorTestCase {
 
-	public static String apppackage = "org.mozilla.fennec_root";
-	public static String appactivity = "org.mozilla.fennec_root.App";
-	public static String appName = "org.mozilla.fennec_root/org.mozilla.fennec_root.App";
-	public static String port = "5555";
+	public static String appName = "org.mozilla.fennec_root/org.mozilla.gecko.BrowserApp";
 
 	public void testfirefox() throws UiObjectNotFoundException, RemoteException,
 			IOException, InterruptedException{
@@ -38,14 +35,12 @@ public class fennec extends UiAutomatorTestCase {
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
 		sleep(3000);
-		otoTest.MoveToTop();
-		otoTest.ClickById("android:id/mwMaximizeBtn");
-		window_lib.windowtest(otoTest.mydevice,appName );
+		otoTest.ClickById("org.mozilla.fennec_root:id/window_maximize");
+		webwindow_lib.windowtest(otoTest.mydevice,appName );
 
 		otoDisplayRun.execCmdNoSave("am start -n " + appName);
 		sleep(1000);
-		otoTest.MoveToTop();
-		otoTest.ClickById("android:id/mwMinimizeBtn");
+		otoTest.ClickById("org.mozilla.fennec_root:id/window_minimize");
 		// 强制关闭程序
 		otoDisplayRun.execCmdNoSave("am force-stop " + appName.substring(0, appName.indexOf("/")));
 	}

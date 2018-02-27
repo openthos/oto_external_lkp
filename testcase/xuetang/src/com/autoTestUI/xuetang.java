@@ -37,7 +37,7 @@ public class xuetang extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(3000);
+		sleep(6000);
 
 		window_lib.windowtest(otoTest.mydevice,appName );
 

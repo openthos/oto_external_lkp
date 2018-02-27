@@ -38,10 +38,10 @@ public class excel extends UiAutomatorTestCase {
 
 		launchTime = endtime.getTime() - starttime.getTime();
 		System.out.println("----------APP launch 时间： " + launchTime +"ms");
-		sleep(7000);
+		sleep(8000);
 
 		otoTest.ClickById("com.microsoft.office.excel:id/docsui_signinview_skipsignin");
-		sleep(2000);
+		sleep(3000);
 		otoTest.MoveToTop();
 		otoTest.ClickById("android:id/mwMaximizeBtn");
 		window_lib.windowtest(otoTest.mydevice,appName );

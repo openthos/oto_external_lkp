@@ -8,7 +8,7 @@ import com.android.uiautomator.core.UiObjectNotFoundException;
 import com.android.uiautomator.core.UiSelector;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
-public class window_lib extends UiAutomatorTestCase{
+public class webwindow_lib extends UiAutomatorTestCase{
 
 	public static void windowtest(UiDevice device, String appName)
 			throws UiObjectNotFoundException, RemoteException, IOException, InterruptedException {
@@ -55,7 +55,7 @@ public class window_lib extends UiAutomatorTestCase{
 		Thread.sleep(2000);
 
 		// 拖动程序 拖动程序后， 窗口最大化/最小化等位置将无法通过resourceId获取到
-		UiObject objectHead = new UiObject(new UiSelector().resourceId("android:id/mw_decor_header"));
+		UiObject objectHead = new UiObject(new UiSelector().resourceId("org.mozilla.fennec_root:id/custom_header"));
 		objectHead.dragTo(1000, 500, 10);
 		Thread.sleep(1000);
 		
